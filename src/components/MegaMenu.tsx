@@ -77,7 +77,7 @@ export default function MegaMenu() {
                   {[
                     { title: "Home", href: "/" },
                     { title: "Products", href: "/products" },
-                    { title: "Services", href: "/#services" },
+                    { title: "Services", href: "/services" },
                     { title: "About Us", href: "/about" },
                     { title: "Contact", href: "/#contact" },
                   ].map((item) => (
