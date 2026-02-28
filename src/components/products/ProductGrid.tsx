@@ -3,44 +3,7 @@
 import { useState } from "react";
 import { Globe, Folder, ArrowDown, ChevronDown, Plus, Check } from "lucide-react";
 
-const products = [
-  {
-    id: 1,
-    title: "Benor Certified Cover - D400",
-    sku: "BE-CV-01",
-    description: "Heavy-duty municipal cover with Benor certification for Belgian infrastructure.",
-    image: "/products/manhole-cover.png",
-    isBenor: true,
-    category: "Covers",
-  },
-  {
-    id: 2,
-    title: "Benor Certified Cover - E600",
-    sku: "BE-CV-02",
-    description: "Extra heavy-duty cover for industrial and high-traffic areas.",
-    image: "/products/hydraulic-cover.png",
-    isBenor: true,
-    category: "Covers",
-  },
-  {
-    id: 3,
-    title: "Benor Siphon - Plat Recht",
-    sku: "BE-SP-01",
-    description: "High-capacity siphon with multiple version options for versatile installation.",
-    image: "/products/siphon.png",
-    isBenor: true,
-    category: "Siphons",
-  },
-  {
-    id: 4,
-    title: "Benor Surface Box",
-    sku: "BE-SB-01",
-    description: "Standard surface box for utility access and protection.",
-    image: "/products/surface-box.png",
-    isBenor: true,
-    category: "Surface boxes",
-  },
-];
+import { products } from "@/data/products";
 
 export default function ProductGrid() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
