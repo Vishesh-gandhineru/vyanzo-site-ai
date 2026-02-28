@@ -13,6 +13,17 @@ export type DocFolder = {
   children: (DocFile | DocFolder)[];
 };
 
+export type ProductFeature = {
+  title: string;
+  description: string;
+  iconName?: string;
+};
+
+export type ProductSpecification = {
+  parameter: string;
+  value: string;
+};
+
 export type Product = {
   id: number;
   title: string;
@@ -22,6 +33,8 @@ export type Product = {
   isBenor: boolean;
   category: string;
   docsTree?: DocFolder;
+  specifications?: ProductSpecification[];
+  features?: ProductFeature[];
 };
 
 // Helper to find the correct folder tree from the JSON map
@@ -39,6 +52,24 @@ export const products: Product[] = [
     isBenor: true,
     category: "Covers",
     docsTree: getDocsTree("Manhole covers - wegenisdeksels - regards"),
+    specifications: [
+      { parameter: "Certification", value: "Benor" },
+      { parameter: "Frame height", value: "20cm" },
+      { parameter: "Load category", value: "D400 – heavy duty" },
+      { parameter: "Inscriptions", value: "D/RWA, EU/P, Aquafin, optional customer logo" },
+    ],
+    features: [
+      {
+        title: "Production Excellence",
+        description: "Utilizing Inductotherm furnaces and DISA 280c vertical moulding lines for unsurpassed precision.",
+        iconName: "factory"
+      },
+      {
+        title: "Eco-Friendly Casting",
+        description: "Powered by rooftop solar energy and electrical induction furnaces to minimize environmental impact.",
+        iconName: "globe"
+      }
+    ]
   },
   {
     id: 2,
@@ -49,6 +80,24 @@ export const products: Product[] = [
     isBenor: true,
     category: "Covers",
     docsTree: getDocsTree("Hydraulic covers - hydraulische deksels - regards hydrauliques"),
+    specifications: [
+      { parameter: "Certification", value: "Benor" },
+      { parameter: "Frame height", value: "20cm" },
+      { parameter: "Load category", value: "E600 – extra heavy duty" },
+      { parameter: "Inscriptions", value: "Custom logo available" },
+    ],
+    features: [
+      {
+        title: "Production Excellence",
+        description: "Utilizing Inductotherm furnaces and DISA 280c vertical moulding lines for unsurpassed precision.",
+        iconName: "factory"
+      },
+      {
+        title: "Eco-Friendly Casting",
+        description: "Powered by rooftop solar energy and electrical induction furnaces to minimize environmental impact.",
+        iconName: "globe"
+      }
+    ]
   },
   {
     id: 3,
@@ -59,6 +108,18 @@ export const products: Product[] = [
     isBenor: true,
     category: "Siphons",
     docsTree: getDocsTree("Siphons - Kolken - Avaloirs"),
+    specifications: [
+      { parameter: "Certification", value: "Benor" },
+      { parameter: "Material", value: "Ductile Iron" },
+      { parameter: "Type", value: "Flat Straight (Plat Recht)" },
+    ],
+    features: [
+      {
+        title: "High Performance",
+        description: "Designed for optimal flow and clog resistance in demanding environments.",
+        iconName: "activity"
+      }
+    ]
   },
   {
     id: 4,
@@ -69,5 +130,10 @@ export const products: Product[] = [
     isBenor: true,
     category: "Surface boxes",
     docsTree: getDocsTree("Surface boxes - Huisaansluitputjes - Regards de branchement"),
+    specifications: [
+      { parameter: "Certification", value: "Benor" },
+      { parameter: "Load category", value: "B125" },
+      { parameter: "Usage", value: "Gas and water valves" },
+    ],
   },
 ];

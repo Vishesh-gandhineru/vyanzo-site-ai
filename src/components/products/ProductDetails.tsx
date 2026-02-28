@@ -1,8 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronRight, Globe, ExternalLink, Plus, ArrowRight, FileDown, ChevronDown, Folder } from "lucide-react";
+import { ChevronRight, Globe, ExternalLink, Plus, ArrowRight, FileDown, ChevronDown, Folder, Factory, Activity } from "lucide-react";
 import { Product, DocFolder } from "@/data/products";
+
+const getIcon = (name?: string) => {
+  switch (name) {
+    case 'factory': return <Factory className="w-6 h-6 text-bg-dark" />;
+    case 'globe': return <Globe className="w-6 h-6 text-bg-dark" />;
+    case 'activity': return <Activity className="w-6 h-6 text-bg-dark" />;
+    default: return <Plus className="w-6 h-6 text-bg-dark" />;
+  }
+};
 
 function RecursiveDocsFolder({ folder, defaultOpen = false }: { folder: DocFolder; defaultOpen?: boolean }) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -104,6 +113,56 @@ export default function ProductDetails({ product }: { product: Product }) {
                 </span>
               </div>
             </div>
+          </div>
+
+          {/* Specifications & Features */}
+          <div className="flex flex-col gap-12 pb-12">
+            
+            {/* Features Grid */}
+            {product.features && product.features.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                {product.features.map((feature, idx) => (
+                  <div key={idx} className="bg-white border border-brand-ash/10 rounded-[32px] p-8 md:p-10 shadow-[0_4px_24px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300">
+                    <div className="mb-6">
+                      {getIcon(feature.iconName)}
+                    </div>
+                    <h3 className="text-xl font-bold font-sans text-bg-dark mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-sm md:text-base text-text-light-bg/70 leading-relaxed font-sans">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Technical Specifications */}
+            {product.specifications && product.specifications.length > 0 && (
+              <div className="flex flex-col gap-6 w-full mt-4">
+                <h2 className="text-2xl font-bold text-bg-dark font-sans tracking-tight px-2">
+                  Technical Specifications
+                </h2>
+                
+                <div className="bg-[#f8f9fc] rounded-[32px] overflow-hidden">
+                  <table className="w-full text-left border-collapse">
+                    <tbody>
+                      {product.specifications.map((spec, idx) => (
+                        <tr key={idx} className="border-b border-white hover:bg-white transition-colors group">
+                          <td className="py-6 px-8 lg:px-10 w-1/3 align-top font-bold text-[10px] sm:text-xs tracking-[0.2em] text-brand-ash uppercase group-hover:text-brand-primary transition-colors">
+                            {spec.parameter}
+                          </td>
+                          <td className="py-5 px-8 lg:px-10 w-2/3 align-top text-sm sm:text-base font-medium text-bg-dark font-sans leading-relaxed">
+                            {spec.value}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
           </div>
         </div>
 
