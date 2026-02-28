@@ -36,9 +36,9 @@ export default function MarqueeLogos() {
           }}
         >
           {/* We duplicate the array to create a seamless infinite loop */}
-          {[...clients, ...clients, ...clients].map((client) => (
+          {[...clients, ...clients, ...clients].map((client, index) => (
             <div
-              key={`dup-${client.name}`}
+              key={`dup-${client.name}-${index}`}
               className="flex whitespace-nowrap items-center justify-center min-w-[200px] text-2xl font-serif font-bold text-text-light-bg/20 tracking-tighter"
             >
               {client.name}

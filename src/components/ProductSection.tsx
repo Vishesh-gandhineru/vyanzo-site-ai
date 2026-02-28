@@ -44,7 +44,7 @@ export default function ProductSection() {
   }, []);
 
   return (
-    <section className="w-full bg-white py-24 font-sans overflow-hidden border-t border-black/5">
+    <section className="w-full bg-white py-12 md:py-16 font-sans overflow-hidden border-t border-black/5">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8">
         
         {/* Section Header */}
@@ -69,7 +69,7 @@ export default function ProductSection() {
           
           {/* Action Card: See All Products */}
           <div 
-             className="min-w-[280px] md:min-w-[320px] lg:min-w-[360px] min-h-[320px] md:min-h-[380px] bg-brand-primary rounded-xl md:rounded-3xl p-8 md:p-10 flex flex-col justify-between shrink-0 shadow-lg shadow-brand-primary/20 pointer-events-none"
+             className="min-w-[280px] md:min-w-[320px] lg:min-w-[360px] min-h-[240px] md:min-h-[280px] bg-brand-primary rounded-xl md:rounded-3xl p-6 md:p-8 flex flex-col justify-between shrink-0 shadow-lg shadow-brand-primary/20 pointer-events-none"
           >
              <div>
                 <h3 className="text-white text-3xl font-bold uppercase tracking-tight leading-none mb-2 pointer-events-auto">View All<br />Products</h3>
@@ -85,14 +85,14 @@ export default function ProductSection() {
           {products.map((product) => (
             <motion.div
               key={product.id}
-              className="min-w-[260px] md:min-w-[300px] lg:min-w-[340px] min-h-[320px] md:min-h-[380px] bg-[#eef5ff] rounded-xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center justify-center shrink-0 relative group overflow-hidden pointer-events-none"
+              className="min-w-[260px] md:min-w-[300px] lg:min-w-[340px] min-h-[240px] md:min-h-[280px] bg-[#eef5ff] rounded-xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center justify-center shrink-0 relative group overflow-hidden pointer-events-none"
             >
               {/* Image Container */}
-              <div className="flex-1 w-full flex items-center justify-center mb-16 px-4">
+              <div className="flex-1 w-full flex items-center justify-center mb-10 px-4 mt-2">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-auto object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700 ease-out pointer-events-none"
+                  className="w-2/3 md:w-3/4 max-h-[120px] md:max-h-[140px] object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700 ease-out pointer-events-none"
                   draggable="false"
                 />
               </div>
