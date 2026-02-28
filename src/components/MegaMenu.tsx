@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, X, ArrowUpRight } from "lucide-react";
@@ -73,16 +75,15 @@ export default function MegaMenu() {
                 {/* Mega Menu Links */}
                 <nav className="flex flex-col gap-1 mt-12 md:mt-24 flex-1">
                   {[
-                    "Home",
-                    "Our Solutions",
-                    "About Us",
-                    "Recent Transactions",
-                    "News & Insights",
-                    "Contact Us",
+                    { title: "Home", href: "/" },
+                    { title: "Products", href: "/products" },
+                    { title: "Services", href: "/#services" },
+                    { title: "About Us", href: "/#about" },
+                    { title: "Contact", href: "/#contact" },
                   ].map((item) => (
                     <motion.a
-                      key={item}
-                      href="#"
+                      key={item.title}
+                      href={item.href}
                       className="text-[2.5rem] md:text-6xl lg:text-[5rem] font-serif font-semibold tracking-tight text-bg-dark hover:text-brand-primary transition-colors leading-[1.1]"
                       whileHover={{ x: 10 }}
                       transition={{
@@ -91,7 +92,7 @@ export default function MegaMenu() {
                         damping: 20,
                       }}
                     >
-                      {item}
+                      {item.title}
                     </motion.a>
                   ))}
                 </nav>
