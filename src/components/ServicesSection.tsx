@@ -32,11 +32,11 @@ export default function ServicesSection() {
             transition={{ duration: 0.6 }}
             className="md:max-w-2xl"
           >
-            <h2 className="text-xs font-bold tracking-[0.15em] text-brand-primary uppercase mb-6 flex items-center gap-3">
+            <h2 className="text-xs font-serif font-semibold tracking-[0.15em] text-brand-primary uppercase mb-6 flex items-center gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
               Our Services
             </h2>
-            <h3 className="text-4xl md:text-5xl lg:text-[3.5rem] font-serif text-bg-dark leading-[1.1] uppercase">
+            <h3 className="text-4xl md:text-5xl lg:text-[3.5rem] font-serif font-bold text-bg-dark leading-[1.1] uppercase">
               Discover what we can do for you
             </h3>
           </motion.div>
@@ -49,7 +49,7 @@ export default function ServicesSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="shrink-0"
           >
-            <button className="bg-brand-accent hover:opacity-90 transition-opacity text-bg-dark font-bold text-sm tracking-widest uppercase py-4 px-8 flex items-center gap-3 rounded-sm group">
+            <button className="bg-brand-accent hover:opacity-90 transition-opacity text-bg-dark font-sans font-bold text-sm tracking-widest uppercase py-4 px-8 flex items-center gap-3 rounded-sm group">
               Learn More
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -70,7 +70,7 @@ export default function ServicesSection() {
               <div className="w-12 h-12 bg-brand-primary/10 group-hover:bg-brand-primary/20 transition-colors rounded-lg flex items-center justify-center mb-auto">
                 <Plus className="w-5 h-5 text-brand-primary" />
               </div>
-              <h4 className="text-xl md:text-lg lg:text-xl font-semibold text-bg-dark leading-snug mt-12 group-hover:text-brand-primary transition-colors whitespace-pre-line">
+              <h4 className="text-xl md:text-lg lg:text-xl font-serif font-semibold text-bg-dark leading-snug mt-12 group-hover:text-brand-primary transition-colors whitespace-pre-line">
                 {service.title}
               </h4>
             </motion.div>

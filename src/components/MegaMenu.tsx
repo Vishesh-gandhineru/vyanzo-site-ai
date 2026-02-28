@@ -19,7 +19,7 @@ export default function MegaMenu() {
               layoutId="menu-header"
               className="flex items-center gap-3 text-text-dark-bg font-sans"
             >
-              <span className="text-[11px] font-medium tracking-widest uppercase">
+              <span className="text-[11px] font-sans font-medium tracking-widest uppercase">
                 Menu
               </span>
               <Plus className="w-[14px] h-[14px] font-light" strokeWidth={1.5} />
@@ -56,7 +56,7 @@ export default function MegaMenu() {
                   className="flex items-center gap-2 group hover:opacity-70 transition-opacity"
                 >
                   <X className="w-5 h-5 font-light" strokeWidth={1.5} />
-                  <span className="text-sm font-medium tracking-wide">
+                  <span className="text-sm font-sans font-medium tracking-wide">
                     Close
                   </span>
                 </button>
@@ -83,7 +83,7 @@ export default function MegaMenu() {
                     <motion.a
                       key={item}
                       href="#"
-                      className="text-[2.5rem] md:text-6xl lg:text-[5rem] font-medium tracking-tight text-bg-dark hover:text-brand-primary transition-colors leading-[1.1]"
+                      className="text-[2.5rem] md:text-6xl lg:text-[5rem] font-serif font-semibold tracking-tight text-bg-dark hover:text-brand-primary transition-colors leading-[1.1]"
                       whileHover={{ x: 10 }}
                       transition={{
                         type: "spring",
@@ -100,7 +100,7 @@ export default function MegaMenu() {
                 <div className="mt-12 w-full flex flex-col gap-6">
                   {/* Small Links row */}
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-bg-dark/10 pb-4 gap-4">
-                    <div className="flex flex-col gap-2 text-sm text-bg-dark/60 font-medium">
+                    <div className="flex flex-col gap-2 text-sm text-bg-dark/60 font-sans font-medium">
                       <a
                         href="#"
                         className="hover:text-bg-dark transition-colors"
@@ -120,7 +120,7 @@ export default function MegaMenu() {
                         Accessibility Statement
                       </a>
                     </div>
-                    <div className="text-sm text-bg-dark/60 font-medium tracking-wide">
+                    <div className="text-sm text-bg-dark/60 font-sans font-medium tracking-wide">
                       <a
                         href="#"
                         className="hover:text-bg-dark transition-colors"
@@ -136,7 +136,7 @@ export default function MegaMenu() {
                       href="#"
                       className="bg-[#f0f2f5] hover:bg-[#e4e7eb] group p-6 md:p-8 flex justify-between items-end rounded-md transition-colors min-h-[120px]"
                     >
-                      <span className="font-semibold text-lg text-bg-dark">
+                      <span className="font-sans font-semibold text-lg text-bg-dark">
                         Investor Login
                       </span>
                       <ArrowUpRight
@@ -148,7 +148,7 @@ export default function MegaMenu() {
                       href="#"
                       className="bg-[#f0f2f5] hover:bg-[#e4e7eb] group p-6 md:p-8 flex justify-between items-end rounded-md transition-colors min-h-[120px]"
                     >
-                      <span className="font-semibold text-lg text-bg-dark">
+                      <span className="font-sans font-semibold text-lg text-bg-dark">
                         Data Room
                       </span>
                       <ArrowUpRight

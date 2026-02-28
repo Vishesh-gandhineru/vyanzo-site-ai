@@ -20,18 +20,18 @@ export default function ContactSection() {
             transition={{ duration: 0.8 }}
             className="lg:w-1/2 flex flex-col justify-center"
           >
-            <h2 className="text-xs font-bold tracking-[0.15em] text-brand-primary uppercase mb-6 flex items-center gap-3">
+            <h2 className="text-xs font-serif font-semibold tracking-[0.15em] text-brand-primary uppercase mb-6 flex items-center gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
               Get in Touch
             </h2>
             
-            <h3 className="text-4xl md:text-5xl lg:text-[3.5rem] font-serif text-bg-dark leading-[1.1] mb-8">
+            <h3 className="text-4xl md:text-5xl lg:text-[3.5rem] font-serif font-bold text-bg-dark leading-[1.1] mb-8">
               Let's build the <br />
               <span className="text-brand-primary italic">future of infrastructure</span> <br />
               together.
             </h3>
             
-            <p className="text-lg text-bg-dark/60 font-light leading-relaxed mb-12 max-w-xl">
+            <p className="text-lg text-bg-dark/60 font-sans font-normal leading-relaxed mb-12 max-w-xl">
               Whether you're looking for custom casting solutions, need a quote for a large municipal project, or want to explore our end-to-end production capabilities, our team of experts is ready to assist you.
             </p>
 
@@ -41,8 +41,8 @@ export default function ContactSection() {
                   <MapPin className="w-5 h-5 text-bg-dark group-hover:text-brand-primary transition-colors" />
                 </div>
                 <div>
-                  <h4 className="text-bg-dark font-semibold text-lg mb-1">Headquarters</h4>
-                  <p className="text-bg-dark/70 font-light leading-relaxed">
+                  <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">Headquarters</h4>
+                  <p className="text-bg-dark/70 font-sans font-normal leading-relaxed">
                     123 Industrial Avenue<br />
                     Brussels, B-1000<br />
                     Belgium
@@ -55,8 +55,8 @@ export default function ContactSection() {
                   <Mail className="w-5 h-5 text-bg-dark group-hover:text-brand-primary transition-colors" />
                 </div>
                 <div>
-                  <h4 className="text-bg-dark font-semibold text-lg mb-1">Email Us</h4>
-                  <a href="mailto:info@vyanzo.com" className="text-bg-dark/70 font-light hover:text-brand-primary transition-colors">
+                  <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">Email Us</h4>
+                  <a href="mailto:info@vyanzo.com" className="text-bg-dark/70 font-sans font-normal hover:text-brand-primary transition-colors">
                     info@vyanzo.com
                   </a>
                 </div>
@@ -67,8 +67,8 @@ export default function ContactSection() {
                   <Phone className="w-5 h-5 text-bg-dark group-hover:text-brand-primary transition-colors" />
                 </div>
                 <div>
-                  <h4 className="text-bg-dark font-semibold text-lg mb-1">Call Us</h4>
-                  <p className="text-bg-dark/70 font-light">
+                  <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">Call Us</h4>
+                  <p className="text-bg-dark/70 font-sans font-normal">
                     +32 (0) 2 123 45 67
                   </p>
                 </div>
@@ -85,12 +85,12 @@ export default function ContactSection() {
             className="lg:w-1/2 w-full"
           >
             <div className="bg-text-dark-bg p-8 md:p-12 rounded-3xl border border-black/5 shadow-xl shadow-black/2">
-              <h3 className="text-2xl font-serif text-bg-dark mb-8">Send us a message</h3>
+              <h3 className="text-2xl font-serif font-bold text-bg-dark mb-8">Send us a message</h3>
               
               <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="firstName" className="text-sm font-medium text-bg-dark/80">First Name</label>
+                    <label htmlFor="firstName" className="text-sm font-sans font-medium text-bg-dark/80">First Name</label>
                     <input 
                       type="text" 
                       id="firstName" 
@@ -99,7 +99,7 @@ export default function ContactSection() {
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="lastName" className="text-sm font-medium text-bg-dark/80">Last Name</label>
+                    <label htmlFor="lastName" className="text-sm font-sans font-medium text-bg-dark/80">Last Name</label>
                     <input 
                       type="text" 
                       id="lastName" 
@@ -110,7 +110,7 @@ export default function ContactSection() {
                 </div>
                 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="text-sm font-medium text-bg-dark/80">Email Address</label>
+                  <label htmlFor="email" className="text-sm font-sans font-medium text-bg-dark/80">Email Address</label>
                   <input 
                     type="email" 
                     id="email" 
@@ -120,7 +120,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="company" className="text-sm font-medium text-bg-dark/80">Company</label>
+                  <label htmlFor="company" className="text-sm font-sans font-medium text-bg-dark/80">Company</label>
                   <input 
                     type="text" 
                     id="company" 
@@ -130,7 +130,7 @@ export default function ContactSection() {
                 </div>
                 
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="message" className="text-sm font-medium text-bg-dark/80">Message</label>
+                  <label htmlFor="message" className="text-sm font-sans font-medium text-bg-dark/80">Message</label>
                   <textarea 
                     id="message" 
                     rows={4}
@@ -141,7 +141,7 @@ export default function ContactSection() {
                 
                 <button 
                   type="submit" 
-                  className="w-full bg-brand-accent hover:opacity-90 text-bg-dark font-bold tracking-wider uppercase py-4 rounded-lg mt-2 transition-opacity duration-300"
+                  className="w-full bg-brand-accent hover:opacity-90 text-bg-dark font-sans font-bold tracking-wider uppercase py-4 rounded-lg mt-2 transition-opacity duration-300"
                 >
                   Submit Inquiry
                 </button>

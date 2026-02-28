@@ -50,8 +50,8 @@ export default function ProductSection() {
         {/* Section Header */}
         <div className="mb-12 flex items-center justify-between gap-4">
             <div>
-               <h2 className="text-3xl md:text-5xl font-semibold text-bg-dark tracking-tight">Our Core Products</h2>
-               <p className="text-bg-dark/60 mt-3 md:text-lg">Premium casting solutions built for the world's most demanding infrastructure.</p>
+               <h2 className="text-3xl md:text-5xl font-serif font-semibold text-bg-dark tracking-tight">Our Core Products</h2>
+               <p className="text-bg-dark/60 mt-3 md:text-lg font-sans font-normal">Premium casting solutions built for the world's most demanding infrastructure.</p>
             </div>
         </div>
       </div>
@@ -72,8 +72,8 @@ export default function ProductSection() {
              className="min-w-[280px] md:min-w-[320px] lg:min-w-[360px] min-h-[240px] md:min-h-[280px] bg-brand-primary rounded-xl md:rounded-3xl p-6 md:p-8 flex flex-col justify-between shrink-0 shadow-lg shadow-brand-primary/20 pointer-events-none"
           >
              <div>
-                <h3 className="text-white text-3xl font-bold uppercase tracking-tight leading-none mb-2 pointer-events-auto">View All<br />Products</h3>
-                <p className="text-white/80 font-medium mt-4 pointer-events-auto">Explore our complete catalog of industrial castings.</p>
+                <h3 className="text-white text-3xl font-serif font-bold uppercase tracking-tight leading-none mb-2 pointer-events-auto">View All<br />Products</h3>
+                <p className="text-white/80 font-sans font-medium mt-4 pointer-events-auto">Explore our complete catalog of industrial castings.</p>
              </div>
              
              <div className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center text-white backdrop-blur-sm self-start mt-auto pointer-events-auto">
@@ -99,7 +99,7 @@ export default function ProductSection() {
 
               {/* Product Info (pinned to bottom) */}
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 pt-0 pointer-events-none">
-                <h3 className="text-xl md:text-2xl font-semibold text-bg-dark tracking-tight">{product.name}</h3>
+                <h3 className="text-xl md:text-2xl font-serif font-bold text-bg-dark tracking-tight">{product.name}</h3>
               </div>
             </motion.div>
           ))}

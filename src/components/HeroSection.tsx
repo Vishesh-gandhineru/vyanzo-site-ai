@@ -50,7 +50,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-              className="text-[3.5rem] md:text-7xl lg:text-[7.5rem] font-serif font-medium leading-[1.1] tracking-tight text-text-dark-bg max-w-[80vw] pt-10"
+              className="text-[3.5rem] md:text-7xl lg:text-[7.5rem] font-serif font-bold leading-[1.1] tracking-tight text-text-dark-bg max-w-[80vw] pt-10"
             >
               Factory-Direct Quality at Honest Prices
             </motion.h1>
@@ -60,7 +60,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-              className="bg-brand-accent hover:bg-brand-accent/90 text-text-light-bg px-8 py-3 rounded-full font-medium text-lg tracking-wide transition-all shadow-[0_0_20px_rgba(253,231,76,0.4)]"
+              className="bg-brand-accent hover:bg-brand-accent/90 text-text-light-bg px-8 py-3 rounded-full font-sans font-semibold text-lg tracking-wide transition-all shadow-[0_0_20px_rgba(253,231,76,0.4)]"
             >
               Learn More
             </motion.button>

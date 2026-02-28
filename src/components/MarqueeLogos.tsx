@@ -20,7 +20,7 @@ const clients = logos.map((logo) => ({ name: logo }));
 export default function MarqueeLogos() {
   return (
     <section className="w-full bg-text-dark-bg py-10 border-b border-brand-ash/20 overflow-hidden flex flex-col items-center">
-      <div className="text-sm font-semibold tracking-widest text-text-light-bg/40 uppercase mb-8">
+      <div className="text-sm font-sans font-semibold tracking-widest text-text-light-bg/40 uppercase mb-8">
         Trusted by Industry Leaders
       </div>
 
