@@ -19,7 +19,7 @@ export default function BentoGrid() {
                 </p>
             </div>
             <div className="flex gap-4">
-                <button className="bg-white border border-black/10 text-bg-dark shadow-sm px-6 py-3 rounded-full font-medium hover:bg-black/5 transition-colors">
+                <button className="bg-brand-accent border border-black/10 text-bg-dark shadow-[0_0_15px_rgba(253,231,76,0.2)] px-6 py-3 rounded-full font-medium hover:opacity-90 transition-opacity">
                     View Impact Report
                 </button>
             </div>

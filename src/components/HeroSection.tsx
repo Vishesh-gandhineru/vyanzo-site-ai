@@ -52,7 +52,7 @@ export default function HeroSection() {
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
               className="text-[3.5rem] md:text-7xl lg:text-[7.5rem] font-serif font-medium leading-[1.1] tracking-tight text-text-dark-bg max-w-[80vw] pt-10"
             >
-              Where Quality Castings Meet Unsurpassed Service Standards
+              Factory-Direct Quality at Honest Prices
             </motion.h1>
 
             {/* Learn More Button */}

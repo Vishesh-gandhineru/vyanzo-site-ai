@@ -20,7 +20,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="w-full bg-[#f8fafc] py-24 px-4 md:px-8 border-t border-black/5 font-sans">
+    <section className="w-full bg-text-dark-bg py-24 px-4 md:px-8 border-t border-black/5 font-sans">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Header Area */}
@@ -32,8 +32,8 @@ export default function ServicesSection() {
             transition={{ duration: 0.6 }}
             className="md:max-w-2xl"
           >
-            <h2 className="text-xs font-bold tracking-[0.15em] text-[#d5b060] uppercase mb-6 flex items-center gap-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#d5b060]"></span>
+            <h2 className="text-xs font-bold tracking-[0.15em] text-brand-primary uppercase mb-6 flex items-center gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
               Our Services
             </h2>
             <h3 className="text-4xl md:text-5xl lg:text-[3.5rem] font-serif text-bg-dark leading-[1.1] uppercase">
@@ -49,7 +49,7 @@ export default function ServicesSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="shrink-0"
           >
-            <button className="bg-[#d5b060] hover:bg-[#c29e50] transition-colors text-white font-bold text-sm tracking-widest uppercase py-4 px-8 flex items-center gap-3 rounded-sm group">
+            <button className="bg-brand-accent hover:opacity-90 transition-opacity text-bg-dark font-bold text-sm tracking-widest uppercase py-4 px-8 flex items-center gap-3 rounded-sm group">
               Learn More
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>

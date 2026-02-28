@@ -18,7 +18,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="flex flex-col gap-6">
-            <h3 className="text-sm font-bold tracking-widest text-[#d5b060] uppercase">Quick Links</h3>
+            <h3 className="text-sm font-bold tracking-widest text-brand-accent uppercase">Quick Links</h3>
             <ul className="flex flex-col gap-3">
               {['Home', 'Products', 'Services', 'About Us', 'Contact'].map((link) => (
                 <li key={link}>
@@ -32,7 +32,7 @@ export default function Footer() {
 
           {/* Products */}
           <div className="flex flex-col gap-6">
-            <h3 className="text-sm font-bold tracking-widest text-[#d5b060] uppercase">Products</h3>
+            <h3 className="text-sm font-bold tracking-widest text-brand-accent uppercase">Products</h3>
             <ul className="flex flex-col gap-3">
               {['Manhole Covers', 'Hydraulic Covers', 'Grates', 'Siphons', 'Surface Boxes'].map((link) => (
                 <li key={link}>
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div className="flex flex-col gap-6">
-            <h3 className="text-sm font-bold tracking-widest text-[#d5b060] uppercase">Stay Updated</h3>
+            <h3 className="text-sm font-bold tracking-widest text-brand-accent uppercase">Stay Updated</h3>
             <p className="text-brand-ash/80 text-sm font-light">
               Subscribe to our newsletter for the latest product updates and industry news.
             </p>
@@ -54,11 +54,11 @@ export default function Footer() {
               <input 
                 type="email" 
                 placeholder="Email Address" 
-                className="bg-white/5 border border-white/10 rounded-l-lg px-4 py-2.5 w-full focus:outline-none focus:border-[#d5b060]/50 focus:bg-white/10 transition-all text-sm font-light text-white placeholder-brand-ash/50"
+                className="bg-white/5 border border-white/10 rounded-l-lg px-4 py-2.5 w-full focus:outline-none focus:border-brand-accent/50 focus:bg-white/10 transition-all text-sm font-light text-white placeholder-brand-ash/50"
               />
               <button 
                 type="submit"
-                className="bg-[#d5b060] hover:bg-[#c29e50] text-white px-4 py-2.5 rounded-r-lg text-sm font-bold tracking-wider uppercase transition-colors"
+                className="bg-brand-accent hover:opacity-90 text-bg-dark px-4 py-2.5 rounded-r-lg text-sm font-bold tracking-wider uppercase transition-colors"
               >
                 Join
               </button>

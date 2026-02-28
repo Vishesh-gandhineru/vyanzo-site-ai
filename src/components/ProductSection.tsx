@@ -85,7 +85,7 @@ export default function ProductSection() {
           {products.map((product) => (
             <motion.div
               key={product.id}
-              className="min-w-[260px] md:min-w-[300px] lg:min-w-[340px] min-h-[240px] md:min-h-[280px] bg-[#eef5ff] rounded-xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center justify-center shrink-0 relative group overflow-hidden pointer-events-none"
+              className="min-w-[260px] md:min-w-[300px] lg:min-w-[340px] min-h-[240px] md:min-h-[280px] bg-brand-primary/5 rounded-xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center justify-center shrink-0 relative group overflow-hidden pointer-events-none"
             >
               {/* Image Container */}
               <div className="flex-1 w-full flex items-center justify-center mb-10 px-4 mt-2">
