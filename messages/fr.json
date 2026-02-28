@@ -1,0 +1,9 @@
+{
+  "Navigation": {
+    "home": "Accueil",
+    "products": "Produits",
+    "services": "Services",
+    "about": "À Propos",
+    "contact": "Contact"
+  }
+}

@@ -1,4 +1,5 @@
 import MegaMenu from "@/components/MegaMenu";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function GlobalHeader() {
   return (
@@ -14,8 +15,11 @@ export default function GlobalHeader() {
         </a>
       </div>
 
-      {/* Mega Menu Component */}
-      <MegaMenu />
+      {/* Navigation Controls */}
+      <div className="flex items-center gap-4">
+        <LanguageSwitcher />
+        <MegaMenu />
+      </div>
     </header>
   );
 }

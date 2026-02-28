@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Globe, Folder, ArrowDown, ChevronDown, Plus, Check } from "lucide-react";
+import { Globe, Folder, ArrowDown, ChevronDown, Plus, Check, LocationEdit, MapPin } from "lucide-react";
 
 import { products } from "@/data/products";
 
 export default function ProductGrid() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [benorOnly, setBenorOnly] = useState(false);
+  const [selectedCertifications, setSelectedCertifications] = useState<string[]>([]);
+  const [selectedGeoLocations, setSelectedGeoLocations] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState("newest");
   const [isSortOpen, setIsSortOpen] = useState(false);
 
@@ -19,21 +20,33 @@ export default function ProductGrid() {
     );
   };
 
-  const resetFilters = () => {
-    setSelectedCategories([]);
-    setBenorOnly(false);
-  };
+    const toggleCertification = (cert: string) => {
+        setSelectedCertifications(prev => 
+            prev.includes(cert) ? prev.filter(c => c !== cert) : [...prev, cert]
+        );
+    };
 
-  // Filter and sort products
-  const filteredProducts = products
-    .filter(p => !benorOnly || p.isBenor)
-    .filter(p => selectedCategories.length === 0 || selectedCategories.includes(p.category))
-    .sort((a, b) => {
-      if (sortBy === "name-asc") return a.title.localeCompare(b.title);
-      if (sortBy === "name-desc") return b.title.localeCompare(a.title);
-      // Default newest - assuming higher ID is newer for this static list
-      return b.id - a.id; 
-    });
+    const toggleGeoLocation = (geo: string) => {
+        setSelectedGeoLocations(prev => 
+            prev.includes(geo) ? prev.filter(g => g !== geo) : [...prev, geo]
+        );
+    };
+
+    const resetFilters = () => {
+        setSelectedCategories([]);
+        setSelectedCertifications([]);
+        setSelectedGeoLocations([]);
+    };
+
+    // Filter and sort products (Note: Mock filtering logic for new fields until data is updated)
+    const filteredProducts = products
+        .filter(p => selectedCategories.length === 0 || selectedCategories.includes(p.category))
+        .filter(p => selectedCertifications.length === 0 || (p.isBenor && selectedCertifications.includes('Benor')) || selectedCertifications.every(c => c !== 'Benor')) // Temporary logic for Benor
+        .sort((a, b) => {
+            if (sortBy === "name-asc") return a.title.localeCompare(b.title);
+            if (sortBy === "name-desc") return b.title.localeCompare(a.title);
+            return b.id - a.id; 
+        });
 
   return (
     <section className="w-full bg-[#f8f9fc] py-16 px-4 md:px-8 font-sans min-h-screen">
@@ -48,18 +61,52 @@ export default function ProductGrid() {
                    <Globe className="w-5 h-5 text-brand-primary" />
                    Certifications
                 </h3>
-                <label className="flex items-center gap-3 cursor-pointer group">
-                   <div className="w-5 h-5 rounded border border-brand-ash/40 flex items-center justify-center group-hover:border-brand-primary transition-colors relative">
-                     <input 
-                         type="checkbox" 
-                         className="absolute opacity-0 w-full h-full cursor-pointer"
-                         checked={benorOnly}
-                         onChange={(e) => setBenorOnly(e.target.checked)}
-                     />
-                     {benorOnly && <Check className="w-3.5 h-3.5 text-brand-primary" strokeWidth={3} />}
-                   </div>
-                   <span className="text-text-light-bg/80 font-sans font-normal text-sm">Benor</span>
-                </label>
+                <div className="flex flex-col gap-4">
+                    {['Copro', 'Benor', 'Vyanzo'].map(cert => {
+                        const isChecked = selectedCertifications.includes(cert);
+                        return (
+                          <label key={cert} className="flex items-center gap-3 cursor-pointer group">
+                             <div className="w-5 h-5 rounded border border-brand-ash/40 flex items-center justify-center group-hover:border-brand-primary transition-colors relative">
+                                <input 
+                                   type="checkbox"
+                                   className="absolute opacity-0 w-full h-full cursor-pointer"
+                                   checked={isChecked}
+                                   onChange={() => toggleCertification(cert)}
+                                />
+                                {isChecked && <Check className="w-3.5 h-3.5 text-brand-primary" strokeWidth={3} />}
+                             </div>
+                             <span className="text-text-light-bg/80 font-sans font-normal text-sm">{cert}</span>
+                          </label>
+                        )
+                    })}
+                </div>
+            </div>
+
+            {/* Geo Location Filter */}
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-brand-ash/20">
+                <h3 className="flex items-center gap-3 text-bg-dark font-sans font-semibold text-lg mb-6">
+                   <MapPin className="w-5 h-5 text-brand-primary" />
+                   Geo Location
+                </h3>
+                <div className="flex flex-col gap-4">
+                    {['Belgium', 'Scandinavia'].map(geo => {
+                        const isChecked = selectedGeoLocations.includes(geo);
+                        return (
+                          <label key={geo} className="flex items-center gap-3 cursor-pointer group">
+                             <div className="w-5 h-5 rounded border border-brand-ash/40 flex items-center justify-center group-hover:border-brand-primary transition-colors relative">
+                                <input 
+                                   type="checkbox"
+                                   className="absolute opacity-0 w-full h-full cursor-pointer"
+                                   checked={isChecked}
+                                   onChange={() => toggleGeoLocation(geo)}
+                                />
+                                {isChecked && <Check className="w-3.5 h-3.5 text-brand-primary" strokeWidth={3} />}
+                             </div>
+                             <span className="text-text-light-bg/80 font-sans font-normal text-sm">{geo}</span>
+                          </label>
+                        )
+                    })}
+                </div>
             </div>
 
             {/* Category Filter */}

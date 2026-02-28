@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import MegaMenu from "./MegaMenu";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function HeroSection() {
   return (
@@ -38,8 +39,11 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Mega Menu Component */}
-          <MegaMenu />
+          {/* Navigation Controls */}
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher />
+            <MegaMenu />
+          </div>
         </header>
 
         {/* Bottom Content Area */}

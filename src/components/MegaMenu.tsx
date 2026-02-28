@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, X, ArrowUpRight } from "lucide-react";
+import { Link } from "@/i18n/routing";
 
 export default function MegaMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,13 +45,15 @@ export default function MegaMenu() {
                 className="flex justify-between items-center w-full"
               >
                 {/* Logo Dark version for overlay */}
-                <div className="cursor-pointer group hover:opacity-80 transition-opacity">
-                  <img
-                    src="/logo.svg"
-                    alt="Hark Capital"
-                    className="h-8 md:h-10 w-auto brightness-0"
-                  />
-                </div>
+                <Link href="/" legacyBehavior passHref>
+                  <a className="cursor-pointer group hover:opacity-80 transition-opacity">
+                    <img
+                      src="/logo.svg"
+                      alt="Vyanzo"
+                      className="h-8 md:h-10 w-auto brightness-0"
+                    />
+                  </a>
+                </Link>
 
                 {/* Close Button */}
                 <button
@@ -81,19 +84,19 @@ export default function MegaMenu() {
                     { title: "About Us", href: "/about" },
                     { title: "Contact", href: "/#contact" },
                   ].map((item) => (
-                    <motion.a
-                      key={item.title}
-                      href={item.href}
-                      className="text-[2.5rem] md:text-6xl lg:text-[5rem] font-serif font-semibold tracking-tight text-bg-dark hover:text-brand-primary transition-colors leading-[1.1]"
-                      whileHover={{ x: 10 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 300,
-                        damping: 20,
-                      }}
-                    >
-                      {item.title}
-                    </motion.a>
+                    <Link key={item.title} href={item.href as any} legacyBehavior passHref>
+                      <motion.a
+                        className="text-[2.5rem] md:text-6xl lg:text-[5rem] font-serif font-semibold tracking-tight text-bg-dark hover:text-brand-primary transition-colors leading-[1.1]"
+                        whileHover={{ x: 10 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 20,
+                        }}
+                      >
+                        {item.title}
+                      </motion.a>
+                    </Link>
                   ))}
                 </nav>
 
