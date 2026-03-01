@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
+import Script from "next/script";
 
 export default function ContactSection() {
   return (
@@ -87,65 +88,15 @@ export default function ContactSection() {
             <div className="bg-text-dark-bg p-8 md:p-12 rounded-3xl border border-black/5 shadow-xl shadow-black/2">
               <h3 className="text-2xl font-serif font-bold text-bg-dark mb-8">Send us a message</h3>
               
-              <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="firstName" className="text-sm font-sans font-medium text-bg-dark/80">First Name</label>
-                    <input 
-                      type="text" 
-                      id="firstName" 
-                      className="w-full bg-white border border-brand-ash/30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all text-bg-dark"
-                      placeholder="John"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="lastName" className="text-sm font-sans font-medium text-bg-dark/80">Last Name</label>
-                    <input 
-                      type="text" 
-                      id="lastName" 
-                      className="w-full bg-white border border-brand-ash/30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all text-bg-dark"
-                      placeholder="Doe"
-                    />
-                  </div>
-                </div>
-                
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="text-sm font-sans font-medium text-bg-dark/80">Email Address</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    className="w-full bg-white border border-brand-ash/30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all text-bg-dark"
-                    placeholder="john@example.com"
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="company" className="text-sm font-sans font-medium text-bg-dark/80">Company</label>
-                  <input 
-                    type="text" 
-                    id="company" 
-                    className="w-full bg-white border border-brand-ash/30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all text-bg-dark"
-                    placeholder="Company Name (Optional)"
-                  />
-                </div>
-                
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="message" className="text-sm font-sans font-medium text-bg-dark/80">Message</label>
-                  <textarea 
-                    id="message" 
-                    rows={4}
-                    className="w-full bg-white border border-brand-ash/30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary transition-all text-bg-dark resize-none"
-                    placeholder="How can we help you?"
-                  ></textarea>
-                </div>
-                
-                <button 
-                  type="submit" 
-                  className="w-full bg-brand-accent hover:opacity-90 text-bg-dark font-sans font-bold tracking-wider uppercase py-4 rounded-lg mt-2 transition-opacity duration-300"
-                >
-                  Submit Inquiry
-                </button>
-              </form>
+              <div 
+                style={{ width: "100%", height: "500px" }} 
+                data-fillout-id="og6zZBZdi1us" 
+                data-fillout-embed-type="standard" 
+                data-fillout-inherit-parameters 
+                data-fillout-dynamic-resize
+                suppressHydrationWarning
+              ></div>
+              <Script src="https://server.fillout.com/embed/v1/" strategy="lazyOnload" />
             </div>
           </motion.div>
           
