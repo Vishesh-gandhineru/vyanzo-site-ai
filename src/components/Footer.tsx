@@ -1,82 +1,107 @@
 "use client";
 
+import { Link } from "@/i18n/routing";
+import { Linkedin, Phone } from "lucide-react"; // Using Phone or MessageCircle as WhatsApp replacement since lucide doesn't have a specific whatsapp icon by default. Let's use a generic MessageCircle or an SVG if needed.
+
+// We will use standard Svgs or Lucide icons for social.
+const WhatsAppIcon = ({ className }: { className?: string }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="24" 
+    height="24" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+    className={className}
+  >
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+  </svg>
+);
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-bg-dark text-white pt-20 pb-10 px-4 md:px-8 border-t border-brand-ash/20 font-sans">
-      <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+    <footer className="w-full pt-12 pb-12 px-4 md:px-8 font-sans">
+      <div className="max-w-[1400px] mx-auto bg-brand-primary rounded-4xl p-8 md:p-12 lg:p-16 flex flex-col md:flex-row justify-between relative overflow-hidden">
+        
+        {/* Left Section: Logo */}
+        <div className="shrink-0 mb-12 md:mb-0">
+          {/* Logo with brightness-0 to make it black/dark */}
+          <Link href="/" className="block">
+            <img 
+              src="/logo.svg" 
+              alt="Vyanzo Quality Castings" 
+              className="h-10 md:h-12 w-auto brightness-0" 
+            />
+          </Link>
+        </div>
+
+        {/* Middle Section: Links Grid */}
+        <div className="grow flex flex-col md:flex-row md:justify-center gap-12 md:gap-24 lg:gap-32 mb-16 md:mb-0">
           
-          {/* Brand Column */}
-          <div className="lg:col-span-1 flex flex-col gap-6">
-            <h2 className="text-3xl font-serif font-bold tracking-tight text-white mb-2">VYANZO</h2>
-            <p className="text-brand-ash/80 text-sm leading-relaxed max-w-xs font-sans font-normal">
-              Premium casting solutions built for the world's most demanding infrastructure. Quality, service, and reliability with relentless consistency.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div className="flex flex-col gap-6">
-            <h3 className="text-sm font-serif font-semibold tracking-widest text-brand-accent uppercase">Quick Links</h3>
-            <ul className="flex flex-col gap-3">
-              {['Home', 'Products', 'Services', 'About Us', 'Contact'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-brand-ash hover:text-white transition-colors text-sm font-sans font-normal">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Products */}
-          <div className="flex flex-col gap-6">
-            <h3 className="text-sm font-serif font-semibold tracking-widest text-brand-accent uppercase">Products</h3>
-            <ul className="flex flex-col gap-3">
-              {['Manhole Covers', 'Hydraulic Covers', 'Grates', 'Siphons', 'Surface Boxes'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-brand-ash hover:text-white transition-colors text-sm font-sans font-normal">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div className="flex flex-col gap-6">
-            <h3 className="text-sm font-serif font-semibold tracking-widest text-brand-accent uppercase">Stay Updated</h3>
-            <p className="text-brand-ash/80 text-sm font-sans font-normal">
-              Subscribe to our newsletter for the latest product updates and industry news.
-            </p>
-            <form className="flex mt-2" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Email Address" 
-                className="bg-white/5 border border-white/10 rounded-l-lg px-4 py-2.5 w-full focus:outline-none focus:border-brand-accent/50 focus:bg-white/10 transition-all text-sm font-sans font-normal text-white placeholder-brand-ash/50"
-              />
-              <button 
-                type="submit"
-                className="bg-brand-accent hover:opacity-90 text-bg-dark px-4 py-2.5 rounded-r-lg text-sm font-sans font-bold tracking-wider uppercase transition-colors"
+          {/* Column 1 */}
+          <div className="flex flex-col gap-4">
+            <Link href="/about" className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity">
+              About
+            </Link>
+            <Link href="/products" className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity whitespace-nowrap">
+              Products
+            </Link>
+            
+            {/* Social Icons positioned below first column */}
+            <div className="flex items-center gap-3 mt-8">
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-bg-dark flex items-center justify-center text-white hover:opacity-80 transition-opacity"
               >
-                Join
-              </button>
-            </form>
+                <Linkedin className="w-5 h-5" fill="currentColor" strokeWidth={0} />
+              </a>
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-bg-dark flex items-center justify-center text-white hover:opacity-80 transition-opacity"
+              >
+                <WhatsAppIcon className="w-5 h-5" />
+              </a>
+            </div>
           </div>
+
+          {/* Column 2 */}
+          <div className="flex flex-col gap-4">
+            <Link href="#" className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity">
+              Team
+            </Link>
+            <Link href="/contact" className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity">
+              Contact
+            </Link>
+          </div>
+
+          {/* Column 3 */}
+          <div className="flex flex-col gap-4">
+            <Link href="/services" className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity">
+              Services
+            </Link>
+            <Link href="#" className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity whitespace-nowrap">
+              Client Portal
+            </Link>
+          </div>
+
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-brand-ash/60 text-xs font-sans font-normal">
-            &copy; {currentYear} Vyanzo. All rights reserved.
+        {/* Bottom Right Copyright */}
+        <div className="absolute bottom-8 right-8 md:bottom-12 md:right-16">
+          <p className="text-bg-dark font-sans font-medium text-sm md:text-base">
+            Copyright @Vyanzo {currentYear}
           </p>
-          <div className="flex gap-6 text-brand-ash/60 text-xs font-sans font-normal">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
-          </div>
         </div>
+
       </div>
     </footer>
   );

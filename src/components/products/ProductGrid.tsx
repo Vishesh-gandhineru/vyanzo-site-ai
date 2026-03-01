@@ -225,7 +225,7 @@ export default function ProductGrid() {
           {filteredProducts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
               {filteredProducts.map(product => (
-                  <a href={`/products/${product.id}`} key={product.id} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-ash/20 group hover:shadow-lg hover:border-brand-primary/30 transition-all flex flex-col cursor-pointer">
+                  <a href={`/products/${product.slug}`} key={product.id} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-ash/20 group hover:shadow-lg hover:border-brand-primary/30 transition-all flex flex-col cursor-pointer">
                       {/* Image Area */}
                       <div className="w-full h-[280px] relative overflow-hidden bg-brand-ash/10">
                           <img 

@@ -25,10 +25,10 @@ export default function BentoGrid() {
             </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[240px]">
+        <div className="flex flex-col md:grid md:grid-cols-4 gap-4 md:gap-6 md:auto-rows-[240px]">
           
           {/* Card 1: Top Left (H:2 W:1) */}
-          <div className="md:col-span-1 md:row-span-2 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
+          <div className="min-h-[300px] md:min-h-0 md:col-span-1 md:row-span-2 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
             <div className="absolute top-0 right-0 w-48 h-48 bg-brand-primary/10 rounded-full blur-3xl -mr-10 -mt-10 transition-all group-hover:bg-brand-primary/20" />
             <div>
               <Zap className="w-10 h-10 text-brand-primary mb-6" strokeWidth={1.5} />
@@ -42,7 +42,7 @@ export default function BentoGrid() {
           </div>
 
           {/* Card 2: Top Center (H:1 W:2) */}
-          <div className="md:col-span-2 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-4xl p-8 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
+          <div className="min-h-[200px] md:min-h-0 md:col-span-2 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-4xl p-8 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
             <div className="absolute inset-0 bg-linear-to-r from-transparent via-brand-primary/5 to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             <Award className="w-8 h-8 text-brand-primary mb-4" strokeWidth={1.5} />
             <h3 className="text-3xl lg:text-4xl font-serif font-semibold text-text-light-bg z-10 tracking-tight">Global Distribution Hub</h3>
@@ -50,7 +50,7 @@ export default function BentoGrid() {
           </div>
 
           {/* Card 3: Top Right (H:1 W:1) */}
-          <div className="md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-6 flex flex-col items-start justify-center group hover:border-brand-primary/30 transition-colors">
+          <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-6 flex flex-col items-start justify-center group hover:border-brand-primary/30 transition-colors">
             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center border border-brand-ash/20 mb-6 group-hover:scale-110 transition-transform">
                 <Users className="w-5 h-5 text-brand-primary" />
             </div>
@@ -62,7 +62,7 @@ export default function BentoGrid() {
           </div>
 
           {/* Card 4: Middle Center (GLOBE CARD) (H:2 W:2) */}
-          <div className="md:col-span-2 md:row-span-2 bg-linear-to-b from-white to-text-dark-bg border border-brand-ash/20 shadow-sm rounded-[2.5rem] flex flex-col items-center justify-center relative overflow-hidden group">
+          <div className="min-h-[400px] md:min-h-0 md:col-span-2 md:row-span-2 bg-linear-to-b from-white to-text-dark-bg border border-brand-ash/20 shadow-sm rounded-[2.5rem] flex flex-col items-center justify-center relative overflow-hidden group">
             
             {/* Title overlay at the top of the globe */}
             <div className="absolute top-8 left-8 right-8 z-20 flex justify-between items-start pointer-events-none">
@@ -108,14 +108,14 @@ export default function BentoGrid() {
           </div>
 
           {/* Card 5: Middle Right (H:1 W:1) */}
-          <div className="md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-6 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
+          <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-6 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
             <div className="text-sm text-brand-ash uppercase tracking-widest font-sans font-normal mb-4">Annual Capacity</div>
             <div className="text-5xl lg:text-6xl font-sans font-bold text-brand-primary tracking-tighter drop-shadow-[0_0_15px_rgba(110,176,255,0.4)]">1.2M</div>
             <div className="text-sm text-text-light-bg/80 mt-2 font-sans font-medium">Tons of Precision Castings</div>
           </div>
 
           {/* Card 6: Bottom Left (H:1 W:1) */}
-          <div className="md:col-span-1 md:row-span-1 bg-brand-primary/10 border border-brand-primary/20 rounded-3xl p-6 flex flex-col justify-between hover:bg-brand-primary hover:text-white transition-colors cursor-pointer group shadow-sm text-text-light-bg">
+          <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-brand-primary/10 border border-brand-primary/20 rounded-3xl p-6 flex flex-col justify-between hover:bg-brand-primary hover:text-white transition-colors cursor-pointer group shadow-sm text-text-light-bg">
              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-primary group-hover:text-brand-primary transition-colors mb-4 shadow-sm">
                 <ArrowUpRight className="w-6 h-6" />
              </div>
@@ -126,7 +126,7 @@ export default function BentoGrid() {
           </div>
 
           {/* Card 7: Bottom Right (H:1 W:1) */}
-          <div className="md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-8 relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
+          <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-8 relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
               <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-brand-primary/10 blur-2xl rounded-full transition-all group-hover:bg-brand-primary/20" />
               <Factory className="w-8 h-8 text-brand-primary mb-4" strokeWidth={1.5} />
               <h3 className="text-xl font-serif font-semibold text-text-light-bg mb-4">Industry Compliance</h3>

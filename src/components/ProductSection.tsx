@@ -3,26 +3,31 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
+import { Link } from "@/i18n/routing";
 
 const products = [
   {
     id: 1,
     name: "Hydraulic Covers",
+    slug: "hydraulic-covers",
     image: "/products/hydraulic-cover.png",
   },
   {
     id: 2,
     name: "Manhole Covers",
+    slug: "manhole-covers",
     image: "/products/manhole-cover.png",
   },
   {
     id: 3,
     name: "Siphons",
+    slug: "siphons",
     image: "/products/siphon.png",
   },
   {
     id: 4,
     name: "Surface Boxes",
+    slug: "surface-boxes",
     image: "/products/surface-box.png",
   },
 ];
@@ -68,40 +73,43 @@ export default function ProductSection() {
         >
           
           {/* Action Card: See All Products */}
-          <div 
-             className="min-w-[280px] md:min-w-[320px] lg:min-w-[360px] min-h-[240px] md:min-h-[280px] bg-brand-primary rounded-xl md:rounded-3xl p-6 md:p-8 flex flex-col justify-between shrink-0 shadow-lg shadow-brand-primary/20 pointer-events-none"
-          >
-             <div>
-                <h3 className="text-white text-3xl font-serif font-bold uppercase tracking-tight leading-none mb-2 pointer-events-auto">View All<br />Products</h3>
-                <p className="text-white/80 font-sans font-medium mt-4 pointer-events-auto">Explore our complete catalog of industrial castings.</p>
-             </div>
-             
-             <div className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center text-white backdrop-blur-sm self-start mt-auto pointer-events-auto">
-                <ArrowRight className="w-5 h-5" />
-             </div>
-          </div>
+          <Link href="/products" className="pointer-events-auto">
+            <div 
+               className="min-w-[280px] md:min-w-[320px] lg:min-w-[360px] min-h-[240px] md:min-h-[280px] bg-brand-primary rounded-xl md:rounded-3xl p-6 md:p-8 flex flex-col justify-between shrink-0 shadow-lg shadow-brand-primary/20 hover:-translate-y-2 transition-transform duration-300 h-full"
+            >
+               <div>
+                  <h3 className="text-white text-3xl font-serif font-bold uppercase tracking-tight leading-none mb-2 pointer-events-auto">View All<br />Products</h3>
+                  <p className="text-white/80 font-sans font-medium mt-4 pointer-events-auto">Explore our complete catalog of industrial castings.</p>
+               </div>
+               
+               <div className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center text-white backdrop-blur-sm self-start mt-auto pointer-events-auto">
+                  <ArrowRight className="w-5 h-5" />
+               </div>
+            </div>
+          </Link>
 
           {/* Product Cards */}
           {products.map((product) => (
-            <motion.div
-              key={product.id}
-              className="min-w-[260px] md:min-w-[300px] lg:min-w-[340px] min-h-[240px] md:min-h-[280px] bg-brand-primary/5 rounded-xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center justify-center shrink-0 relative group overflow-hidden pointer-events-none"
-            >
-              {/* Image Container */}
-              <div className="flex-1 w-full flex items-center justify-center mb-10 px-4 mt-2">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-2/3 md:w-3/4 max-h-[120px] md:max-h-[140px] object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700 ease-out pointer-events-none"
-                  draggable="false"
-                />
-              </div>
+            <Link key={product.id} href={`/products/${product.slug}`} className="pointer-events-auto">
+              <motion.div
+                className="min-w-[260px] md:min-w-[300px] lg:min-w-[340px] min-h-[440px] md:min-h-[480px] bg-brand-primary/5 rounded-xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center justify-center shrink-0 relative group overflow-hidden hover:bg-brand-primary/10 transition-colors duration-300"
+              >
+                {/* Image Container */}
+                <div className="flex-1 w-full flex items-center justify-center mb-10 px-4 mt-2">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-2/3 md:w-3/4 max-h-full  object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700 ease-out pointer-events-none"
+                    draggable="false"
+                  />
+                </div>
 
-              {/* Product Info (pinned to bottom) */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 pt-0 pointer-events-none">
-                <h3 className="text-xl md:text-2xl font-serif font-bold text-bg-dark tracking-tight">{product.name}</h3>
-              </div>
-            </motion.div>
+                {/* Product Info (pinned to bottom) */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 pt-0 pointer-events-none">
+                  <h3 className="text-xl md:text-2xl font-serif font-bold text-bg-dark tracking-tight">{product.name}</h3>
+                </div>
+              </motion.div>
+            </Link>
           ))}
           
         </motion.div>

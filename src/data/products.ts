@@ -27,6 +27,7 @@ export type ProductSpecification = {
 export type Product = {
   id: number;
   title: string;
+  slug: string;
   sku: string;
   description: string;
   image: string;
@@ -46,6 +47,7 @@ export const products: Product[] = [
   {
     id: 1,
     title: "Benor Certified Cover - D400",
+    slug: "manhole-covers",
     sku: "BE-CV-01",
     description: "Heavy-duty municipal cover with Benor certification for Belgian infrastructure.",
     image: "/products/manhole-cover.png",
@@ -74,6 +76,7 @@ export const products: Product[] = [
   {
     id: 2,
     title: "Benor Certified Cover - E600",
+    slug: "hydraulic-covers",
     sku: "BE-CV-02",
     description: "Extra heavy-duty cover for industrial and high-traffic areas.",
     image: "/products/hydraulic-cover.png",
@@ -102,6 +105,7 @@ export const products: Product[] = [
   {
     id: 3,
     title: "Benor Siphon - Plat Recht",
+    slug: "siphons",
     sku: "BE-SP-01",
     description: "High-capacity siphon with multiple version options for versatile installation.",
     image: "/products/siphon.png",
@@ -124,6 +128,7 @@ export const products: Product[] = [
   {
     id: 4,
     title: "Benor Surface Box",
+    slug: "surface-boxes",
     sku: "BE-SB-01",
     description: "Standard surface box for utility access and protection.",
     image: "/products/surface-box.png",

@@ -22,7 +22,7 @@ export default function HeroSection() {
 
       </div>    {/* Soft edge blur and darkened overlay to ensure text readability */}
         <div className="absolute inset-0 bg-black/30 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-bg-dark/80 via-transparent to-transparent" />
 
       {/* Main Content */}
       <div className="relative z-10 w-full h-full flex flex-col justify-between p-6 md:p-12 lg:p-16">

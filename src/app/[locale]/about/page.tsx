@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import GlobalHeader from "@/components/GlobalHeader";
 import Footer from "@/components/Footer";
+import TeamSection from "@/components/TeamSection";
 import { CheckCircle2, ShieldCheck, TrendingUp, Cpu, Users2, Building2, Globe, Wrench } from "lucide-react";
 
 export default function AboutPage() {
@@ -202,47 +203,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Team */}
-      <section className="py-24 px-6 md:px-12 lg:px-16 bg-white border-t border-brand-ash/10">
-        <div className="max-w-[1400px] mx-auto text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-bg-dark mb-6">Leadership Team</h2>
-            <p className="text-xl text-text-light-bg/60 max-w-2xl mx-auto">
-              Guided by a leadership team with decades of combined experience in global manufacturing, supply chain, and quality assurance.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { name: "Steve Vernelen", role: "CEO" },
-              { name: "Roxane Sabatier", role: "Office Manager" },
-              { name: "Annick D'Hont", role: "Legal and Contracts" },
-              { name: "Naba Kumar Gayen", role: "Head of Quality" }
-            ].map((leader, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="flex flex-col items-center group"
-              >
-                <div className="w-48 h-48 bg-[#f8f9fc] rounded-[2rem] border border-brand-ash/20 mb-6 flex items-center justify-center group-hover:bg-brand-primary group-hover:border-transparent transition-all duration-300 shadow-sm group-hover:shadow-[0_10px_30px_rgba(253,231,76,0.3)]">
-                  <Users2 className="w-12 h-12 text-brand-ash/40 group-hover:text-bg-dark transition-colors" />
-                </div>
-                <h3 className="text-xl font-bold font-sans text-bg-dark mb-1">{leader.name}</h3>
-                <p className="text-brand-primary font-bold tracking-wider text-xs uppercase">{leader.role}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TeamSection />
 
       <Footer />
     </main>
