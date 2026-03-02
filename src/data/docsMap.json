@@ -1,292 +1,152 @@
 [
   {
-    "name": "Manhole covers",
+    "name": "Hydraulic covers",
     "type": "folder",
     "children": [
-    
-          {
-            "name": "B125",
-            "type": "folder",
-            "children": [
-              {
-                "name": "100X100-B125.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/100X100-B125.pdf",
-                "size": "320 KB"
-              },
-              {
-                "name": "30X30-B125.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/30X30-B125.pdf",
-                "size": "283 KB"
-              },
-              {
-                "name": "40X40-B125.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/40X40-B125.pdf",
-                "size": "283 KB"
-              },
-              {
-                "name": "50X50-B125.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/50X50-B125.pdf",
-                "size": "285 KB"
-              },
-              {
-                "name": "60X60-B125.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/60X60-B125.pdf",
-                "size": "292 KB"
-              },
-              {
-                "name": "70X70-B125.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/70X70-B125.pdf",
-                "size": "297 KB"
-              },
-              {
-                "name": "80X80-B125.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/80X80-B125.pdf",
-                "size": "304 KB"
-              },
-              {
-                "name": "90X90-B125.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/90X90-B125.pdf",
-                "size": "313 KB"
-              }
-            ]
-          },
-          {
-            "name": "C250",
-            "type": "folder",
-            "children": [
-              {
-                "name": "50X50-C250.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/50X50-C250.pdf",
-                "size": "369 KB"
-              },
-              {
-                "name": "60X60-C250.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/60X60-C250.pdf",
-                "size": "375 KB"
-              },
-              {
-                "name": "70X70-C250.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/70X70-C250.pdf",
-                "size": "379 KB"
-              },
-              {
-                "name": "80X80-C250.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/80X80-C250.pdf",
-                "size": "387 KB"
-              },
-              {
-                "name": "90X90-C250.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/90X90-C250.pdf",
-                "size": "393 KB"
-              }
-            ]
-          },
-          {
-            "name": "D400",
-            "type": "folder",
-            "children": [
-              {
-                "name": "100X100-D400.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/100X100-D400.pdf",
-                "size": "312 KB"
-              },
-              {
-                "name": "110X110-D400.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/110X110-D400.pdf",
-                "size": "321 KB"
-              },
-              {
-                "name": "40X40-D400.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/40X40-D400.pdf",
-                "size": "277 KB"
-              },
-              {
-                "name": "50X50-D400.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/50X50-D400.pdf",
-                "size": "288 KB"
-              },
-              {
-                "name": "60X60-D400.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/60X60-D400.pdf",
-                "size": "287 KB"
-              },
-              {
-                "name": "70X70-D400.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/70X70-D400.pdf",
-                "size": "291 KB"
-              },
-              {
-                "name": "90X90-D400.pdf",
-                "type": "file",
-                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/90X90-D400.pdf",
-                "size": "307 KB"
-              }
-            ]
-          },
       {
-       
-            "name": "VYA+5",
-            "type": "folder",
-            "children": [
-              {
-                "name": "Benor certificaat VYA+5B NDL.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Benor/VYA+5/Benor certificaat VYA+5B NDL.pdf",
-                "size": "1992 KB"
-              },
-              {
-                "name": "Certificat Benor VYA+5B FR.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Benor/VYA+5/Certificat Benor VYA+5B FR.pdf",
-                "size": "1992 KB"
-              }
-            ]
-          },
-          {
-            "name": "VYA+7",
-            "type": "folder",
-            "children": [
-              {
-                "name": "Benor certificaat VYA+7B NDL.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Benor/VYA+7/Benor certificaat VYA+7B NDL.pdf",
-                "size": "2039 KB"
-              },
-              {
-                "name": "Certificat Benor VYA+7B FR.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Benor/VYA+7/Certificat Benor VYA+7B FR.pdf",
-                "size": "2039 KB"
-              }
-            ]
-          },
-          {
-            "name": "VYA+9",
-            "type": "folder",
-            "children": [
-              {
-                "name": "Benor certificaat VYA+9B NDL.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Benor/VYA+9/Benor certificaat VYA+9B NDL.pdf",
-                "size": "1937 KB"
-              },
-              {
-                "name": "Certificat Benor VYA+9B FR.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Benor/VYA+9/Certificat Benor VYA+9B FR.pdf",
-                "size": "1938 KB"
-              }
-            ]
-          },
-        
-
-      {
-        
-         
-            "name": "VYA+2L",
-            "type": "folder",
-            "children": [
-              {
-                "name": "Certificat Copro VYA+2L FR.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Copro/VYA+2L/Certificat Copro VYA+2L FR.pdf",
-                "size": "1029 KB"
-              },
-              {
-                "name": "Copro certificaat VYA+2L NDL.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Copro/VYA+2L/Copro certificaat VYA+2L NDL.pdf",
-                "size": "1032 KB"
-              }
-            ]
-          },
-          {
-            "name": "VYA+4L",
-            "type": "folder",
-            "children": [
-              {
-                "name": "Certificat Copro VYA+4 FR.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Copro/VYA+4L/Certificat Copro VYA+4 FR.pdf",
-                "size": "2127 KB"
-              },
-              {
-                "name": "Copro certificaat VYA+4 NDL.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Copro/VYA+4L/Copro certificaat VYA+4 NDL.pdf",
-                "size": "2130 KB"
-              }
-            ]
-          },
-          {
-            "name": "VYA+6L",
-            "type": "folder",
-            "children": [
-              {
-                "name": "Certificat Copro VYA+6 FR.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Copro/VYA+6L/Certificat Copro VYA+6 FR.pdf",
-                "size": "2124 KB"
-              },
-              {
-                "name": "Copro certificaat VYA+6 NDL.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Copro/VYA+6L/Copro certificaat VYA+6 NDL.pdf",
-                "size": "2127 KB"
-              }
-            ]
-          },
-          {
-            "name": "VYA+8L",
-            "type": "folder",
-            "children": [
-              {
-                "name": "Certificat Copro VYA+8 FR.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Copro/VYA+8L/Certificat Copro VYA+8 FR.pdf",
-                "size": "2038 KB"
-              },
-              {
-                "name": "Copro certificaat VYA+8 NDL.pdf",
-                "type": "file",
-                "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Copro/VYA+8L/Copro certificaat VYA+8 NDL.pdf",
-                "size": "2041 KB"
-              }
-            ]
-        
-      },
-      {
-        "name": "Verdo 600",
+        "name": "B125",
         "type": "folder",
         "children": [
           {
-            "name": "VERDO 600.pdf",
+            "name": "100X100-B125.pdf",
             "type": "file",
-            "path": "/products/pdf/Manhole covers - wegenisdeksels - regards/Verdo 600/VERDO 600.pdf",
-            "size": "578 KB"
+            "path": "/products/pdf/Hydraulic covers/B125/100X100-B125.pdf",
+            "size": "320 KB"
+          },
+          {
+            "name": "30X30-B125.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/B125/30X30-B125.pdf",
+            "size": "283 KB"
+          },
+          {
+            "name": "40X40-B125.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/B125/40X40-B125.pdf",
+            "size": "283 KB"
+          },
+          {
+            "name": "50X50-B125.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/B125/50X50-B125.pdf",
+            "size": "285 KB"
+          },
+          {
+            "name": "60X60-B125.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/B125/60X60-B125.pdf",
+            "size": "292 KB"
+          },
+          {
+            "name": "70X70-B125.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/B125/70X70-B125.pdf",
+            "size": "297 KB"
+          },
+          {
+            "name": "80X80-B125.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/B125/80X80-B125.pdf",
+            "size": "304 KB"
+          },
+          {
+            "name": "90X90-B125.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/B125/90X90-B125.pdf",
+            "size": "313 KB"
+          }
+        ]
+      },
+      {
+        "name": "C250",
+        "type": "folder",
+        "children": [
+          {
+            "name": "50X50-C250.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/C250/50X50-C250.pdf",
+            "size": "369 KB"
+          },
+          {
+            "name": "60X60-C250.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/C250/60X60-C250.pdf",
+            "size": "375 KB"
+          },
+          {
+            "name": "70X70-C250.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/C250/70X70-C250.pdf",
+            "size": "379 KB"
+          },
+          {
+            "name": "80X80-C250.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/C250/80X80-C250.pdf",
+            "size": "387 KB"
+          },
+          {
+            "name": "90X90-C250.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/C250/90X90-C250.pdf",
+            "size": "393 KB"
+          }
+        ]
+      },
+      {
+        "name": "D400",
+        "type": "folder",
+        "children": [
+          {
+            "name": "100X100-D400.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/D400/100X100-D400.pdf",
+            "size": "312 KB"
+          },
+          {
+            "name": "110X110-D400.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/D400/110X110-D400.pdf",
+            "size": "321 KB"
+          },
+          {
+            "name": "40X40-D400.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/D400/40X40-D400.pdf",
+            "size": "277 KB"
+          },
+          {
+            "name": "50X50-D400.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/D400/50X50-D400.pdf",
+            "size": "288 KB"
+          },
+          {
+            "name": "60X60-D400.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/D400/60X60-D400.pdf",
+            "size": "287 KB"
+          },
+          {
+            "name": "70X70-D400.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/D400/70X70-D400.pdf",
+            "size": "291 KB"
+          },
+          {
+            "name": "90X90-D400.pdf",
+            "type": "file",
+            "path": "/products/pdf/Hydraulic covers/D400/90X90-D400.pdf",
+            "size": "307 KB"
           }
         ]
       }
     ]
+  },
+  {
+    "name": "Manhole covers",
+    "type": "folder",
+    "children": []
   },
   {
     "name": "Siphons",
@@ -299,19 +159,19 @@
           {
             "name": "Benor certificaat RMBE_2_2.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/RMBE/Benor certificaat RMBE_2_2.pdf",
+            "path": "/products/pdf/Siphons/RMBE/Benor certificaat RMBE_2_2.pdf",
             "size": "806 KB"
           },
           {
             "name": "Certificat Benor RMBE_1_1.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/RMBE/Certificat Benor RMBE_1_1.pdf",
+            "path": "/products/pdf/Siphons/RMBE/Certificat Benor RMBE_1_1.pdf",
             "size": "806 KB"
           },
           {
             "name": "RM BE.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/RMBE/RM BE.pdf",
+            "path": "/products/pdf/Siphons/RMBE/RM BE.pdf",
             "size": "252 KB"
           }
         ]
@@ -323,7 +183,7 @@
           {
             "name": "V19-40O.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V1940O - under development/V19-40O.pdf",
+            "path": "/products/pdf/Siphons/V1940O - under development/V19-40O.pdf",
             "size": "309 KB"
           }
         ]
@@ -333,34 +193,28 @@
         "type": "folder",
         "children": [
           {
-            "name": "Benor certificaat V23Z straatkolk gebogen.pdf",
+            "name": "Benor Certificaat Straatkolk Gebogen V23Z NDL.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V23Z - Stad Brussel - Ville de Bruxelles/Benor certificaat V23Z straatkolk gebogen.pdf",
+            "path": "/products/pdf/Siphons/V23Z - Stad Brussel - Ville de Bruxelles/Benor Certificaat Straatkolk Gebogen V23Z NDL.pdf",
             "size": "2110 KB"
           },
           {
-            "name": "Benor certificaat V23Z straatkolk plat.pdf",
+            "name": "Benor Certificaat Straatkolk Plat V23Z NDL.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V23Z - Stad Brussel - Ville de Bruxelles/Benor certificaat V23Z straatkolk plat.pdf",
-            "size": "2988 KB"
+            "path": "/products/pdf/Siphons/V23Z - Stad Brussel - Ville de Bruxelles/Benor Certificaat Straatkolk Plat V23Z NDL.pdf",
+            "size": "2989 KB"
           },
           {
-            "name": "Certificat Benor V23Z avaloir curvé.pdf",
+            "name": "Certificat Benor Avaloir Curvé V23Z FR.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V23Z - Stad Brussel - Ville de Bruxelles/Certificat Benor V23Z avaloir curvé.pdf",
+            "path": "/products/pdf/Siphons/V23Z - Stad Brussel - Ville de Bruxelles/Certificat Benor Avaloir Curvé V23Z FR.pdf",
             "size": "2111 KB"
           },
           {
-            "name": "Certificat Benor V23Z avaloir plat.pdf",
+            "name": "Certificat Benor Avaloir Plat V23Z FR.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V23Z - Stad Brussel - Ville de Bruxelles/Certificat Benor V23Z avaloir plat.pdf",
+            "path": "/products/pdf/Siphons/V23Z - Stad Brussel - Ville de Bruxelles/Certificat Benor Avaloir Plat V23Z FR.pdf",
             "size": "2990 KB"
-          },
-          {
-            "name": "V23Z.pdf",
-            "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V23Z - Stad Brussel - Ville de Bruxelles/V23Z.pdf",
-            "size": "1649 KB"
           }
         ]
       },
@@ -369,34 +223,28 @@
         "type": "folder",
         "children": [
           {
-            "name": "Benor certificaat V3040Z straatkolk gebogen.pdf",
+            "name": "Benor Certificaat Straatkolk Gebogen V3040Z NDL.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3040Z/Benor certificaat V3040Z straatkolk gebogen.pdf",
+            "path": "/products/pdf/Siphons/V3040Z/Benor Certificaat Straatkolk Gebogen V3040Z NDL.pdf",
             "size": "2240 KB"
           },
           {
-            "name": "Benor certificaat V3040Z straatkolk plat.pdf",
+            "name": "Benor Certificaat Straatkolk Plat V3040Z NDL.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3040Z/Benor certificaat V3040Z straatkolk plat.pdf",
-            "size": "3395 KB"
+            "path": "/products/pdf/Siphons/V3040Z/Benor Certificaat Straatkolk Plat V3040Z NDL.pdf",
+            "size": "3394 KB"
           },
           {
-            "name": "Certificat Benor V3040Z avaloir curvé.pdf",
+            "name": "Certificat Benor Avaloir Curvé V3040Z FR.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3040Z/Certificat Benor V3040Z avaloir curvé.pdf",
+            "path": "/products/pdf/Siphons/V3040Z/Certificat Benor Avaloir Curvé V3040Z FR.pdf",
             "size": "2241 KB"
           },
           {
-            "name": "Certificat Benor V3040Z avaloir plat.pdf",
+            "name": "Certificat Benor Avaloir Plat V3040Z FR.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3040Z/Certificat Benor V3040Z avaloir plat.pdf",
+            "path": "/products/pdf/Siphons/V3040Z/Certificat Benor Avaloir Plat V3040Z FR.pdf",
             "size": "3395 KB"
-          },
-          {
-            "name": "V30-40Z.pdf",
-            "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3040Z/V30-40Z.pdf",
-            "size": "2051 KB"
           }
         ]
       },
@@ -405,34 +253,28 @@
         "type": "folder",
         "children": [
           {
-            "name": "Benor certificaat V3060K straatkolk gebogen.pdf",
+            "name": "Benor Certificaat Straatkolk Gebogen V3060K NDL.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3060K/Benor certificaat V3060K straatkolk gebogen.pdf",
+            "path": "/products/pdf/Siphons/V3060K/Benor Certificaat Straatkolk Gebogen V3060K NDL.pdf",
             "size": "1770 KB"
           },
           {
-            "name": "Benor certificaat V3060K straatkolk plat.pdf",
+            "name": "Benor Certificaat Straatkolk Plat V3060K NDL.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3060K/Benor certificaat V3060K straatkolk plat.pdf",
+            "path": "/products/pdf/Siphons/V3060K/Benor Certificaat Straatkolk Plat V3060K NDL.pdf",
             "size": "2564 KB"
           },
           {
-            "name": "Certificat Benor V3060K avaloir curvé.pdf",
+            "name": "Certificat Benor Avaloir Curvé V3060K FR.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3060K/Certificat Benor V3060K avaloir curvé.pdf",
+            "path": "/products/pdf/Siphons/V3060K/Certificat Benor Avaloir Curvé V3060K FR.pdf",
             "size": "1771 KB"
           },
           {
-            "name": "Certificat Benor V3060K avaloir plat.pdf",
+            "name": "Certificat Benor Avaloir Plat V3060K FR.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3060K/Certificat Benor V3060K avaloir plat.pdf",
+            "path": "/products/pdf/Siphons/V3060K/Certificat Benor Avaloir Plat V3060K FR.pdf",
             "size": "2565 KB"
-          },
-          {
-            "name": "V30-60K.pdf",
-            "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3060K/V30-60K.pdf",
-            "size": "1905 KB"
           }
         ]
       },
@@ -441,34 +283,28 @@
         "type": "folder",
         "children": [
           {
-            "name": "Benor certificaat V3060Z straatkolk gebogen.pdf",
+            "name": "Benor Certificaat Straatkolk Gebogen V3060Z NDL.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3060Z/Benor certificaat V3060Z straatkolk gebogen.pdf",
+            "path": "/products/pdf/Siphons/V3060Z/Benor Certificaat Straatkolk Gebogen V3060Z NDL.pdf",
             "size": "1978 KB"
           },
           {
-            "name": "Benor certificaat V3060Z straatkolk plat.pdf",
+            "name": "Benor Certificaat Straatkolk Plat V3060Z NDL.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3060Z/Benor certificaat V3060Z straatkolk plat.pdf",
+            "path": "/products/pdf/Siphons/V3060Z/Benor Certificaat Straatkolk Plat V3060Z NDL.pdf",
             "size": "2854 KB"
           },
           {
-            "name": "Certificat Benor V3060Z avaloir curvé.pdf",
+            "name": "Certificat Benor Avaloir Curvé V3060Z FR.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3060Z/Certificat Benor V3060Z avaloir curvé.pdf",
+            "path": "/products/pdf/Siphons/V3060Z/Certificat Benor Avaloir Curvé V3060Z FR.pdf",
             "size": "1979 KB"
           },
           {
-            "name": "Certificat Benor V3060Z avaloir plat.pdf",
+            "name": "Certificat Benor Avaloir Plat V3060Z FR.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3060Z/Certificat Benor V3060Z avaloir plat.pdf",
+            "path": "/products/pdf/Siphons/V3060Z/Certificat Benor Avaloir Plat V3060Z FR.pdf",
             "size": "2856 KB"
-          },
-          {
-            "name": "V30-60Z.pdf",
-            "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V3060Z/V30-60Z.pdf",
-            "size": "1873 KB"
           }
         ]
       },
@@ -477,34 +313,28 @@
         "type": "folder",
         "children": [
           {
-            "name": "Benor certificaat V5045Z straatkolk gebogen.pdf",
+            "name": "Benor Certificaat Straatkolk gebogen V5045Z NDL.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V5045Z/Benor certificaat V5045Z straatkolk gebogen.pdf",
+            "path": "/products/pdf/Siphons/V5045Z/Benor Certificaat Straatkolk gebogen V5045Z NDL.pdf",
             "size": "2205 KB"
           },
           {
-            "name": "Benor certificaat V5045Z straatkolk plat.pdf",
+            "name": "Benor Certificaat Straatkolk Plat V5045Z NDL.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V5045Z/Benor certificaat V5045Z straatkolk plat.pdf",
+            "path": "/products/pdf/Siphons/V5045Z/Benor Certificaat Straatkolk Plat V5045Z NDL.pdf",
             "size": "3176 KB"
           },
           {
-            "name": "Certificat Benor V5045Z avaloir curvé.pdf",
+            "name": "Certificat Benor Avaloir Curvé V5045Z FR.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V5045Z/Certificat Benor V5045Z avaloir curvé.pdf",
+            "path": "/products/pdf/Siphons/V5045Z/Certificat Benor Avaloir Curvé V5045Z FR.pdf",
             "size": "2206 KB"
           },
           {
-            "name": "Certificat Benor V5045Z avaloir plat.pdf",
+            "name": "Certificat Benor Avaloir Plat V5045Z FR.pdf",
             "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V5045Z/Certificat Benor V5045Z avaloir plat.pdf",
-            "size": "3177 KB"
-          },
-          {
-            "name": "V50-45Z.pdf",
-            "type": "file",
-            "path": "/products/pdf/Siphons - Kolken - Avaloirs/V5045Z/V50-45Z.pdf",
-            "size": "2238 KB"
+            "path": "/products/pdf/Siphons/V5045Z/Certificat Benor Avaloir Plat V5045Z FR.pdf",
+            "size": "3178 KB"
           }
         ]
       }
@@ -521,19 +351,19 @@
           {
             "name": "CASA 160 C250.jpg",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 160 C250/CASA 160 C250.jpg",
-            "size": "1033 KB"
+            "path": "/products/pdf/Surface boxes/CASA 160 C250/CASA 160 C250.jpg",
+            "size": "293 KB"
           },
           {
             "name": "Certificat Copro CASA 160 C250_1_1.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 160 C250/Certificat Copro CASA 160 C250_1_1.pdf",
+            "path": "/products/pdf/Surface boxes/CASA 160 C250/Certificat Copro CASA 160 C250_1_1.pdf",
             "size": "1033 KB"
           },
           {
             "name": "Copro certificaat CASA 160 C250_2_2.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 160 C250/Copro certificaat CASA 160 C250_2_2.pdf",
+            "path": "/products/pdf/Surface boxes/CASA 160 C250/Copro certificaat CASA 160 C250_2_2.pdf",
             "size": "1036 KB"
           }
         ]
@@ -543,15 +373,21 @@
         "type": "folder",
         "children": [
           {
+            "name": "CASA 250 B125 (REGENWATER RWA-EP).jpg",
+            "type": "file",
+            "path": "/products/pdf/Surface boxes/CASA 250 B125/CASA 250 B125 (REGENWATER RWA-EP).jpg",
+            "size": "280 KB"
+          },
+          {
             "name": "Certificat Copro CASA 250 B125_1_1.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 250 B125/Certificat Copro CASA 250 B125_1_1.pdf",
+            "path": "/products/pdf/Surface boxes/CASA 250 B125/Certificat Copro CASA 250 B125_1_1.pdf",
             "size": "1783 KB"
           },
           {
             "name": "Copro certificaat CASA 250 B125_3_2.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 250 B125/Copro certificaat CASA 250 B125_3_2.pdf",
+            "path": "/products/pdf/Surface boxes/CASA 250 B125/Copro certificaat CASA 250 B125_3_2.pdf",
             "size": "1786 KB"
           }
         ]
@@ -563,13 +399,19 @@
           {
             "name": "Benor certificaat CASA 250 C250_3_1.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 250 C250/Benor certificaat CASA 250 C250_3_1.pdf",
+            "path": "/products/pdf/Surface boxes/CASA 250 C250/Benor certificaat CASA 250 C250_3_1.pdf",
             "size": "1002 KB"
+          },
+          {
+            "name": "CASA 250 C250.jpg",
+            "type": "file",
+            "path": "/products/pdf/Surface boxes/CASA 250 C250/CASA 250 C250.jpg",
+            "size": "283 KB"
           },
           {
             "name": "Certificat Benor CASA 250 C250_1_1.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 250 C250/Certificat Benor CASA 250 C250_1_1.pdf",
+            "path": "/products/pdf/Surface boxes/CASA 250 C250/Certificat Benor CASA 250 C250_1_1.pdf",
             "size": "1004 KB"
           }
         ]
@@ -579,15 +421,21 @@
         "type": "folder",
         "children": [
           {
+            "name": "CASA 315 B125 (REGENWATER RWA-EP).jpg",
+            "type": "file",
+            "path": "/products/pdf/Surface boxes/CASA 315 B125/CASA 315 B125 (REGENWATER RWA-EP).jpg",
+            "size": "315 KB"
+          },
+          {
             "name": "Certificat Copro CASA 315 B125_1_1.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 315 B125/Certificat Copro CASA 315 B125_1_1.pdf",
+            "path": "/products/pdf/Surface boxes/CASA 315 B125/Certificat Copro CASA 315 B125_1_1.pdf",
             "size": "2020 KB"
           },
           {
             "name": "Copro certificaat CASA 315 B125_3_2.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 315 B125/Copro certificaat CASA 315 B125_3_2.pdf",
+            "path": "/products/pdf/Surface boxes/CASA 315 B125/Copro certificaat CASA 315 B125_3_2.pdf",
             "size": "2023 KB"
           }
         ]
@@ -599,13 +447,19 @@
           {
             "name": "Benor certificaat CASA 315 C250_3_1.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 315 C250/Benor certificaat CASA 315 C250_3_1.pdf",
+            "path": "/products/pdf/Surface boxes/CASA 315 C250/Benor certificaat CASA 315 C250_3_1.pdf",
             "size": "1049 KB"
+          },
+          {
+            "name": "CASA 315 C250.jpg",
+            "type": "file",
+            "path": "/products/pdf/Surface boxes/CASA 315 C250/CASA 315 C250.jpg",
+            "size": "295 KB"
           },
           {
             "name": "Certificat Benor CASA 315 C250_1_1.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 315 C250/Certificat Benor CASA 315 C250_1_1.pdf",
+            "path": "/products/pdf/Surface boxes/CASA 315 C250/Certificat Benor CASA 315 C250_1_1.pdf",
             "size": "1051 KB"
           }
         ]
@@ -617,13 +471,19 @@
           {
             "name": "Benor certificaat CASA 400 C250_3_1.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 400 C250/Benor certificaat CASA 400 C250_3_1.pdf",
+            "path": "/products/pdf/Surface boxes/CASA 400 C250/Benor certificaat CASA 400 C250_3_1.pdf",
             "size": "1202 KB"
+          },
+          {
+            "name": "CASA 400 C250.jpg",
+            "type": "file",
+            "path": "/products/pdf/Surface boxes/CASA 400 C250/CASA 400 C250.jpg",
+            "size": "341 KB"
           },
           {
             "name": "Certificat Benor CASA 400 C250_1_1.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 400 C250/Certificat Benor CASA 400 C250_1_1.pdf",
+            "path": "/products/pdf/Surface boxes/CASA 400 C250/Certificat Benor CASA 400 C250_1_1.pdf",
             "size": "1203 KB"
           }
         ]
@@ -635,13 +495,19 @@
           {
             "name": "Benor certificaat CASA OM_2_2.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA OM C250/Benor certificaat CASA OM_2_2.pdf",
+            "path": "/products/pdf/Surface boxes/CASA OM C250/Benor certificaat CASA OM_2_2.pdf",
             "size": "1174 KB"
+          },
+          {
+            "name": "CASA OM C250.jpg",
+            "type": "file",
+            "path": "/products/pdf/Surface boxes/CASA OM C250/CASA OM C250.jpg",
+            "size": "349 KB"
           },
           {
             "name": "Certificat Benor CASA OM_1_1.pdf",
             "type": "file",
-            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA OM C250/Certificat Benor CASA OM_1_1.pdf",
+            "path": "/products/pdf/Surface boxes/CASA OM C250/Certificat Benor CASA OM_1_1.pdf",
             "size": "1175 KB"
           }
         ]
