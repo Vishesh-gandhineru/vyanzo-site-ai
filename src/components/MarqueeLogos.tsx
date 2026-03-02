@@ -10,7 +10,7 @@ const logos = [
   "/certified/ISO_9001-2015.svg",
   "/certified/iso-14001-2015.webp",
   "/certified/logo1-default.png",
-  "/certified/MPA-bremen-logo.webp",
+  "/certified/MPA_Bremen_logo.png",
 
 ];
 
