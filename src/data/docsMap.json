@@ -143,10 +143,7 @@
             ]
           },
       {
-        "name": "Benor",
-        "type": "folder",
-        "children": [
-          {
+       
             "name": "VYA+5",
             "type": "folder",
             "children": [
@@ -199,14 +196,12 @@
                 "size": "1938 KB"
               }
             ]
-          }
-        ]
-      },
+          },
+        
+
       {
-        "name": "Copro",
-        "type": "folder",
-        "children": [
-          {
+        
+         
             "name": "VYA+2L",
             "type": "folder",
             "children": [
@@ -277,8 +272,7 @@
                 "size": "2041 KB"
               }
             ]
-          }
-        ]
+        
       },
       {
         "name": "Verdo 600",
@@ -524,6 +518,12 @@
         "name": "CASA 160 C250",
         "type": "folder",
         "children": [
+          {
+            "name": "CASA 160 C250.jpg",
+            "type": "file",
+            "path": "/products/pdf/Surface boxes - Huisaansluitputjes - Regards de branchement/CASA 160 C250/CASA 160 C250.jpg",
+            "size": "1033 KB"
+          },
           {
             "name": "Certificat Copro CASA 160 C250_1_1.pdf",
             "type": "file",
