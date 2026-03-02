@@ -76,8 +76,11 @@ export default function ProductGrid() {
     const filteredProducts = products
         .filter(p => selectedCategories.length === 0 || selectedCategories.includes(p.category))
         .filter(p => {
-            const pGeos = p.isBenor ? ['Belgium'] : [];
-            const pCerts = p.isBenor ? ['Benor', 'Copro', 'Vyanzo'] : [];
+            // As requested, make all products show up under the Belgium geo-location
+            const pGeos = ['Belgium']; 
+            
+            // Certifications remain tied to isBenor status, with Vyanzo as a default generic cert
+            const pCerts = p.isBenor ? ['Benor', 'Copro', 'Vyanzo'] : ['Vyanzo'];
             
             const geoMatch = selectedGeoLocations.length === 0 || selectedGeoLocations.some(g => pGeos.includes(g));
             const certMatch = selectedCertifications.length === 0 || selectedCertifications.some(c => pCerts.includes(c));
