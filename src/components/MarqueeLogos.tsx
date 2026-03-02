@@ -2,26 +2,23 @@
 
 import { motion } from "framer-motion";
 
-// Placeholder for real logos
+// Logos from public/certified
 const logos = [
-  "ACME CORP",
-  "QUANTUM",
-  "ECHO VALLEY",
-  "NEXUS",
-  "NEBULA",
-  "TESSERACT",
-  "ZEPHYR",
-  "VORTEX",
+  "/certified/BENOR.png",
+  "/certified/COPRO.svg",
+  "/certified/ISO-45001-2018.png",
+  "/certified/ISO_9001-2015.png",
+  "/certified/iso-14001-2015.webp",
 ];
 
-// Transform logos into clients array with name property
-const clients = logos.map((logo) => ({ name: logo }));
+// Combine to create an infinite loop array
+const infiniteLogos = [...logos, ...logos, ...logos, ...logos];
 
 export default function MarqueeLogos() {
   return (
     <section className="w-full bg-text-dark-bg py-10 border-b border-brand-ash/20 overflow-hidden flex flex-col items-center">
-      <div className="text-sm font-sans font-semibold tracking-widest text-text-light-bg/40 uppercase mb-8">
-        Trusted by Industry Leaders
+      <div className="text-xl font-sans font-semibold tracking-widest text-text-light-bg/40 uppercase mb-8">
+        Certifications
       </div>
 
       {/* The mask-image creates a fade out effect on the left and right edges */}
@@ -35,13 +32,17 @@ export default function MarqueeLogos() {
             repeat: Infinity,
           }}
         >
-          {/* We duplicate the array to create a seamless infinite loop */}
-          {[...clients, ...clients, ...clients].map((client, index) => (
+          {infiniteLogos.map((src, index) => (
             <div
-              key={`dup-${client.name}-${index}`}
-              className="flex whitespace-nowrap items-center justify-center min-w-[200px] text-2xl font-serif font-bold text-text-light-bg/20 tracking-tighter"
+              key={`logo-${index}`}
+              className="flex justify-center items-center min-w-[120px] md:min-w-[150px]"
             >
-              {client.name}
+              <img
+                src={src}
+                alt={`Certification ${index}`}
+                className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:opacity-100 transition-opacity duration-300"
+                draggable="false"
+              />
             </div>
           ))}
         </motion.div>

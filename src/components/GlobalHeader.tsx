@@ -10,7 +10,7 @@ export default function GlobalHeader() {
           <img 
              src="/logo.svg" 
              alt="Vyanzo" 
-             className="w-full h-auto invert brightness-0" 
+             className="w-full h-auto" 
           />
         </a>
       </div>

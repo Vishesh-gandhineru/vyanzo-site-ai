@@ -5,12 +5,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const products = [
-  {
-    id: 1,
-    name: "Hydraulic Covers",
-    slug: "hydraulic-covers",
-    image: "/products/hydraulic-cover.png",
-  },
+ 
   {
     id: 2,
     name: "Manhole Covers",
@@ -56,7 +51,7 @@ export default function ProductSection() {
           {products.map((product) => (
             <Link key={product.id} href={`/products/${product.slug}`} className="pointer-events-auto h-full block">
               <motion.div
-                className="w-full min-h-[360px] md:min-h-[440px] bg-brand-primary/5 rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center justify-between relative group overflow-hidden border border-brand-ash/10 hover:bg-brand-primary/10 transition-colors duration-300 h-full"
+                className="w-full min-h-[360px] md:min-h-[360px] bg-brand-primary/5 rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center justify-between relative group overflow-hidden border border-brand-ash/10 hover:bg-brand-primary/10 transition-colors duration-300 h-full"
               >
                 {/* Product Info (Top) */}
                 <div className="w-full flex items-center justify-between z-10 mb-6 md:mb-8">
@@ -73,7 +68,7 @@ export default function ProductSection() {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-2/3 md:w-3/4 max-h-[220px] md:max-h-[300px] object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"
+                    className="w-2/3 md:w-3/4 max-h-[220px] md:max-h-[240px] object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"
                     draggable="false"
                   />
                 </div>

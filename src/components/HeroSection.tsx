@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import MegaMenu from "./MegaMenu";
 import LanguageSwitcher from "./LanguageSwitcher";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -25,17 +26,17 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-linear-to-t from-bg-dark/80 via-transparent to-transparent" />
 
       {/* Main Content */}
-      <div className="relative z-10 w-full h-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
+      <div className="relative z-10 w-full h-full flex flex-col justify-between p-4 md:p-12 lg:p-16">
 
         {/* Top Navbar */}
-        <header className="flex justify-between items-start w-full relative z-60">
+        <header className="flex justify-between items-start w-full relative z-60 gap-4 ">
           
           {/* Logo container to correctly float next to the absolute mega menu */}
           <div className="w-48">
             <img 
                src="/logo.svg" 
                alt="Vyanzo" 
-               className="w-full h-auto invert brightness-0" 
+               className="w-full h-auto" 
             />
           </div>
 
@@ -54,20 +55,24 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-              className="text-[3.5rem] md:text-7xl lg:text-[7.5rem] font-serif font-bold leading-[1.1] tracking-tight text-text-dark-bg max-w-[80vw] pt-10"
+              className="text-[2.5rem] md:text-7xl lg:text-[5.5rem] font-serif font-bold leading-[1.1] tracking-tight text-text-dark-bg lg:max-w-[60vw] pt-10"
             >
               Where Quality Castings Meet Unsurpassed Service Standards
             </motion.h1>
 
             {/* Learn More Button */}
-            <motion.button
+            <Link href="/products"> 
+            
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
               className="bg-brand-accent hover:bg-brand-accent/90 text-text-light-bg px-8 py-3 rounded-full font-sans font-semibold text-lg tracking-wide transition-all shadow-[0_0_20px_rgba(253,231,76,0.4)]"
             >
-              Learn More
-            </motion.button>
+              View products
+            </motion.div>
+            </Link>
+            
           </div>
 
           {/* Scroll Down Indicator */}

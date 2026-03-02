@@ -75,7 +75,7 @@ export default function LanguageSwitcher() {
       <div className="relative z-50">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-[#0a1f33]/40 backdrop-blur-xl border border-[#b8c6db] shadow-[0_8px_32px_rgba(0,0,0,0.5)] rounded-md px-4 py-3 flex items-center justify-between gap-2 cursor-pointer hover:bg-[#0a1f33]/60 hover:border-[#ffffff] transition-colors duration-300 min-w-[120px]"
+          className="bg-[#0a1f33]/40 backdrop-blur-xl border border-[#b8c6db] shadow-[0_8px_32px_rgba(0,0,0,0.5)] rounded-md px-3 md:px-4 py-2.5 md:py-3 flex items-center justify-between gap-1 md:gap-2 cursor-pointer hover:bg-[#0a1f33]/60 hover:border-[#ffffff] transition-colors duration-300 min-w-fit md:min-w-[120px]"
         >
           <div className="flex items-center gap-2">
             <Globe className="w-4 h-4 text-white" />

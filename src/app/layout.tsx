@@ -16,6 +16,9 @@ const notoSerif = Noto_Serif({
 export const metadata: Metadata = {
   title: "Vyanzo | Industrial Casting Solutions",
   description: "Delivering unparalleled casting solutions across the globe with precision, scale, and reliability.",
+  icons: {
+    icon: "/Favicon.png",
+  },
 };
 
 export default function RootLayout({

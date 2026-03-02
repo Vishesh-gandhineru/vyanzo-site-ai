@@ -18,11 +18,7 @@ export default function BentoGrid() {
                    Delivering unparalleled casting solutions across the globe with precision, scale, and reliability since 1999.
                 </p>
             </div>
-            <div className="flex gap-4">
-                <button className="bg-brand-accent border border-black/10 text-bg-dark shadow-[0_0_15px_rgba(253,231,76,0.2)] px-6 py-3 rounded-full font-sans font-semibold hover:opacity-90 transition-opacity">
-                    View Impact Report
-                </button>
-            </div>
+           
         </div>
 
         <div className="flex flex-col md:grid md:grid-cols-4 gap-4 md:gap-6 md:auto-rows-[240px]">
@@ -45,8 +41,8 @@ export default function BentoGrid() {
           <div className="min-h-[200px] md:min-h-0 md:col-span-2 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-4xl p-8 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
             <div className="absolute inset-0 bg-linear-to-r from-transparent via-brand-primary/5 to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             <Award className="w-8 h-8 text-brand-primary mb-4" strokeWidth={1.5} />
-            <h3 className="text-3xl lg:text-4xl font-serif font-semibold text-text-light-bg z-10 tracking-tight">Global Distribution Hub</h3>
-            <p className="text-text-light-bg/70 mt-3 z-10 text-lg font-sans font-normal">Seamlessly serving critical industries in over 45 countries worldwide.</p>
+            <h3 className="text-3xl xl:text-4xl font-serif font-semibold text-text-light-bg z-10 tracking-tight">Vast Global Reach</h3>
+            <p className="text-text-light-bg/70 mt-3 z-10 text-base xl:text-lg font-sans font-normal leading-relaxed">Serving customers in Belgium, France, Spain, Italy, Austria, Holland, UK, USA, and Canada.</p>
           </div>
 
           {/* Card 3: Top Right (H:1 W:1) */}
@@ -100,8 +96,8 @@ export default function BentoGrid() {
                      <div className="w-2 h-2 rounded-full bg-brand-primary" />
                   </div>
                   <div>
-                     <div className="text-sm font-sans font-medium text-text-light-bg">Manufacturing Hubs</div>
-                     <div className="text-xs text-brand-ash font-sans font-normal">6 active global sites</div>
+                     <div className="text-sm font-sans font-medium text-text-light-bg">Production Sites</div>
+                     <div className="text-xs text-brand-ash font-sans font-normal">India, Turkey, China & Vietnam</div>
                   </div>
                </div>
             </div>
@@ -109,9 +105,9 @@ export default function BentoGrid() {
 
           {/* Card 5: Middle Right (H:1 W:1) */}
           <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-6 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
-            <div className="text-sm text-brand-ash uppercase tracking-widest font-sans font-normal mb-4">Annual Capacity</div>
-            <div className="text-5xl lg:text-6xl font-sans font-bold text-brand-primary tracking-tighter drop-shadow-[0_0_15px_rgba(110,176,255,0.4)]">1.2M</div>
-            <div className="text-sm text-text-light-bg/80 mt-2 font-sans font-medium">Tons of Precision Castings</div>
+            <div className="text-sm xl:text-xs 2xl:text-sm text-brand-ash uppercase tracking-widest font-sans font-normal mb-4 text-balance">Annual Production Volume</div>
+            <div className="text-4xl lg:text-5xl font-sans font-bold text-brand-primary tracking-tighter drop-shadow-[0_0_15px_rgba(110,176,255,0.4)]">&gt;20,000</div>
+            <div className="text-sm text-text-light-bg/80 mt-2 font-sans font-medium text-balance">Tons of castings shipped worldwide</div>
           </div>
 
           {/* Card 6: Bottom Left (H:1 W:1) */}
@@ -131,9 +127,11 @@ export default function BentoGrid() {
               <Factory className="w-8 h-8 text-brand-primary mb-4" strokeWidth={1.5} />
               <h3 className="text-xl font-serif font-semibold text-text-light-bg mb-4">Industry Compliance</h3>
               <div className="flex flex-wrap gap-2 relative z-10">
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">COPRO</span>
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">Benor</span>
                  <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">ISO 9001:2015</span>
-                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">TS 16949</span>
-                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">AS9100D</span>
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">ISO 14001:2015</span>
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">ISO 45001:2018</span>
               </div>
            </div>
 

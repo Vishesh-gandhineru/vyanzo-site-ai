@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, X, ArrowUpRight } from "lucide-react";
+import { Plus, X, ArrowUpRight, Menu } from "lucide-react";
 import Link from "next/link";
 
 export default function MegaMenu() {
@@ -16,16 +16,17 @@ export default function MegaMenu() {
             key="trigger"
             layoutId="menu-wrapper"
             onClick={() => setIsOpen(true)}
-            className="bg-[#0a1f33]/40 backdrop-blur-xl border border-[#b8c6db] shadow-[0_8px_32px_rgba(0,0,0,0.5)] rounded-md px-6 py-3 flex items-center justify-center cursor-pointer hover:bg-[#0a1f33]/60 hover:border-[#ffffff] transition-colors duration-300 z-40"
+            className="bg-[#0a1f33]/40 backdrop-blur-xl border border-[#b8c6db] shadow-[0_8px_32px_rgba(0,0,0,0.5)] rounded-md px-4 md:px-6 py-2.5 md:py-3 flex items-center justify-center cursor-pointer hover:bg-[#0a1f33]/60 hover:border-[#ffffff] transition-colors duration-300 z-40"
           >
             <motion.div
               layoutId="menu-header"
-              className="flex items-center gap-3 text-text-dark-bg font-sans"
+              className="flex items-center gap-2 md:gap-3 text-text-dark-bg font-sans"
             >
-              <span className="text-[11px] font-sans font-medium tracking-widest uppercase">
+              <span className="hidden md:inline text-[11px] font-sans font-medium tracking-widest uppercase">
                 Menu
               </span>
-              <Plus className="w-[14px] h-[14px] font-light" strokeWidth={1.5} />
+              <Menu className="w-5 h-5 md:hidden font-light" strokeWidth={1.5} />
+              <Plus className="hidden md:block w-[14px] h-[14px] font-light" strokeWidth={1.5} />
             </motion.div>
           </motion.div>
         )}
@@ -45,14 +46,14 @@ export default function MegaMenu() {
                 className="flex justify-between items-center w-full"
               >
                 {/* Logo Dark version for overlay */}
-                <Link href="/" legacyBehavior passHref>
-                  <a className="cursor-pointer group hover:opacity-80 transition-opacity">
+                <Link href="/"  passHref>
+                  <div className="cursor-pointer group hover:opacity-80 transition-opacity">
                     <img
                       src="/logo.svg"
                       alt="Vyanzo"
-                      className="h-8 md:h-10 w-auto brightness-0"
+                      className="h-8 md:h-10 w-auto"
                     />
-                  </a>
+                  </div>
                 </Link>
 
                 {/* Close Button */}
@@ -100,68 +101,6 @@ export default function MegaMenu() {
                   ))}
                 </nav>
 
-                {/* Bottom Utilities Area */}
-                <div className="mt-12 w-full flex flex-col gap-6">
-                  {/* Small Links row */}
-                  <div className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-bg-dark/10 pb-4 gap-4">
-                    <div className="flex flex-col gap-2 text-sm text-bg-dark/60 font-sans font-medium">
-                      <a
-                        href="#"
-                        className="hover:text-bg-dark transition-colors"
-                      >
-                        Privacy Policy
-                      </a>
-                      <a
-                        href="#"
-                        className="hover:text-bg-dark transition-colors"
-                      >
-                        Legal Disclosure
-                      </a>
-                      <a
-                        href="#"
-                        className="hover:text-bg-dark transition-colors"
-                      >
-                        Accessibility Statement
-                      </a>
-                    </div>
-                    <div className="text-sm text-bg-dark/60 font-sans font-medium tracking-wide">
-                      <a
-                        href="#"
-                        className="hover:text-bg-dark transition-colors"
-                      >
-                        LinkedIn
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Action Cards */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <a
-                      href="#"
-                      className="bg-[#f0f2f5] hover:bg-[#e4e7eb] group p-6 md:p-8 flex justify-between items-end rounded-md transition-colors min-h-[120px]"
-                    >
-                      <span className="font-sans font-semibold text-lg text-bg-dark">
-                        Investor Login
-                      </span>
-                      <ArrowUpRight
-                        className="w-5 h-5 text-bg-dark/60 group-hover:text-bg-dark transition-colors"
-                        strokeWidth={1.5}
-                      />
-                    </a>
-                    <a
-                      href="#"
-                      className="bg-[#f0f2f5] hover:bg-[#e4e7eb] group p-6 md:p-8 flex justify-between items-end rounded-md transition-colors min-h-[120px]"
-                    >
-                      <span className="font-sans font-semibold text-lg text-bg-dark">
-                        Data Room
-                      </span>
-                      <ArrowUpRight
-                        className="w-5 h-5 text-bg-dark/60 group-hover:text-bg-dark transition-colors"
-                        strokeWidth={1.5}
-                      />
-                    </a>
-                  </div>
-                </div>
               </motion.div>
             </div>
           </motion.div>
