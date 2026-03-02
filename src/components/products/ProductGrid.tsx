@@ -20,16 +20,38 @@ export default function ProductGrid() {
     );
   };
 
+    const GEO_TO_CERT: Record<string, string[]> = {
+      'Belgium': ['Copro', 'Benor', 'Vyanzo'],
+      'Scandinavia': ['EN 124:2015']
+    };
+
+    const CERT_TO_GEO: Record<string, string[]> = {
+      'Copro': ['Belgium'],
+      'Benor': ['Belgium'],
+      'Vyanzo': ['Belgium'],
+      'EN 124:2015': ['Scandinavia']
+    };
+
     const toggleCertification = (cert: string) => {
-        setSelectedCertifications(prev => 
-            prev.includes(cert) ? prev.filter(c => c !== cert) : [...prev, cert]
-        );
+        setSelectedCertifications(prev => {
+            const next = prev.includes(cert) ? prev.filter(c => c !== cert) : [...prev, cert];
+            if (next.length > 0) {
+                const validGeos = new Set(next.flatMap(c => CERT_TO_GEO[c] || []));
+                setSelectedGeoLocations(geos => geos.filter(g => validGeos.has(g)));
+            }
+            return next;
+        });
     };
 
     const toggleGeoLocation = (geo: string) => {
-        setSelectedGeoLocations(prev => 
-            prev.includes(geo) ? prev.filter(g => g !== geo) : [...prev, geo]
-        );
+        setSelectedGeoLocations(prev => {
+            const next = prev.includes(geo) ? prev.filter(g => g !== geo) : [...prev, geo];
+            if (next.length > 0) {
+                const validCerts = new Set(next.flatMap(g => GEO_TO_CERT[g] || []));
+                setSelectedCertifications(certs => certs.filter(c => validCerts.has(c)));
+            }
+            return next;
+        });
     };
 
     const resetFilters = () => {
@@ -38,10 +60,29 @@ export default function ProductGrid() {
         setSelectedGeoLocations([]);
     };
 
-    // Filter and sort products (Note: Mock filtering logic for new fields until data is updated)
+    const ALL_GEOS = Object.keys(GEO_TO_CERT);
+    const ALL_CERTS = Object.keys(CERT_TO_GEO);
+
+    const availableGeos = selectedCertifications.length === 0 
+      ? ALL_GEOS 
+      : Array.from(new Set(selectedCertifications.flatMap(cert => CERT_TO_GEO[cert] || [])));
+
+    const availableCerts = selectedGeoLocations.length === 0
+      ? ALL_CERTS
+      : Array.from(new Set(selectedGeoLocations.flatMap(geo => GEO_TO_CERT[geo] || [])));
+
+    // Filter and sort products
     const filteredProducts = products
         .filter(p => selectedCategories.length === 0 || selectedCategories.includes(p.category))
-        .filter(p => selectedCertifications.length === 0 || (p.isBenor && selectedCertifications.includes('Benor')) || selectedCertifications.every(c => c !== 'Benor')) // Temporary logic for Benor
+        .filter(p => {
+            const pGeos = p.isBenor ? ['Belgium'] : [];
+            const pCerts = p.isBenor ? ['Benor', 'Copro', 'Vyanzo'] : [];
+            
+            const geoMatch = selectedGeoLocations.length === 0 || selectedGeoLocations.some(g => pGeos.includes(g));
+            const certMatch = selectedCertifications.length === 0 || selectedCertifications.some(c => pCerts.includes(c));
+            
+            return geoMatch && certMatch;
+        })
         .sort((a, b) => {
             if (sortBy === "name-asc") return a.title.localeCompare(b.title);
             if (sortBy === "name-desc") return b.title.localeCompare(a.title);
@@ -55,32 +96,7 @@ export default function ProductGrid() {
         {/* Sidebar Filters */}
         <aside className="w-full lg:w-[300px] shrink-0 flex flex-col gap-6">
             
-            {/* Certifications Filter */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-brand-ash/20">
-                <h3 className="flex items-center gap-3 text-bg-dark font-sans font-semibold text-lg mb-6">
-                   <Globe className="w-5 h-5 text-brand-primary" />
-                   Certifications
-                </h3>
-                <div className="flex flex-col gap-4">
-                    {['Copro', 'Benor', 'Vyanzo'].map(cert => {
-                        const isChecked = selectedCertifications.includes(cert);
-                        return (
-                          <label key={cert} className="flex items-center gap-3 cursor-pointer group">
-                             <div className="w-5 h-5 rounded border border-brand-ash/40 flex items-center justify-center group-hover:border-brand-primary transition-colors relative">
-                                <input 
-                                   type="checkbox"
-                                   className="absolute opacity-0 w-full h-full cursor-pointer"
-                                   checked={isChecked}
-                                   onChange={() => toggleCertification(cert)}
-                                />
-                                {isChecked && <Check className="w-3.5 h-3.5 text-brand-primary" strokeWidth={3} />}
-                             </div>
-                             <span className="text-text-light-bg/80 font-sans font-normal text-sm">{cert}</span>
-                          </label>
-                        )
-                    })}
-                </div>
-            </div>
+           
 
             {/* Geo Location Filter */}
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-brand-ash/20">
@@ -89,7 +105,7 @@ export default function ProductGrid() {
                    Geo Location
                 </h3>
                 <div className="flex flex-col gap-4">
-                    {['Belgium', 'Scandinavia'].map(geo => {
+                    {availableGeos.map(geo => {
                         const isChecked = selectedGeoLocations.includes(geo);
                         return (
                           <label key={geo} className="flex items-center gap-3 cursor-pointer group">
@@ -103,6 +119,33 @@ export default function ProductGrid() {
                                 {isChecked && <Check className="w-3.5 h-3.5 text-brand-primary" strokeWidth={3} />}
                              </div>
                              <span className="text-text-light-bg/80 font-sans font-normal text-sm">{geo}</span>
+                          </label>
+                        )
+                    })}
+                </div>
+            </div>
+
+             {/* Certifications Filter */}
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-brand-ash/20">
+                <h3 className="flex items-center gap-3 text-bg-dark font-sans font-semibold text-lg mb-6">
+                   <Globe className="w-5 h-5 text-brand-primary" />
+                   Certifications
+                </h3>
+                <div className="flex flex-col gap-4">
+                    {availableCerts.map(cert => {
+                        const isChecked = selectedCertifications.includes(cert);
+                        return (
+                          <label key={cert} className="flex items-center gap-3 cursor-pointer group">
+                             <div className="w-5 h-5 rounded border border-brand-ash/40 flex items-center justify-center group-hover:border-brand-primary transition-colors relative">
+                                <input 
+                                   type="checkbox"
+                                   className="absolute opacity-0 w-full h-full cursor-pointer"
+                                   checked={isChecked}
+                                   onChange={() => toggleCertification(cert)}
+                                />
+                                {isChecked && <Check className="w-3.5 h-3.5 text-brand-primary" strokeWidth={3} />}
+                             </div>
+                             <span className="text-text-light-bg/80 font-sans font-normal text-sm">{cert}</span>
                           </label>
                         )
                     })}
