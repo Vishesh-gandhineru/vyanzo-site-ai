@@ -35,26 +35,26 @@ export default function CobeGlobe() {
       { location: [52.3676, 4.9041] as [number, number], size: 0.08 },  // Holland
       { location: [51.5074, -0.1278] as [number, number], size: 0.08 }, // UK
       { location: [40.7128, -74.0060] as [number, number], size: 0.08 },// USA (NY)
-      { location: [43.6532, -79.3832] as [number, number], size: 0.08 },// Canada (Toronto)
-      { location: [20.5937, 78.9629] as [number, number], size: 0.08 }, // India
-      { location: [38.9637, 35.2433] as [number, number], size: 0.08 }, // Turkey
-      { location: [14.0583, 108.2772] as [number, number], size: 0.08 }, // Vietnam
+      { location: [43.6532, -79.3832] as [number, number], size: 0.15 },// Canada (Toronto)
+      { location: [20.5937, 78.9629] as [number, number], size: 0.15 }, // India
+      { location: [38.9637, 35.2433] as [number, number], size: 0.15 }, // Turkey
+      { location: [14.0583, 108.2772] as [number, number], size: 0.15 }, // Vietnam
     ];
 
     const globe = createGlobe(canvasRef.current!, {
       devicePixelRatio: 2,
-      width: 800,
-      height: 800,
-      phi: 0,
-      theta: 0.3,
-      dark: 0,
-      diffuse: 1.2,
-      mapSamples: 16000,
-      mapBrightness: 6,
-      baseColor: [0.95, 0.95, 0.95],
-      markerColor: hexToRgb("#6eb0ff"), // Brand primary blue
-      glowColor: [0.9, 0.9, 0.9],
-      markers: baseMarkers,
+  width: 800,
+  height: 800,
+  phi: Math.PI / 2, // rotate start
+  theta: 0.3,
+  dark: 0,
+  diffuse: 1.2,
+  mapSamples: 16000,
+  mapBrightness: 1.2, // reduce
+  baseColor: [0.95, 0.95, 0.95],
+  markerColor: hexToRgb("#6eb0ff"),
+  glowColor: [0.9, 0.9, 0.9],
+  markers: baseMarkers,
       onRender: (state) => {
         if (!pointerInteracting.current) {
           currentPhi += 0.003;
