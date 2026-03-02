@@ -2,7 +2,10 @@ import GlobalHeader from "@/components/GlobalHeader";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
 
+
 export default function ContactPage() {
+  
+
   return (
     <main className="min-h-screen bg-[#f8f9fc] font-sans flex flex-col">
       <GlobalHeader />
@@ -13,10 +16,10 @@ export default function ContactPage() {
           <div>
             <h1 className="text-sm font-serif font-semibold tracking-[0.2em] text-brand-primary uppercase mb-6 flex items-center gap-4">
               <span className="w-12 h-px bg-brand-primary"></span>
-              Contact Us
+              {"heroPreTitle"}
             </h1>
             <h2 className="text-4xl md:text-6xl font-serif font-bold text-bg-dark leading-[1.1] mb-6 tracking-tight">
-              Get in touch with our team.
+              {"heroTitle"}
             </h2>
           </div>
         </div>

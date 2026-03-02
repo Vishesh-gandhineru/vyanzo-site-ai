@@ -3,8 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Globe, ChevronDown } from "lucide-react";
-import { usePathname, useRouter } from "@/i18n/routing";
-import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
 
 const languages = [
   { code: "en", label: "English" },
@@ -17,13 +16,13 @@ const languages = [
 
 export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
-  const locale = useLocale();
+  const locale = "en";
   const router = useRouter();
   const pathname = usePathname();
 
   const handleLanguageChange = (newLocale: string) => {
     setIsOpen(false);
-    router.replace(pathname, { locale: newLocale });
+    // router.replace(pathname, { locale: newLocale });
   };
 
   const activeLanguage = languages.find((l) => l.code === locale) || languages[0];

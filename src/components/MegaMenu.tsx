@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, X, ArrowUpRight } from "lucide-react";
-import { Link } from "@/i18n/routing";
+import Link from "next/link";
 
 export default function MegaMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -84,8 +84,8 @@ export default function MegaMenu() {
                     { title: "About Us", href: "/about" },
                     { title: "Contact", href: "/contact" },
                   ].map((item) => (
-                    <Link key={item.title} href={item.href as any} legacyBehavior passHref>
-                      <motion.a
+                    <Link key={item.title} href={item.href as any}>
+                      <motion.div
                         className="text-[2.5rem] md:text-6xl lg:text-[5rem] font-serif font-semibold tracking-tight text-bg-dark hover:text-brand-primary transition-colors leading-[1.1]"
                         whileHover={{ x: 10 }}
                         transition={{
@@ -95,7 +95,7 @@ export default function MegaMenu() {
                         }}
                       >
                         {item.title}
-                      </motion.a>
+                      </motion.div>
                     </Link>
                   ))}
                 </nav>

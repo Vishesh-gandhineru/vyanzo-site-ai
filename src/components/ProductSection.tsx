@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
-import { Link } from "@/i18n/routing";
+import Link from "next/link";
 
 const products = [
   {

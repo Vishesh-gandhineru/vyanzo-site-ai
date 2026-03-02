@@ -17,6 +17,7 @@ import {
   CheckCircle2
 } from "lucide-react";
 
+
 // Service Data
 const services = [
   {
@@ -39,20 +40,20 @@ const services = [
       { label: "Pattern Making", value: "Creating the initial molds and patterns." },
       { label: "Sampling", value: "Producing prototypes and samples for approval." },
       { label: "Quality Control", value: "Rigorous testing and inspection throughout the production run." },
-      { label: "Finishing & Coating", value: "Water-based paint, KTL (E-coating), Epoxy coatings." },
+      { label: "Finishing & Coating", value: "Offering various painting and coating options, including: Water-based paint, KTL (E-coating), Epoxy coatings." },
       { label: "Assembly", value: "Final assembly of components before shipment." }
     ]
   },
   {
     id: "logistics",
-    title: "Packaging & Delivery",
+    title: "Custom Packaging & Delivery Options",
     icon: <Package className="w-6 h-6" />,
     description: "Clients have full control over how their products are protected and branded during transit.",
     highlights: [
       { label: "Packaging Specs", value: "Customized number of items per pallet or box." },
       { label: "Protection", value: "Options for plastic wrap or specialized shielding." },
       { label: "Branding", value: "Custom design and content for labels." },
-      { label: "Logistics", value: "Shipments scheduled according to client timelines, utilizing 20ft and 40ft containers." }
+      { label: "Logistics", value: "Shipments scheduled according to client timelines, utilizing 20-foot and 40-foot containers." }
     ]
   },
   {
@@ -70,16 +71,18 @@ const services = [
   }
 ];
 
-// Product Categories Data
-const productCategories = [
-  { name: "Pipe Fittings & Flanges", icon: <Settings2 className="w-8 h-8" /> },
-  { name: "Manhole Covers & Grates", icon: <CircleDot className="w-8 h-8" /> },
-  { name: "Valves", icon: <Wrench className="w-8 h-8" /> },
-  { name: "Channel Gratings", icon: <Grid className="w-8 h-8" /> },
-  { name: "Bearings", icon: <Settings className="w-8 h-8" /> },
-];
-
 export default function ServicesPage() {
+  
+  // Service strings extracted directly on outer component.
+
+  const productCategories = [
+    { name: "Pipe Fittings & Flanges", icon: <Settings2 className="w-8 h-8" /> },
+    { name: "Manhole Covers & Grates", icon: <CircleDot className="w-8 h-8" /> },
+    { name: "Valves", icon: <Wrench className="w-8 h-8" /> },
+    { name: "Channel Gratings", icon: <Grid className="w-8 h-8" /> },
+    { name: "Bearings", icon: <Settings className="w-8 h-8" /> },
+  ];
+
   const [activeTab, setActiveTab] = useState(services[0].id);
 
   return (
@@ -120,7 +123,7 @@ export default function ServicesPage() {
             
             {/* Sidebar Navigation */}
             <div className="lg:w-1/3 shrink-0 flex flex-col gap-4 sticky top-32 h-fit">
-              <h3 className="text-2xl font-bold font-serif text-bg-dark mb-4">Our Services</h3>
+              <h3 className="text-2xl font-bold font-serif text-bg-dark mb-4">{"Our Services"}</h3>
               {services.map((service) => {
                 const isActive = activeTab === service.id;
                 return (
@@ -214,7 +217,7 @@ export default function ServicesPage() {
             >
                <h2 className="text-4xl md:text-5xl font-serif font-bold text-bg-dark mb-6">Core Product Categories Served</h2>
                <p className="text-xl text-text-light-bg/70">
-                 While providing these comprehensive services, Vyanzo focuses primarily on the following product lines engineered for durability.
+                 While providing these services, Vyanzo focuses on the following primary product lines:
                </p>
             </motion.div>
 

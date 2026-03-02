@@ -7,7 +7,7 @@ import {
   ShieldCheck, Leaf, AlertCircle, Settings2, FileText, CheckCircle2 
 } from "lucide-react";
 import { Product, DocFolder } from "@/data/products";
-import { Link } from "@/i18n/routing";
+import Link from "next/link";
 import { products } from "@/data/products";
 
 const getIcon = (name?: string) => {

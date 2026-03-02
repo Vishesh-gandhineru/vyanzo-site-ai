@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "@/i18n/routing";
+import Link from "next/link";
 import { Linkedin, Phone } from "lucide-react"; // Using Phone or MessageCircle as WhatsApp replacement since lucide doesn't have a specific whatsapp icon by default. Let's use a generic MessageCircle or an SVG if needed.
 
 // We will use standard Svgs or Lucide icons for social.
