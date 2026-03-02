@@ -72,7 +72,7 @@ export default function TeamSection() {
   const handleModalClick = (e: React.MouseEvent) => e.stopPropagation();
 
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-16 bg-white border-t border-brand-ash/10 relative">
+    <section id="team" className="py-24 px-6 md:px-12 lg:px-16 bg-white border-t border-brand-ash/10 relative">
       <div className="max-w-[1400px] mx-auto text-center">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

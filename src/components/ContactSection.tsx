@@ -1,10 +1,23 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
-import Script from "next/script";
 
 export default function ContactSection() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://server.fillout.com/embed/v1/";
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <section className="w-full bg-white py-24 px-4 md:px-8 border-t border-black/5 font-sans relative overflow-hidden">
       {/* Background Graphic */}
@@ -44,9 +57,9 @@ export default function ContactSection() {
                 <div>
                   <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">Headquarters</h4>
                   <p className="text-bg-dark/70 font-sans font-normal leading-relaxed">
-                    123 Industrial Avenue<br />
-                    Brussels, B-1000<br />
-                    Belgium
+                    Botermelkbaan 51 <br />
+                    2900 Schoten <br />
+                    Belgium 
                   </p>
                 </div>
               </div>
@@ -57,8 +70,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">Email Us</h4>
-                  <a href="mailto:info@vyanzo.com" className="text-bg-dark/70 font-sans font-normal hover:text-brand-primary transition-colors">
-                    info@vyanzo.com
+                  <a href="mailto:info@vyanzo.be" className="text-bg-dark/70 font-sans font-normal hover:text-brand-primary transition-colors">
+                     info@vyanzo.be
                   </a>
                 </div>
               </div>
@@ -68,9 +81,9 @@ export default function ContactSection() {
                   <Phone className="w-5 h-5 text-bg-dark group-hover:text-brand-primary transition-colors" />
                 </div>
                 <div>
-                  <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">Call Us</h4>
+                  <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">Call / Whatsapp Us</h4>
                   <p className="text-bg-dark/70 font-sans font-normal">
-                    +32 (0) 2 123 45 67
+                    + 32 475 26 47 52
                   </p>
                 </div>
               </div>
@@ -96,7 +109,6 @@ export default function ContactSection() {
                 data-fillout-dynamic-resize
                 suppressHydrationWarning
               ></div>
-              <Script src="https://server.fillout.com/embed/v1/" strategy="lazyOnload" />
             </div>
           </motion.div>
           

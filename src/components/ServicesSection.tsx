@@ -1,20 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Plus } from "lucide-react";
+import { ArrowRight, PenTool, Factory, Package, ShieldCheck } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
     title: "Product Development",
+    icon: PenTool,
   },
   {
     title: "A-Z Production Excellence",
+    icon: Factory,
   },
   {
     title: "Custom Packaging &\nDelivery Options",
+    icon: Package,
   },
   {
     title: "Product Certification",
+    icon: ShieldCheck,
   },
 ];
 
@@ -49,10 +54,12 @@ export default function ServicesSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="shrink-0"
           >
-            <button className="bg-brand-accent hover:opacity-90 transition-opacity text-bg-dark font-sans font-bold text-sm tracking-widest uppercase py-4 px-8 flex items-center gap-3 rounded-sm group">
+            <Link href="/services">
+            <div className="bg-brand-accent hover:opacity-90 transition-opacity text-bg-dark font-sans font-bold text-sm tracking-widest uppercase py-4 px-8 flex items-center gap-3 rounded-sm group">
               Learn More
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </div>
+            </Link>
           </motion.div>
         </div>
 
@@ -68,7 +75,7 @@ export default function ServicesSection() {
               className="bg-white p-8 md:p-10 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 border border-black/2 flex flex-col items-start min-h-[260px] group cursor-pointer"
             >
               <div className="w-12 h-12 bg-brand-primary/10 group-hover:bg-brand-primary/20 transition-colors rounded-lg flex items-center justify-center mb-auto">
-                <Plus className="w-5 h-5 text-brand-primary" />
+                <service.icon className="w-5 h-5 text-brand-primary" />
               </div>
               <h4 className="text-xl md:text-lg lg:text-xl font-serif font-semibold text-bg-dark leading-snug mt-12 group-hover:text-brand-primary transition-colors whitespace-pre-line">
                 {service.title}

@@ -21,7 +21,7 @@ export default function AboutSection() {
               About Vyanzo
             </h2>
             <h3 className="text-4xl md:text-5xl lg:text-[3.5rem] font-serif font-bold text-bg-dark leading-tight mb-8">
-              Meticulously designed and manufactured products.
+              Discover our range of meticulously designed and manufactured products.
             </h3>
             <div className="border-l-4 border-brand-primary pl-6 py-2">
               <p className="text-xl md:text-2xl text-text-light-bg/90 font-sans font-medium leading-relaxed">
@@ -39,10 +39,10 @@ export default function AboutSection() {
             className="lg:w-[55%] flex flex-col justify-center gap-6 text-text-light-bg/70 text-lg md:text-xl font-sans font-normal leading-relaxed"
           >
             <p>
-              Vyanzo has evolved into a standalone product brand with its own manufacturing capability. We are makers and owners — delivering factory-direct quality without intermediaries.
+              Since its inception in 2018, Vyanzo has evolved from an OEM supplier to become a leading manufacturer of its own range of Manhole Covers, Grates and other municipal casting products that are now supplied across Europe.
             </p>
             <p>
-              We own our entire value chain from manufacturing to delivery. This vertical integration allows us to deliver factory-direct quality at honest prices, passing on a minimum of 25% savings to our buyers.
+              We offer end-to-end services to customers around the world who share our business philosophy: Quality, Service & Reliability at a correct price – and that with relentless consistency.
             </p>
             
             {/* Sustainability highlighted box */}
@@ -55,7 +55,10 @@ export default function AboutSection() {
                  Sustainable Manufacturing
                </h4>
                <p className="text-base text-text-light-bg/80 m-0 font-sans font-normal">
-                 We have continuously upgraded our production facilities with the latest machines and technology, always considering the environment and energy efficiency. For example, we don’t melt with coal, like they still do in Belgium, but with the latest electrical induction furnaces. Hence reducing massively our environmental impact.
+                 We have continuously upgraded our production facilities with the latest machines and technology, always considering the environment and energy efficiency. For example, we don't melt with coal, like they still do in Belgium, but with the latest electrical induction furnaces. Hence massively reducing our environmental impact.
+               </p>
+               <p className="text-base text-text-light-bg/80 mt-4 font-sans font-normal">
+                 Vyanzo’s production facilities are state-of-the-art and ready to meet customer volume and quality demands for decades to come.
                </p>
             </div>
           </motion.div>
