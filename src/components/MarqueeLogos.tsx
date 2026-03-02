@@ -7,7 +7,7 @@ const logos = [
   "/certified/BENOR.png",
   "/certified/COPRO.svg",
   "/certified/ISO-45001-2018.png",
-  "/certified/ISO_9001-2015.png",
+  "/certified/ISO_9001-2015.svg",
   "/certified/iso-14001-2015.webp",
 ];
 
@@ -35,12 +35,12 @@ export default function MarqueeLogos() {
           {infiniteLogos.map((src, index) => (
             <div
               key={`logo-${index}`}
-              className="flex justify-center items-center min-w-[120px] md:min-w-[150px]"
+              className="flex justify-center items-center min-w-[120px] md:min-w-[120px]"
             >
               <img
                 src={src}
                 alt={`Certification ${index}`}
-                className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:opacity-100 transition-opacity duration-300"
+                className="h-12 md:h-20 w-auto object-contain grayscale opacity-60 hover:opacity-100 transition-opacity duration-300"
                 draggable="false"
               />
             </div>

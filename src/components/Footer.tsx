@@ -1,7 +1,8 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Linkedin, Phone } from "lucide-react"; // Using Phone or MessageCircle as WhatsApp replacement since lucide doesn't have a specific whatsapp icon by default. Let's use a generic MessageCircle or an SVG if needed.
+import { Linkedin, ChevronUp } from "lucide-react";
 
 // We will use standard Svgs or Lucide icons for social.
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -23,6 +24,19 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScroll(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <footer className="w-full pt-12 pb-12 px-4 md:px-8 font-sans">
@@ -101,6 +115,34 @@ export default function Footer() {
         </div>
 
       </div>
+
+      {/* Floating Action Buttons */}
+      <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 flex flex-col items-center gap-4 z-9999">
+        
+        {/* Scroll to Top Button */}
+        <button
+          onClick={scrollToTop}
+          className={`w-12 h-12 bg-bg-dark text-white rounded-full flex items-center justify-center shadow-lg border border-black/10 transition-all duration-300 ${
+            showScroll ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
+          } hover:-translate-y-1 hover:bg-black`}
+          aria-label="Scroll to top"
+        >
+          <ChevronUp className="w-6 h-6" />
+        </button>
+
+        {/* WhatsApp Button */}
+        <a
+          href="https://wa.link/yemzpo"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 relative overflow-hidden group"
+          aria-label="Contact on WhatsApp"
+        >
+          <WhatsAppIcon className="w-7 h-7 relative z-10" />
+          <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+        </a>
+      </div>
+
     </footer>
   );
 }

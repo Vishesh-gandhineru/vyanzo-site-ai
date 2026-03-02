@@ -46,15 +46,10 @@ export default function BentoGrid() {
           </div>
 
           {/* Card 3: Top Right (H:1 W:1) */}
-          <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-6 flex flex-col items-start justify-center group hover:border-brand-primary/30 transition-colors">
-            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center border border-brand-ash/20 mb-6 group-hover:scale-110 transition-transform">
-                <Users className="w-5 h-5 text-brand-primary" />
-            </div>
-            <div className="text-4xl lg:text-5xl font-sans font-bold text-text-light-bg tracking-tighter mb-1">500+</div>
-            <div className="text-sm text-brand-ash uppercase tracking-widest font-sans font-normal flex items-center gap-2">
-                Active Partners
-                <div className="w-2 h-2 rounded-full bg-brand-primary animate-pulse" />
-            </div>
+          <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-6 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
+            <div className="text-sm xl:text-xs 2xl:text-sm text-brand-ash uppercase tracking-widest font-sans font-normal mb-4 text-balance">Annual Production Volume</div>
+            <div className="text-4xl lg:text-5xl font-sans font-bold text-brand-primary tracking-tighter drop-shadow-[0_0_15px_rgba(110,176,255,0.4)]">&gt;20,000</div>
+            <div className="text-sm text-text-light-bg/80 mt-2 font-sans font-medium text-balance">Tons of castings shipped worldwide</div>
           </div>
 
           {/* Card 4: Middle Center (GLOBE CARD) (H:2 W:2) */}
@@ -91,24 +86,25 @@ export default function BentoGrid() {
                   </div>
                </div>
                
-               <div className="bg-white/90 backdrop-blur-xl border border-brand-ash/20 shadow-sm px-4 py-3 rounded-2xl flex items-center gap-3 w-fit">
-                  <div className="w-8 h-8 rounded-full bg-brand-primary/10 flex items-center justify-center">
-                     <div className="w-2 h-2 rounded-full bg-brand-primary" />
-                  </div>
-                  <div>
-                     <div className="text-sm font-sans font-medium text-text-light-bg">Production Sites</div>
-                     <div className="text-xs text-brand-ash font-sans font-normal">India, Turkey, China & Vietnam</div>
-                  </div>
-               </div>
+               
             </div>
           </div>
 
-          {/* Card 5: Middle Right (H:1 W:1) */}
-          <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-6 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
-            <div className="text-sm xl:text-xs 2xl:text-sm text-brand-ash uppercase tracking-widest font-sans font-normal mb-4 text-balance">Annual Production Volume</div>
-            <div className="text-4xl lg:text-5xl font-sans font-bold text-brand-primary tracking-tighter drop-shadow-[0_0_15px_rgba(110,176,255,0.4)]">&gt;20,000</div>
-            <div className="text-sm text-text-light-bg/80 mt-2 font-sans font-medium text-balance">Tons of castings shipped worldwide</div>
-          </div>
+ {/* Card 7: Bottom Right (H:2 W:1) */}
+          <div className="min-h-[300px] md:min-h-0 md:col-span-1 md:row-span-2 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
+              <div className="absolute -right-4 -bottom-4 w-48 h-48 bg-brand-primary/10 blur-3xl rounded-full transition-all group-hover:bg-brand-primary/20" />
+              <div>
+                  <Factory className="w-10 h-10 text-brand-primary mb-6" strokeWidth={1.5} />
+                  <h3 className="text-2xl lg:text-3xl font-serif font-semibold text-text-light-bg mb-4 tracking-tight">Industry Compliance</h3>
+              </div>
+              <div className="flex flex-wrap gap-2 relative z-10 mt-8">
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">COPRO</span>
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">Benor</span>
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">ISO 9001:2015</span>
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">ISO 14001:2015</span>
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">ISO 45001:2018</span>
+              </div>
+           </div>
 
           {/* Card 6: Bottom Left (H:1 W:1) */}
           <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-brand-primary/10 border border-brand-primary/20 rounded-3xl p-6 flex flex-col justify-between hover:bg-brand-primary hover:text-white transition-colors cursor-pointer group shadow-sm text-text-light-bg">
@@ -121,19 +117,7 @@ export default function BentoGrid() {
              </div>
           </div>
 
-          {/* Card 7: Bottom Right (H:1 W:1) */}
-          <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-6 relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
-              <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-brand-primary/10 blur-2xl rounded-full transition-all group-hover:bg-brand-primary/20" />
-              <Factory className="w-8 h-8 text-brand-primary mb-4" strokeWidth={1.5} />
-              <h3 className="text-xl font-serif font-semibold text-text-light-bg mb-4">Industry Compliance</h3>
-              <div className="flex flex-wrap gap-2 relative z-10">
-                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">COPRO</span>
-                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">Benor</span>
-                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">ISO 9001:2015</span>
-                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">ISO 14001:2015</span>
-                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">ISO 45001:2018</span>
-              </div>
-           </div>
+         
 
         </div>
       </div>

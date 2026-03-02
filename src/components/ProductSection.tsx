@@ -38,7 +38,7 @@ export default function ProductSection() {
                <p className="text-bg-dark/60 mt-3 md:text-lg font-sans font-normal">Premium casting solutions built for the world's most demanding infrastructure.</p>
             </div>
             
-            <Link href="/products" className="shrink-0 flex items-center justify-center gap-2 bg-brand-primary text-white font-sans font-bold px-8 py-3.5 rounded-full hover:bg-brand-primary/90 transition-colors shadow-sm">
+            <Link href="/products" className="shrink-0 flex items-center justify-center gap-2 bg-brand-accent text-bg-dark font-sans font-bold px-8 py-3.5 rounded-full hover:bg-brand-primary/90 transition-colors shadow-sm">
                 View All Products
                 <ArrowRight className="w-4 h-4" />
             </Link>

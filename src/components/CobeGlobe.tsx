@@ -26,6 +26,18 @@ export default function CobeGlobe() {
       return [r, g, b] as [number, number, number];
     };
 
+    const baseMarkers = [
+      { location: [50.8503, 4.3517] as [number, number], size: 0.08 }, // Belgium
+      { location: [48.8566, 2.3522] as [number, number], size: 0.08 }, // France
+      { location: [40.4168, -3.7038] as [number, number], size: 0.08 }, // Spain
+      { location: [41.9028, 12.4964] as [number, number], size: 0.08 }, // Italy
+      { location: [48.2082, 16.3738] as [number, number], size: 0.08 }, // Austria
+      { location: [52.3676, 4.9041] as [number, number], size: 0.08 },  // Holland
+      { location: [51.5074, -0.1278] as [number, number], size: 0.08 }, // UK
+      { location: [40.7128, -74.0060] as [number, number], size: 0.08 },// USA (NY)
+      { location: [43.6532, -79.3832] as [number, number], size: 0.08 },// Canada (Toronto)
+    ];
+
     const globe = createGlobe(canvasRef.current!, {
       devicePixelRatio: 2,
       width: 800,
@@ -37,16 +49,9 @@ export default function CobeGlobe() {
       mapSamples: 16000,
       mapBrightness: 6,
       baseColor: [0.95, 0.95, 0.95],
-      markerColor: hexToRgb("#fde74c"),
+      markerColor: hexToRgb("#6eb0ff"), // Brand primary blue
       glowColor: [0.9, 0.9, 0.9],
-      markers: [
-        { location: [37.7595, -122.4367], size: 0.05 },
-        { location: [40.7128, -74.006], size: 0.05 },
-        { location: [51.5074, -0.1278], size: 0.05 },
-        { location: [22.3193, 114.1694], size: 0.05 },
-        { location: [1.3521, 103.8198], size: 0.05 },
-        { location: [25.2048, 55.2708], size: 0.05 },
-      ],
+      markers: baseMarkers,
       onRender: (state) => {
         if (!pointerInteracting.current) {
           currentPhi += 0.003;
@@ -56,6 +61,13 @@ export default function CobeGlobe() {
           state.width = canvasRef.current.clientWidth * 2;
           state.height = canvasRef.current.clientHeight * 2;
         }
+        
+        // Dynamic blinking/pulsing effect for markers
+        const t = Date.now() / 200;
+        state.markers = baseMarkers.map(m => ({
+          location: m.location,
+          size: m.size + Math.sin(t) * 0.03
+        }));
       }
     });
 
