@@ -9,6 +9,9 @@ const logos = [
   "/certified/ISO-45001-2018.png",
   "/certified/ISO_9001-2015.svg",
   "/certified/iso-14001-2015.webp",
+  "/certified/logo1-default.png",
+  "/certified/MPA_bremen_logo.png",
+
 ];
 
 // Combine to create an infinite loop array

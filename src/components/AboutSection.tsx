@@ -45,22 +45,8 @@ export default function AboutSection() {
               We offer end-to-end services to customers around the world who share our business philosophy: Quality, Service & Reliability at a correct price – and that with relentless consistency.
             </p>
             
-            {/* Sustainability highlighted box */}
-            <div className="bg-white p-6 md:p-8 rounded-2xl border border-brand-ash/20 mt-6 relative overflow-hidden group shadow-lg">
-               {/* Decorative gradient */}
-               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/10 rounded-full blur-2xl -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700 ease-out"></div>
-               
-               <h4 className="text-bg-dark text-base md:text-lg font-serif font-semibold mb-4 flex items-center gap-3">
-                 <div className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.6)]"></div>
-                 Sustainable Manufacturing
-               </h4>
-               <p className="text-base text-text-light-bg/80 m-0 font-sans font-normal">
-                 We have continuously upgraded our production facilities with the latest machines and technology, always considering the environment and energy efficiency. For example, we don't melt with coal, like they still do in Belgium, but with the latest electrical induction furnaces. Hence massively reducing our environmental impact.
-               </p>
-               <p className="text-base text-text-light-bg/80 mt-4 font-sans font-normal">
-                 Vyanzo’s production facilities are state-of-the-art and ready to meet customer volume and quality demands for decades to come.
-               </p>
-            </div>
+            <button className="bg-brand-primary text-white px-6 py-3 rounded-full hover:bg-brand-primary/90 transition-colors">Meet the team</button>
+           
           </motion.div>
           
         </div>

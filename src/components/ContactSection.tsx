@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Warehouse } from "lucide-react";
 
 export default function ContactSection() {
   useEffect(() => {
@@ -85,6 +85,20 @@ export default function ContactSection() {
                   <p className="text-bg-dark/70 font-sans font-normal">
                     + 32 475 26 47 52
                   </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 group">
+                <div className="w-12 h-12 rounded-full bg-text-dark-bg flex items-center justify-center shrink-0 group-hover:bg-brand-primary/10 transition-colors">
+                  <Warehouse className="w-5 h-5 text-bg-dark group-hover:text-brand-primary transition-colors" />
+                
+                  
+                </div>
+                <div>
+                  <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">Belgian distribution and warehouse </h4>
+                  <a href="https://viateq.be" target="_blank" rel="noopener noreferrer" className="text-bg-dark/70 font-sans font-normal hover:text-brand-primary transition-colors">
+                    VIATEQ bv
+                  </a>
                 </div>
               </div>
             </div>

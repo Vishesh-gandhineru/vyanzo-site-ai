@@ -61,7 +61,7 @@ export default function Footer() {
           {/* Column 1 */}
           <div className="flex flex-col gap-4">
             <Link href="/about" className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity">
-              About
+              About Us
             </Link>
             <Link href="/products" className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity whitespace-nowrap">
               Products
@@ -91,10 +91,10 @@ export default function Footer() {
           {/* Column 2 */}
           <div className="flex flex-col gap-4">
             <Link href="/about/#team" className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity">
-              Team
+              Our Team
             </Link>
             <Link href="/contact" className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity">
-              Contact
+              Contact Us
             </Link>
           </div>
 

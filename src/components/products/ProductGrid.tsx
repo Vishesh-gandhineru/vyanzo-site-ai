@@ -188,34 +188,7 @@ export default function ProductGrid() {
                 </button>
             </div>
 
-            {/* Quality Standards Block */}
-            <div className="bg-bg-dark rounded-2xl p-6 text-white shadow-xl">
-                <div className="text-xs font-sans font-bold tracking-widest text-brand-ash uppercase mb-6">
-                    Quality Standards
-                </div>
-                
-                <div className="flex flex-col gap-6">
-                    <div>
-                        <h4 className="flex items-center gap-2 text-white font-sans font-semibold text-sm mb-2 cursor-pointer hover:text-brand-accent transition-colors">
-                            <Plus className="w-4 h-4 text-brand-accent" />
-                            What is Benor?
-                        </h4>
-                        <p className="text-brand-ash/80 text-xs font-sans font-normal leading-relaxed pl-6">
-                            Belgian quality mark for construction products, ensuring conformity to European standards.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h4 className="flex items-center gap-2 text-white font-sans font-semibold text-sm mb-2 cursor-pointer hover:text-brand-accent transition-colors">
-                            <Plus className="w-4 h-4 text-brand-accent" />
-                            Vyanzo Proprietary
-                        </h4>
-                        <p className="text-brand-ash/80 text-xs font-sans font-normal leading-relaxed pl-6">
-                            Enhanced security and durability features exclusive to our custom-engineered range.
-                        </p>
-                    </div>
-                </div>
-            </div>
+          
 
         </aside>
 
