@@ -60,11 +60,9 @@ export default function BentoGrid() {
             <div className="absolute top-8 left-8 right-8 z-20 flex justify-between items-start pointer-events-none">
                 <div>
                    <h3 className="text-2xl font-serif font-semibold text-text-light-bg tracking-tight">Worldwide Impact</h3>
-                   <p className="text-text-light-bg/70 mt-1 font-sans font-normal">Interactive live delivery routes</p>
+                  
                 </div>
-                <div className="px-3 py-1 bg-brand-primary/10 text-brand-primary text-xs font-sans font-bold rounded-full border border-brand-primary/20 uppercase tracking-wider backdrop-blur-md">
-                   Live
-                </div>
+                
             </div>
 
             {/* The Globe */}
