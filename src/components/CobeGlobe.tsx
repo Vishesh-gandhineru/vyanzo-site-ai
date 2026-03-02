@@ -27,18 +27,18 @@ export default function CobeGlobe() {
     };
 
     const baseMarkers = [
-      { location: [50.8503, 4.3517] , size: 0.08 }, // Belgium
-      { location: [48.8566, 2.3522] , size: 0.08 }, // France
-      { location: [40.4168, -3.7038] , size: 0.08 }, // Spain
-      { location: [41.9028, 12.4964] , size: 0.08 }, // Italy
-      { location: [48.2082, 16.3738] , size: 0.08 }, // Austria
-      { location: [52.3676, 4.9041] , size: 0.08 },  // Holland
-      { location: [51.5074, -0.1278] , size: 0.08 }, // UK
-      { location: [40.7128, -74.0060] , size: 0.08 },// USA (NY)
-      { location: [43.6532, -79.3832] , size: 0.15 },// Canada (Toronto)
-      { location: [20.5937, 78.9629] , size: 0.15 }, // India
-      { location: [38.9637, 35.2433] , size: 0.15 }, // Turkey
-      { location: [14.0583, 108.2772] , size: 0.15 }, // Vietnam
+      { location: [50.8503, 4.3517] as [number, number], size: 0.08 }, // Belgium
+      { location: [48.8566, 2.3522] as [number, number], size: 0.08 }, // France
+      { location: [40.4168, -3.7038] as [number, number], size: 0.08 }, // Spain
+      { location: [41.9028, 12.4964] as [number, number], size: 0.08 }, // Italy
+      { location: [48.2082, 16.3738] as [number, number], size: 0.08 }, // Austria
+      { location: [52.3676, 4.9041] as [number, number], size: 0.08 },  // Holland
+      { location: [51.5074, -0.1278] as [number, number], size: 0.08 }, // UK
+      { location: [40.7128, -74.0060] as [number, number], size: 0.08 },// USA (NY)
+      { location: [43.6532, -79.3832] as [number, number], size: 0.08 },// Canada (Toronto)
+      { location: [20.5937, 78.9629] as [number, number], size: 0.08 }, // India
+      { location: [38.9637, 35.2433] as [number, number], size: 0.08 }, // Turkey
+      { location: [14.0583, 108.2772] as [number, number], size: 0.15 }, // Vietnam
     ];
 
     const globe = createGlobe(canvasRef.current!, {
