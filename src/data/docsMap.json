@@ -1,152 +1,147 @@
 [
   {
-    "name": "Hydraulic covers - hydraulische deksels - regards hydrauliques",
+    "name": "Manhole covers",
     "type": "folder",
     "children": [
-      {
-        "name": "B125",
-        "type": "folder",
-        "children": [
+    
           {
-            "name": "100X100-B125.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/100X100-B125.pdf",
-            "size": "320 KB"
+            "name": "B125",
+            "type": "folder",
+            "children": [
+              {
+                "name": "100X100-B125.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/100X100-B125.pdf",
+                "size": "320 KB"
+              },
+              {
+                "name": "30X30-B125.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/30X30-B125.pdf",
+                "size": "283 KB"
+              },
+              {
+                "name": "40X40-B125.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/40X40-B125.pdf",
+                "size": "283 KB"
+              },
+              {
+                "name": "50X50-B125.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/50X50-B125.pdf",
+                "size": "285 KB"
+              },
+              {
+                "name": "60X60-B125.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/60X60-B125.pdf",
+                "size": "292 KB"
+              },
+              {
+                "name": "70X70-B125.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/70X70-B125.pdf",
+                "size": "297 KB"
+              },
+              {
+                "name": "80X80-B125.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/80X80-B125.pdf",
+                "size": "304 KB"
+              },
+              {
+                "name": "90X90-B125.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/90X90-B125.pdf",
+                "size": "313 KB"
+              }
+            ]
           },
           {
-            "name": "30X30-B125.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/30X30-B125.pdf",
-            "size": "283 KB"
+            "name": "C250",
+            "type": "folder",
+            "children": [
+              {
+                "name": "50X50-C250.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/50X50-C250.pdf",
+                "size": "369 KB"
+              },
+              {
+                "name": "60X60-C250.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/60X60-C250.pdf",
+                "size": "375 KB"
+              },
+              {
+                "name": "70X70-C250.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/70X70-C250.pdf",
+                "size": "379 KB"
+              },
+              {
+                "name": "80X80-C250.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/80X80-C250.pdf",
+                "size": "387 KB"
+              },
+              {
+                "name": "90X90-C250.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/90X90-C250.pdf",
+                "size": "393 KB"
+              }
+            ]
           },
           {
-            "name": "40X40-B125.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/40X40-B125.pdf",
-            "size": "283 KB"
+            "name": "D400",
+            "type": "folder",
+            "children": [
+              {
+                "name": "100X100-D400.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/100X100-D400.pdf",
+                "size": "312 KB"
+              },
+              {
+                "name": "110X110-D400.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/110X110-D400.pdf",
+                "size": "321 KB"
+              },
+              {
+                "name": "40X40-D400.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/40X40-D400.pdf",
+                "size": "277 KB"
+              },
+              {
+                "name": "50X50-D400.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/50X50-D400.pdf",
+                "size": "288 KB"
+              },
+              {
+                "name": "60X60-D400.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/60X60-D400.pdf",
+                "size": "287 KB"
+              },
+              {
+                "name": "70X70-D400.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/70X70-D400.pdf",
+                "size": "291 KB"
+              },
+              {
+                "name": "90X90-D400.pdf",
+                "type": "file",
+                "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/90X90-D400.pdf",
+                "size": "307 KB"
+              }
+            ]
           },
-          {
-            "name": "50X50-B125.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/50X50-B125.pdf",
-            "size": "285 KB"
-          },
-          {
-            "name": "60X60-B125.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/60X60-B125.pdf",
-            "size": "292 KB"
-          },
-          {
-            "name": "70X70-B125.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/70X70-B125.pdf",
-            "size": "297 KB"
-          },
-          {
-            "name": "80X80-B125.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/80X80-B125.pdf",
-            "size": "304 KB"
-          },
-          {
-            "name": "90X90-B125.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/B125/90X90-B125.pdf",
-            "size": "313 KB"
-          }
-        ]
-      },
-      {
-        "name": "C250",
-        "type": "folder",
-        "children": [
-          {
-            "name": "50X50-C250.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/50X50-C250.pdf",
-            "size": "369 KB"
-          },
-          {
-            "name": "60X60-C250.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/60X60-C250.pdf",
-            "size": "375 KB"
-          },
-          {
-            "name": "70X70-C250.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/70X70-C250.pdf",
-            "size": "379 KB"
-          },
-          {
-            "name": "80X80-C250.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/80X80-C250.pdf",
-            "size": "387 KB"
-          },
-          {
-            "name": "90X90-C250.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/C250/90X90-C250.pdf",
-            "size": "393 KB"
-          }
-        ]
-      },
-      {
-        "name": "D400",
-        "type": "folder",
-        "children": [
-          {
-            "name": "100X100-D400.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/100X100-D400.pdf",
-            "size": "312 KB"
-          },
-          {
-            "name": "110X110-D400.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/110X110-D400.pdf",
-            "size": "321 KB"
-          },
-          {
-            "name": "40X40-D400.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/40X40-D400.pdf",
-            "size": "277 KB"
-          },
-          {
-            "name": "50X50-D400.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/50X50-D400.pdf",
-            "size": "288 KB"
-          },
-          {
-            "name": "60X60-D400.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/60X60-D400.pdf",
-            "size": "287 KB"
-          },
-          {
-            "name": "70X70-D400.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/70X70-D400.pdf",
-            "size": "291 KB"
-          },
-          {
-            "name": "90X90-D400.pdf",
-            "type": "file",
-            "path": "/products/pdf/Hydraulic covers - hydraulische deksels - regards hydrauliques/D400/90X90-D400.pdf",
-            "size": "307 KB"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Manhole covers - wegenisdeksels - regards",
-    "type": "folder",
-    "children": [
       {
         "name": "Benor",
         "type": "folder",
@@ -300,7 +295,7 @@
     ]
   },
   {
-    "name": "Siphons - Kolken - Avaloirs",
+    "name": "Siphons",
     "type": "folder",
     "children": [
       {
@@ -522,7 +517,7 @@
     ]
   },
   {
-    "name": "Surface boxes - Huisaansluitputjes - Regards de branchement",
+    "name": "Surface boxes",
     "type": "folder",
     "children": [
       {

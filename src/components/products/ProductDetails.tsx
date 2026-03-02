@@ -67,7 +67,7 @@ function RecursiveDocsFolder({ folder, defaultOpen = false }: { folder: DocFolde
 }
 
 export default function ProductDetails({ product }: { product: Product }) {
-  const [isTechSheetOpen, setIsTechSheetOpen] = useState(false);
+  const [isTechSheetOpen, setIsTechSheetOpen] = useState(true);
   const similarProducts = products.filter(p => p.id !== product.id).slice(0, 3);
 
   return (
@@ -148,8 +148,8 @@ export default function ProductDetails({ product }: { product: Product }) {
                     <div className="flex items-center gap-5">
                       <Plus className="w-6 h-6 text-[#ef4444]" />
                       <div className="flex flex-col items-start text-left">
-                        <span className="font-semibold text-base text-bg-dark mb-1">Technical Sheets</span>
-                        <span className="text-[10px] font-bold tracking-widest text-brand-ash uppercase">Multiple Options</span>
+                        <span className="font-semibold text-base text-bg-dark mb-1">Specifications</span>
+                       
                       </div>
                     </div>
                     <ChevronDown className={`w-5 h-5 text-brand-ash group-hover:text-brand-primary transition-transform duration-300 ${isTechSheetOpen ? 'rotate-180' : ''}`} />
@@ -164,42 +164,8 @@ export default function ProductDetails({ product }: { product: Product }) {
                 </div>
               )}
 
-              {/* Doc Item */}
-              <a href="#" className="group flex items-center justify-between p-5 bg-[#f8f9fc] rounded-[1.5rem] hover:bg-white hover:shadow-md hover:border-brand-primary/30 border border-transparent transition-all">
-                <div className="flex items-center gap-5">
-                  <Plus className="w-6 h-6 text-brand-primary" />
-                  <div className="flex flex-col">
-                    <span className="font-semibold text-base text-bg-dark mb-1">CAD Drawing</span>
-                    <span className="text-[10px] font-bold tracking-widest text-brand-ash uppercase">DWG • 12.8 MB</span>
-                  </div>
-                </div>
-                <ArrowRight className="w-5 h-5 text-brand-ash group-hover:text-brand-primary group-hover:translate-x-1 transition-all" />
-              </a>
-
-              {/* Doc Item */}
-              <a href="#" className="group flex items-center justify-between p-5 bg-[#f8f9fc] rounded-[1.5rem] hover:bg-white hover:shadow-md hover:border-brand-primary/30 border border-transparent transition-all">
-                <div className="flex items-center gap-5">
-                  <Plus className="w-6 h-6 text-[#10b981]" />
-                  <div className="flex flex-col">
-                    <span className="font-semibold text-base text-bg-dark mb-1">Maintenance Manual</span>
-                    <span className="text-[10px] font-bold tracking-widest text-brand-ash uppercase">PDF • 5.1 MB</span>
-                  </div>
-                </div>
-                <ArrowRight className="w-5 h-5 text-brand-ash group-hover:text-brand-primary group-hover:translate-x-1 transition-all" />
-              </a>
+            
               
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-brand-ash/20">
-              <div className="text-[10px] font-bold tracking-widest text-brand-ash uppercase mb-4">
-                Request Support
-              </div>
-              <button className="w-full bg-bg-dark text-white hover:bg-brand-primary transition-colors py-4 rounded-xl font-bold text-base shadow-[0_4px_14px_rgba(0,0,0,0.15)] hover:shadow-none">
-                Contact Engineering
-              </button>
-              <p className="text-[11px] text-text-light-bg/60 font-medium text-center mt-6 italic px-4">
-                Architecture concrete textures & proprietary molding used in production.
-              </p>
             </div>
           </div>
 
@@ -216,12 +182,7 @@ export default function ProductDetails({ product }: { product: Product }) {
               <p className="text-text-light-bg/70 font-sans font-normal text-lg leading-relaxed max-w-2xl">
                 {product.description}
               </p>
-              
-              <div className="shrink-0 bg-[#eef2f9] border border-brand-primary/20 rounded-full px-8 py-3.5 flex items-center justify-center">
-                <span className="text-brand-primary text-[11px] font-bold tracking-widest uppercase text-center leading-tight">
-                  Manufacturer<br />Direct
-                </span>
-              </div>
+            
             </div>
           </div>
       {/* Middle Section: Specs, Materials, Pricing, Certifications Grid (from Image 1 layout) */}
@@ -267,71 +228,9 @@ export default function ProductDetails({ product }: { product: Product }) {
           </div>
         )}
 
-        {/* Materials / Features Box */}
-        <div className="bg-white rounded-[2rem] md:rounded-[3rem] p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col h-full">
-          <h3 className="flex items-center gap-3 text-xl font-serif font-bold text-bg-dark mb-8">
-            <Activity className="w-5 h-5 text-brand-primary" />
-            Materials & Features
-          </h3>
-          <div className="flex flex-col gap-6 flex-1 justify-center">
-            {product.features?.map((feature, idx) => (
-              <div key={idx} className="flex gap-5 items-start group">
-                <div className="w-12 h-12 rounded-xl bg-[#f8f9fc] border border-brand-ash/20 flex flex-shrink-0 items-center justify-center group-hover:bg-brand-primary/10 transition-colors">
-                  {getIcon(feature.iconName)}
-                </div>
-                <div>
-                  <h4 className="text-bg-dark font-bold text-sm md:text-base mb-1">{feature.title}</h4>
-                  <p className="text-text-light-bg/70 text-xs md:text-sm leading-relaxed">{feature.description}</p>
-                </div>
-              </div>
-            ))}
-            {/* Fallbacks if empty */}
-            {(!product.features || product.features.length === 0) && (
-              <div className="flex gap-5 items-start group">
-                <div className="w-12 h-12 rounded-xl bg-[#f8f9fc] border border-brand-ash/20 flex flex-shrink-0 items-center justify-center group-hover:bg-brand-primary/10 transition-colors">
-                  <Leaf className="w-6 h-6 text-bg-dark" />
-                </div>
-                <div>
-                  <h4 className="text-bg-dark font-bold text-sm md:text-base mb-1">High-Grade Nodular Iron</h4>
-                  <p className="text-text-light-bg/70 text-xs md:text-sm leading-relaxed">Cast from premium materials to ensure high yield strength and durability.</p>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
+       
 
-        {/* Pricing Box */}
-        <div className="bg-white rounded-[2rem] md:rounded-[3rem] p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col h-full w-full">
-            <h3 className="flex items-center gap-3 text-xl md:text-2xl font-bold text-bg-dark font-sans tracking-tight mb-8">
-              <ShoppingCart className="w-5 h-5 text-brand-primary" />
-              Pricing & Units
-            </h3>
-            
-            <div className="bg-[#f8f9fc] rounded-[1.5rem] border border-brand-ash/10 overflow-hidden flex flex-col">
-                <div className="flex items-center justify-between py-5 px-6 md:px-8 border-b border-brand-ash/10 hover:bg-white transition-colors">
-                  <span className="text-text-light-bg/70 font-medium text-sm md:text-[15px]">1-10 Units</span>
-                  <div className="flex items-center gap-2">
-                    <span className="text-bg-dark font-bold font-sans text-sm md:text-[15px]">$1,420.00</span>
-                    <span className="text-brand-primary font-bold text-xs uppercase bg-brand-primary/10 px-2 py-0.5 rounded-full">ea</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between py-5 px-6 md:px-8 border-b border-brand-ash/10 hover:bg-white transition-colors">
-                  <span className="text-text-light-bg/70 font-medium text-sm md:text-[15px]">11-50 Units</span>
-                  <div className="flex items-center gap-2">
-                    <span className="text-brand-primary font-bold font-sans text-sm md:text-[15px]">$1,280.00</span>
-                    <span className="bg-brand-primary/10 text-brand-primary font-bold text-xs uppercase px-2 py-0.5 rounded-full">ea</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between py-5 px-6 md:px-8 hover:bg-white transition-colors cursor-pointer group">
-                  <span className="text-text-light-bg/70 font-medium text-sm md:text-[15px]">50+ Units</span>
-                  <span className="text-brand-primary font-bold font-sans text-sm md:text-[15px] group-hover:underline decoration-2 underline-offset-4">Request Quote</span>
-                </div>
-            </div>
-            
-            <p className="text-[10px] font-bold tracking-widest text-brand-ash uppercase mt-8 text-center sm:text-left">
-                GLOBAL SHIPPING VIA VYANZO LOGISTICS
-            </p>
-        </div>
+    
         
         {/* Certifications Box */}
         <div className="bg-white rounded-[2rem] md:rounded-[3rem] p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col h-full">

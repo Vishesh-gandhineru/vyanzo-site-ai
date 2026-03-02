@@ -38,107 +38,46 @@ export type Product = {
   features?: ProductFeature[];
 };
 
-// Helper to find the correct folder tree from the JSON map
-function getDocsTree(folderName: string): DocFolder | undefined {
-  return (docsMap as DocFolder[]).find(f => f.name === folderName);
-}
+export const products: Product[] = (docsMap as DocFolder[]).flatMap((categoryFolder, catIndex) => {
+  const categoryName = categoryFolder.name;
+  
+  // The first children (level 2) become the products
+  const productFolders = categoryFolder.children.filter(c => c.type === "folder") as DocFolder[];
+  
+  return productFolders.map((productFolder, prodIndex) => {
+    const title = productFolder.name;
+    const isBenor = title.toLowerCase().includes("benor") || categoryName.toLowerCase().includes("benor");
+    const slug = `${categoryName}-${title}`.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    const sku = `VY-${categoryName.substring(0,3).toUpperCase()}-${title.substring(0,3).toUpperCase()}-${prodIndex + 1}`;
+    
+    // Assign generic images based on category or fallback
+    let image = "/products/manhole-cover.png";
+    if (categoryName.toLowerCase().includes("hydraulic")) image = "/products/hydraulic-cover.png";
+    else if (categoryName.toLowerCase().includes("siphon")) image = "/products/siphon.png";
+    else if (categoryName.toLowerCase().includes("surface box")) image = "/products/surface-box.png";
 
-export const products: Product[] = [
-  {
-    id: 1,
-    title: "Benor Certified Cover - D400",
-    slug: "manhole-covers",
-    sku: "BE-CV-01",
-    description: "Heavy-duty municipal cover with Benor certification for Belgian infrastructure.",
-    image: "/products/manhole-cover.png",
-    isBenor: true,
-    category: "Covers",
-    docsTree: getDocsTree("Manhole covers - wegenisdeksels - regards"),
-    specifications: [
-      { parameter: "Certification", value: "Benor" },
-      { parameter: "Frame height", value: "20cm" },
-      { parameter: "Load category", value: "D400 – heavy duty" },
-      { parameter: "Inscriptions", value: "D/RWA, EU/P, Aquafin, optional customer logo" },
-    ],
-    features: [
-      {
-        title: "Production Excellence",
-        description: "Utilizing Inductotherm furnaces and DISA 280c vertical moulding lines for unsurpassed precision.",
-        iconName: "factory"
-      },
-      {
-        title: "Eco-Friendly Casting",
-        description: "Powered by rooftop solar energy and electrical induction furnaces to minimize environmental impact.",
-        iconName: "globe"
-      }
-    ]
-  },
-  {
-    id: 2,
-    title: "Benor Certified Cover - E600",
-    slug: "hydraulic-covers",
-    sku: "BE-CV-02",
-    description: "Extra heavy-duty cover for industrial and high-traffic areas.",
-    image: "/products/hydraulic-cover.png",
-    isBenor: true,
-    category: "Covers",
-    docsTree: getDocsTree("Hydraulic covers - hydraulische deksels - regards hydrauliques"),
-    specifications: [
-      { parameter: "Certification", value: "Benor" },
-      { parameter: "Frame height", value: "20cm" },
-      { parameter: "Load category", value: "E600 – extra heavy duty" },
-      { parameter: "Inscriptions", value: "Custom logo available" },
-    ],
-    features: [
-      {
-        title: "Production Excellence",
-        description: "Utilizing Inductotherm furnaces and DISA 280c vertical moulding lines for unsurpassed precision.",
-        iconName: "factory"
-      },
-      {
-        title: "Eco-Friendly Casting",
-        description: "Powered by rooftop solar energy and electrical induction furnaces to minimize environmental impact.",
-        iconName: "globe"
-      }
-    ]
-  },
-  {
-    id: 3,
-    title: "Benor Siphon - Plat Recht",
-    slug: "siphons",
-    sku: "BE-SP-01",
-    description: "High-capacity siphon with multiple version options for versatile installation.",
-    image: "/products/siphon.png",
-    isBenor: true,
-    category: "Siphons",
-    docsTree: getDocsTree("Siphons - Kolken - Avaloirs"),
-    specifications: [
-      { parameter: "Certification", value: "Benor" },
-      { parameter: "Material", value: "Ductile Iron" },
-      { parameter: "Type", value: "Flat Straight (Plat Recht)" },
-    ],
-    features: [
-      {
-        title: "High Performance",
-        description: "Designed for optimal flow and clog resistance in demanding environments.",
-        iconName: "activity"
-      }
-    ]
-  },
-  {
-    id: 4,
-    title: "Benor Surface Box",
-    slug: "surface-boxes",
-    sku: "BE-SB-01",
-    description: "Standard surface box for utility access and protection.",
-    image: "/products/surface-box.png",
-    isBenor: true,
-    category: "Surface boxes",
-    docsTree: getDocsTree("Surface boxes - Huisaansluitputjes - Regards de branchement"),
-    specifications: [
-      { parameter: "Certification", value: "Benor" },
-      { parameter: "Load category", value: "B125" },
-      { parameter: "Usage", value: "Gas and water valves" },
-    ],
-  },
-];
+    return {
+      id: parseInt(`${catIndex + 1}${prodIndex + 1}`),
+      title: title,
+      slug: slug,
+      sku: sku,
+      description: `High-quality ${title} from our ${categoryName} range.`,
+      image: image,
+      isBenor: isBenor,
+      category: categoryName,
+      docsTree: productFolder,
+      specifications: [
+        { parameter: "Category", value: categoryName },
+        { parameter: "Product Type", value: title },
+        { parameter: "Certification", value: isBenor ? "Benor" : "Standard" }
+      ],
+      features: [
+        {
+          title: "Production Excellence",
+          description: "Utilizing modern induction furnaces for unsurpassed precision.",
+          iconName: "factory"
+        }
+      ]
+    };
+  });
+});

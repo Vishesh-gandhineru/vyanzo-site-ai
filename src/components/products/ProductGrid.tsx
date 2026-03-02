@@ -62,6 +62,7 @@ export default function ProductGrid() {
 
     const ALL_GEOS = Object.keys(GEO_TO_CERT);
     const ALL_CERTS = Object.keys(CERT_TO_GEO);
+    const ALL_CATEGORIES = Array.from(new Set(products.map(p => p.category)));
 
     const availableGeos = selectedCertifications.length === 0 
       ? ALL_GEOS 
@@ -159,7 +160,7 @@ export default function ProductGrid() {
                    Category
                 </h3>
                 <div className="flex flex-col gap-4">
-                    {['Covers', 'Siphons', 'Surface boxes'].map(cat => {
+                    {ALL_CATEGORIES.map(cat => {
                         const isChecked = selectedCategories.includes(cat);
                         return (
                           <label key={cat} className="flex items-center gap-3 cursor-pointer group">
