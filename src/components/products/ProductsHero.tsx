@@ -21,12 +21,7 @@ export default function ProductsHero() {
                 </p>
             </div>
             
-            <div className="shrink-0">
-               <button className="bg-brand-accent hover:opacity-90 transition-opacity text-bg-dark font-sans font-bold text-sm tracking-widest uppercase py-4 px-8 flex items-center gap-3 rounded-lg group">
-                 Download Full Catalog
-                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-               </button>
-            </div>
+            
         </div>
       </div>
     </section>

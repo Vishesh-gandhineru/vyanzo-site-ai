@@ -83,7 +83,7 @@ export default function MegaMenu() {
                     { title: "Products", href: "/products" },
                     { title: "Services", href: "/services" },
                     { title: "About Us", href: "/about" },
-                    { title: "Contact", href: "/contact" },
+                    { title: "Contact Us", href: "/contact" },
                   ].map((item) => (
                     <Link key={item.title} href={item.href as any}>
                       <motion.div

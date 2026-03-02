@@ -253,16 +253,8 @@ export default function ProductGrid() {
                           
                           <p className="text-text-light-bg/60 font-sans font-normal text-sm leading-relaxed mb-6 flex-1">
                               {product.description}
-                          </p>
+                          </p>                          
                           
-                          <div className="flex items-center gap-2 text-brand-primary font-sans font-bold text-xs tracking-widest uppercase mb-6">
-                              {product.isBenor && (
-                                <>
-                                  <Globe className="w-4 h-4" />
-                                  Benor
-                                </>
-                              )}
-                          </div>
                           
                           <button className="w-full py-3 px-4 border border-brand-ash/30 rounded-xl text-bg-dark font-sans font-bold text-sm tracking-wide group-hover:border-brand-primary group-hover:bg-brand-primary/5 transition-colors">
                               View Technical Specs
