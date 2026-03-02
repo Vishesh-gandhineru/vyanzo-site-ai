@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import CobeGlobe from "./CobeGlobe";
 import { ArrowUpRight, BarChart3, Users, Zap, Award, Factory } from "lucide-react";
 
@@ -107,7 +108,13 @@ export default function BentoGrid() {
            </div>
 
           {/* Card 6: Bottom Left (H:1 W:1) */}
-          <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-brand-primary/10 border border-brand-primary/20 rounded-3xl p-6 flex flex-col justify-between hover:bg-brand-primary hover:text-white transition-colors cursor-pointer group shadow-sm text-text-light-bg">
+          <Link 
+          className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-brand-primary/10 border border-brand-primary/20 rounded-3xl p-6 flex flex-col justify-between hover:bg-brand-primary hover:text-white transition-colors cursor-pointer group shadow-sm text-text-light-bg"
+          href="/contact"
+          >
+
+         
+         
              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-primary group-hover:text-brand-primary transition-colors mb-4 shadow-sm">
                 <ArrowUpRight className="w-6 h-6" />
              </div>
@@ -115,7 +122,9 @@ export default function BentoGrid() {
                 <h3 className="text-2xl font-serif font-semibold group-hover:text-white transition-colors">Contact Sales</h3>
                 <p className="text-sm opacity-80 mt-1 font-sans font-normal">Get custom quotes</p>
              </div>
-          </div>
+          
+
+           </Link>
 
          
 
