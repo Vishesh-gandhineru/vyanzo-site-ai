@@ -6,6 +6,7 @@ import { Linkedin, ChevronUp } from "lucide-react";
 
 // We will use standard Svgs or Lucide icons for social.
 const WhatsAppIcon = ({ className }: { className?: string }) => (
+  
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
     width="24" 
@@ -122,7 +123,7 @@ export default function Footer() {
         {/* Scroll to Top Button */}
         <button
           onClick={scrollToTop}
-          className={`w-12 h-12 bg-bg-dark text-white rounded-full flex items-center justify-center shadow-lg border border-black/10 transition-all duration-300 ${
+          className={`w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center shadow-lg border border-black/10 transition-all duration-300 ${
             showScroll ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
           } hover:-translate-y-1 hover:bg-black`}
           aria-label="Scroll to top"
@@ -135,11 +136,12 @@ export default function Footer() {
           href="https://wa.link/yemzpo"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 relative overflow-hidden group"
+          className="w-14 h-14 text-white rounded-full flex items-center justify-center shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 relative overflow-hidden group"
           aria-label="Contact on WhatsApp"
         >
-          <WhatsAppIcon className="w-7 h-7 relative z-10" />
-          <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+          
+       <svg xmlns="http://www.w3.org/2000/svg" aria-label="WhatsApp" role="img" viewBox="0 0 512 512" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><rect width="512" height="512" rx="15%" fill="#25d366"></rect><path fill="#25d366" stroke="#ffffff" stroke-width="26" d="M123 393l14-65a138 138 0 1150 47z"></path><path fill="#ffffff" d="M308 273c-3-2-6-3-9 1l-12 16c-3 2-5 3-9 1-15-8-36-17-54-47-1-4 1-6 3-8l9-14c2-2 1-4 0-6l-12-29c-3-8-6-7-9-7h-8c-2 0-6 1-10 5-22 22-13 53 3 73 3 4 23 40 66 59 32 14 39 12 48 10 11-1 22-10 27-19 1-3 6-16 2-18"></path></g></svg>
+          
         </a>
       </div>
 
