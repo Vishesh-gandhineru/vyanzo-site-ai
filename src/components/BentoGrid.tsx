@@ -122,7 +122,7 @@ export default function BentoGrid() {
           </div>
 
           {/* Card 7: Bottom Right (H:1 W:1) */}
-          <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-8 relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
+          <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-6 relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
               <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-brand-primary/10 blur-2xl rounded-full transition-all group-hover:bg-brand-primary/20" />
               <Factory className="w-8 h-8 text-brand-primary mb-4" strokeWidth={1.5} />
               <h3 className="text-xl font-serif font-semibold text-text-light-bg mb-4">Industry Compliance</h3>
