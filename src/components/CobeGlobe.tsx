@@ -36,6 +36,9 @@ export default function CobeGlobe() {
       { location: [51.5074, -0.1278] as [number, number], size: 0.08 }, // UK
       { location: [40.7128, -74.0060] as [number, number], size: 0.08 },// USA (NY)
       { location: [43.6532, -79.3832] as [number, number], size: 0.08 },// Canada (Toronto)
+      { location: [20.5937, 78.9629] as [number, number], size: 0.08 }, // India
+      { location: [38.9637, 35.2433] as [number, number], size: 0.08 }, // Turkey
+      { location: [14.0583, 108.2772] as [number, number], size: 0.08 }, // Vietnam
     ];
 
     const globe = createGlobe(canvasRef.current!, {
