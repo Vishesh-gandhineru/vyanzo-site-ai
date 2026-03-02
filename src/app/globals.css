@@ -25,3 +25,16 @@ body {
   background-color: var(--color-brand-primary);
   color: var(--color-background);
 }
+
+
+
+/* Google Translate UI Overrides */
+iframe.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+.goog-te-spinner-pos {
+  display: none !important;
+}
