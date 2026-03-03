@@ -1,115 +1,109 @@
-import docsMap from "./docsMap.json";
+import productData from "./productdata.json";
 
-export type DocFile = {
-  name: string;
-  type: "file";
-  path: string;
-  size: string;
-};
+// ─── Types ────────────────────────────────────────────────────────────────────
 
-export type DocFolder = {
-  name: string;
-  type: "folder";
-  children: (DocFile | DocFolder)[];
-};
-
-export type ProductFeature = {
-  title: string;
-  description: string;
-  iconName?: string;
-};
-
-export type ProductSpecification = {
-  parameter: string;
-  value: string;
+export type DriveLink = {
+  label: string;
+  url: string;
+  downloadUrl: string;
 };
 
 export type Product = {
   id: number;
-  title: string;
+  no: number;
+  title: string;        // = name from JSON
   slug: string;
   sku: string;
   description: string;
   image: string;
+  category: string;     // = product_category
+  subCategory: string | null;
+  certificationType: string;
   isBenor: boolean;
-  category: string;
-  docsTree?: DocFolder;
-  specifications?: ProductSpecification[];
-  features?: ProductFeature[];
+  specificationFiles: DriveLink[];
+  certificationFiles: DriveLink[];
+  tableLink: string | null;
 };
 
-export const products: Product[] = (docsMap as DocFolder[]).flatMap((categoryFolder, catIndex) => {
-  const categoryName = categoryFolder.name;
-  
-  // Create a base slug for the category (e.g., "Manhole covers" -> "manhole-covers")
-  const categorySlug = categoryName.split(' - ')[0].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-  
-  // Assign generic images based on category or fallback
-  let categoryImage = "/products/manhole-cover.png";
-  if (categoryName.toLowerCase().includes("hydraulic")) categoryImage = "/products/hydraulic-cover.png";
-  else if (categoryName.toLowerCase().includes("siphon")) categoryImage = "/products/siphon.png";
-  else if (categoryName.toLowerCase().includes("surface box")) categoryImage = "/products/surface-box.png";
+// ─── Helpers ──────────────────────────────────────────────────────────────────
 
-  const isCategoryBenor = categoryName.toLowerCase().includes("benor");
+/** Convert a Google Drive share URL to a direct download URL */
+function toDownloadUrl(viewUrl: string): string {
+  const m = viewUrl.match(/\/file\/d\/([^/]+)\//);
+  return m ? `https://drive.google.com/uc?export=download&id=${m[1]}` : viewUrl;
+}
 
-  // Push the main Category itself as a "parent" product
-  const categoryProduct: Product = {
-      id: parseInt(`${catIndex + 1}000`),
-      title: categoryName.split(' - ')[0], // Use the short name for the title
-      slug: categorySlug,
-      sku: `VY-${categoryName.substring(0,3).toUpperCase()}-MSTR`,
-      description: `Explore our complete range of high-quality ${categoryName.split(' - ')[0].toLowerCase()}.`,
-      image: categoryImage,
-      isBenor: isCategoryBenor,
-      category: categoryName,
-      docsTree: categoryFolder,
-      specifications: [
-        { parameter: "Category", value: categoryName },
-        { parameter: "Type", value: "Product Range" }
-      ],
-      features: [
-        {
-          title: "Production Excellence",
-          description: "Utilizing modern induction furnaces for unsurpassed precision.",
-          iconName: "factory"
-        }
-      ]
+/** Convert a name + index to a sane display label */
+function fileLabel(name: string, idx: number): string {
+  return `${name} — Document ${idx + 1}`;
+}
+
+/** Build a DriveLink array from an object of { file_1, file_2, ... } */
+function buildLinks(name: string, files: Record<string, string | null>): DriveLink[] {
+  return Object.values(files)
+    .filter((url): url is string => !!url)
+    .map((url, i) => ({
+      label: fileLabel(name, i),
+      url,
+      downloadUrl: toDownloadUrl(url),
+    }));
+}
+
+/** Pick the right product image based on category */
+function imageForCategory(cat: string, sub: string | null): string {
+  const c = cat.toLowerCase();
+  const s = (sub ?? "").toLowerCase();
+  if (s.includes("hydraulic")) return "/products/hydraulic-cover.png";
+  if (c.includes("siphon"))    return "/products/siphon.png";
+  if (c.includes("surface"))   return "/products/surface-box.png";
+  return "/products/manhole-cover.png";
+}
+
+/** Slugify a string */
+function slugify(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+// ─── Build products array ─────────────────────────────────────────────────────
+
+type RawEntry = {
+  no: number;
+  product_category: string;
+  sub_category: string | null;
+  name: string;
+  certification_type: string;
+  certifications: Record<string, string | null>;
+  specifications: Record<string, string | null>;
+  image_link: string | null;
+  table_link: string | null;
+};
+
+export const products: Product[] = (productData as RawEntry[]).map((p) => {
+  const certFiles  = buildLinks(p.name, p.certifications);
+  const specFiles  = buildLinks(p.name, p.specifications);
+
+  return {
+    id:                p.no,
+    no:                p.no,
+    title:             p.name,
+    slug:              slugify(`${p.product_category}-${p.sub_category ?? ""}-${p.name}`),
+    sku:               `VY-${p.product_category.substring(0, 3).toUpperCase()}-${String(p.no).padStart(2, "0")}`,
+    description:       `High-quality ${p.name} from our ${p.product_category} range${p.sub_category ? ` (${p.sub_category})` : ""}.`,
+    image:             imageForCategory(p.product_category, p.sub_category),
+    category:          p.product_category,
+    subCategory:       p.sub_category,
+    certificationType: p.certification_type,
+    isBenor:           p.certification_type.toLowerCase() === "benor",
+    specificationFiles: specFiles,
+    certificationFiles: certFiles,
+    tableLink:         p.table_link,
   };
-
-  // The children (level 2) become the individual sub-products
-  const productFolders = categoryFolder.children.filter(c => c.type === "folder") as DocFolder[];
-  
-  const childProducts = productFolders.map((productFolder, prodIndex) => {
-    const title = productFolder.name;
-    const isBenor = title.toLowerCase().includes("benor") || isCategoryBenor;
-    const slug = `${categorySlug}-${title}`.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-    const sku = `VY-${categoryName.substring(0,3).toUpperCase()}-${title.substring(0,3).toUpperCase()}-${prodIndex + 1}`;
-    
-    return {
-      id: parseInt(`${catIndex + 1}00${prodIndex + 1}`),
-      title: title,
-      slug: slug,
-      sku: sku,
-      description: `High-quality ${title} from our ${categoryName.split(' - ')[0]} range.`,
-      image: categoryImage, // Inherit category image
-      isBenor: isBenor,
-      category: categoryName,
-      docsTree: productFolder,
-      specifications: [
-        { parameter: "Category", value: categoryName },
-        { parameter: "Product Type", value: title },
-        { parameter: "Certification", value: isBenor ? "Benor" : "Standard" }
-      ],
-      features: [
-        {
-          title: "Production Excellence",
-          description: "Utilizing modern induction furnaces for unsurpassed precision.",
-          iconName: "factory"
-        }
-      ]
-    };
-  });
-
-  // Return the main category product PLUS all of its child products
-  return [categoryProduct, ...childProducts];
 });
+
+// ─── Derived filter lists (used by ProductGrid) ───────────────────────────────
+
+export const ALL_CATEGORIES    = Array.from(new Set(products.map(p => p.category)));
+export const ALL_SUB_CATEGORIES = Array.from(
+  new Set(products.map(p => p.subCategory).filter((s): s is string => !!s))
+);
+export const ALL_CERT_TYPES    = Array.from(new Set(products.map(p => p.certificationType)));
