@@ -24,10 +24,10 @@ export default function ContactPage() {
                    Start a Conversation
                 </div>
                 <h1 className="text-hero-inner font-serif font-bold tracking-tight mb-6 leading-[1.2]">
-                    Get in Touch
+                  We're <span className="text-brand-primary italic">Listening</span>
                 </h1>
                  <p className="text-brand-ash/80 text-lg md:text-xl font-sans font-normal max-w-2xl leading-relaxed">
-                We are happy to help you with questions about our products or to book a consultation. Please get in touch and we will get back to you as soon as we can.
+                Got a project in mind? Let's figure out the right solution together.
                 </p>
             </div>
             
@@ -37,7 +37,7 @@ export default function ContactPage() {
     </section>
 
       {/* Reusing existing ContactSection but without its own top-padding if it looks wrong, but ContactSection has py-24 so it will flow naturally */}
-      <div  className="py-24 px-6 md:px-12 lg:px-16 bg-white relative -mt-12 rounded-t-[3rem] z-20 shadow-[0_-20px_40px_rgba(0,0,0,0.05)] border-t border-brand-ash/10">
+      <div  className="section-xl bg-white relative -mt-12 rounded-t-[3rem] z-20 shadow-[0_-20px_40px_rgba(0,0,0,0.05)] border-t border-brand-ash/10">
       <ContactSection />
       </div>
 

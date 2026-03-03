@@ -214,26 +214,6 @@ export default function ProductDetails({ product }: { product: Product }) {
                   </p>
                 )}
 
-                {/* Dimension Table link */}
-                {/* {product.tableLink && (
-                  <a
-                    href={product.tableLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-between p-4 bg-brand-primary/5 rounded-xl border border-brand-primary/20 hover:bg-brand-primary/10 transition-all group mt-2"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-brand-primary/20 flex items-center justify-center shrink-0">
-                        <ExternalLink className="w-4 h-4 text-brand-primary" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold text-bg-dark font-sans">Dimension Table</p>
-                        <p className="text-xs text-brand-ash font-sans mt-0.5">Google Sheets</p>
-                      </div>
-                    </div>
-                    <ExternalLink className="w-4 h-4 text-brand-ash group-hover:text-brand-primary transition-colors shrink-0" />
-                  </a>
-                )} */}
               </div>
             )}
 
@@ -271,7 +251,7 @@ export default function ProductDetails({ product }: { product: Product }) {
         <h1 className="text-4xl md:text-5xl lg:text-[4rem] leading-[1.05] font-serif font-bold text-bg-dark tracking-tight mb-6">
           {product.title}
         </h1>
-        <p className="text-text-light-bg/70 font-sans font-normal text-lg leading-relaxed max-w-2xl">
+        <p className="text-text-light-bg/70 font-sans font-normal text-body-xl leading-relaxed max-w-2xl">
           {product.description}
         </p>
       </div>
@@ -281,8 +261,8 @@ export default function ProductDetails({ product }: { product: Product }) {
 
         {/* Technical Specifications */}
         <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col">
-          <h3 className="flex items-center gap-3 text-xl md:text-2xl font-bold text-bg-dark font-sans tracking-tight mb-8">
-            <Settings2 className="w-5 h-5 text-brand-primary" />
+          <h3 className="flex items-center gap-3 text-xl font-bold text-bg-dark font-sans tracking-tight mb-8">
+            <Settings2 className="w-8 h-8 text-brand-primary" />
             Product Details
           </h3>
           <div className="bg-[#f8f9fc] rounded-2xl border border-brand-ash/10 overflow-hidden">
@@ -303,8 +283,8 @@ export default function ProductDetails({ product }: { product: Product }) {
                     idx !== arr.length - 1 ? "border-b border-brand-ash/10" : ""
                   }`}
                 >
-                  <span className="text-text-light-bg/70 font-medium text-sm shrink-0">{row.key}</span>
-                  <span className="text-bg-dark font-bold font-sans text-sm text-left sm:text-right whitespace-pre-line max-w-[60%]">{row.value}</span>
+                  <span className="text-text-light-bg/70 font-medium text-body-lg shrink-0">{row.key}</span>
+                  <span className="text-bg-dark font-bold font-sans text-body-sm text-left sm:text-right whitespace-pre-line max-w-[60%]">{row.value}</span>
                 </div>
               ))
             ) : (
@@ -321,8 +301,8 @@ export default function ProductDetails({ product }: { product: Product }) {
                     idx !== arr.length - 1 ? "border-b border-brand-ash/10" : ""
                   }`}
                 >
-                  <span className="text-text-light-bg/70 font-medium text-sm">{row.label}</span>
-                  <span className="text-bg-dark font-bold font-sans text-sm uppercase">{row.value}</span>
+                  <span className="text-text-light-bg/70 font-medium text-body-lg">{row.label}</span>
+                  <span className="text-bg-dark font-bold font-sans text-body-sm uppercase">{row.value}</span>
                 </div>
               ))
             )}
@@ -333,8 +313,8 @@ export default function ProductDetails({ product }: { product: Product }) {
         {/* Certifications & Compliance */}
         {certFiles.length > 0 && (
           <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col">
-            <h3 className="flex items-center gap-3 text-xl md:text-2xl font-bold text-bg-dark tracking-tight font-sans mb-6">
-              <CheckCircle2 className="w-5 h-5 text-brand-primary" />
+            <h3 className="flex items-center gap-3 text-xl font-bold text-bg-dark tracking-tight font-sans mb-6">
+              <CheckCircle2 className="w-8 h-8 text-brand-primary" />
               Certifications & Compliance
             </h3>
 
@@ -356,8 +336,8 @@ export default function ProductDetails({ product }: { product: Product }) {
       <div className="border-t border-brand-ash/20 pt-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <h2 className="text-3xl font-serif font-bold text-bg-dark tracking-tight mb-2">Similar Products</h2>
-            <p className="text-text-light-bg/70 text-sm">Explore alternative configurations for your infrastructure needs.</p>
+            <h2 className="text-section-h2 font-serif text-bg-dark tracking-tight mb-2">Similar Products</h2>
+            <p className="text-text-light-bg/70 text-body-xl">Explore alternative configurations for your infrastructure needs.</p>
           </div>
           <Link href="/products" className="text-xs font-bold tracking-[0.15em] text-brand-primary uppercase hover:text-bg-dark transition-colors shrink-0">
             View All Products

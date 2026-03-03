@@ -29,9 +29,9 @@ export default function AboutPage() {
                    Company Profile
                 </div>
                 <h1 className="text-hero-inner font-serif font-bold tracking-tight mb-6">
-                   We are Vyanzo.
+                   We are <span className="text-brand-primary italic">Vyanzo</span>.
                 </h1>
-                <p className="text-brand-ash/80 text-lg md:text-xl font-sans font-normal max-w-2xl leading-relaxed">
+                <p className="text-brand-ash/80 text-body-xl  font-sans font-normal max-w-2xl leading-relaxed">
                   A premier global manufacturing partner specializing in the casting industry. Strategic bridge between high-quality manufacturing hubs in Asia and Eastern Europe and clients in the European and North American markets.
                 </p>
             </div>
@@ -42,7 +42,7 @@ export default function AboutPage() {
     </section>
 
       {/* Philosophy & Meaning */}
-      <section  className="py-24 px-6 md:px-12 lg:px-16 bg-white relative -mt-12 rounded-t-[3rem] z-20 shadow-[0_-20px_40px_rgba(0,0,0,0.05)] border-t border-brand-ash/10">
+      <section  className="section-xl bg-white relative -mt-12 rounded-t-[3rem] z-20 shadow-[0_-20px_40px_rgba(0,0,0,0.05)] border-t border-brand-ash/10">
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
             
@@ -56,10 +56,10 @@ export default function AboutPage() {
               <div className="aspect-square md:aspect-[4/3] bg-bg-dark rounded-[2.5rem] p-12 relative overflow-hidden flex flex-col justify-center shadow-2xl">
                  <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-transparent mix-blend-overlay"></div>
                  <Globe className="w-16 h-16 text-brand-primary mb-8" />
-                 <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
+                 <h3 className="text-section-h3 font-serif font-bold text-white mb-6 leading-tight">
                    "{"Buy globally by dealing locally."}"
                  </h3>
-                 <p className="text-text-dark-bg/80 text-lg">
+                 <p className="text-text-dark-bg/80 text-body-xl">
                    The name <strong className="text-white font-medium">Vyanzo</strong> is derived from the Swahili word for <strong className="text-white font-medium">new source,</strong> reflecting our mission to provide an innovative, customer-centric approach to global sourcing.
                  </p>
               </div>
@@ -72,8 +72,8 @@ export default function AboutPage() {
                transition={{ duration: 0.8, delay: 0.2 }}
                className="flex-1"
             >
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-bg-dark mb-6">{"Seamless Experience"}</h2>
-              <p className="text-lg text-text-light-bg/70 leading-relaxed mb-8">
+              <h2 className="text-section-h2 font-serif font-bold text-bg-dark mb-6">{"Seamless Experience"}</h2>
+              <p className="text-body-lg text-text-light-bg/70 leading-relaxed mb-8">
                 {"Vyanzo combines the cost-efficiencies of global manufacturing with the ease and reliability of a local partner. By managing multiple time zones and providing multi-lingual support, Vyanzo ensures a seamless, \"headache-free\" experience for its clients."}
               </p>
               <div className="flex items-center gap-4">
@@ -92,7 +92,7 @@ export default function AboutPage() {
       </section>
 
       {/* Key Offerings & Products */}
-      <section className="py-24 px-6 md:px-12 lg:px-16 bg-bg-dark text-white relative overflow-hidden">
+      <section className="section-xl  bg-bg-dark text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-primary to-transparent opacity-20" />
         <div className="max-w-[1400px] mx-auto">
           <motion.div 
@@ -102,8 +102,8 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="mb-16 text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">{"Key Offerings"}</h2>
-            <p className="text-xl text-text-dark-bg/70">
+            <h2 className="text-section-h2 font-serif mb-6">{"Key Offerings"}</h2>
+            <p className="text-body-xl text-text-dark-bg/70">
               {"Vyanzo is a leading supplier of premium casting products, engineered for scale and durability."}
             </p>
           </motion.div>
@@ -116,8 +116,8 @@ export default function AboutPage() {
               <div className="w-14 h-14 bg-brand-primary rounded-2xl flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(253,231,76,0.2)]">
                 <div className="w-6 h-6 border-4 border-bg-dark rounded-full" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 font-serif">{"Manhole Covers & Grates"}</h3>
-              <p className="text-text-dark-bg/60 leading-relaxed">{"Heavy-duty, robust solutions engineered for high traffic and demanding infrastructural applications."}</p>
+              <h3 className="text-card-title mb-4 font-serif">{"Manhole Covers & Grates"}</h3>
+              <p className="text-body-lg text-text-dark-bg/60 leading-relaxed">{"Heavy-duty, robust solutions engineered for high traffic and demanding infrastructural applications."}</p>
             </motion.div>
 
             <motion.div 
@@ -127,8 +127,8 @@ export default function AboutPage() {
               <div className="w-14 h-14 bg-brand-primary rounded-2xl flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(253,231,76,0.2)]">
                 <Wrench className="w-6 h-6 text-bg-dark" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 font-serif">{"Valves"}</h3>
-              <p className="text-text-dark-bg/60 leading-relaxed">{"Precision-engineered valves designed to strict European and North American standards."}</p>
+              <h3 className="text-card-title mb-4 font-serif">{"Valves"}</h3>
+              <p className="text-body-lg text-text-dark-bg/60 leading-relaxed">{"Precision-engineered valves designed to strict European and North American standards."}</p>
             </motion.div>
 
             <motion.div 
@@ -139,20 +139,20 @@ export default function AboutPage() {
               <div className="w-14 h-14 bg-brand-primary rounded-2xl flex items-center justify-center mb-8 relative z-10 shadow-[0_0_30px_rgba(253,231,76,0.2)]">
                 <Cpu className="w-6 h-6 text-bg-dark" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 font-serif relative z-10">{"OEM Services"}</h3>
-              <p className="text-text-dark-bg/60 leading-relaxed relative z-10">{"Specializing in custom manufacturing, operating as the silent partner for leading suppliers globally."}</p>
+              <h3 className="text-card-title mb-4 font-serif relative z-10">{"OEM Services"}</h3>
+              <p className="text-body-lg text-text-dark-bg/60 leading-relaxed relative z-10">{"Specializing in custom manufacturing, operating as the silent partner for leading suppliers globally."}</p>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* The Vyanzo Advantage */}
-      <section className="py-24 px-6 md:px-12 lg:px-16 bg-[#f8f9fc]">
+      <section className="section-xl  bg-[#f8f9fc]">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-bg-dark mb-6">{"The Vyanzo Advantage"}</h2>
-              <p className="text-xl text-text-light-bg/70 mb-12">
+              <h2 className="text-section-h2 font-serif  text-bg-dark mb-6">{"The Vyanzo Advantage"}</h2>
+              <p className="text-body-lg text-text-light-bg/70 mb-12">
                 {"A relentless focus on quality, scale, and long-term partnership stability."}
               </p>
 
@@ -162,8 +162,8 @@ export default function AboutPage() {
                     <div className="w-12 h-12 bg-white rounded-full shadow-sm border border-brand-ash/20 flex items-center justify-center text-brand-primary font-bold">01</div>
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-bg-dark mb-2">{"Strategic Manufacturing"}</h4>
-                    <p className="text-text-light-bg/70 leading-relaxed">{"Over a decade of experience collaborating exclusively with top-tier manufacturers in India, Turkey, and China."}</p>
+                    <h4 className="text-card-title font-bold text-bg-dark mb-2">{"Strategic Manufacturing"}</h4>
+                    <p className="text-text-light-bg/70 text-body-lg leading-relaxed">{"Over a decade of experience collaborating exclusively with top-tier manufacturers in India, Turkey, and China."}</p>
                   </div>
                 </div>
                 
@@ -172,8 +172,8 @@ export default function AboutPage() {
                     <div className="w-12 h-12 bg-white rounded-full shadow-sm border border-brand-ash/20 flex items-center justify-center text-brand-primary font-bold">02</div>
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-bg-dark mb-2">{"Full-Service Management"}</h4>
-                    <p className="text-text-light-bg/70 leading-relaxed">{"We handle the entire lifecycle of the sourcing process, from initial design to final logistics."}</p>
+                    <h4 className="text-card-title font-bold text-bg-dark mb-2">{"Full-Service Management"}</h4>
+                    <p className="text-text-light-bg/70 text-body-lg leading-relaxed">{"We handle the entire lifecycle of the sourcing process, from initial design to final logistics."}</p>
                   </div>
                 </div>
 
@@ -182,8 +182,8 @@ export default function AboutPage() {
                     <div className="w-12 h-12 bg-white rounded-full shadow-sm border border-brand-ash/20 flex items-center justify-center text-brand-primary font-bold">03</div>
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-bg-dark mb-2">{"Stability & Expertise"}</h4>
-                    <p className="text-text-light-bg/70 leading-relaxed">{"Exceptional team with a 15-year track record and zero churn, ensuring consistent quality."}</p>
+                    <h4 className="text-card-title font-bold text-bg-dark mb-2">{"Stability & Expertise"}</h4>
+                    <p className="text-text-light-bg/70 text-body-lg leading-relaxed">{"Exceptional team with a 15-year track record and zero churn, ensuring consistent quality."}</p>
                   </div>
                 </div>
               </div>

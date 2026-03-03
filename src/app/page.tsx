@@ -18,7 +18,10 @@ export default function Home() {
       <AboutSection />
       <EnvironmentSection />
       <ServicesSection />
+      <div  className="section-xl bg-white relative">
+
       <ContactSection />
+      </div>
       <Footer />
     </main>
   );

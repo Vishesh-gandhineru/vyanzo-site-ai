@@ -19,7 +19,7 @@ export default function ContactSection() {
   }, []);
 
   return (
-    <section className="w-full bg-white py-24 px-4 md:px-8 font-sans relative overflow-hidden">
+    <section className="w-full bg-white font-sans relative overflow-hidden">
       {/* Background Graphic */}
     
 
@@ -36,17 +36,15 @@ export default function ContactSection() {
           >
             <h2 className="text-body-lg font-serif font-semibold tracking-[0.15em] text-brand-primary mb-6 flex items-center gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
-              Get in Touch
+            Your Next Step
             </h2>
             
             <h3 className="text-section-h2 font-serif font-bold text-bg-dark leading-[1.1] mb-8">
-              Let's build the <br />
-              <span className="text-brand-primary italic">future of infrastructure</span> <br />
-              together.
+             Drop us a line, <span className="text-brand-primary italic">we'll take it from there.</span>
             </h3>
             
             <p className="text-body-lg text-bg-dark/60 font-sans font-normal leading-relaxed mb-12 max-w-xl">
-              Whether you're looking for custom casting solutions, need a quote for a large municipal project, or want to explore our end-to-end production capabilities, our team of experts is ready to assist you.
+              Custom quotes, technical specs, or bulk orders — fill in the details and our team gets back to you within 24 hours.
             </p>
 
             <div className="flex flex-col gap-8">

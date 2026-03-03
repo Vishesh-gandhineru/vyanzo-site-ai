@@ -103,11 +103,11 @@ export default function ServicesPage() {
                    <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
                    Services Portfolio
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight mb-6 leading-[1.1] ">
+                <h1 className="text-hero-inner font-serif font-bold tracking-tight mb-6 leading-[1.1] ">
                    Excellence Forged,<br/>
                    <span className="text-brand-primary">Service Perfected.</span>
                 </h1>
-                <p className="text-brand-ash/80 text-lg md:text-xl font-sans font-normal max-w-2xl leading-relaxed">
+                <p className="text-brand-ash/80 text-body-xl font-sans font-normal max-w-2xl leading-relaxed">
                   Vyanzo offers a comprehensive suite of services designed to streamline the casting and manufacturing process, from initial design to final delivery.
                 </p>
             </div>
@@ -118,14 +118,14 @@ export default function ServicesPage() {
     </section>
 
       {/* Animated Services Tabs Section */}
-      <section className="py-24 px-6 md:px-12 lg:px-16 bg-white relative -mt-12 rounded-t-[3rem] z-20 shadow-[0_-20px_40px_rgba(0,0,0,0.05)] border-t border-brand-ash/10">
+      <section className="section-xl bg-white relative -mt-12 rounded-t-[3rem] z-20 shadow-[0_-20px_40px_rgba(0,0,0,0.05)] border-t border-brand-ash/10">
         <div className="max-w-[1400px] mx-auto">
           
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
             
             {/* Sidebar Navigation */}
             <div className="lg:w-1/3 shrink-0 flex flex-col gap-4 sticky top-32 h-fit">
-              <h3 className="text-2xl font-bold font-serif text-bg-dark mb-4">{"Our Services"}</h3>
+              <h3 className="text-section-h2 font-serif text-bg-dark mb-4">{"Our Services"}</h3>
               {services.map((service) => {
                 const isActive = activeTab === service.id;
                 return (
@@ -154,7 +154,7 @@ export default function ServicesPage() {
                       }`}>
                         {service.icon}
                       </div>
-                      <span className="font-bold text-lg">{service.title}</span>
+                      <span className="font-bold text-body-lg">{service.title}</span>
                     </div>
                   </button>
                 );
@@ -177,10 +177,10 @@ export default function ServicesPage() {
                       <div className="w-20 h-20 bg-brand-primary/10 rounded-2xl flex items-center justify-center mb-8 text-brand-primary border border-brand-primary/20">
                         {service.icon}
                       </div>
-                      <h3 className="text-3xl md:text-4xl font-serif font-bold text-bg-dark mb-6">
+                      <h3 className="text-section-h3 font-serif font-bold text-bg-dark mb-6">
                         {service.title}
                       </h3>
-                      <p className="text-xl text-text-light-bg/70 leading-relaxed font-light mb-12">
+                      <p className="text-body-xl text-text-light-bg/70 leading-relaxed font-light mb-12">
                         {service.description}
                       </p>
 
@@ -208,7 +208,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Core Product Categories Served */}
-      <section className="py-24 px-6 md:px-12 lg:px-16 bg-[#f8f9fc]">
+      <section className="section-xl bg-[#f8f9fc]">
          <div className="max-w-[1400px] mx-auto">
             <motion.div 
                initial={{ opacity: 0, y: 30 }}
@@ -217,8 +217,8 @@ export default function ServicesPage() {
                transition={{ duration: 0.8 }}
                className="text-center max-w-3xl mx-auto mb-16"
             >
-               <h2 className="text-4xl md:text-5xl font-serif font-bold text-bg-dark mb-6">Core Product Categories Served</h2>
-               <p className="text-xl text-text-light-bg/70">
+               <h2 className="text-section-h2 font-serif font-bold text-bg-dark mb-6">Core Product Categories Served</h2>
+               <p className="text-body-xl text-text-light-bg/70">
                  While providing these services, Vyanzo focuses on the following primary product lines:
                </p>
             </motion.div>
@@ -236,7 +236,7 @@ export default function ServicesPage() {
                    <div className="w-20 h-20 bg-[#f8f9fc] rounded-full flex items-center justify-center text-brand-ash group-hover:bg-bg-dark group-hover:text-brand-primary transition-colors duration-300">
                      {cat.icon}
                    </div>
-                   <h4 className="font-bold text-bg-dark font-sans text-lg">{cat.name}</h4>
+                   <h4 className="font-bold text-bg-dark font-sans text-body-lg">{cat.name}</h4>
                  </motion.div>
                ))}
             </div>

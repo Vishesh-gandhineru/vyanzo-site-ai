@@ -72,7 +72,7 @@ export default function TeamSection() {
   const handleModalClick = (e: React.MouseEvent) => e.stopPropagation();
 
   return (
-    <section id="team" className="py-24 px-6 md:px-12 lg:px-16 bg-white border-t border-brand-ash/10 relative">
+    <section id="team" className="section-xl bg-white border-t border-brand-ash/10 relative">
       <div className="max-w-[1400px] mx-auto text-center">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -81,8 +81,8 @@ export default function TeamSection() {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-bg-dark mb-6">Leadership Team</h2>
-          <p className="text-xl text-text-light-bg/60 max-w-2xl mx-auto">
+          <h2 className="text-section-h2 font-serif mb-6">Leadership Team</h2>
+          <p className="text-body-xl text-text-light-bg/60 max-w-2xl mx-auto">
             Guided by a leadership team with decades of combined experience in global manufacturing, supply chain, and quality assurance.
           </p>
         </motion.div>
@@ -105,8 +105,8 @@ export default function TeamSection() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <h3 className="text-xl font-bold font-sans text-bg-dark mb-1 group-hover:text-brand-primary transition-colors">{leader.name}</h3>
-              <p className="text-bg-dark/60 font-medium tracking-wider text-sm uppercase">{leader.role}</p>
+              <h3 className="text-card-title font-bold font-sans text-bg-dark mb-1 group-hover:text-brand-primary transition-colors">{leader.name}</h3>
+              <p className="text-bg-dark/60 font-medium tracking-wider text-body-lg">{leader.role}</p>
             </motion.div>
           ))}
         </div>
@@ -156,7 +156,7 @@ export default function TeamSection() {
               {/* Right Side: Details */}
               <div className="w-full md:w-[60%] p-8 md:p-12 md:pl-4 flex flex-col justify-center text-left text-bg-dark pb-12 md:pb-12">
                 <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8">
-                  <h3 className="text-3xl md:text-5xl font-serif font-bold text-white tracking-tight leading-tight">
+                  <h3 className="text-section-h3 font-serif font-bold text-white tracking-tight leading-tight">
                     {team[selectedMember].name}
                   </h3>
                   <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-bg-dark/30 text-bg-dark text-sm font-semibold tracking-wider uppercase whitespace-nowrap self-start md:self-auto">
@@ -164,13 +164,13 @@ export default function TeamSection() {
                   </div>
                 </div>
 
-                <div className="space-y-4 md:space-y-6 mb-10 text-base md:text-lg font-medium leading-relaxed max-w-2xl">
+                <div className="space-y-4 md:space-y-6 mb-10 text-body-lg font-medium leading-relaxed max-w-2xl">
                   {team[selectedMember].bio.map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>
                   ))}
                 </div>
 
-                <div className="flex flex-col gap-2 text-base md:text-lg font-semibold">
+                <div className="flex flex-col gap-2 text-body-lg font-semibold">
                   {team[selectedMember].contact.email && (
                     <div className="flex flex-col md:flex-row md:gap-2">
                       <span className="text-bg-dark/70">Contact:</span>
