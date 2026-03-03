@@ -19,9 +19,9 @@ export default function ContactSection() {
   }, []);
 
   return (
-    <section className="w-full bg-white py-24 px-4 md:px-8 border-t border-black/5 font-sans relative overflow-hidden">
+    <section className="w-full bg-white py-24 px-4 md:px-8 font-sans relative overflow-hidden">
       {/* Background Graphic */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-text-dark-bg rounded-full blur-3xl -mr-[400px] -mt-[400px] opacity-70 pointer-events-none"></div>
+    
 
       <div className="max-w-[1400px] mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">

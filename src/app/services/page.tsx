@@ -90,30 +90,32 @@ export default function ServicesPage() {
       <GlobalHeader />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 px-6 md:px-12 lg:px-16 overflow-hidden bg-bg-dark text-white">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(253,231,76,0.1),transparent_50%)]" />
-        
-        <div className="max-w-[1400px] mx-auto relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl"
-          >
-            <h1 className="text-sm font-serif font-semibold tracking-[0.2em] text-brand-primary uppercase mb-6 flex items-center gap-4">
-              <span className="w-12 h-px bg-brand-primary"></span>
-              Services Portfolio
-            </h1>
-            <h2 className="text-5xl md:text-7xl font-serif font-bold leading-[1.1] mb-8 tracking-tight">
-              Excellence Forged,<br/>
-              <span className="text-brand-primary">Service Perfected.</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-text-dark-bg/80 leading-relaxed font-light">
-              Vyanzo offers a comprehensive suite of services designed to streamline the casting and manufacturing process, from initial design to final delivery.
-            </p>
-          </motion.div>
+      
+
+      <section className="w-full bg-bg-dark text-white py-24 px-4 md:px-8 font-sans relative overflow-hidden">
+      {/* Background Graphic */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-primary/10 rounded-full blur-3xl -mr-[200px] -mt-[200px] pointer-events-none"></div>
+
+      <div className="max-w-[1400px] mx-auto relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div className="max-w-3xl">
+                <div className="flex items-center gap-3 text-brand-primary text-sm font-sans font-bold tracking-widest uppercase mb-6">
+                   <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
+                   Services Portfolio
+                </div>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight mb-6 leading-[1.1] ">
+                   Excellence Forged,<br/>
+                   <span className="text-brand-primary">Service Perfected.</span>
+                </h1>
+                <p className="text-brand-ash/80 text-lg md:text-xl font-sans font-normal max-w-2xl leading-relaxed">
+                  Vyanzo offers a comprehensive suite of services designed to streamline the casting and manufacturing process, from initial design to final delivery.
+                </p>
+            </div>
+            
+            
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Animated Services Tabs Section */}
       <section className="py-24 px-6 md:px-12 lg:px-16 bg-white relative -mt-12 rounded-t-[3rem] z-20 shadow-[0_-20px_40px_rgba(0,0,0,0.05)] border-t border-brand-ash/10">

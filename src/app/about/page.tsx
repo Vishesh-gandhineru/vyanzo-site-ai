@@ -15,33 +15,34 @@ export default function AboutPage() {
       <GlobalHeader />
 
       {/* Hero / Overview Section */}
-      <section className="relative pt-32 pb-24 px-6 md:px-12 lg:px-16 overflow-hidden">
-        {/* Background Decorative Element */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-        
-        <div className="max-w-[1400px] mx-auto relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl"
-          >
-            <h1 className="text-sm font-serif font-semibold tracking-[0.2em] text-brand-primary uppercase mb-6 flex items-center gap-4">
-              <span className="w-12 h-px bg-brand-primary"></span>
-              {"Company Profile"}
-            </h1>
-            <h2 className="text-5xl md:text-7xl font-serif font-bold text-bg-dark leading-[1.1] mb-8 tracking-tight">
-              {"We are"} <span className="text-transparent bg-clip-text bg-gradient-to-r from-bg-dark to-brand-primary">Vyanzo.</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-text-light-bg/80 leading-relaxed font-light">
-              {"A premier global manufacturing partner specializing in the casting industry. Strategic bridge between high-quality manufacturing hubs in Asia and Eastern Europe and clients in the European and North American markets."}
-            </p>
-          </motion.div>
+     
+
+      <section className="w-full bg-bg-dark text-white py-24 px-4 md:px-8 font-sans relative overflow-hidden">
+      {/* Background Graphic */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-primary/10 rounded-full blur-3xl -mr-[200px] -mt-[200px] pointer-events-none"></div>
+
+      <div className="max-w-[1400px] mx-auto relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div className="max-w-3xl">
+                <div className="flex items-center gap-3 text-brand-primary text-sm font-sans font-bold tracking-widest uppercase mb-6">
+                   <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
+                   Company Profile
+                </div>
+                <h1 className="text-hero-inner font-serif font-bold tracking-tight mb-6">
+                   We are Vyanzo.
+                </h1>
+                <p className="text-brand-ash/80 text-lg md:text-xl font-sans font-normal max-w-2xl leading-relaxed">
+                  A premier global manufacturing partner specializing in the casting industry. Strategic bridge between high-quality manufacturing hubs in Asia and Eastern Europe and clients in the European and North American markets.
+                </p>
+            </div>
+            
+            
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Philosophy & Meaning */}
-      <section className="py-24 px-6 md:px-12 lg:px-16 bg-white border-y border-brand-ash/10">
+      <section  className="py-24 px-6 md:px-12 lg:px-16 bg-white relative -mt-12 rounded-t-[3rem] z-20 shadow-[0_-20px_40px_rgba(0,0,0,0.05)] border-t border-brand-ash/10">
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
             

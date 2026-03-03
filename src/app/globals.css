@@ -38,3 +38,100 @@ body {
 .goog-te-spinner-pos {
   display: none !important;
 }
+
+
+@layer components {
+  /* =========================
+     HERO HEADINGS
+  ========================== */
+
+  /* 64px → scales down to ~36px */
+  .text-hero-home {
+    font-size: clamp(2.25rem, 5vw, 5.5rem); /* 36px → 64px */
+    @apply leading-[1.05] font-bold;
+  }
+
+  /* 48px → scales down to ~30px */
+  .text-hero-inner {
+    font-size: clamp(1.875rem, 4vw, 3rem); /* 30px → 48px */
+    @apply leading-[1.10] font-bold;
+  }
+
+  /* =========================
+     SECTION HEADINGS
+  ========================== */
+
+  /* 40px → ~26px */
+  .text-section-h2 {
+    font-size: clamp(1.625rem, 3.5vw, 2.5rem); /* 26px → 40px */
+    @apply leading-[1.15] font-bold;
+  }
+
+  /* 30px → ~22px */
+  .text-section-h3 {
+    font-size: clamp(1.375rem, 2.5vw, 1.875rem); /* 22px → 30px */
+    @apply leading-[1.20] font-semibold;
+  }
+
+  /* =========================
+     CARD
+  ========================== */
+
+  /* 22px → ~18px */
+  .text-card-title {
+    font-size: clamp(1.125rem, 1.8vw, 1.375rem); /* 18px → 22px */
+    @apply leading-[1.25] font-semibold;
+  }
+
+  /* =========================
+     BODY TEXT
+  ========================== */
+
+  /* 18px → ~16px */
+  .text-body-lg {
+    font-size: clamp(1rem, 1.3vw, 1.125rem); /* 16px → 18px */
+    @apply leading-[1.65] font-normal;
+  }
+
+  /* 16px → ~15px */
+  .text-body-md {
+    font-size: clamp(0.9375rem, 1.1vw, 1rem); /* 15px → 16px */
+    @apply leading-[1.70] font-normal;
+  }
+
+  /* 14px → ~13px */
+  .text-body-sm {
+    font-size: clamp(0.8125rem, 1vw, 0.875rem); /* 13px → 14px */
+    @apply leading-[1.60] font-normal;
+  }
+
+  /* =========================
+     LABEL / EYEBROW
+  ========================== */
+
+  /* 13px → ~12px */
+  .text-eyebrow {
+    font-size: clamp(0.75rem, 0.9vw, 0.8125rem); /* 12px → 13px */
+    @apply leading-[1.2] font-semibold uppercase tracking-[0.16em];
+  }
+
+  .btn-primary {
+    @apply bg-brand-accent
+           hover:bg-brand-accent/90
+           text-text-light-bg
+           px-8
+           py-3
+           rounded-full
+           font-sans
+           font-semibold
+           text-lg
+           tracking-wide
+           transition-all
+           duration-300
+           shadow-[0_0_20px_rgba(253,231,76,0.4)];
+  }
+
+  .btn-primary:hover {
+    @apply shadow-[0_0_28px_rgba(253,231,76,0.6)];
+  }
+}

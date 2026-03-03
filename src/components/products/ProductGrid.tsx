@@ -94,7 +94,7 @@ export default function ProductGrid() {
         });
 
   return (
-    <section className="w-full bg-[#f8f9fc] py-16 px-4 md:px-8 font-sans min-h-screen">
+    <section  className="py-24 px-6 md:px-12 lg:px-16 bg-white relative -mt-12 rounded-t-[3rem] z-20 shadow-[0_-20px_40px_rgba(0,0,0,0.05)] border-t border-brand-ash/10">
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-8">
         
         {/* Sidebar Filters */}
