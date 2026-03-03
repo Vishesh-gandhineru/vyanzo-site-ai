@@ -16,7 +16,7 @@ export default function BentoGrid() {
                    Built for <span className="text-brand-primary italic">Global Impact</span>
                 </h2>
                 <p className="text-body-xl text-bg-dark/60 font-sans font-normal">
-                   Delivering unparalleled casting solutions across the globe with precision, scale, and reliability since 1999.
+                   Delivering unparalleled casting solutions across the globe with precision, scale, and reliability since 2018.
                 </p>
             </div>
            
@@ -30,7 +30,7 @@ export default function BentoGrid() {
             <div>
               <Zap className="w-10 h-10 text-brand-primary mb-6" strokeWidth={1.5} />
               <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg mb-3 tracking-tight">Unsurpassed Quality</h3>
-              <p className="text-text-light-bg/70 font-sans font-normal leading-relaxed">Engineered for perfection in every dimension and pour.</p>
+              <p className="text-text-light-bg/70 font-sans text-body-lg font-normal leading-relaxed">Engineered for perfection in every dimension and pour.</p>
             </div>
             <div className="mt-8 z-10">
                <div className="text-5xl lg:text-6xl font-sans font-bold text-brand-primary tracking-tighter">99.9%</div>
@@ -43,14 +43,15 @@ export default function BentoGrid() {
             <div className="absolute inset-0 bg-linear-to-r from-transparent via-brand-primary/5 to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             <Award className="w-8 h-8 text-brand-primary mb-4" strokeWidth={1.5} />
             <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg z-10 tracking-tight">Vast Global Reach</h3>
-            <p className="text-text-light-bg/70 mt-3 z-10 text-base xl:text-lg font-sans font-normal leading-relaxed">Serving customers in Belgium, France, Spain, Italy, Austria, Holland, UK, USA, and Canada.</p>
+            <p className="text-text-light-bg/70 mt-3 z-10 text-body-lg font-sans font-normal leading-relaxed">Serving customers in Belgium, France, Spain, Italy, Austria, Holland, UK, USA, and Canada.</p>
           </div>
 
           {/* Card 3: Top Right (H:1 W:1) */}
           <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-6 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
           <Cog className="w-8 h-8 text-brand-primary mb-4" strokeWidth={1.5} />
             <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg z-10 tracking-tight">Annual Production Volume</h3>
-            <div className="text-4xl lg:text-5xl font-sans mt-3 font-bold text-brand-primary tracking-tighter drop-shadow-[0_0_15px_rgba(110,176,255,0.4)]">&gt;20,000</div>
+            <div className="text-4xl lg:text-5xl font-sans mt-3 font-bold text-brand-primary tracking-tighter drop-shadow-[0_0_15px_rgba(110,176,255,0.4)]">&gt; 20,000<span className="
+            text-[12px] font-sans font-normal text-brand-ash tracking-wider"> Tonnes</span></div>
             
           </div>
 
