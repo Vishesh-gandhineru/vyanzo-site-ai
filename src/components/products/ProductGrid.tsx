@@ -147,6 +147,26 @@ export default function ProductGrid() {
             </div>
           </div>
 
+           {/* Certification Type */}
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-brand-ash/20">
+            <h3 className="flex items-center gap-2 text-bg-dark font-sans font-semibold text-base mb-5">
+              <ShieldCheck className="w-4 h-4 text-brand-primary" />
+              Certification
+            </h3>
+            <div className="flex flex-col gap-3">
+              {availableCerts.map(cert => (
+                <FilterCheckbox
+                  key={cert}
+                  label={cert}
+                  checked={selectedCertTypes.includes(cert)}
+                  onChange={() => toggleCert(cert)}
+                />
+              ))}
+            </div>
+
+           
+          </div>
+
           {/* Category */}
           <div className="bg-white rounded-2xl p-6 shadow-sm border border-brand-ash/20">
             <h3 className="flex items-center gap-2 text-bg-dark font-sans font-semibold text-base mb-5">
@@ -182,32 +202,14 @@ export default function ProductGrid() {
               ))}
             </div>
           </div>
-
-          {/* Certification Type */}
-          <div className="bg-white rounded-2xl p-6 shadow-sm border border-brand-ash/20">
-            <h3 className="flex items-center gap-2 text-bg-dark font-sans font-semibold text-base mb-5">
-              <ShieldCheck className="w-4 h-4 text-brand-primary" />
-              Certification
-            </h3>
-            <div className="flex flex-col gap-3">
-              {availableCerts.map(cert => (
-                <FilterCheckbox
-                  key={cert}
-                  label={cert}
-                  checked={selectedCertTypes.includes(cert)}
-                  onChange={() => toggleCert(cert)}
-                />
-              ))}
-            </div>
-
-            <button
+ <button
               onClick={resetFilters}
               className="flex items-center gap-2 text-brand-primary text-sm font-sans font-semibold mt-6 hover:opacity-75 transition-opacity"
             >
               <ArrowDown className="w-4 h-4" />
               Reset Filters
             </button>
-          </div>
+         
 
         </aside>
 
@@ -291,9 +293,7 @@ export default function ProductGrid() {
                       <h3 className="font-sans font-semibold text-bg-dark text-xl leading-snug">
                         {product.title}
                       </h3>
-                      <span className="text-[10px] font-sans font-bold tracking-widest text-brand-ash/70 mt-1 whitespace-nowrap uppercase">
-                        {product.sku}
-                      </span>
+                     
                     </div>
 
                     <p className="text-text-light-bg/60 font-sans font-normal text-sm leading-relaxed mb-5 flex-1 line-clamp-2">

@@ -8,6 +8,12 @@ export type DriveLink = {
   downloadUrl: string;
 };
 
+/** One key-value row from the product's Google Sheet specs table */
+export type SheetRow = {
+  key: string;
+  value: string;
+};
+
 export type Product = {
   id: number;
   no: number;

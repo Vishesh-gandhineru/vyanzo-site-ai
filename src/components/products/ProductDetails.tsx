@@ -6,7 +6,7 @@ import {
   Factory, ShieldCheck, AlertCircle, Settings2,
   FileText, CheckCircle2, Download, Award
 } from "lucide-react";
-import { Product, DriveLink } from "@/data/products";
+import { Product, DriveLink, SheetRow } from "@/data/products";
 import Link from "next/link";
 import { products } from "@/data/products";
 
@@ -32,6 +32,25 @@ function useDriveFileName(driveUrl: string, fallback: string): { name: string; l
   }, [driveUrl]);
 
   return { name, loading };
+}
+
+// ─── Fetch and parse specs from a Google Sheet table_link ───────────────────────
+function useSheetSpecs(tableLink: string | null): { rows: SheetRow[]; loading: boolean } {
+  const [rows, setRows] = useState<SheetRow[]>([]);
+  const [loading, setLoading] = useState(!!tableLink);
+
+  useEffect(() => {
+    if (!tableLink) { setLoading(false); return; }
+    let cancelled = false;
+    fetch(`/api/sheet-specs?url=${encodeURIComponent(tableLink)}`)
+      .then(r => r.json())
+      .then(data => { if (!cancelled && data.rows) setRows(data.rows); })
+      .catch(() => {})
+      .finally(() => { if (!cancelled) setLoading(false); });
+    return () => { cancelled = true; };
+  }, [tableLink]);
+
+  return { rows, loading };
 }
 
 // ─── Certification chip colour ────────────────────────────────────────────────
@@ -76,6 +95,7 @@ function DriveRow({ file, icon }: { file: DriveLink; icon: React.ReactNode }) {
 // ─── Main component ───────────────────────────────────────────────────────────
 export default function ProductDetails({ product }: { product: Product }) {
   const [activeTab, setActiveTab] = useState<"specifications" | "certifications">("specifications");
+  const { rows: sheetRows, loading: sheetLoading } = useSheetSpecs(product.tableLink);
 
   const specFiles = product.specificationFiles;
   const certFiles = product.certificationFiles;
@@ -257,7 +277,7 @@ export default function ProductDetails({ product }: { product: Product }) {
       </div>
 
       {/* ── Info Grid ── */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-24">
+      <div className={`grid grid-cols-1 ${certFiles.length > 0 ? "md:grid-cols-2" : ""} gap-6 lg:gap-8 mb-24`}>
 
         {/* Technical Specifications */}
         <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col">
@@ -266,33 +286,58 @@ export default function ProductDetails({ product }: { product: Product }) {
             Product Details
           </h3>
           <div className="bg-[#f8f9fc] rounded-2xl border border-brand-ash/10 overflow-hidden">
-            {[
-              { label: "Category",      value: product.category },
-              { label: "Sub-Category",  value: product.subCategory ?? "—" },
-              { label: "Certification", value: product.certificationType },
-              { label: "SKU",           value: product.sku },
-              { label: "Spec Files",    value: `${product.specificationFiles.length} available` },
-              { label: "Cert Files",    value: `${product.certificationFiles.length} available` },
-            ].map((row, idx, arr) => (
-              <div
-                key={idx}
-                className={`flex flex-col sm:flex-row sm:items-center justify-between py-4 px-6 hover:bg-white transition-colors gap-2 sm:gap-4 ${idx !== arr.length - 1 ? "border-b border-brand-ash/10" : ""}`}
-              >
-                <span className="text-text-light-bg/70 font-medium text-sm">{row.label}</span>
-                <span className="text-bg-dark font-bold font-sans text-sm uppercase">{row.value}</span>
-              </div>
-            ))}
+
+            {/* Live rows from Google Sheet */}
+            {sheetLoading ? (
+              Array.from({ length: 4 }).map((_, i) => (
+                <div key={i} className="flex items-center justify-between py-4 px-6 border-b border-brand-ash/10 gap-4">
+                  <div className="h-3.5 w-28 bg-brand-ash/20 rounded animate-pulse" />
+                  <div className="h-3.5 w-36 bg-brand-ash/20 rounded animate-pulse" />
+                </div>
+              ))
+            ) : sheetRows.length > 0 ? (
+              sheetRows.map((row, idx, arr) => (
+                <div
+                  key={idx}
+                  className={`flex flex-col sm:flex-row sm:items-start justify-between py-4 px-6 hover:bg-white transition-colors gap-2 sm:gap-4 ${
+                    idx !== arr.length - 1 ? "border-b border-brand-ash/10" : ""
+                  }`}
+                >
+                  <span className="text-text-light-bg/70 font-medium text-sm shrink-0">{row.key}</span>
+                  <span className="text-bg-dark font-bold font-sans text-sm text-left sm:text-right whitespace-pre-line max-w-[60%]">{row.value}</span>
+                </div>
+              ))
+            ) : (
+              // Fallback when no table_link / sheet unavailable
+              [
+                { label: "Category",      value: product.category },
+                { label: "Sub-Category",  value: product.subCategory ?? "—" },
+                { label: "Certification", value: product.certificationType },
+                { label: "SKU",           value: product.sku },
+              ].map((row, idx, arr) => (
+                <div
+                  key={idx}
+                  className={`flex flex-col sm:flex-row sm:items-center justify-between py-4 px-6 hover:bg-white transition-colors gap-2 sm:gap-4 ${
+                    idx !== arr.length - 1 ? "border-b border-brand-ash/10" : ""
+                  }`}
+                >
+                  <span className="text-text-light-bg/70 font-medium text-sm">{row.label}</span>
+                  <span className="text-bg-dark font-bold font-sans text-sm uppercase">{row.value}</span>
+                </div>
+              ))
+            )}
+
           </div>
         </div>
 
         {/* Certifications & Compliance */}
-        <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col">
-          <h3 className="flex items-center gap-3 text-xl md:text-2xl font-bold text-bg-dark tracking-tight font-sans mb-6">
-            <CheckCircle2 className="w-5 h-5 text-brand-primary" />
-            Certifications & Compliance
-          </h3>
+        {certFiles.length > 0 && (
+          <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col">
+            <h3 className="flex items-center gap-3 text-xl md:text-2xl font-bold text-bg-dark tracking-tight font-sans mb-6">
+              <CheckCircle2 className="w-5 h-5 text-brand-primary" />
+              Certifications & Compliance
+            </h3>
 
-          {certFiles.length > 0 ? (
             <div className="flex flex-col gap-3">
               <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-bold tracking-wider uppercase self-start mb-2 ${certChipClass(product.certificationType)}`}>
                 <ShieldCheck className="w-3 h-3" />
@@ -302,26 +347,9 @@ export default function ProductDetails({ product }: { product: Product }) {
                 <DriveRow key={idx} file={file} icon={<ShieldCheck className="w-4 h-4 text-brand-primary" />} />
               ))}
             </div>
-          ) : (
-            <div className="grid grid-cols-2 gap-y-8 gap-x-4 flex-1 items-center justify-center pt-4">
-              {[
-                { icon: <Factory className="w-6 h-6" />,     label: "ISO 9001:2015" },
-                { icon: <ShieldCheck className="w-6 h-6" />, label: product.certificationType },
-                { icon: <Globe className="w-6 h-6" />,       label: "EN 124 Standard" },
-                { icon: <AlertCircle className="w-6 h-6" />, label: "REACH Compliant" },
-              ].map((cert, idx) => (
-                <div key={idx} className="flex flex-col items-center gap-3 group">
-                  <div className="w-16 h-16 rounded-[1.25rem] border border-brand-ash/20 bg-[#f8f9fc] flex items-center justify-center text-bg-dark group-hover:border-brand-primary group-hover:bg-brand-primary/5 transition-colors shadow-sm">
-                    {cert.icon}
-                  </div>
-                  <span className="text-[10px] font-bold tracking-[0.1em] text-brand-ash uppercase leading-tight text-center max-w-[100px]">
-                    {cert.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+          </div>
+        )}
+
       </div>
 
       {/* ── Similar Products ── */}
