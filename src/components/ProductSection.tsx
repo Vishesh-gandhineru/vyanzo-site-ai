@@ -5,23 +5,22 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const products = [
- 
   {
     id: 2,
     name: "Manhole Covers",
-    slug: "manhole-covers",
+    category: "Manhole Covers",
     image: "/products/manhole-cover.png",
   },
   {
     id: 3,
     name: "Siphons",
-    slug: "siphons",
+    category: "Siphons",
     image: "/products/siphon.png",
   },
   {
     id: 4,
     name: "Surface Boxes",
-    slug: "surface-boxes",
+    category: "Surface Boxes",
     image: "/products/surface-box.png",
   },
 ];
@@ -49,7 +48,7 @@ export default function ProductSection() {
           
           {/* Product Cards */}
           {products.map((product) => (
-            <Link key={product.id} href={`/products/${product.slug}`} className="pointer-events-auto h-full block">
+            <Link key={product.id} href={`/products?category=${encodeURIComponent(product.category)}`} className="pointer-events-auto h-full block">
               <motion.div
                 className="w-full min-h-[360px] md:min-h-[360px] bg-brand-primary/5 rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center justify-between relative group overflow-hidden border border-brand-ash/10 hover:bg-brand-primary/10 transition-colors duration-300 h-full"
               >

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { Globe, Folder, ArrowDown, ChevronDown, Check, ShieldCheck, Tag, MapPin } from "lucide-react";
 import Link from "next/link";
 
@@ -101,7 +102,15 @@ export default function ProductGrid() {
     setSelectedGeos([]);
   };
 
-  // ─── Filter ─────────────────────────────────────────────────────────────────
+  const searchParams = useSearchParams();
+
+  // Pre-select category from URL query param (e.g. ?category=Manhole+Covers)
+  useEffect(() => {
+    const cat = searchParams.get("category");
+    if (cat && ALL_CATEGORIES.includes(cat)) {
+      setSelectedCategories([cat]);
+    }
+  }, [searchParams]);
   const filtered = products
     .filter(p => selectedCategories.length    === 0 || selectedCategories.includes(p.category))
     .filter(p => selectedSubCategories.length === 0 || (p.subCategory && selectedSubCategories.includes(p.subCategory)))

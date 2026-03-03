@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ChevronRight, Globe, ExternalLink, ArrowRight,
   Factory, ShieldCheck, AlertCircle, Settings2,
@@ -9,6 +9,30 @@ import {
 import { Product, DriveLink } from "@/data/products";
 import Link from "next/link";
 import { products } from "@/data/products";
+
+// ─── Resolve the real Google Drive filename via our API route ─────────────────
+function useDriveFileName(driveUrl: string, fallback: string): { name: string; loading: boolean } {
+  const [name, setName] = useState(fallback);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Extract file ID from the Drive share URL
+    const m = driveUrl.match(/\/file\/d\/([^/]+)\//);
+    if (!m) { setLoading(false); return; }
+    const id = m[1];
+
+    let cancelled = false;
+    fetch(`/api/drive-name?id=${id}`)
+      .then(r => r.json())
+      .then(data => { if (!cancelled && data.name) setName(data.name); })
+      .catch(() => { /* keep fallback */ })
+      .finally(() => { if (!cancelled) setLoading(false); });
+
+    return () => { cancelled = true; };
+  }, [driveUrl]);
+
+  return { name, loading };
+}
 
 // ─── Certification chip colour ────────────────────────────────────────────────
 function certChipClass(type: string): string {
@@ -23,6 +47,8 @@ function certChipClass(type: string): string {
 
 // ─── Reusable download row ────────────────────────────────────────────────────
 function DriveRow({ file, icon }: { file: DriveLink; icon: React.ReactNode }) {
+  const { name, loading } = useDriveFileName(file.url, file.label);
+
   return (
     <a
       href={file.downloadUrl}
@@ -35,8 +61,11 @@ function DriveRow({ file, icon }: { file: DriveLink; icon: React.ReactNode }) {
           {icon}
         </div>
         <div>
-          <p className="text-sm font-semibold text-bg-dark font-sans">{file.label}</p>
-      
+          {loading ? (
+            <div className="h-4 w-40 bg-brand-ash/20 rounded animate-pulse" />
+          ) : (
+            <p className="text-sm font-semibold text-bg-dark font-sans">{name}</p>
+          )}
         </div>
       </div>
       <Download className="w-4 h-4 text-brand-ash group-hover:text-brand-primary transition-colors shrink-0" />

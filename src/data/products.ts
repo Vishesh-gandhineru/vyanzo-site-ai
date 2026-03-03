@@ -34,16 +34,16 @@ function toDownloadUrl(viewUrl: string): string {
 }
 
 /** Convert a name + index to a sane display label */
-function fileLabel(name: string, idx: number): string {
-  return `${name} — Document ${idx + 1}`;
+function fileLabel(name: string, idx: number, docType: string): string {
+  return `${name} — ${docType} ${idx + 1}`;
 }
 
 /** Build a DriveLink array from an object of { file_1, file_2, ... } */
-function buildLinks(name: string, files: Record<string, string | null>): DriveLink[] {
+function buildLinks(name: string, files: Record<string, string | null>, docType: string): DriveLink[] {
   return Object.values(files)
     .filter((url): url is string => !!url)
     .map((url, i) => ({
-      label: fileLabel(name, i),
+      label: fileLabel(name, i, docType),
       url,
       downloadUrl: toDownloadUrl(url),
     }));
@@ -79,8 +79,8 @@ type RawEntry = {
 };
 
 export const products: Product[] = (productData as RawEntry[]).map((p) => {
-  const certFiles  = buildLinks(p.name, p.certifications);
-  const specFiles  = buildLinks(p.name, p.specifications);
+  const certFiles  = buildLinks(p.name, p.certifications, "Certification");
+  const specFiles  = buildLinks(p.name, p.specifications, "Specification");
 
   return {
     id:                p.no,
