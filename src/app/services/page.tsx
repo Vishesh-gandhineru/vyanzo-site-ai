@@ -105,7 +105,7 @@ export default function ServicesPage() {
                 </div>
                 <h1 className="text-hero-inner font-serif font-bold tracking-tight mb-6 leading-[1.1] ">
                    Excellence Forged,<br/>
-                   <span className="text-brand-primary">Service Perfected.</span>
+                   <span className="text-brand-primary italic">Service Perfected.</span>
                 </h1>
                 <p className="text-brand-ash/80 text-body-xl font-sans font-normal max-w-2xl leading-relaxed">
                   Vyanzo offers a comprehensive suite of services designed to streamline the casting and manufacturing process, from initial design to final delivery.

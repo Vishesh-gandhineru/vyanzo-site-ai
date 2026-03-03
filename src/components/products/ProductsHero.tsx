@@ -16,7 +16,7 @@ export default function ProductsHero() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight mb-6 leading-[1.2]">
                    Engineered for  
                    <br/>
-                   <span className="text-brand-primary">
+                   <span className="text-brand-primary italic">
                     Infrastructure.
                     </span>
                 </h1>
