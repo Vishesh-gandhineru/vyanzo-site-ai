@@ -34,18 +34,18 @@ export default function ContactSection() {
             transition={{ duration: 0.8 }}
             className="lg:w-1/2 flex flex-col justify-center"
           >
-            <h2 className="text-xs font-serif font-semibold tracking-[0.15em] text-brand-primary uppercase mb-6 flex items-center gap-3">
+            <h2 className="text-body-lg font-serif font-semibold tracking-[0.15em] text-brand-primary mb-6 flex items-center gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
               Get in Touch
             </h2>
             
-            <h3 className="text-4xl md:text-5xl lg:text-[3.5rem] font-serif font-bold text-bg-dark leading-[1.1] mb-8">
+            <h3 className="text-section-h2 font-serif font-bold text-bg-dark leading-[1.1] mb-8">
               Let's build the <br />
               <span className="text-brand-primary italic">future of infrastructure</span> <br />
               together.
             </h3>
             
-            <p className="text-lg text-bg-dark/60 font-sans font-normal leading-relaxed mb-12 max-w-xl">
+            <p className="text-body-lg text-bg-dark/60 font-sans font-normal leading-relaxed mb-12 max-w-xl">
               Whether you're looking for custom casting solutions, need a quote for a large municipal project, or want to explore our end-to-end production capabilities, our team of experts is ready to assist you.
             </p>
 
@@ -113,7 +113,7 @@ export default function ContactSection() {
             className="lg:w-1/2 w-full"
           >
             <div className="bg-text-dark-bg p-8 md:p-12 rounded-3xl border border-black/5 shadow-xl shadow-black/2">
-              <h3 className="text-2xl font-serif font-bold text-bg-dark mb-8">Send us a message</h3>
+              <h3 className="text-section-h3 font-serif font-bold text-bg-dark mb-8">Send us a message</h3>
               
               <div 
                 style={{ width: "100%", height: "500px" }} 

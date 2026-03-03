@@ -37,12 +37,12 @@ export default function ServicesSection() {
             transition={{ duration: 0.6 }}
             className="md:max-w-2xl"
           >
-            <h2 className="text-xs font-serif font-semibold tracking-[0.15em] text-brand-primary uppercase mb-6 flex items-center gap-3">
+            <h2 className="text-body-lg font-serif font-semibold tracking-[0.15em] text-brand-primary  mb-6 flex items-center gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
               Our Services
             </h2>
-            <h3 className="text-4xl md:text-5xl lg:text-[3.5rem] font-serif font-bold text-bg-dark leading-[1.1] uppercase">
-              Discover what we can do for you
+            <h3 className="text-section-h2 font-serif font-bold text-bg-dark leading-[1.1] uppercase">
+              Discover what we can <span className="text-brand-primary italic">do for you</span>
             </h3>
           </motion.div>
 
@@ -55,7 +55,7 @@ export default function ServicesSection() {
             className="shrink-0"
           >
             <Link href="/services">
-            <div className="bg-brand-accent hover:opacity-90 transition-opacity text-bg-dark rounded-full font-sans font-bold text-sm tracking-widest uppercase py-4 px-8 flex items-center gap-3 group">
+            <div className="btn-primary flex items-center gap-2 "> 
               Learn More
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </div>
@@ -72,12 +72,12 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="bg-white p-8 md:p-10 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 border border-black/2 flex flex-col items-start min-h-[260px] group cursor-pointer"
+              className="bg-white p-8 md:p-10 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 border border-black/2 flex flex-col items-start min-h-[260px] group "
             >
-              <div className="w-12 h-12 bg-brand-primary/10 group-hover:bg-brand-primary/20 transition-colors rounded-lg flex items-center justify-center mb-auto">
-                <service.icon className="w-5 h-5 text-brand-primary" />
+              <div className="w-14 h-14 bg-brand-primary/10 group-hover:bg-brand-primary/20 transition-colors rounded-lg flex items-center justify-center mb-auto">
+                <service.icon className="w-8 h-8 text-brand-primary" />
               </div>
-              <h4 className="text-xl md:text-lg lg:text-xl font-serif font-semibold text-bg-dark leading-snug mt-12 group-hover:text-brand-primary transition-colors whitespace-pre-line">
+              <h4 className="text-card-title font-serif font-semibold text-bg-dark leading-snug mt-12 group-hover:text-brand-primary transition-colors whitespace-pre-line">
                 {service.title}
               </h4>
             </motion.div>

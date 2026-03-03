@@ -16,29 +16,29 @@ export default function EnvironmentSection() {
             transition={{ duration: 0.8 }}
             className="lg:w-1/2 flex flex-col justify-center"
           >
-            <h2 className="text-xs font-serif font-semibold tracking-[0.15em] text-brand-primary uppercase mb-8 flex items-center gap-3">
+            <h2 className="text-body-lg font-serif font-semibold tracking-widest  text-brand-primary mb-8 flex items-center gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
               Environmental Responsibility
             </h2>
             
-            <h3 className="text-4xl md:text-5xl lg:text-[4rem] font-serif font-bold text-bg-dark leading-[1.1] mb-8">
-              Massively reducing our <br />
-              <span className="text-brand-primary italic">environmental impact</span> <br />
+            <h3 className="text-section-h2 font-serif font-bold text-bg-dark leading-[1.1] mb-8">
+              Massively reducing our 
+              <span className="text-brand-primary italic"> environmental impact </span> 
               through innovation.
             </h3>
             
-            <p className="text-lg md:text-xl text-bg-dark/60 font-sans font-normal leading-relaxed mb-12 max-w-xl">
+            <p className="text-body-lg text-bg-dark/60 font-sans font-normal leading-relaxed mb-12 max-w-xl">
               We don’t melt with coal, like they still do in Belgium, but with the latest electrical induction furnaces. This shift, combined with rooftop solar panel green energy, represents our commitment to a sustainable future.
             </p>
             
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-3 bg-brand-primary/10 px-5 py-3 rounded-full">
                 <span className="w-2 h-2 rounded-full bg-brand-primary"></span>
-                <span className="text-xs font-sans font-bold tracking-wider text-bg-dark uppercase">No Coal Melting</span>
+                <span className="text-xs font-sans font-bold tracking-wide text-bg-dark">No Coal Melting</span>
               </div>
               <div className="flex items-center gap-3 bg-brand-primary/10 px-5 py-3 rounded-full">
                 <span className="w-2 h-2 rounded-full bg-brand-primary"></span>
-                <span className="text-xs font-sans font-bold tracking-wider text-bg-dark uppercase">Solar Powered</span>
+                <span className="text-xs font-sans font-bold tracking-wide text-bg-dark ">Solar Powered</span>
               </div>
             </div>
           </motion.div>
@@ -52,7 +52,7 @@ export default function EnvironmentSection() {
             className="lg:w-1/2 w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-4xl overflow-hidden"
           >
             <img 
-              src="https://images.unsplash.com/photo-1542261623-01053c1ed512?q=80&w=2070&auto=format&fit=crop" 
+              src="/solar_panal.jpg" 
               alt="Sustainable environmental road"
               className="w-full h-full object-cover grayscale-30"
             />

@@ -19,8 +19,8 @@ const infiniteLogos = [...logos, ...logos, ...logos, ...logos];
 
 export default function MarqueeLogos() {
   return (
-    <section className="w-full bg-text-dark-bg py-10 border-b border-brand-ash/20 overflow-hidden flex flex-col items-center">
-      <div className="text-xl font-sans font-semibold tracking-widest text-text-light-bg/40 uppercase mb-8">
+    <section className="w-full section-s gap-xs bg-text-dark-bg border-b border-brand-ash/20 overflow-hidden flex flex-col items-center">
+      <div className="text-lg font-sans font-semibold tracking-widest text-text-light-bg/40 uppercase mb-8">
         Certifications
       </div>
 

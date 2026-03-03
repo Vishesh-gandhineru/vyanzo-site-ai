@@ -21,7 +21,7 @@ export default function ContactPage() {
             <div className="max-w-3xl">
                 <div className="flex items-center gap-3 text-brand-primary text-sm font-sans font-bold tracking-widest uppercase mb-6">
                    <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
-                   Get in Touch
+                   Start a Conversation
                 </div>
                 <h1 className="text-hero-inner font-serif font-bold tracking-tight mb-6 leading-[1.2]">
                     Get in Touch

@@ -28,17 +28,17 @@ const products = [
 
 export default function ProductSection() {
   return (
-    <section className="w-full bg-white py-12 md:py-16 font-sans overflow-hidden border-t border-black/5">
-      <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+    <section className="w-full bg-white section-xl font-sans overflow-hidden border-t border-black/5">
+      <div className="max-w-[1400px] mx-auto">
         
         {/* Section Header */}
         <div className="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
             <div>
-               <h2 className="text-3xl md:text-5xl font-serif font-semibold text-bg-dark tracking-tight">Our Core Products</h2>
-               <p className="text-bg-dark/60 mt-3 md:text-lg font-sans font-normal">Premium casting solutions built for the world's most demanding infrastructure.</p>
+               <h2 className="text-section-h2 font-serif text-bg-dark tracking-tight">Our Core <span className="text-brand-primary italic">Products</span></h2>
+               <p className="text-bg-dark/60 mt-3 text-body-xl font-sans font-normal">Premium casting solutions built for the world's most demanding infrastructure.</p>
             </div>
             
-            <Link href="/products" className="shrink-0 flex items-center justify-center gap-2 bg-brand-accent text-bg-dark font-sans font-bold px-8 py-3.5 rounded-full hover:bg-brand-primary/90 transition-colors shadow-sm">
+            <Link href="/products" className="btn-primary flex gap-xs  justify-center items-center">
                 View All Products
                 <ArrowRight className="w-4 h-4" />
             </Link>
@@ -55,7 +55,7 @@ export default function ProductSection() {
               >
                 {/* Product Info (Top) */}
                 <div className="w-full flex items-center justify-between z-10 mb-6 md:mb-8">
-                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-bg-dark tracking-tight">
+                  <h3 className="text-card-title font-serif font-semibold text-bg-dark tracking-tight">
                     {product.name}
                   </h3>
                   <div className="w-10 h-10 rounded-full bg-white flex shrink-0 items-center justify-center border border-brand-ash/20 text-brand-primary shadow-sm group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">

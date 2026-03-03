@@ -2,20 +2,20 @@
 
 import Link from "next/link";
 import CobeGlobe from "./CobeGlobe";
-import { ArrowUpRight, BarChart3, Users, Zap, Award, Factory } from "lucide-react";
+import { ArrowUpRight, BarChart3, Users, Zap, Award, Factory, Cog } from "lucide-react";
 
 export default function BentoGrid() {
   return (
-    <section className="w-full bg-[#f8f9fc] py-24 px-4 md:px-8 border-t border-black/5 font-sans">
-      <div className="max-w-7xl mx-auto">
+    <section className="w-full section-xl bg-[#f8f9fc] border-t border-black/5 font-sans">
+      <div className="max-w-[1400px] mx-auto">
         
           {/* Header */}
         <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="max-w-2xl">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-text-light-bg tracking-tight mb-6">
-                   Built for Global Impact
+                <h2 className="text-section-h2 font-serif font-bold text-text-light-bg tracking-tight mb-4">
+                   Built for <span className="text-brand-primary italic">Global Impact</span>
                 </h2>
-                <p className="text-bg-dark/70 text-lg md:text-xl font-sans font-normal">
+                <p className="text-body-xl text-bg-dark/60 font-sans font-normal">
                    Delivering unparalleled casting solutions across the globe with precision, scale, and reliability since 1999.
                 </p>
             </div>
@@ -29,11 +29,11 @@ export default function BentoGrid() {
             <div className="absolute top-0 right-0 w-48 h-48 bg-brand-primary/10 rounded-full blur-3xl -mr-10 -mt-10 transition-all group-hover:bg-brand-primary/20" />
             <div>
               <Zap className="w-10 h-10 text-brand-primary mb-6" strokeWidth={1.5} />
-              <h3 className="text-2xl lg:text-3xl font-serif font-semibold text-text-light-bg mb-3 tracking-tight">Unsurpassed Quality</h3>
+              <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg mb-3 tracking-tight">Unsurpassed Quality</h3>
               <p className="text-text-light-bg/70 font-sans font-normal leading-relaxed">Engineered for perfection in every dimension and pour.</p>
             </div>
             <div className="mt-8 z-10">
-               <div className="text-5xl lg:text-6xl font-sans font-bold text-text-light-bg tracking-tighter">99.9%</div>
+               <div className="text-5xl lg:text-6xl font-sans font-bold text-brand-primary tracking-tighter">99.9%</div>
                <div className="text-sm text-brand-ash mt-2 uppercase tracking-widest font-sans font-normal">Defect-Free Output</div>
             </div>
           </div>
@@ -42,15 +42,16 @@ export default function BentoGrid() {
           <div className="min-h-[200px] md:min-h-0 md:col-span-2 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-4xl p-8 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
             <div className="absolute inset-0 bg-linear-to-r from-transparent via-brand-primary/5 to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             <Award className="w-8 h-8 text-brand-primary mb-4" strokeWidth={1.5} />
-            <h3 className="text-3xl xl:text-4xl font-serif font-semibold text-text-light-bg z-10 tracking-tight">Vast Global Reach</h3>
+            <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg z-10 tracking-tight">Vast Global Reach</h3>
             <p className="text-text-light-bg/70 mt-3 z-10 text-base xl:text-lg font-sans font-normal leading-relaxed">Serving customers in Belgium, France, Spain, Italy, Austria, Holland, UK, USA, and Canada.</p>
           </div>
 
           {/* Card 3: Top Right (H:1 W:1) */}
           <div className="min-h-[200px] md:min-h-0 md:col-span-1 md:row-span-1 bg-text-dark-bg border border-brand-ash/20 shadow-sm rounded-3xl p-6 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:border-brand-primary/30 transition-colors">
-            <div className="text-sm xl:text-xs 2xl:text-sm text-brand-ash uppercase tracking-widest font-sans font-normal mb-4 text-balance">Annual Production Volume</div>
-            <div className="text-4xl lg:text-5xl font-sans font-bold text-brand-primary tracking-tighter drop-shadow-[0_0_15px_rgba(110,176,255,0.4)]">&gt;20,000</div>
-            <div className="text-sm text-text-light-bg/80 mt-2 font-sans font-medium text-balance">Tons of castings shipped worldwide</div>
+          <Cog className="w-8 h-8 text-brand-primary mb-4" strokeWidth={1.5} />
+            <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg z-10 tracking-tight">Annual Production Volume</h3>
+            <div className="text-4xl lg:text-5xl font-sans mt-3 font-bold text-brand-primary tracking-tighter drop-shadow-[0_0_15px_rgba(110,176,255,0.4)]">&gt;20,000</div>
+            
           </div>
 
           {/* Card 4: Middle Center (GLOBE CARD) (H:2 W:2) */}
@@ -59,7 +60,7 @@ export default function BentoGrid() {
             {/* Title overlay at the top of the globe */}
             <div className="absolute top-8 left-8 right-8 z-20 flex justify-between items-start pointer-events-none">
                 <div>
-                   <h3 className="text-2xl font-serif font-semibold text-text-light-bg tracking-tight">Worldwide Impact</h3>
+                   <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg tracking-tight">Worldwide Impact</h3>
                   
                 </div>
                 
@@ -94,7 +95,7 @@ export default function BentoGrid() {
               <div className="absolute -right-4 -bottom-4 w-48 h-48 bg-brand-primary/10 blur-3xl rounded-full transition-all group-hover:bg-brand-primary/20" />
               <div>
                   <Factory className="w-10 h-10 text-brand-primary mb-6" strokeWidth={1.5} />
-                  <h3 className="text-2xl lg:text-3xl font-serif font-semibold text-text-light-bg mb-4 tracking-tight">Industry Compliance</h3>
+                  <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg mb-4 tracking-tight">Industry Compliance</h3>
               </div>
               <div className="flex flex-wrap gap-2 relative z-10 mt-8">
                  <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">COPRO</span>
