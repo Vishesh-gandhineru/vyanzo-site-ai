@@ -12,6 +12,10 @@ export default function BentoGrid() {
           {/* Header */}
         <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="max-w-2xl">
+                <div className="text-body-lg font-serif font-semibold tracking-widest text-brand-primary  mb-6 flex items-center gap-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
+              The Vyanzo Edge
+            </div>
                 <h2 className="text-section-h2 font-serif font-bold text-text-light-bg tracking-tight mb-4">
                    Built for <span className="text-brand-primary italic">Global Impact</span>
                 </h2>
@@ -77,7 +81,7 @@ export default function BentoGrid() {
 
             {/* Labels at bottom */}
             <div className="absolute bottom-6 left-6 right-6 flex flex-col xl:flex-row justify-between z-10 gap-3 pointer-events-none">
-               <div className="bg-white/90 backdrop-blur-xl border border-brand-ash/20 shadow-sm px-4 py-3 rounded-2xl flex items-center gap-3 w-fit">
+               <div className="bg-white/90 backdrop-blur-xl border border-brand-primary/20 shadow-sm px-4 py-3 rounded-2xl flex items-center gap-3 w-fit">
                   <div className="w-8 h-8 rounded-full bg-brand-primary/10 flex items-center justify-center">
                      <div className="w-2 h-2 rounded-full bg-brand-primary" />
                   </div>
@@ -99,11 +103,12 @@ export default function BentoGrid() {
                   <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg mb-4 tracking-tight">Industry Compliance</h3>
               </div>
               <div className="flex flex-wrap gap-2 relative z-10 mt-8">
-                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">COPRO</span>
-                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">Benor</span>
-                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">ISO 9001:2015</span>
-                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">ISO 14001:2015</span>
-                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-brand-ash border border-brand-ash/20 font-sans font-normal">ISO 45001:2018</span>
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">COPRO</span>
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">Benor</span>
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">ISO 9001:2015</span>
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">ISO 14001:2015</span>
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">ISO 45001:2018</span>
+                 <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">EN124-2</span>
               </div>
            </div>
 

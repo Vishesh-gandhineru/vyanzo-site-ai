@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function EnvironmentSection() {
   return (
@@ -22,16 +23,14 @@ export default function EnvironmentSection() {
             </h2>
             
             <h3 className="text-section-h2 font-serif font-bold text-bg-dark leading-[1.1] mb-8">
-              Massively reducing our 
-              <span className="text-brand-primary italic"> environmental impact </span> 
-              through innovation.
+              Cleaner casting starts at the <span className="text-brand-primary italic">furnace.</span>
             </h3>
             
             <p className="text-body-lg text-bg-dark/60 font-sans font-normal leading-relaxed mb-12 max-w-xl">
-              We don’t melt with coal, like they still do in Belgium, but with the latest electrical induction furnaces. This shift, combined with rooftop solar panel green energy, represents our commitment to a sustainable future.
+              Zero coal. Electrical induction furnaces. Rooftop solar. Every facility is built to minimize footprint: not just meet standards, but set them.
             </p>
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mb-12">
               <div className="flex items-center gap-3 bg-brand-primary/10 px-5 py-3 rounded-full">
                 <span className="w-2 h-2 rounded-full bg-brand-primary"></span>
                 <span className="text-xs font-sans font-bold tracking-wide text-bg-dark">No Coal Melting</span>
@@ -40,7 +39,17 @@ export default function EnvironmentSection() {
                 <span className="w-2 h-2 rounded-full bg-brand-primary"></span>
                 <span className="text-xs font-sans font-bold tracking-wide text-bg-dark ">Solar Powered</span>
               </div>
+              <div className="flex items-center gap-3 bg-brand-primary/10 px-5 py-3 rounded-full">
+                <span className="w-2 h-2 rounded-full bg-brand-primary"></span>
+                <span className="text-xs font-sans font-bold tracking-wide text-bg-dark ">ISO 14001 Certified</span>
+              </div>
             </div>
+            <Link 
+            href="/about/#team"
+            className="w-full md:w-auto"
+            >
+            <button className="btn-primary">Learn More</button>
+            </Link>
           </motion.div>
 
           {/* Right Column: Image */}

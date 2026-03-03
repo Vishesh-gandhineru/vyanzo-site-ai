@@ -369,7 +369,7 @@ export default function ProductDetails({ product }: { product: Product }) {
             <Link
               href={`/products/${p.slug}`}
               key={p.id}
-              className="group bg-white border border-brand-ash/20 rounded-[2rem] p-8 hover:shadow-lg hover:border-brand-primary transition-all flex flex-col relative overflow-hidden"
+              className="group bg-white border border-brand-ash/20  rounded-4xl p-8 hover:shadow-lg hover:border-brand-primary transition-all flex flex-col relative overflow-hidden"
             >
               <div className="w-full h-48 bg-[#f8f9fc] rounded-2xl mb-8 flex items-center justify-center p-6 border border-brand-ash/10 group-hover:bg-white transition-colors">
                 <img

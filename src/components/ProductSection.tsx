@@ -33,6 +33,10 @@ export default function ProductSection() {
         {/* Section Header */}
         <div className="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
             <div>
+               <div className="text-body-lg font-serif font-semibold tracking-widest text-brand-primary  mb-6 flex items-center gap-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
+              What We Cast
+            </div>
                <h2 className="text-section-h2 font-serif text-bg-dark tracking-tight">Our Core <span className="text-brand-primary italic">Products</span></h2>
                <p className="text-bg-dark/60 mt-3 text-body-xl font-sans font-normal">Premium casting solutions built for the world's most demanding infrastructure.</p>
             </div>

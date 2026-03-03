@@ -22,7 +22,7 @@ export default function AboutSection() {
               About Vyanzo
             </h2>
             <h3 className="text-section-h2 font-serif font-bold text-bg-dark leading-tight mb-8">
-              Discover our range of <span className="text-brand-primary italic">meticulously designed </span>and manufactured products.
+              Precision-cast for the <span className="text-brand-primary italic">world's toughest</span> infrastructure.
             </h3>
            
           </motion.div>
@@ -35,16 +35,8 @@ export default function AboutSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:w-[55%] flex flex-col justify-center gap-6 text-text-light-bg/60 text-body-lg font-sans font-normal leading-relaxed"
           >
-             <div className="border-l-4 border-brand-primary pl-6 py-2">
-              <p className="text-body-xl text-text-light-bg/90 font-sans font-medium leading-relaxed">
-                Vyanzo delivers top quality castings to the most demanding customers. Consistent quality and service level are paramount to what we do.
-              </p>
-            </div>
             <p>
-              Since its inception in 2018, Vyanzo has evolved from an OEM supplier to become a leading manufacturer of its own range of Manhole Covers, Grates and other municipal casting products that are now supplied across Europe.
-            </p>
-            <p>
-              We offer end-to-end services to customers around the world who share our business philosophy: Quality, Service & Reliability at a correct price – and that with relentless consistency.
+             Born in 2018, Vyanzo manufactures manhole covers, grates, and municipal castings: supplied across Europe and beyond. Quality, service, and reliability aren't just promises. They're the standard.
             </p>
             <Link 
             href="/about/#team"
