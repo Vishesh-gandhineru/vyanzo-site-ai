@@ -25,7 +25,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="w-full bg-text-dark-bg py-24 px-4 md:px-8 border-t border-black/5 font-sans">
+    <section className="w-full section-xl bg-text-dark-bg border-t border-black/5 font-sans">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Header Area */}
@@ -41,7 +41,7 @@ export default function ServicesSection() {
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
               Our Services
             </h2>
-            <h3 className="text-section-h2 font-serif font-bold text-bg-dark leading-[1.1] uppercase">
+            <h3 className="text-section-h2 font-serif font-bold text-bg-dark">
               Discover what we can <span className="text-brand-primary italic">do for you</span>
             </h3>
           </motion.div>
@@ -55,7 +55,7 @@ export default function ServicesSection() {
             className="shrink-0"
           >
             <Link href="/services">
-            <div className="btn-primary flex items-center gap-2 "> 
+            <div className="btn-primary flex items-center gap-2 justify-center "> 
               Learn More
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </div>
@@ -72,12 +72,12 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="bg-white p-8 md:p-10 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 border border-black/2 flex flex-col items-start min-h-[260px] group "
+              className="bg-white p-8 md:p-10 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 border border-black/2 flex flex-col items-start min-h-[200px] lg:min-h-[260px] group "
             >
               <div className="w-14 h-14 bg-brand-primary/10 group-hover:bg-brand-primary/20 transition-colors rounded-lg flex items-center justify-center mb-auto">
                 <service.icon className="w-8 h-8 text-brand-primary" />
               </div>
-              <h4 className="text-card-title font-serif font-semibold text-bg-dark leading-snug mt-12 group-hover:text-brand-primary transition-colors whitespace-pre-line">
+              <h4 className="text-card-title font-serif font-semibold text-bg-dark leading-snug mt-12 group-hover:text-brand-primary transition-colors">
                 {service.title}
               </h4>
             </motion.div>

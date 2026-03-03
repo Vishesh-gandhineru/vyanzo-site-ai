@@ -87,7 +87,7 @@ body {
 
   /* 40px → ~26px */
   .text-section-h2 {
-    font-size: clamp(1.625rem, 3.5vw, 4rem); /* 26px → 40px */
+    font-size: clamp(2.25rem, 3.5vw, 4rem); /* 26px → 40px */
     @apply leading-[1.15] font-bold;
   }
 
@@ -155,7 +155,8 @@ body {
            rounded-full
            font-sans
            font-semibold
-           text-lg
+           text-sm
+           lg:text-lg
            tracking-wide
            transition-all
            duration-300
