@@ -300,7 +300,7 @@
     "image_link": null, "table_link": "https://docs.google.com/spreadsheets/d/1fimmUnzBaPwIQBbksTEzQIQyUDrwglCpCEdUsO2OiRs/edit#gid=566104412"
   },
   {
-    "no": 32, "product_category": "Siphons", "sub_category": null, "name": "3060K", "certification_type": "Benor",
+    "no": 32, "product_category": "Siphons", "sub_category": null, "name": "V30/60K", "certification_type": "Benor",
     "certifications": {
       "file_1": "https://drive.google.com/file/d/1ZcIyEe8SqCMfZw3C2YlxYlKGNHBZ-QzG/view?usp=drive_link",
       "file_2": "https://drive.google.com/file/d/1ioQ1Q2B735DdmoQb6nivPdCW3QwaX3jS/view?usp=drive_link",
@@ -311,7 +311,7 @@
     "image_link": null, "table_link": "https://docs.google.com/spreadsheets/d/1fimmUnzBaPwIQBbksTEzQIQyUDrwglCpCEdUsO2OiRs/edit#gid=1104070030"
   },
   {
-    "no": 33, "product_category": "Siphons", "sub_category": null, "name": "3060Z", "certification_type": "Benor",
+    "no": 33, "product_category": "Siphons", "sub_category": null, "name": "V30/60Z", "certification_type": "Benor",
     "certifications": {
       "file_1": "https://drive.google.com/file/d/1ERGLD0koVcSW0KfP0UaXgRXHSjdfoZol/view?usp=drive_link",
       "file_2": "https://drive.google.com/file/d/1UDCWVybeoPsFrACoOItvumUA2U0-k28Z/view?usp=drive_link",
@@ -332,7 +332,7 @@
     "image_link": null, "table_link": "https://docs.google.com/spreadsheets/d/1fimmUnzBaPwIQBbksTEzQIQyUDrwglCpCEdUsO2OiRs/edit#gid=1158753928"
   },
   {
-    "no": 35, "product_category": "Siphons", "sub_category": null, "name": "V19400 (under development)", "certification_type": "Benor",
+    "no": 35, "product_category": "Siphons", "sub_category": null, "name": "V19/40O (under development)", "certification_type": "Benor",
     "certifications": { "file_1": null, "file_2": null, "file_3": null, "file_4": null },
     "specifications": { "file_1": "https://drive.google.com/file/d/1b_lHC9tnL2C3bbzMayz3MmlgY4dKzh65/view?usp=drive_link", "file_2": null },
     "image_link": null, "table_link": null

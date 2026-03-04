@@ -5,7 +5,6 @@ import { ArrowDown } from "lucide-react";
 import MegaMenu from "./MegaMenu";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Link from "next/link";
-
 export default function HeroSection() {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-bg-dark text-text-dark-bg font-sans selection:bg-brand-primary/30">
@@ -29,10 +28,10 @@ export default function HeroSection() {
       <div className="relative z-10 w-full h-full flex flex-col justify-between p-4 md:p-12 lg:p-16">
 
         {/* Top Navbar */}
-        <header className="flex justify-between items-start w-full relative z-60 gap-4 ">
+        <header className="flex justify-between items-center w-full relative z-60 gap-4 ">
           
           {/* Logo container to correctly float next to the absolute mega menu */}
-          <div className="w-48">
+          <div className="w-38 md:w-64">
             <img 
                src="/logo.svg" 
                alt="Vyanzo" 
@@ -75,15 +74,7 @@ export default function HeroSection() {
             
           </div>
 
-          {/* Scroll Down Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 1 }}
-            className="hidden md:flex flex-col items-center gap-2 pr-6"
-          >
-            <ArrowDown className="w-6 h-6 text-brand-accent animate-bounce" strokeWidth={1} />
-          </motion.div>
+          
         </div>
       </div>
     </section>

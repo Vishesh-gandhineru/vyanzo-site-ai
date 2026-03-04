@@ -22,7 +22,7 @@ export default function AboutSection() {
               About Vyanzo
             </h2>
             <h3 className="text-section-h2 font-serif font-bold text-bg-dark leading-tight mb-8">
-              Precision-cast for the <span className="text-brand-primary italic">world's toughest</span> infrastructure.
+              Precision-cast for the <span className="text-brand-primary italic">world's Most Demanding</span> infrastructure.
             </h3>
            
           </motion.div>

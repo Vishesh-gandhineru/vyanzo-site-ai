@@ -21,7 +21,7 @@ export default function ProductsHero() {
                     </span>
                 </h1>
                 <p className="text-brand-ash/80 text-lg md:text-xl font-sans font-normal max-w-2xl leading-relaxed">
-                   Discover our complete range of heavily certified municipal castings, designed for extreme durability and seamless global distribution.
+                   Discover our complete range of certified municipal castings, designed for extreme durability and easy installation.
                 </p>
             </div>
             

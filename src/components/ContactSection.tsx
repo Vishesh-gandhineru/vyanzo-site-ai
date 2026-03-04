@@ -48,7 +48,9 @@ export default function ContactSection() {
             </p>
 
             <div className="flex flex-col gap-8">
-              <div className="flex items-start gap-4 group">
+              <div className="flex flex-col lg:flex-row items-start gap-16 group">
+                <div className="flex items-start gap-4">
+
                 <div className="w-12 h-12 rounded-full bg-text-dark-bg flex items-center justify-center shrink-0 group-hover:bg-brand-primary/10 transition-colors">
                   <MapPin className="w-5 h-5 text-bg-dark group-hover:text-brand-primary transition-colors" />
                 </div>
@@ -59,6 +61,24 @@ export default function ContactSection() {
                     2900 Schoten <br />
                     Belgium 
                   </p>
+                </div>
+
+                </div>
+
+                <div className="flex items-start gap-4">
+
+                <div className="w-12 h-12 rounded-full bg-text-dark-bg flex items-center justify-center shrink-0 group-hover:bg-brand-primary/10 transition-colors">
+                  <MapPin className="w-5 h-5 text-bg-dark group-hover:text-brand-primary transition-colors" />
+                </div>
+                <div>
+                  <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">Warehouse</h4>
+                  <p className="text-bg-dark/70 font-sans font-normal leading-relaxed">
+                    Kluizenmeersen 10 <br />
+                    9170 Sint-Gillis-Waas <br />
+                    Belgium 
+                  </p>
+                </div>
+
                 </div>
               </div>
 

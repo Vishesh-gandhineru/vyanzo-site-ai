@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
@@ -18,7 +18,6 @@ export default function CobeGlobe() {
   useEffect(() => {
     let currentPhi = 0;
     
-    // Convert hex to rgb for cobe
     const hexToRgb = (hex: string) => {
       const r = parseInt(hex.slice(1, 3), 16) / 255;
       const g = parseInt(hex.slice(3, 5), 16) / 255;
@@ -26,35 +25,67 @@ export default function CobeGlobe() {
       return [r, g, b] as [number, number, number];
     };
 
-    const baseMarkers = [
-      { location: [50.8503, 4.3517] as [number, number], size: 0.08 }, // Belgium
-      { location: [48.8566, 2.3522] as [number, number], size: 0.08 }, // France
-      { location: [40.4168, -3.7038] as [number, number], size: 0.08 }, // Spain
-      { location: [41.9028, 12.4964] as [number, number], size: 0.08 }, // Italy
-      { location: [48.2082, 16.3738] as [number, number], size: 0.08 }, // Austria
-      { location: [52.3676, 4.9041] as [number, number], size: 0.08 },  // Holland
-      { location: [51.5074, -0.1278] as [number, number], size: 0.08 }, // UK
-      { location: [40.7128, -74.0060] as [number, number], size: 0.08 },// USA (NY)
-      { location: [43.6532, -79.3832] as [number, number], size: 0.08 },// Canada (Toronto)
-      { location: [20.5937, 78.9629] as [number, number], size: 0.08 }, // India
-      { location: [38.9637, 35.2433] as [number, number], size: 0.08 }, // Turkey
-      { location: [14.0583, 108.2772] as [number, number], size: 0.15 }, // Vietnam
-    ];
+
 
     const globe = createGlobe(canvasRef.current!, {
       devicePixelRatio: 2,
-  width: 800,
-  height: 800,
-  phi: Math.PI / 2, // rotate start
-  theta: 0.3,
-  dark: 0,
-  diffuse: 1.2,
-  mapSamples: 16000,
-  mapBrightness: 1.2, // reduce
-  baseColor: [0.95, 0.95, 0.95],
-  markerColor: hexToRgb("#6eb0ff"),
-  glowColor: [0.9, 0.9, 0.9],
-  markers: baseMarkers,
+      width: 800,
+      height: 800,
+      phi: 0,
+      theta: 0.3,
+      dark: 0,
+      diffuse: 1.2,
+      mapSamples: 16000,
+      mapBrightness: 6,
+      baseColor: [0.95, 0.95, 0.95],
+      markerColor: hexToRgb("#6eb0ff"),
+      glowColor: [0.9, 0.9, 0.9],
+      markers: [
+       // Europe
+{ location: [50.8503, 4.3517] as [number, number], size: 0.08 },   // Belgium
+{ location: [48.8566, 2.3522] as [number, number], size: 0.08 },   // France
+{ location: [40.4168, -3.7038] as [number, number], size: 0.08 },  // Spain
+{ location: [41.9028, 12.4964] as [number, number], size: 0.08 },  // Italy
+{ location: [48.2082, 16.3738] as [number, number], size: 0.08 },  // Austria
+{ location: [52.3676, 4.9041] as [number, number], size: 0.08 },   // Holland
+
+// United States
+{ location: [37.7595, -122.4367], size: 0.05 },                    // San Francisco
+{ location: [40.7128, -74.006], size: 0.05 },                      // New York
+{ location: [25.7617, -80.1918], size: 0.05 },                     // Miami
+
+// United Kingdom
+{ location: [51.5074, -0.1278], size: 0.05 },                      // London
+
+// Original extras
+{ location: [22.3193, 114.1694], size: 0.05 },                     // Hong Kong
+{ location: [1.3521, 103.8198], size: 0.05 },                      // Singapore
+{ location: [25.2048, 55.2708], size: 0.05 },                      // Dubai
+
+// Canada
+{ location: [45.4215, -75.6972], size: 0.05 },                     // Ottawa
+{ location: [43.6532, -79.3832], size: 0.05 },                     // Toronto
+
+// India
+
+{ location: [22.5726, 88.3639], size: 0.05 },                      // Kolkata
+{ location: [19.0760, 72.8777], size: 0.05 },                      // Mumbai
+
+// Turkey
+{ location: [39.9334, 32.8597], size: 0.05 },                      // Ankara
+{ location: [41.0082, 28.9784], size: 0.05 },                      // Istanbul
+
+// Vietnam
+{ location: [21.0285, 105.8542], size: 0.05 },                     // Hanoi
+
+// China
+{ location: [39.9042, 116.4074], size: 0.05 },                     // Beijing
+{ location: [31.2304, 121.4737], size: 0.05 },                     // Shanghai
+
+// Africa
+{ location: [33.9716, -6.8498], size: 0.05 },                      // Morocco (Rabat)
+{ location: [26.2041, 28.0473], size: 0.05 },                      // South Africa (Johannesburg)
+      ],
       onRender: (state) => {
         if (!pointerInteracting.current) {
           currentPhi += 0.003;
@@ -64,13 +95,6 @@ export default function CobeGlobe() {
           state.width = canvasRef.current.clientWidth * 2;
           state.height = canvasRef.current.clientHeight * 2;
         }
-        
-        // Dynamic blinking/pulsing effect for markers
-        const t = Date.now() / 200;
-        state.markers = baseMarkers.map(m => ({
-          location: m.location,
-          size: m.size + Math.sin(t) * 0.03
-        }));
       }
     });
 

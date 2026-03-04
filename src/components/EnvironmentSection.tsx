@@ -45,7 +45,7 @@ export default function EnvironmentSection() {
               </div>
             </div>
             <Link 
-            href="/about/#team"
+            href="/sustainability"
             className="w-full md:w-auto"
             >
             <button className="btn-primary">Learn More</button>

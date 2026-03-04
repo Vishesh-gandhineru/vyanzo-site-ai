@@ -3,9 +3,9 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function GlobalHeader() {
   return (
-    <header className="flex justify-between items-start w-full relative z-50 p-6 md:p-8 lg:px-16 bg-bg-dark border-b border-brand-ash/20">
+    <header className="flex justify-between items-center w-full relative z-50 p-6 md:p-8 lg:px-16 bg-bg-dark border-b border-brand-ash/20">
       {/* Logo */}
-      <div className="w-40 md:w-48">
+      <div className="w-38 md:w-64">
         <a href="/">
           <img 
              src="/logo.svg" 
