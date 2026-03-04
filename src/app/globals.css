@@ -16,7 +16,7 @@
     --fluid-side-padding: clamp(1.25rem, 6.522vw - 0.217rem, 5rem);
 
     --section-xxl-y: clamp(9.375rem, 1.087vw + 9.13rem, 10rem);
-    --section-xl-y: clamp(6.875rem, 1.087vw + 6.63rem, 7.5rem);
+    --section-xl-y: clamp(5rem, 4.3182rem + 3.6364vw, 7.5rem);
     --section-l-y: clamp(5.625rem, 1.087vw + 5.38rem, 6.25rem);
     --section-m-y: 5rem;
     --section-s-y: 3.75rem;

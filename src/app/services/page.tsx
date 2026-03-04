@@ -142,7 +142,7 @@ export default function ServicesPage() {
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
                 Services Portfolio
               </div>
-              <h1 className="text-hero-inner font-serif font-bold tracking-tight mb-6 leading-[1.1] ">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight mb-6 leading-[1.1] ">
                 Excellence Forged,
                 <br />
                 <span className="text-brand-primary italic">
