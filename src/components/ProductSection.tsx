@@ -9,19 +9,19 @@ const products = [
     id: 2,
     name: "Manhole Covers",
     category: "Manhole Covers",
-    image: "/products/manhole-cover.png",
+    image: "/Manhole_home.png",
   },
   {
     id: 3,
     name: "Siphons",
     category: "Siphons",
-    image: "/products/siphon.png",
+    image: "/Siphon_Home.png",
   },
   {
     id: 4,
     name: "Surface Boxes",
     category: "Surface Boxes",
-    image: "/products/surface-box.png",
+    image: "/SurfaceBoxes_home.png",
   },
 ];
 
@@ -29,33 +29,42 @@ export default function ProductSection() {
   return (
     <section className="w-full bg-white section-xl font-sans overflow-hidden border-t border-black/5">
       <div className="max-w-[1400px] mx-auto">
-        
         {/* Section Header */}
         <div className="mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
-            <div>
-               <div className="text-body-lg font-serif font-semibold tracking-widest text-brand-primary  mb-6 flex items-center gap-4">
+          <div>
+            <div className="text-body-lg font-serif font-semibold tracking-widest text-brand-primary  mb-6 flex items-center gap-4">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
               What We Cast
             </div>
-               <h2 className="text-section-h2 font-serif text-bg-dark tracking-tight">Our Core <span className="text-brand-primary italic">Products</span></h2>
-               <p className="text-bg-dark/60 mt-3 text-body-xl font-sans font-normal">Premium casting solutions built for the world's most demanding infrastructure.</p>
-            </div>
-            
-            <Link href="/products" className="btn-primary flex gap-xs  justify-center items-center">
-                View All Products
-                <ArrowRight className="w-4 h-4" />
-            </Link>
+            <h2 className="text-section-h2 font-serif text-bg-dark tracking-tight">
+              Our Core{" "}
+              <span className="text-brand-primary italic">Products</span>
+            </h2>
+            <p className="text-bg-dark/60 mt-3 text-body-xl font-sans font-normal">
+              Premium casting solutions built for the world's most demanding
+              infrastructure.
+            </p>
+          </div>
+
+          <Link
+            href="/products"
+            className="btn-primary flex gap-xs  justify-center items-center"
+          >
+            View All Products
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
         {/* Product Grid (1 column on mobile, 2 columns on md) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 pb-8">
-          
           {/* Product Cards */}
           {products.map((product) => (
-            <Link key={product.id} href={`/products?category=${encodeURIComponent(product.category)}`} className="pointer-events-auto h-full block">
-              <motion.div
-                className="w-full min-h-[360px] md:min-h-[360px] bg-brand-primary/5 rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center justify-between relative group overflow-hidden border border-brand-ash/10 hover:bg-brand-primary/10 transition-colors duration-300 h-full"
-              >
+            <Link
+              key={product.id}
+              href={`/products?category=${encodeURIComponent(product.category)}`}
+              className="pointer-events-auto h-full block"
+            >
+              <motion.div className="w-full min-h-[360px] md:min-h-[360px] bg-brand-primary/5 rounded-2xl md:rounded-3xl p-6 md:p-8 flex flex-col items-center justify-between relative group overflow-hidden border border-brand-ash/10 hover:bg-brand-primary/10 transition-colors duration-300 h-full">
                 {/* Product Info (Top) */}
                 <div className="w-full flex items-center justify-between z-10 mb-6 md:mb-8">
                   <h3 className="text-card-title font-serif font-semibold text-bg-dark tracking-tight">
@@ -78,7 +87,6 @@ export default function ProductSection() {
               </motion.div>
             </Link>
           ))}
-          
         </div>
       </div>
     </section>
