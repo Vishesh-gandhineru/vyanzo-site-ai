@@ -22,6 +22,7 @@ export type Product = {
   sku: string;
   description: string;
   image: string;
+  subImages: string[];
   category: string;     // = product_category
   subCategory: string | null;
   certificationType: string;
@@ -80,13 +81,17 @@ type RawEntry = {
   certification_type: string;
   certifications: Record<string, string | null>;
   specifications: Record<string, string | null>;
-  image_link: string | null;
+  image_link: Record<string, string> | null;
   table_link: string | null;
 };
 
 export const products: Product[] = (productData as RawEntry[]).map((p) => {
   const certFiles  = buildLinks(p.name, p.certifications, "Certification");
   const specFiles  = buildLinks(p.name, p.specifications, "Specification");
+
+  const imageKeys = p.image_link ? Object.keys(p.image_link).sort() : [];
+  const primaryImage = imageKeys.length > 0 ? p.image_link![imageKeys[0]] : imageForCategory(p.product_category, p.sub_category);
+  const subImages = imageKeys.length > 1 ? imageKeys.slice(1).map(k => p.image_link![k]) : [];
 
   return {
     id:                p.no,
@@ -95,7 +100,8 @@ export const products: Product[] = (productData as RawEntry[]).map((p) => {
     slug:              slugify(`${p.product_category}-${p.sub_category ?? ""}-${p.name}`),
     sku:               `VY-${p.product_category.substring(0, 3).toUpperCase()}-${String(p.no).padStart(2, "0")}`,
     description:       `High-quality ${p.name} from our ${p.product_category} range${p.sub_category ? ` (${p.sub_category})` : ""}.`,
-    image:             imageForCategory(p.product_category, p.sub_category),
+    image:             primaryImage,
+    subImages:         subImages,
     category:          p.product_category,
     subCategory:       p.sub_category,
     certificationType: p.certification_type,
