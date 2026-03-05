@@ -8,9 +8,8 @@ export default function AboutSection() {
     <section className="w-full section-xl bg-text-dark-bg text-text-light-bg  overflow-hidden font-sans border-t border-brand-ash/20">
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
-          
           {/* Left Column: Heading and Highlight */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -22,13 +21,16 @@ export default function AboutSection() {
               About Vyanzo
             </h2>
             <h3 className="text-section-h2 font-serif font-bold text-bg-dark leading-tight mb-8">
-              Precision-cast for the <span className="text-brand-primary italic">world's Most Demanding</span> infrastructure.
+              Precision-cast for the{" "}
+              <span className="text-brand-primary italic">
+                World's Most Demanding
+              </span>{" "}
+              infrastructure.
             </h3>
-           
           </motion.div>
 
           {/* Right Column: Detailed Text */}
-            <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -36,17 +38,15 @@ export default function AboutSection() {
             className="lg:w-[55%] flex flex-col justify-center gap-6 text-text-light-bg/60 text-body-lg font-sans font-normal leading-relaxed"
           >
             <p>
-             Born in 2018, Vyanzo manufactures manhole covers, grates, and municipal castings: supplied across Europe and beyond. Quality, service, and reliability aren't just promises. They're the standard.
+              Born in 2018, Vyanzo manufactures manhole covers, grates, and
+              municipal castings: supplied across Europe and beyond. Quality,
+              service, and reliability aren't just promises. They're the
+              standard.
             </p>
-            <Link 
-            href="/about/#team"
-            className="w-full md:w-auto"
-            >
-            <button className="btn-primary w-full">Meet the team</button>
+            <Link href="/about/#team" className="w-full md:w-auto">
+              <button className="btn-primary w-full">Meet the team</button>
             </Link>
-           
           </motion.div>
-          
         </div>
       </div>
     </section>

@@ -51,10 +51,33 @@ export default function Footer() {
               className="h-10 md:h-12 w-auto brightness-0"
             />
           </Link>
+          {/* Social Icons positioned below first column */}
+          <div className="flex items-center gap-3 mt-8">
+            <a
+              href="https://www.linkedin.com/company/vyanzo-castings/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-bg-dark flex items-center justify-center text-white hover:opacity-80 transition-opacity"
+            >
+              <Linkedin
+                className="w-5 h-5"
+                fill="currentColor"
+                strokeWidth={0}
+              />
+            </a>
+            <a
+              href="https://wa.link/yemzpo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-bg-dark flex items-center justify-center text-white hover:opacity-80 transition-opacity"
+            >
+              <WhatsAppIcon className="w-5 h-5" />
+            </a>
+          </div>
         </div>
 
         {/* Middle Section: Links Grid */}
-        <div className="grow flex flex-col md:flex-row md:justify-center gap-12 md:gap-24 lg:gap-32 mb-16 md:mb-0">
+        <div className="grow flex flex-col md:flex-row md:justify-center gap-4 md:gap-24 lg:gap-32 mb-16 md:mb-0">
           {/* Column 1 */}
           <div className="flex flex-col gap-4">
             <Link
@@ -70,30 +93,6 @@ export default function Footer() {
             >
               Services
             </Link>
-
-            {/* Social Icons positioned below first column */}
-            <div className="flex items-center gap-3 mt-8">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-bg-dark flex items-center justify-center text-white hover:opacity-80 transition-opacity"
-              >
-                <Linkedin
-                  className="w-5 h-5"
-                  fill="currentColor"
-                  strokeWidth={0}
-                />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-bg-dark flex items-center justify-center text-white hover:opacity-80 transition-opacity"
-              >
-                <WhatsAppIcon className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Column 2 */}
