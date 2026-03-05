@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -25,8 +25,14 @@ export default function MegaMenu() {
               <span className="hidden md:inline text-[11px] font-sans font-medium tracking-widest uppercase">
                 Menu
               </span>
-              <Menu className="w-5 h-5 md:hidden font-light" strokeWidth={1.5} />
-              <Plus className="hidden md:block w-[14px] h-[14px] font-light" strokeWidth={1.5} />
+              <Menu
+                className="w-5 h-5 md:hidden font-light"
+                strokeWidth={1.5}
+              />
+              <Plus
+                className="hidden md:block w-[14px] h-[14px] font-light"
+                strokeWidth={1.5}
+              />
             </motion.div>
           </motion.div>
         )}
@@ -46,7 +52,7 @@ export default function MegaMenu() {
                 className="flex justify-between items-center w-full"
               >
                 {/* Logo Dark version for overlay */}
-                <Link href="/"  passHref>
+                <Link href="/" passHref>
                   <div className="cursor-pointer group hover:opacity-80 transition-opacity">
                     <img
                       src="/logo.svg"
@@ -84,6 +90,7 @@ export default function MegaMenu() {
                     { title: "Services", href: "/services" },
                     { title: "About Us", href: "/about" },
                     { title: "Contact Us", href: "/contact" },
+                    { title: "Sustainability", href: "/sustainability" },
                   ].map((item) => (
                     <Link key={item.title} href={item.href as any}>
                       <motion.div
@@ -100,7 +107,6 @@ export default function MegaMenu() {
                     </Link>
                   ))}
                 </nav>
-
               </motion.div>
             </div>
           </motion.div>
