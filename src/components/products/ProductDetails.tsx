@@ -14,6 +14,7 @@ import {
   CheckCircle2,
   Download,
   Award,
+  Maximize,
 } from "lucide-react";
 import { Product, DriveLink, SheetRow } from "@/data/products";
 import Link from "next/link";
@@ -139,7 +140,7 @@ export default function ProductDetails({ product }: { product: Product }) {
   const [selectedImage, setSelectedImage] = useState(allImages[0]);
 
   const [activeTab, setActiveTab] = useState<
-    "specifications" | "certifications"
+    "specifications" | "certifications" | "sizes"
   >("specifications");
   const { rows: sheetRows, loading: sheetLoading } = useSheetSpecs(
     product.tableLink,
@@ -249,7 +250,10 @@ export default function ProductDetails({ product }: { product: Product }) {
 
             {/* Tab switcher */}
             <div className="flex gap-2 mb-6 bg-[#f8f9fc] rounded-xl p-1">
-              {(["specifications", "certifications"] as const).map((tab) => (
+              {(product.sizes && product.sizes.length > 0
+                ? (["specifications", "certifications", "sizes"] as const)
+                : (["specifications", "certifications"] as const)
+              ).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
@@ -297,6 +301,31 @@ export default function ProductDetails({ product }: { product: Product }) {
                 ) : (
                   <p className="text-center py-8 text-text-light-bg/40 text-sm font-sans">
                     No certification files available.
+                  </p>
+                )}
+              </div>
+            )}
+
+            {/* Sizes tab */}
+            {activeTab === "sizes" && product.sizes && (
+              <div className="flex flex-col gap-2">
+                {product.sizes.length > 0 ? (
+                  product.sizes.map((size, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 p-4 bg-[#f8f9fc] rounded-xl border border-transparent"
+                    >
+                      <div className="w-9 h-9 rounded-lg bg-brand-primary/10 flex items-center justify-center shrink-0">
+                        <Maximize className="w-4 h-4 text-brand-primary" />
+                      </div>
+                      <p className="text-sm font-semibold text-bg-dark font-sans">
+                        {size}
+                      </p>
+                    </div>
+                  ))
+                ) : (
+                  <p className="text-center py-8 text-text-light-bg/40 text-sm font-sans">
+                    No sizes available.
                   </p>
                 )}
               </div>

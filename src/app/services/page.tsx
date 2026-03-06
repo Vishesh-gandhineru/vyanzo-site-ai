@@ -99,11 +99,96 @@ const services = [
       "Vyanzo offers specialized assistance with international certification processes to ensure products meet global safety and quality standards.",
     highlights: [
       {
-        label: "Available Certifications",
-        value: "EN124-2 (Ductile iron manhole covers)",
+        label: "Copro",
+        value: "Copro Certification",
+        icon: (
+          <img
+            src="/certified/COPRO.svg"
+            alt="Copro"
+            className="h-12 w-auto object-contain mx-auto"
+          />
+        ),
       },
-      { label: "BENOR", value: "Belgian certification" },
-      { label: "Other (On Request)", value: "BS-Kitemark / KOMO / ICMQ / MPA" },
+      {
+        label: "BENOR",
+        value: "BENOR Certification",
+        icon: (
+          <img
+            src="/certified/BENOR.png"
+            alt="BENOR"
+            className="h-12 w-auto object-contain mx-auto"
+          />
+        ),
+      },
+      {
+        label: "EN124-2",
+        value: "EN124-2 Certification",
+        icon: <ShieldCheck className="w-6 h-6" />,
+      },
+      {
+        label: "MPA Bremen",
+        value: "MPA Bremen Certification",
+        icon: (
+          <img
+            src="/certified/MPA-Bremen-logo.webp"
+            alt="MPA Bremen"
+            className="h-12 w-auto object-contain mx-auto"
+          />
+        ),
+      },
+      {
+        label: "ICMQ",
+        value: "ICMQ Certification",
+        icon: (
+          <img
+            src="/certified/logo1-default.png"
+            alt="ICMQ"
+            className="h-12 w-auto object-contain mx-auto"
+          />
+        ),
+      },
+    ],
+  },
+  {
+    id: "foundry-certifications",
+    title: "Foundry Certifications",
+    icon: <ShieldCheck className="w-6 h-6" />,
+    description:
+      "Vyanzo offers specialized assistance with international certification processes to ensure products meet global safety and quality standards.",
+    highlights: [
+      {
+        label: "ISO 9001",
+        value: "ISO 9001 Certification",
+        icon: (
+          <img
+            src="/certified/ISO_9001-2015.svg"
+            alt="ISO 9001"
+            className="h-12 w-auto object-contain mx-auto"
+          />
+        ),
+      },
+      {
+        label: "ISO 14001",
+        value: "ISO 14001 Certification",
+        icon: (
+          <img
+            src="/certified/iso-14001-2015.webp"
+            alt="ISO 14001"
+            className="h-12 w-auto object-contain mx-auto"
+          />
+        ),
+      },
+      {
+        label: "ISO 45001",
+        value: "ISO 45001 Certification",
+        icon: (
+          <img
+            src="/certified/ISO-45001-2018.png"
+            alt="ISO 45001"
+            className="h-12 w-auto object-contain mx-auto"
+          />
+        ),
+      },
     ],
   },
 ];
@@ -244,23 +329,27 @@ export default function ServicesPage() {
                           {service.description}
                         </p>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-auto">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-auto">
                           {service.highlights.map((highlight, idx) => (
                             <div
                               key={idx}
-                              className="bg-white p-6 rounded-2xl shadow-sm border border-brand-ash/10 hover:-translate-y-1 transition-transform"
+                              className="bg-white p-6 rounded-2xl shadow-sm border border-brand-ash/10 hover:-translate-y-1 transition-transform flex flex-col items-center justify-center text-center gap-3"
                             >
-                              <div className="flex items-start gap-4">
-                                <CheckCircle2 className="w-5 h-5 text-brand-primary shrink-0 mt-0.5" />
-                                <div>
-                                  <h4 className="font-bold text-bg-dark mb-1">
-                                    {highlight.label}
-                                  </h4>
+                              {"icon" in highlight ? (
+                                highlight.icon
+                              ) : (
+                                <CheckCircle2 className="w-5 h-5 text-brand-primary shrink-0" />
+                              )}
+                              <h4 className="font-bold text-bg-dark">
+                                {highlight.label}
+                              </h4>
+                              {highlight.value &&
+                                typeof highlight.value === "string" &&
+                                !("icon" in highlight) && (
                                   <p className="text-text-light-bg/70 text-sm leading-relaxed">
                                     {highlight.value}
                                   </p>
-                                </div>
-                              </div>
+                                )}
                             </div>
                           ))}
                         </div>

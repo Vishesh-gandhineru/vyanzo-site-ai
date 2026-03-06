@@ -23,9 +23,9 @@ export default function AboutSection() {
             <h3 className="text-section-h2 font-serif font-bold text-bg-dark leading-tight mb-8">
               Precision-cast for the{" "}
               <span className="text-brand-primary italic">
-                World's Most Demanding
+                world's most demanding
               </span>{" "}
-              infrastructure.
+              infrastructure
             </h3>
           </motion.div>
 

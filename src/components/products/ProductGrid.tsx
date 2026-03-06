@@ -41,19 +41,26 @@ function FilterCheckbox({
   label,
   checked,
   onChange,
+  disabled,
 }: {
   label: string;
   checked: boolean;
   onChange: () => void;
+  disabled?: boolean;
 }) {
   return (
-    <label className="flex items-center gap-3 cursor-pointer group">
-      <div className="w-5 h-5 rounded border border-brand-ash/40 flex items-center justify-center group-hover:border-brand-primary transition-colors relative shrink-0">
+    <label
+      className={`flex items-center gap-3 ${disabled ? "cursor-not-allowed opacity-50" : "cursor-pointer group"}`}
+    >
+      <div
+        className={`w-5 h-5 rounded border border-brand-ash/40 flex items-center justify-center relative shrink-0 ${disabled ? "" : "group-hover:border-brand-primary transition-colors"}`}
+      >
         <input
           type="checkbox"
-          className="absolute opacity-0 w-full h-full cursor-pointer"
+          className={`absolute opacity-0 w-full h-full ${disabled ? "cursor-not-allowed" : "cursor-pointer"}`}
           checked={checked}
-          onChange={onChange}
+          onChange={disabled ? undefined : onChange}
+          disabled={disabled}
         />
         {checked && (
           <Check className="w-3.5 h-3.5 text-brand-primary" strokeWidth={3} />
@@ -195,14 +202,20 @@ export default function ProductGrid() {
               Geo Location
             </h3>
             <div className="flex flex-col gap-3">
-              {availableGeos.map((geo) => (
-                <FilterCheckbox
-                  key={geo}
-                  label={geo}
-                  checked={selectedGeos.includes(geo)}
-                  onChange={() => toggleGeo(geo)}
-                />
-              ))}
+              {availableGeos.map((geo) => {
+                const isSelected = selectedGeos.includes(geo);
+                // If any geo is selected, and this one is not the selected one, disable it
+                const isDisabled = selectedGeos.length > 0 && !isSelected;
+                return (
+                  <FilterCheckbox
+                    key={geo}
+                    label={geo}
+                    checked={isSelected}
+                    onChange={() => toggleGeo(geo)}
+                    disabled={isDisabled}
+                  />
+                );
+              })}
             </div>
           </div>
 
@@ -242,23 +255,6 @@ export default function ProductGrid() {
             </div>
           </div>
 
-          {/* Sub-Category */}
-          <div className="bg-white rounded-2xl p-6 shadow-sm border border-brand-ash/20">
-            <h3 className="flex items-center gap-2 text-bg-dark font-sans font-semibold text-base mb-5">
-              <Tag className="w-4 h-4 text-brand-primary" />
-              Sub-Category
-            </h3>
-            <div className="flex flex-col gap-3">
-              {ALL_SUB_CATEGORIES.map((sub) => (
-                <FilterCheckbox
-                  key={sub}
-                  label={sub}
-                  checked={selectedSubCategories.includes(sub)}
-                  onChange={() => toggle(setSelectedSubCategories, sub)}
-                />
-              ))}
-            </div>
-          </div>
           <button
             onClick={resetFilters}
             className="flex items-center gap-2 text-brand-primary text-sm font-sans font-semibold mt-6 hover:opacity-75 transition-opacity"
@@ -389,7 +385,7 @@ export default function ProductGrid() {
                 <Folder className="w-8 h-8 text-brand-ash" />
               </div>
               <h3 className="text-xl font-serif font-semibold text-bg-dark mb-2">
-                No products found
+                The products for Scandinavia are under development.
               </h3>
               <p className="text-text-light-bg/60 font-sans font-normal mb-8">
                 Try adjusting your filters to find what you&apos;re looking for.

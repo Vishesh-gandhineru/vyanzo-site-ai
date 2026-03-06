@@ -53,11 +53,11 @@ export default function MegaMenu() {
               >
                 {/* Logo Dark version for overlay */}
                 <Link href="/" passHref>
-                  <div className="cursor-pointer group hover:opacity-80 transition-opacity">
+                  <div className="cursor-pointer group hover:opacity-80 transition-opacity w-38 md:w-64">
                     <img
                       src="/logo.svg"
                       alt="Vyanzo"
-                      className="h-8 md:h-10 w-auto"
+                      className="h-auto w-full"
                     />
                   </div>
                 </Link>
@@ -89,8 +89,8 @@ export default function MegaMenu() {
                     { title: "Products", href: "/products" },
                     { title: "Services", href: "/services" },
                     { title: "About Us", href: "/about" },
-                    { title: "Contact Us", href: "/contact" },
                     { title: "Sustainability", href: "/sustainability" },
+                    { title: "Contact Us", href: "/contact" },
                   ].map((item) => (
                     <Link key={item.title} href={item.href as any}>
                       <motion.div

@@ -30,6 +30,7 @@ export type Product = {
   specificationFiles: DriveLink[];
   certificationFiles: DriveLink[];
   tableLink: string | null;
+  sizes?: string[];
 };
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -83,6 +84,7 @@ type RawEntry = {
   specifications: Record<string, string | null>;
   image_link: Record<string, string> | null;
   table_link: string | null;
+  sizes?: string[];
 };
 
 export const products: Product[] = (productData as RawEntry[]).map((p) => {
@@ -109,6 +111,7 @@ export const products: Product[] = (productData as RawEntry[]).map((p) => {
     specificationFiles: specFiles,
     certificationFiles: certFiles,
     tableLink:         p.table_link,
+    sizes:             p.sizes,
   };
 });
 

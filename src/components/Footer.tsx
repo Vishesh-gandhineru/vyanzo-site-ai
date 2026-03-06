@@ -65,14 +65,6 @@ export default function Footer() {
                 strokeWidth={0}
               />
             </a>
-            <a
-              href="https://wa.link/yemzpo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-bg-dark flex items-center justify-center text-white hover:opacity-80 transition-opacity"
-            >
-              <WhatsAppIcon className="w-5 h-5" />
-            </a>
           </div>
         </div>
 

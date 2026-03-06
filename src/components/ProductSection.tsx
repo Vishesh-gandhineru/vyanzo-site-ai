@@ -37,8 +37,8 @@ export default function ProductSection() {
               What We Cast
             </div>
             <h2 className="text-section-h2 font-serif text-bg-dark tracking-tight">
-              Our Core{" "}
-              <span className="text-brand-primary italic">Products</span>
+              Our core{" "}
+              <span className="text-brand-primary italic">products</span>
             </h2>
             <p className="text-bg-dark/60 mt-3 text-body-xl font-sans font-normal">
               Premium casting solutions built for the world's most demanding
