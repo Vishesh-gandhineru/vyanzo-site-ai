@@ -130,25 +130,25 @@ export default function BentoGrid() {
                 Industry Compliance
               </h3>
             </div>
-            <div className="flex flex-wrap gap-4 relative z-10 mt-8">
-              <img
-                src="/certified/COPRO.svg"
-                alt="COPRO"
-                className="h-12 w-auto object-contain mx-auto"
-              />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 relative z-10 mt-8">
               <img
                 src="/certified/BENOR.png"
                 alt="BENOR"
                 className="h-10 w-auto object-contain mx-auto"
               />
               <img
-                src="/certified/MPA-Bremen-logo.webp"
-                alt="MPA Bremen"
+                src="/certified/logo1-default.png"
+                alt="ICMQ"
                 className="h-10 w-auto object-contain mx-auto"
               />
               <img
-                src="/certified/logo1-default.png"
-                alt="ICMQ"
+                src="/certified/COPRO.svg"
+                alt="COPRO"
+                className="h-12 w-auto object-contain mx-auto"
+              />
+              <img
+                src="/certified/MPA-Bremen-logo.webp"
+                alt="MPA Bremen"
                 className="h-10 w-auto object-contain mx-auto"
               />
             </div>
