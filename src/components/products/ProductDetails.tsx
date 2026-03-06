@@ -28,20 +28,19 @@ function useDriveFileName(
   driveUrl: string,
   fallback: string,
 ): { name: string; loading: boolean } {
+  const m = driveUrl ? driveUrl.match(/\/file\/d\/([^/]+)\//) : null;
+  const fileId = m ? m[1] : null;
+
   const [name, setName] = useState(fallback);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!!fileId);
 
   useEffect(() => {
-    // Extract file ID from the Drive share URL
-    const m = driveUrl.match(/\/file\/d\/([^/]+)\//);
-    if (!m) {
-      setLoading(false);
-      return;
-    }
-    const id = m[1];
+    if (!fileId) return;
 
     let cancelled = false;
-    fetch(`/api/drive-name?id=${id}`)
+    setLoading(true);
+
+    fetch(`/api/drive-name?id=${fileId}`)
       .then((r) => r.json())
       .then((data) => {
         if (!cancelled && data.name) setName(data.name);
@@ -56,7 +55,7 @@ function useDriveFileName(
     return () => {
       cancelled = true;
     };
-  }, [driveUrl]);
+  }, [fileId]);
 
   return { name, loading };
 }
@@ -70,11 +69,11 @@ function useSheetSpecs(tableLink: string | null): {
   const [loading, setLoading] = useState(!!tableLink);
 
   useEffect(() => {
-    if (!tableLink) {
-      setLoading(false);
-      return;
-    }
+    if (!tableLink) return;
+
     let cancelled = false;
+    setLoading(true);
+
     fetch(`/api/sheet-specs?url=${encodeURIComponent(tableLink)}`)
       .then((r) => r.json())
       .then((data) => {
@@ -449,94 +448,29 @@ export default function ProductDetails({ product }: { product: Product }) {
               </p>
             </div>
           ) : (
-            <div className="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-sm border border-brand-ash/20 h-fit">
-              <h3 className="flex items-center gap-3 text-bg-dark font-sans font-semibold text-xl mb-6 tracking-tight">
-                <ExternalLink className="w-5 h-5 text-brand-primary" />
-                Documentation
-              </h3>
-
-              {/* Tab switcher */}
-              <div className="flex gap-2 mb-6 bg-[#f8f9fc] rounded-xl p-1">
-                {(product.sizes && product.sizes.length > 0
-                  ? (["specifications", "certifications", "sizes"] as const)
-                  : (["specifications", "certifications"] as const)
-                ).map((tab) => (
-                  <button
-                    key={tab}
-                    onClick={() => setActiveTab(tab)}
-                    className={`flex-1 py-2.5 px-3 rounded-lg text-sm font-semibold font-sans capitalize transition-all ${
-                      activeTab === tab
-                        ? "bg-white text-bg-dark shadow-sm"
-                        : "text-text-light-bg/60 hover:text-bg-dark"
-                    }`}
-                  >
-                    {tab}
-                  </button>
-                ))}
-              </div>
-
-              {/* Specifications tab */}
-              {activeTab === "specifications" && (
-                <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
-                  {specFiles.length > 0 ? (
-                    specFiles.map((f, i) => (
-                      <DriveRow
-                        key={i}
-                        file={f}
-                        icon={
-                          <FileText className="w-4 h-4 text-brand-primary" />
-                        }
-                      />
-                    ))
+            <div className="bg-white rounded-[2.5rem] p-4 shadow-sm border border-brand-ash/20 h-fit overflow-hidden">
+              {specFiles.length > 0 ? (
+                (() => {
+                  const fileId =
+                    specFiles[0].url.match(/\/file\/d\/([^/]+)\//)?.[1];
+                  return fileId ? (
+                    <iframe
+                      src={`https://drive.google.com/file/d/${fileId}/preview`}
+                      className="w-full aspect-3/4 rounded-2xl border-none"
+                    />
                   ) : (
-                    <p className="text-center py-8 text-text-light-bg/40 text-sm font-sans">
-                      No specification files available.
-                    </p>
-                  )}
-                </div>
-              )}
-
-              {/* Certifications tab */}
-              {activeTab === "certifications" && (
-                <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
-                  {certFiles.length > 0 ? (
-                    certFiles.map((f, i) => (
-                      <DriveRow
-                        key={i}
-                        file={f}
-                        icon={<Award className="w-4 h-4 text-brand-primary" />}
-                      />
-                    ))
-                  ) : (
-                    <p className="text-center py-8 text-text-light-bg/40 text-sm font-sans">
-                      No certification files available.
-                    </p>
-                  )}
-                </div>
-              )}
-
-              {/* Sizes tab */}
-              {activeTab === "sizes" && product.sizes && (
-                <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
-                  {product.sizes.length > 0 ? (
-                    product.sizes.map((size, i) => (
-                      <div
-                        key={i}
-                        className="flex items-center gap-3 p-4 bg-[#f8f9fc] rounded-xl border border-transparent"
-                      >
-                        <div className="w-9 h-9 rounded-lg bg-brand-primary/10 flex items-center justify-center shrink-0">
-                          <Maximize className="w-4 h-4 text-brand-primary" />
-                        </div>
-                        <p className="text-sm font-semibold text-bg-dark font-sans">
-                          {size}
-                        </p>
-                      </div>
-                    ))
-                  ) : (
-                    <p className="text-center py-8 text-text-light-bg/40 text-sm font-sans">
-                      No sizes available.
-                    </p>
-                  )}
+                    <div className="w-full aspect-square flex items-center justify-center bg-[#f8f9fc] rounded-2xl">
+                      <p className="text-text-light-bg/40 text-sm font-sans shrink-0">
+                        Invalid spec URL
+                      </p>
+                    </div>
+                  );
+                })()
+              ) : (
+                <div className="w-full aspect-square flex items-center justify-center bg-[#f8f9fc] rounded-2xl">
+                  <p className="text-text-light-bg/40 text-sm font-sans shrink-0">
+                    No specification available
+                  </p>
                 </div>
               )}
             </div>
@@ -675,9 +609,7 @@ export default function ProductDetails({ product }: { product: Product }) {
           })}
         </div>
       ) : (
-        <div
-          className={`grid grid-cols-1 ${certFiles.length > 0 ? "md:grid-cols-2" : ""} gap-6 lg:gap-8 mb-24`}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-24">
           {/* Technical Specifications */}
           <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col">
             <h3 className="flex items-center gap-3 text-xl font-bold text-bg-dark font-sans tracking-tight mb-8">
@@ -721,10 +653,6 @@ export default function ProductDetails({ product }: { product: Product }) {
                         label: "Sub-Category",
                         value: product.subCategory ?? "—",
                       },
-                      {
-                        label: "Certification",
-                        value: product.certificationType,
-                      },
                       { label: "SKU", value: product.sku },
                     ].map((row, idx, arr) => (
                       <div
@@ -746,33 +674,96 @@ export default function ProductDetails({ product }: { product: Product }) {
             </div>
           </div>
 
-          {/* Certifications & Compliance */}
-          {certFiles.length > 0 && (
-            <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col">
-              <h3 className="flex items-center gap-3 text-xl font-bold text-bg-dark tracking-tight font-sans mb-6">
-                <CheckCircle2 className="w-8 h-8 text-brand-primary" />
-                Certifications & Compliance
-              </h3>
+          {/* Documentation Section (moved to bottom) */}
+          <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col h-fit">
+            <h3 className="flex items-center gap-3 text-xl font-bold text-bg-dark tracking-tight font-sans mb-6">
+              <ExternalLink className="w-6 h-6 text-brand-primary" />
+              Documentation
+            </h3>
 
-              <div className="flex flex-col gap-3">
-                <div
-                  className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-bold tracking-wider uppercase self-start mb-2 ${certChipClass(product.certificationType)}`}
+            {/* Tab switcher */}
+            <div className="flex gap-2 mb-6 bg-[#f8f9fc] rounded-xl p-1 w-full md:w-fit">
+              {(product.sizes && product.sizes.length > 0
+                ? (["specifications", "certifications", "sizes"] as const)
+                : (["specifications", "certifications"] as const)
+              ).map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`py-2.5 px-6 rounded-lg text-sm font-semibold font-sans capitalize transition-all ${
+                    activeTab === tab
+                      ? "bg-white text-bg-dark shadow-sm"
+                      : "text-text-light-bg/60 hover:text-bg-dark"
+                  }`}
                 >
-                  <ShieldCheck className="w-3 h-3" />
-                  {product.certificationType} Certified
-                </div>
-                {certFiles.map((file, idx) => (
-                  <DriveRow
-                    key={idx}
-                    file={file}
-                    icon={
-                      <ShieldCheck className="w-4 h-4 text-brand-primary" />
-                    }
-                  />
-                ))}
-              </div>
+                  {tab}
+                </button>
+              ))}
             </div>
-          )}
+
+            {/* Specifications tab */}
+            {activeTab === "specifications" && (
+              <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
+                {specFiles.length > 0 ? (
+                  specFiles.map((f, i) => (
+                    <DriveRow
+                      key={i}
+                      file={f}
+                      icon={<FileText className="w-4 h-4 text-brand-primary" />}
+                    />
+                  ))
+                ) : (
+                  <p className="py-8 text-text-light-bg/40 text-sm font-sans">
+                    No specification files available.
+                  </p>
+                )}
+              </div>
+            )}
+
+            {/* Certifications tab */}
+            {activeTab === "certifications" && (
+              <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
+                {certFiles.length > 0 ? (
+                  certFiles.map((f, i) => (
+                    <DriveRow
+                      key={i}
+                      file={f}
+                      icon={<Award className="w-4 h-4 text-brand-primary" />}
+                    />
+                  ))
+                ) : (
+                  <p className="py-8 text-text-light-bg/40 text-sm font-sans">
+                    No certification files available.
+                  </p>
+                )}
+              </div>
+            )}
+
+            {/* Sizes tab */}
+            {activeTab === "sizes" && product.sizes && (
+              <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
+                {product.sizes.length > 0 ? (
+                  product.sizes.map((size, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 p-4 bg-[#f8f9fc] rounded-xl border border-transparent"
+                    >
+                      <div className="w-9 h-9 rounded-lg bg-brand-primary/10 flex items-center justify-center shrink-0">
+                        <Maximize className="w-4 h-4 text-brand-primary" />
+                      </div>
+                      <p className="text-sm font-semibold text-bg-dark font-sans">
+                        {size}
+                      </p>
+                    </div>
+                  ))
+                ) : (
+                  <p className="py-8 text-text-light-bg/40 text-sm font-sans">
+                    No sizes available.
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       )}
 

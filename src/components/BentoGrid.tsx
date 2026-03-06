@@ -87,7 +87,7 @@ export default function BentoGrid() {
               Annual Production Volume
             </h3>
             <div className="text-4xl lg:text-5xl font-sans mt-3 font-bold text-brand-primary tracking-tighter drop-shadow-[0_0_15px_rgba(110,176,255,0.4)]">
-              &gt; 200,000
+              &gt; 250,000
               <span
                 className="
             text-[12px] font-sans font-normal text-brand-ash tracking-wider"

@@ -262,7 +262,7 @@ export default function AboutPage() {
               <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-brand-ash/10 hover:-translate-y-2 transition-transform duration-300 sm:translate-y-12">
                 <Building2 className="w-8 h-8 text-brand-primary mb-6" />
                 <div className="text-4xl font-serif font-bold text-bg-dark mb-2">
-                  200,000<span className="text-brand-primary">+</span>
+                  250,000<span className="text-brand-primary">+</span>
                 </div>
                 <div className="text-text-light-bg/60 font-medium">
                   {"Tons of Castings Annually"}
