@@ -31,6 +31,20 @@ export type Product = {
   certificationFiles: DriveLink[];
   tableLink: string | null;
   sizes?: string[];
+  variants?: Variant[];
+};
+
+export type Variant = {
+  name: string;
+  kn: string;
+  application: string;
+  description: string;
+  sizes: string[];
+  specifications: Record<string, string | null>;
+  image_link: Record<string, string> | null;
+  catalog_link?: string | null;
+  specificationFiles: DriveLink[];
+  image: string;
 };
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -85,6 +99,16 @@ type RawEntry = {
   image_link: Record<string, string> | null;
   table_link: string | null;
   sizes?: string[];
+  variants?: {
+    name: string;
+    kn: string;
+    application: string;
+    description: string;
+    sizes: string[];
+    specifications: Record<string, string | null>;
+    image_link: Record<string, string> | null;
+    catalog_link: string | null;
+  }[];
 };
 
 export const products: Product[] = (productData as RawEntry[]).map((p) => {
@@ -112,6 +136,24 @@ export const products: Product[] = (productData as RawEntry[]).map((p) => {
     certificationFiles: certFiles,
     tableLink:         p.table_link,
     sizes:             p.sizes,
+    variants: p.variants?.map((v) => {
+      const vSpecFiles = buildLinks(v.name, v.specifications, "Specification");
+      const vImageKeys = v.image_link ? Object.keys(v.image_link).sort() : [];
+      const vImage = vImageKeys.length > 0 ? v.image_link![vImageKeys[0]] : primaryImage;
+
+      return {
+        name: v.name,
+        kn: v.kn,
+        application: v.application,
+        description: v.description,
+        sizes: v.sizes,
+        specifications: v.specifications,
+        image_link: v.image_link,
+        catalog_link: v.catalog_link,
+        specificationFiles: vSpecFiles,
+        image: vImage,
+      };
+    }),
   };
 });
 

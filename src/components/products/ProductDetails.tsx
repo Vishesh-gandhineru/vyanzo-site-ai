@@ -15,6 +15,7 @@ import {
   Download,
   Award,
   Maximize,
+  Info,
 } from "lucide-react";
 import { Product, DriveLink, SheetRow } from "@/data/products";
 import Link from "next/link";
@@ -134,8 +135,185 @@ function DriveRow({ file, icon }: { file: DriveLink; icon: React.ReactNode }) {
   );
 }
 
+// ─── Variant Icon Helper ──────────────────────────────────────────────────────
+function VariantIcon({ name }: { name: string }) {
+  if (name.includes("B125")) {
+    return (
+      <svg
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full block"
+      >
+        <rect
+          x="22"
+          y="10"
+          width="56"
+          height="56"
+          rx="7"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          fill="none"
+        />
+        <line
+          x1="34"
+          y1="22"
+          x2="34"
+          y2="56"
+          stroke="currentColor"
+          strokeWidth="3.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M34 22 Q34 22 46 22 Q56 22 56 32 Q56 42 46 42 L34 42"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          fill="none"
+        />
+        <g
+          transform="translate(54, 50) scale(0.48)"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          fill="none"
+        >
+          <rect x="0" y="7" width="30" height="13" rx="3" strokeWidth="2.5" />
+          <path d="M5 7 L8 1 L22 1 L25 7" strokeWidth="2.2" />
+          <circle cx="7" cy="21" r="3.5" strokeWidth="2.2" />
+          <circle cx="23" cy="21" r="3.5" strokeWidth="2.2" />
+        </g>
+        <text
+          x="50"
+          y="94"
+          textAnchor="middle"
+          fontFamily="'DM Sans', sans-serif"
+          fontWeight="700"
+          fontSize="11"
+          fill="currentColor"
+          letterSpacing="0.5"
+        >
+          B125
+        </text>
+      </svg>
+    );
+  }
+  if (name.includes("C250")) {
+    return (
+      <svg
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-full block"
+      >
+        <circle
+          cx="50"
+          cy="24"
+          r="14"
+          fill="white"
+          stroke="#e63030"
+          strokeWidth="2.5"
+        />
+        <text
+          x="50"
+          y="29"
+          textAnchor="middle"
+          fontFamily="'DM Sans', sans-serif"
+          fontWeight="700"
+          fontSize="13"
+          fill="#111"
+        >
+          30
+        </text>
+        <line
+          x1="10"
+          y1="46"
+          x2="90"
+          y2="46"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <g fill="currentColor">
+          <path d="M12 80 L17 48 L23 48 L18 80 Z" />
+          <path d="M25 80 L30 48 L36 48 L31 80 Z" />
+          <path d="M38 80 L43 48 L49 48 L44 80 Z" />
+          <path d="M51 80 L56 48 L62 48 L57 80 Z" />
+          <path d="M64 80 L69 48 L75 48 L70 80 Z" />
+          <path d="M77 80 L82 48 L88 48 L83 80 Z" />
+        </g>
+        <text
+          x="50"
+          y="94"
+          textAnchor="middle"
+          fontFamily="'DM Sans', sans-serif"
+          fontWeight="700"
+          fontSize="11"
+          fill="currentColor"
+          letterSpacing="0.5"
+        >
+          C250
+        </text>
+      </svg>
+    );
+  }
+  if (name.includes("D400")) {
+    return (
+      <svg
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-full h-full block"
+      >
+        <line x1="8" y1="38" x2="92" y2="38" strokeWidth="3" />
+        <line x1="20" y1="38" x2="20" y2="48" strokeWidth="3" />
+        <line x1="80" y1="38" x2="80" y2="48" strokeWidth="3" />
+        <path d="M4 78 L32 48 L50 48 L24 78 Z" strokeWidth="2" />
+        <path d="M96 78 L68 48 L50 48 L76 78 Z" strokeWidth="2" />
+        <path d="M32 38 L42 16 L38 38 Z" strokeWidth="1.8" />
+        <path d="M68 38 L58 16 L62 38 Z" strokeWidth="1.8" />
+        <line
+          x1="50"
+          y1="49"
+          x2="50"
+          y2="58"
+          strokeWidth="1.8"
+          strokeDasharray="4 3"
+        />
+        <line
+          x1="50"
+          y1="63"
+          x2="50"
+          y2="75"
+          strokeWidth="1.8"
+          strokeDasharray="4 3"
+        />
+        <text
+          x="50"
+          y="94"
+          textAnchor="middle"
+          fontFamily="'DM Sans', sans-serif"
+          fontWeight="700"
+          fontSize="11"
+          fill="currentColor"
+          letterSpacing="0.5"
+          stroke="none"
+        >
+          D400
+        </text>
+      </svg>
+    );
+  }
+  return null;
+}
+
 // ─── Main component ───────────────────────────────────────────────────────────
 export default function ProductDetails({ product }: { product: Product }) {
+  const hasVariants = product.variants && product.variants.length > 0;
   const allImages = [product.image, ...product.subImages];
   const [selectedImage, setSelectedImage] = useState(allImages[0]);
 
@@ -240,221 +418,357 @@ export default function ProductDetails({ product }: { product: Product }) {
           </div>
         </div>
 
-        {/* ── Right Sidebar: Documentation ── */}
+        {/* ── Right Sidebar: Documentation OR Title ── */}
         <aside className="w-full lg:w-[420px] shrink-0 flex flex-col gap-8">
-          <div className="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-sm border border-brand-ash/20 h-fit">
-            <h3 className="flex items-center gap-3 text-bg-dark font-sans font-semibold text-xl mb-6 tracking-tight">
-              <ExternalLink className="w-5 h-5 text-brand-primary" />
-              Documentation
-            </h3>
-
-            {/* Tab switcher */}
-            <div className="flex gap-2 mb-6 bg-[#f8f9fc] rounded-xl p-1">
-              {(product.sizes && product.sizes.length > 0
-                ? (["specifications", "certifications", "sizes"] as const)
-                : (["specifications", "certifications"] as const)
-              ).map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={`flex-1 py-2.5 px-3 rounded-lg text-sm font-semibold font-sans capitalize transition-all ${
-                    activeTab === tab
-                      ? "bg-white text-bg-dark shadow-sm"
-                      : "text-text-light-bg/60 hover:text-bg-dark"
-                  }`}
+          {hasVariants ? (
+            <div className="flex flex-col pt-4">
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-bold tracking-wider uppercase ${certChipClass(product.certificationType)}`}
                 >
-                  {tab}
-                </button>
-              ))}
+                  <ShieldCheck className="w-3 h-3" />
+                  {product.certificationType}
+                </span>
+                {product.subCategory && (
+                  <span className="text-xs font-bold tracking-widest text-brand-ash uppercase">
+                    {product.subCategory}
+                  </span>
+                )}
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-[4rem] leading-[1.05] font-serif font-bold text-bg-dark tracking-tight mb-6 mt-4">
+                {product.title}
+              </h1>
+              <p className="text-text-light-bg/70 font-sans font-normal text-body-lg leading-relaxed max-w-2xl">
+                {product.description}
+              </p>
             </div>
+          ) : (
+            <div className="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-sm border border-brand-ash/20 h-fit">
+              <h3 className="flex items-center gap-3 text-bg-dark font-sans font-semibold text-xl mb-6 tracking-tight">
+                <ExternalLink className="w-5 h-5 text-brand-primary" />
+                Documentation
+              </h3>
 
-            {/* Specifications tab */}
-            {activeTab === "specifications" && (
-              <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
-                {specFiles.length > 0 ? (
-                  specFiles.map((f, i) => (
-                    <DriveRow
-                      key={i}
-                      file={f}
-                      icon={<FileText className="w-4 h-4 text-brand-primary" />}
-                    />
-                  ))
-                ) : (
-                  <p className="text-center py-8 text-text-light-bg/40 text-sm font-sans">
-                    No specification files available.
-                  </p>
-                )}
+              {/* Tab switcher */}
+              <div className="flex gap-2 mb-6 bg-[#f8f9fc] rounded-xl p-1">
+                {(product.sizes && product.sizes.length > 0
+                  ? (["specifications", "certifications", "sizes"] as const)
+                  : (["specifications", "certifications"] as const)
+                ).map((tab) => (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveTab(tab)}
+                    className={`flex-1 py-2.5 px-3 rounded-lg text-sm font-semibold font-sans capitalize transition-all ${
+                      activeTab === tab
+                        ? "bg-white text-bg-dark shadow-sm"
+                        : "text-text-light-bg/60 hover:text-bg-dark"
+                    }`}
+                  >
+                    {tab}
+                  </button>
+                ))}
               </div>
-            )}
 
-            {/* Certifications tab */}
-            {activeTab === "certifications" && (
-              <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
-                {certFiles.length > 0 ? (
-                  certFiles.map((f, i) => (
-                    <DriveRow
-                      key={i}
-                      file={f}
-                      icon={<Award className="w-4 h-4 text-brand-primary" />}
-                    />
-                  ))
-                ) : (
-                  <p className="text-center py-8 text-text-light-bg/40 text-sm font-sans">
-                    No certification files available.
-                  </p>
-                )}
-              </div>
-            )}
+              {/* Specifications tab */}
+              {activeTab === "specifications" && (
+                <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
+                  {specFiles.length > 0 ? (
+                    specFiles.map((f, i) => (
+                      <DriveRow
+                        key={i}
+                        file={f}
+                        icon={
+                          <FileText className="w-4 h-4 text-brand-primary" />
+                        }
+                      />
+                    ))
+                  ) : (
+                    <p className="text-center py-8 text-text-light-bg/40 text-sm font-sans">
+                      No specification files available.
+                    </p>
+                  )}
+                </div>
+              )}
 
-            {/* Sizes tab */}
-            {activeTab === "sizes" && product.sizes && (
-              <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
-                {product.sizes.length > 0 ? (
-                  product.sizes.map((size, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-3 p-4 bg-[#f8f9fc] rounded-xl border border-transparent"
-                    >
-                      <div className="w-9 h-9 rounded-lg bg-brand-primary/10 flex items-center justify-center shrink-0">
-                        <Maximize className="w-4 h-4 text-brand-primary" />
+              {/* Certifications tab */}
+              {activeTab === "certifications" && (
+                <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
+                  {certFiles.length > 0 ? (
+                    certFiles.map((f, i) => (
+                      <DriveRow
+                        key={i}
+                        file={f}
+                        icon={<Award className="w-4 h-4 text-brand-primary" />}
+                      />
+                    ))
+                  ) : (
+                    <p className="text-center py-8 text-text-light-bg/40 text-sm font-sans">
+                      No certification files available.
+                    </p>
+                  )}
+                </div>
+              )}
+
+              {/* Sizes tab */}
+              {activeTab === "sizes" && product.sizes && (
+                <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
+                  {product.sizes.length > 0 ? (
+                    product.sizes.map((size, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-3 p-4 bg-[#f8f9fc] rounded-xl border border-transparent"
+                      >
+                        <div className="w-9 h-9 rounded-lg bg-brand-primary/10 flex items-center justify-center shrink-0">
+                          <Maximize className="w-4 h-4 text-brand-primary" />
+                        </div>
+                        <p className="text-sm font-semibold text-bg-dark font-sans">
+                          {size}
+                        </p>
                       </div>
-                      <p className="text-sm font-semibold text-bg-dark font-sans">
-                        {size}
-                      </p>
-                    </div>
-                  ))
-                ) : (
-                  <p className="text-center py-8 text-text-light-bg/40 text-sm font-sans">
-                    No sizes available.
-                  </p>
-                )}
-              </div>
-            )}
-          </div>
+                    ))
+                  ) : (
+                    <p className="text-center py-8 text-text-light-bg/40 text-sm font-sans">
+                      No sizes available.
+                    </p>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
         </aside>
       </div>
 
-      {/* ── Title & Description ── */}
-      <div className="mb-16">
-        <div className="flex flex-wrap items-center gap-3 mb-4">
-          <span
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-bold tracking-wider uppercase ${certChipClass(product.certificationType)}`}
-          >
-            <ShieldCheck className="w-3 h-3" />
-            {product.certificationType}
-          </span>
-          {product.subCategory && (
-            <span className="text-xs font-bold tracking-widest text-brand-ash uppercase">
-              {product.subCategory}
+      {/* ── Title & Description (Only for non-variants) ── */}
+      {!hasVariants && (
+        <div className="mb-16">
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            <span
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-bold tracking-wider uppercase ${certChipClass(product.certificationType)}`}
+            >
+              <ShieldCheck className="w-3 h-3" />
+              {product.certificationType}
             </span>
-          )}
+            {product.subCategory && (
+              <span className="text-xs font-bold tracking-widest text-brand-ash uppercase">
+                {product.subCategory}
+              </span>
+            )}
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-[4rem] leading-[1.05] font-serif font-bold text-bg-dark tracking-tight mb-6">
+            {product.title}
+          </h1>
+          <p className="text-text-light-bg/70 font-sans font-normal text-body-xl leading-relaxed max-w-2xl">
+            {product.description}
+          </p>
         </div>
-        <h1 className="text-4xl md:text-5xl lg:text-[4rem] leading-[1.05] font-serif font-bold text-bg-dark tracking-tight mb-6">
-          {product.title}
-        </h1>
-        <p className="text-text-light-bg/70 font-sans font-normal text-body-xl leading-relaxed max-w-2xl">
-          {product.description}
-        </p>
-      </div>
+      )}
 
-      {/* ── Info Grid ── */}
-      <div
-        className={`grid grid-cols-1 ${certFiles.length > 0 ? "md:grid-cols-2" : ""} gap-6 lg:gap-8 mb-24`}
-      >
-        {/* Technical Specifications */}
-        <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col">
-          <h3 className="flex items-center gap-3 text-xl font-bold text-bg-dark font-sans tracking-tight mb-8">
-            <Settings2 className="w-8 h-8 text-brand-primary" />
-            Product Details
-          </h3>
-          <div className="bg-[#f8f9fc] rounded-2xl border border-brand-ash/10 overflow-hidden">
-            {/* Live rows from Google Sheet */}
-            {sheetLoading
-              ? Array.from({ length: 4 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center justify-between py-4 px-6 border-b border-brand-ash/10 gap-4"
-                  >
-                    <div className="h-3.5 w-28 bg-brand-ash/20 rounded animate-pulse" />
-                    <div className="h-3.5 w-36 bg-brand-ash/20 rounded animate-pulse" />
+      {/* ── Info Grid / Variants Table ── */}
+      {product.variants && product.variants.length > 0 ? (
+        <div className="flex flex-col gap-12 mb-24">
+          {product.variants.map((variant, vIdx) => {
+            // Pick a color theme depending on KN / class name if we want to mimic the image exactly
+            // For B125: text-[#1c64f2] (blue)
+            // For C250: text-[#e02424] (red) ? user didn't specify color for C250, but we can stick to brand-primary or blue
+            const themeColor = variant.name.includes("B125")
+              ? "#1c64f2"
+              : variant.name.includes("C250")
+                ? "#047481"
+                : "#4b5563"; // D400 or default
+
+            return (
+              <div
+                key={vIdx}
+                className="bg-white rounded-[2.5rem] border border-brand-ash/20 shadow-sm flex flex-col overflow-hidden"
+              >
+                {/* ── Header ── */}
+                <div className="p-8 md:p-10 border-b border-[#1c64f2]/20 flex flex-col md:flex-row md:items-start justify-between gap-6 relative bg-white">
+                  <div className="flex gap-6 items-start">
+                    {/* Icon Circle */}
+                    <div className="w-[100px] h-[100px] rounded-full bg-[#eef4fb] border-[2.2px] border-[#6ab0e0] shrink-0 text-[#6ab0e0] overflow-hidden hover:bg-[#d8ecf9] hover:shadow-[0_4px_16px_rgba(106,176,224,0.3)] transition-all cursor-pointer relative">
+                      <VariantIcon name={variant.name} />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-3 mb-2">
+                        <h3 className="text-section-h3 text-bg-dark font-sans tracking-tight">
+                          {variant.name}
+                        </h3>
+                        <span className="bg-brand-primary text-white px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+                          {variant.kn}
+                        </span>
+                      </div>
+                      <h4 className="text-bg-dark text-body-xl mb-1">
+                        {variant.application}
+                      </h4>
+                      <p className="text-bg-dark text-body-md">
+                        {variant.description}
+                      </p>
+                    </div>
                   </div>
-                ))
-              : sheetRows.length > 0
-                ? sheetRows.map((row, idx, arr) => (
+                </div>
+
+                {/* ── Table ── */}
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left border-collapse min-w-[600px]">
+                    <thead>
+                      <tr className="border-b border-brand-ash/10 bg-[#fbfcfd]">
+                        <th className="py-5 px-8 text-[11px] font-bold text-brand-ash tracking-[0.15em] uppercase w-1/3">
+                          Item Identifier
+                        </th>
+                        <th className="py-5 px-8 text-[11px] font-bold text-brand-ash tracking-[0.15em] uppercase w-1/3">
+                          Clear Opening (mm)
+                        </th>
+                        <th className="py-5 px-8 text-[11px] font-bold text-brand-ash tracking-[0.15em] uppercase w-1/3 text-right">
+                          Technical Data
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {variant.sizes.map((size, sIdx) => {
+                        const specFile = variant.specificationFiles[sIdx];
+                        const identifier = `HC-${variant.name.replace("Class ", "")}-${size.replace(/x/gi, "")}`;
+                        return (
+                          <tr
+                            key={sIdx}
+                            className="border-b border-brand-ash/10 hover:bg-[#f8f9fc] transition-colors last:border-0 group/row"
+                          >
+                            <td className="py-4 px-8 font-mono text-[#a0aabf] font-medium text-sm tracking-wide">
+                              {identifier}
+                            </td>
+                            <td className="py-4 px-8 font-sans font-extrabold text-[#111827] text-[15px] flex items-center gap-3">
+                              <Maximize className="w-4 h-4 text-[#d1d5db]" />
+                              {size.toLowerCase()}
+                            </td>
+                            <td className="py-4 px-8 text-right">
+                              <div className="flex items-center justify-end gap-3">
+                                {specFile ? (
+                                  <a
+                                    href={specFile.downloadUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 bg-[#f4f7f9] text-[#6b7280] hover:text-brand-primary hover:bg-[#eaf0f6] transition-colors px-4 py-2.5 rounded-xl text-xs font-bold tracking-wide border border-transparent hover:border-[#1c64f2]/20 shadow-sm"
+                                  >
+                                    <Download className="w-3.5 h-3.5" />
+                                    DOWNLOAD SPEC
+                                  </a>
+                                ) : (
+                                  <span className="text-text-light-bg/40 text-xs italic px-4 py-2.5">
+                                    Not available
+                                  </span>
+                                )}
+                              </div>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div
+          className={`grid grid-cols-1 ${certFiles.length > 0 ? "md:grid-cols-2" : ""} gap-6 lg:gap-8 mb-24`}
+        >
+          {/* Technical Specifications */}
+          <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col">
+            <h3 className="flex items-center gap-3 text-xl font-bold text-bg-dark font-sans tracking-tight mb-8">
+              <Settings2 className="w-8 h-8 text-brand-primary" />
+              Product Details
+            </h3>
+            <div className="bg-[#f8f9fc] rounded-2xl border border-brand-ash/10 overflow-hidden">
+              {/* Live rows from Google Sheet */}
+              {sheetLoading
+                ? Array.from({ length: 4 }).map((_, i) => (
                     <div
-                      key={idx}
-                      className={`flex flex-col sm:flex-row sm:items-start justify-between py-4 px-6 hover:bg-white transition-colors gap-2 sm:gap-4 ${
-                        idx !== arr.length - 1
-                          ? "border-b border-brand-ash/10"
-                          : ""
-                      }`}
+                      key={i}
+                      className="flex items-center justify-between py-4 px-6 border-b border-brand-ash/10 gap-4"
                     >
-                      <span className="text-text-light-bg/70 font-medium text-body-lg shrink-0">
-                        {row.key}
-                      </span>
-                      <span className="text-bg-dark font-bold font-sans text-body-sm text-left sm:text-right whitespace-pre-line max-w-[60%]">
-                        {row.value}
-                      </span>
+                      <div className="h-3.5 w-28 bg-brand-ash/20 rounded animate-pulse" />
+                      <div className="h-3.5 w-36 bg-brand-ash/20 rounded animate-pulse" />
                     </div>
                   ))
-                : // Fallback when no table_link / sheet unavailable
-                  [
-                    { label: "Category", value: product.category },
-                    {
-                      label: "Sub-Category",
-                      value: product.subCategory ?? "—",
-                    },
-                    {
-                      label: "Certification",
-                      value: product.certificationType,
-                    },
-                    { label: "SKU", value: product.sku },
-                  ].map((row, idx, arr) => (
-                    <div
-                      key={idx}
-                      className={`flex flex-col sm:flex-row sm:items-center justify-between py-4 px-6 hover:bg-white transition-colors gap-2 sm:gap-4 ${
-                        idx !== arr.length - 1
-                          ? "border-b border-brand-ash/10"
-                          : ""
-                      }`}
-                    >
-                      <span className="text-text-light-bg/70 font-medium text-body-lg">
-                        {row.label}
-                      </span>
-                      <span className="text-bg-dark font-bold font-sans text-body-sm uppercase">
-                        {row.value}
-                      </span>
-                    </div>
-                  ))}
-          </div>
-        </div>
-
-        {/* Certifications & Compliance */}
-        {certFiles.length > 0 && (
-          <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col">
-            <h3 className="flex items-center gap-3 text-xl font-bold text-bg-dark tracking-tight font-sans mb-6">
-              <CheckCircle2 className="w-8 h-8 text-brand-primary" />
-              Certifications & Compliance
-            </h3>
-
-            <div className="flex flex-col gap-3">
-              <div
-                className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-bold tracking-wider uppercase self-start mb-2 ${certChipClass(product.certificationType)}`}
-              >
-                <ShieldCheck className="w-3 h-3" />
-                {product.certificationType} Certified
-              </div>
-              {certFiles.map((file, idx) => (
-                <DriveRow
-                  key={idx}
-                  file={file}
-                  icon={<ShieldCheck className="w-4 h-4 text-brand-primary" />}
-                />
-              ))}
+                : sheetRows.length > 0
+                  ? sheetRows.map((row, idx, arr) => (
+                      <div
+                        key={idx}
+                        className={`flex flex-col sm:flex-row sm:items-start justify-between py-4 px-6 hover:bg-white transition-colors gap-2 sm:gap-4 ${
+                          idx !== arr.length - 1
+                            ? "border-b border-brand-ash/10"
+                            : ""
+                        }`}
+                      >
+                        <span className="text-text-light-bg/70 font-medium text-body-lg shrink-0">
+                          {row.key}
+                        </span>
+                        <span className="text-bg-dark font-bold font-sans text-body-sm text-left sm:text-right whitespace-pre-line max-w-[60%]">
+                          {row.value}
+                        </span>
+                      </div>
+                    ))
+                  : // Fallback when no table_link / sheet unavailable
+                    [
+                      { label: "Category", value: product.category },
+                      {
+                        label: "Sub-Category",
+                        value: product.subCategory ?? "—",
+                      },
+                      {
+                        label: "Certification",
+                        value: product.certificationType,
+                      },
+                      { label: "SKU", value: product.sku },
+                    ].map((row, idx, arr) => (
+                      <div
+                        key={idx}
+                        className={`flex flex-col sm:flex-row sm:items-center justify-between py-4 px-6 hover:bg-white transition-colors gap-2 sm:gap-4 ${
+                          idx !== arr.length - 1
+                            ? "border-b border-brand-ash/10"
+                            : ""
+                        }`}
+                      >
+                        <span className="text-text-light-bg/70 font-medium text-body-lg">
+                          {row.label}
+                        </span>
+                        <span className="text-bg-dark font-bold font-sans text-body-sm uppercase">
+                          {row.value}
+                        </span>
+                      </div>
+                    ))}
             </div>
           </div>
-        )}
-      </div>
+
+          {/* Certifications & Compliance */}
+          {certFiles.length > 0 && (
+            <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col">
+              <h3 className="flex items-center gap-3 text-xl font-bold text-bg-dark tracking-tight font-sans mb-6">
+                <CheckCircle2 className="w-8 h-8 text-brand-primary" />
+                Certifications & Compliance
+              </h3>
+
+              <div className="flex flex-col gap-3">
+                <div
+                  className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-bold tracking-wider uppercase self-start mb-2 ${certChipClass(product.certificationType)}`}
+                >
+                  <ShieldCheck className="w-3 h-3" />
+                  {product.certificationType} Certified
+                </div>
+                {certFiles.map((file, idx) => (
+                  <DriveRow
+                    key={idx}
+                    file={file}
+                    icon={
+                      <ShieldCheck className="w-4 h-4 text-brand-primary" />
+                    }
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* ── Similar Products ── */}
       <div className="border-t border-brand-ash/20 pt-16">

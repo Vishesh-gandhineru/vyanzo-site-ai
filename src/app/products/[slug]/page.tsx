@@ -6,9 +6,13 @@ import ProductDetails from "@/components/products/ProductDetails";
 import { products } from "@/data/products";
 import { notFound } from "next/navigation";
 
-export default async function SingleProductPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function SingleProductPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const resolvedParams = await params;
-  const product = products.find(p => p.slug === resolvedParams.slug);
+  const product = products.find((p) => p.slug === resolvedParams.slug);
 
   if (!product) {
     notFound();
