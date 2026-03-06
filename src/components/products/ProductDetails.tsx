@@ -373,10 +373,10 @@ export default function ProductDetails({ product }: { product: Product }) {
         <span className="text-bg-dark font-semibold">{product.title}</span>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-12 mb-10">
+      <div className="flex flex-col lg:flex-row gap-4 lg:gap-12 mb-10">
         {/* ── Left: Product Image ── */}
         <div className="flex-1 flex flex-col">
-          <div className="flex flex-col gap-4 mb-16">
+          <div className="flex flex-col gap-4 mb-0 lg:mb-16">
             {/* Main image */}
             <div className="w-full bg-[#f8f9fc] rounded-4xl overflow-hidden relative aspect-square lg:h-[480px] lg:aspect-auto flex items-center justify-center border border-brand-ash/10 group">
               {/* Cert chip */}
@@ -490,83 +490,99 @@ export default function ProductDetails({ product }: { product: Product }) {
               >
                 {/* ── Header ── */}
                 <div
-                  className="p-8 md:p-10 border-b border-[#1c64f2]/20 flex flex-col md:flex-row md:items-start justify-between gap-6 relative bg-white cursor-pointer hover:bg-[#f8f9fc] transition-colors"
+                  className="p-5 md:p-10 border-b border-[#1c64f2]/20 flex flex-row md:items-start justify-between gap-4 md:gap-6 relative bg-white cursor-pointer hover:bg-[#f8f9fc] transition-colors"
                   onClick={() => toggleVariant(vIdx)}
                 >
-                  <div className="flex gap-6 items-center w-full pr-12">
+                  <div className="flex gap-4 md:gap-6 items-center w-full pr-10 md:pr-12">
                     {/* Icon Circle */}
-                    <div className="w-[100px] h-[100px] rounded-full bg-[#eef4fb] border-[2.2px] border-[#6ab0e0] shrink-0 text-[#6ab0e0] overflow-hidden hover:bg-[#d8ecf9] hover:shadow-[0_4px_16px_rgba(106,176,224,0.3)] transition-all relative">
+                    <div className="w-[80px] h-[80px] md:w-[100px] md:h-[100px] rounded-full bg-[#eef4fb] border-2 md:border-[2.2px] border-[#6ab0e0] shrink-0 text-[#6ab0e0] overflow-hidden hover:bg-[#d8ecf9] hover:shadow-[0_4px_16px_rgba(106,176,224,0.3)] transition-all relative">
                       <VariantIcon name={variant.name} />
                     </div>
                     <div>
-                      <div className="flex items-center gap-3 mb-2">
-                        <h3 className="text-section-h3 text-bg-dark font-sans tracking-tight">
-                          {variant.name}
+                      <div className="flex items-center gap-3 md:gap-4 mb-0 md:mb-2">
+                        <h3 className="text-[1.3rem] md:text-section-h3 text-bg-dark font-sans tracking-tight leading-[1.15] md:leading-tight">
+                          {variant.name.split(" ").map((word, i, arr) => (
+                            <span key={i} className="block md:inline">
+                              {word}
+                              {i < arr.length - 1 ? " " : ""}
+                            </span>
+                          ))}
                         </h3>
-                        <span className="bg-brand-primary text-white px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
-                          {variant.kn}
+                        <span className="bg-[#6ab0e0] md:bg-brand-primary text-white w-10 h-10 md:w-auto md:h-auto md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-bold tracking-wider uppercase flex flex-col md:inline-flex items-center justify-center leading-[1.1] md:leading-normal shrink-0">
+                          {variant.kn.split(" ").map((part, i, arr) => (
+                            <span key={i} className="block md:inline">
+                              {part}
+                              {i < arr.length - 1 ? " " : ""}
+                            </span>
+                          ))}
                         </span>
                       </div>
                     </div>
                   </div>
                   {/* Chevron Toggle */}
-                  <div className="absolute right-8 top-10 md:top-1/2 md:-translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-brand-primary/10 text-brand-primary group-hover:text-brand-primary transition-colors">
+                  <div className="absolute right-5 md:right-8 top-1/2 -translate-y-1/2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#eff4fb] md:bg-brand-primary/10 text-[#5497c9] md:text-brand-primary hover:text-brand-primary transition-colors shrink-0">
                     {isOpen ? (
-                      <ChevronUp className="w-5 h-5" />
+                      <ChevronUp className="w-4 h-4 md:w-5 md:h-5" />
                     ) : (
-                      <ChevronDown className="w-5 h-5" />
+                      <ChevronDown className="w-4 h-4 md:w-5 md:h-5" />
                     )}
                   </div>
                 </div>
 
                 {/* ── Table ── */}
                 {isOpen && (
-                  <div className="overflow-x-auto animate-in fade-in slide-in-from-top-4 duration-300">
-                    <table className="w-full text-left border-collapse min-w-[600px]">
+                  <div className="overflow-hidden animate-in fade-in slide-in-from-top-4 duration-300">
+                    <table className="w-full text-left border-collapse">
                       <thead>
                         <tr className="border-b border-brand-ash/10 bg-[#fbfcfd]">
-                          <th className="py-5 px-8 text-[11px] font-bold text-brand-ash tracking-[0.15em] uppercase w-1/3">
+                          <th className="py-3 px-4 md:py-5 md:px-8 text-[10px] md:text-[11px] font-bold text-brand-ash tracking-widest md:tracking-[0.15em] uppercase w-1/4 md:w-1/3">
                             Class
                           </th>
-                          <th className="py-5 px-8 text-[11px] font-bold text-brand-ash tracking-[0.15em] uppercase w-1/3">
+                          <th className="py-3 px-4 md:py-5 md:px-8 text-[10px] md:text-[11px] font-bold text-brand-ash tracking-widest md:tracking-[0.15em] uppercase w-1/2 md:w-1/3">
                             Size
                           </th>
-                          <th className="py-5 px-8 text-[11px] font-bold text-brand-ash tracking-[0.15em] uppercase w-1/3 text-right">
-                            Technical Data
+                          <th className="py-3 px-4 md:py-5 md:px-8 text-[10px] md:text-[11px] font-bold text-brand-ash tracking-widest md:tracking-[0.15em] uppercase w-1/4 md:w-1/3 text-right">
+                            <span className="hidden md:inline">Technical </span>
+                            Data
                           </th>
                         </tr>
                       </thead>
                       <tbody>
                         {variant.sizes.map((size, sIdx) => {
                           const specFile = variant.specificationFiles[sIdx];
-                          const identifier = `${variant.name.replace("Class ", "")}-${size.replace(/x/gi, "")}`;
+                          const identifier = `${variant.name.replace("Class ", "")}`;
                           return (
                             <tr
                               key={sIdx}
                               className="border-b border-brand-ash/10 hover:bg-[#f8f9fc] transition-colors last:border-0 group/row"
                             >
-                              <td className="py-4 px-8 font-mono text-[#a0aabf] font-medium text-sm tracking-wide">
+                              <td className="py-3 px-4 md:py-4 md:px-8 font-mono text-[#a0aabf] font-medium text-xs md:text-sm tracking-wide">
                                 {identifier}
                               </td>
-                              <td className="py-4 px-8 font-sans font-bold text-[#111827] text-[14px] flex items-center gap-3">
-                                <Maximize className="w-4 h-4 text-[#d1d5db]" />
-                                {size.toLowerCase()}
+                              <td className="py-3 px-4 md:py-4 md:px-8 font-sans font-bold text-[#111827] text-xs md:text-[14px] flex items-center gap-2 md:gap-3">
+                                <Maximize className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#d1d5db] shrink-0" />
+                                <span className="truncate">
+                                  {size.toLowerCase()}
+                                </span>
                               </td>
-                              <td className="py-4 px-8 text-right">
+                              <td className="py-3 px-4 md:py-4 md:px-8 text-right">
                                 <div className="flex items-center justify-end gap-3">
                                   {specFile ? (
                                     <a
                                       href={specFile.downloadUrl}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="inline-flex items-center gap-2 bg-[#f4f7f9] text-[#6b7280] hover:text-brand-primary hover:bg-[#eaf0f6] transition-colors px-4 py-2.5 rounded-xl text-xs font-bold tracking-wide border border-transparent hover:border-[#1c64f2]/20 shadow-sm"
+                                      title="Download Specification"
+                                      className="inline-flex items-center justify-center gap-2 bg-[#f4f7f9] text-[#6b7280] hover:text-brand-primary hover:bg-[#eaf0f6] transition-colors p-2.5 md:px-4 md:py-2.5 rounded-xl text-xs font-bold tracking-wide border border-transparent hover:border-[#1c64f2]/20 shadow-sm"
                                     >
-                                      <Download className="w-3.5 h-3.5" />
-                                      DOWNLOAD SPEC
+                                      <Download className="w-4 h-4 md:w-3.5 md:h-3.5" />
+                                      <span className="hidden md:inline">
+                                        DOWNLOAD SPEC
+                                      </span>
                                     </a>
                                   ) : (
-                                    <span className="text-text-light-bg/40 text-xs italic px-4 py-2.5">
-                                      Not available
+                                    <span className="text-text-light-bg/40 text-[10px] md:text-xs italic px-2 md:px-4 py-2.5">
+                                      N/A
                                     </span>
                                   )}
                                 </div>
