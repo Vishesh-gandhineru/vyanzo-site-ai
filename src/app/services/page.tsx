@@ -105,7 +105,7 @@ const services = [
           <img
             src="/certified/COPRO.svg"
             alt="Copro"
-            className="h-12 w-auto object-contain mx-auto"
+            className="h-16 w-auto object-contain mx-auto"
           />
         ),
       },
@@ -116,7 +116,7 @@ const services = [
           <img
             src="/certified/BENOR.png"
             alt="BENOR"
-            className="h-12 w-auto object-contain mx-auto"
+            className="h-16 w-auto object-contain mx-auto"
           />
         ),
       },
@@ -132,7 +132,7 @@ const services = [
           <img
             src="/certified/MPA-Bremen-logo.webp"
             alt="MPA Bremen"
-            className="h-12 w-auto object-contain mx-auto"
+            className="h-16 w-auto object-contain mx-auto"
           />
         ),
       },
@@ -143,7 +143,7 @@ const services = [
           <img
             src="/certified/logo1-default.png"
             alt="ICMQ"
-            className="h-12 w-auto object-contain mx-auto"
+            className="h-16 w-auto object-contain mx-auto"
           />
         ),
       },
@@ -163,7 +163,7 @@ const services = [
           <img
             src="/certified/ISO_9001-2015.svg"
             alt="ISO 9001"
-            className="h-[130px] w-auto object-contain mx-auto"
+            className="h-[130px] p-[6px] w-auto object-contain mx-auto"
           />
         ),
       },
@@ -174,7 +174,7 @@ const services = [
           <img
             src="/certified/iso-14001-2015.webp"
             alt="ISO 14001"
-            className="h-[130px] w-auto object-contain mx-auto"
+            className="h-[130px] p-[8px] w-auto object-contain mx-auto"
           />
         ),
       },

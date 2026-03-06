@@ -270,7 +270,7 @@ export default function ProductDetails({ product }: { product: Product }) {
 
             {/* Specifications tab */}
             {activeTab === "specifications" && (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
                 {specFiles.length > 0 ? (
                   specFiles.map((f, i) => (
                     <DriveRow
@@ -289,7 +289,7 @@ export default function ProductDetails({ product }: { product: Product }) {
 
             {/* Certifications tab */}
             {activeTab === "certifications" && (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
                 {certFiles.length > 0 ? (
                   certFiles.map((f, i) => (
                     <DriveRow
@@ -308,7 +308,7 @@ export default function ProductDetails({ product }: { product: Product }) {
 
             {/* Sizes tab */}
             {activeTab === "sizes" && product.sizes && (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 max-h-[350px] overflow-y-auto pr-2 pb-2 custom-scrollbar">
                 {product.sizes.length > 0 ? (
                   product.sizes.map((size, i) => (
                     <div
