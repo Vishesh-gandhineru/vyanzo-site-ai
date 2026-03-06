@@ -130,31 +130,27 @@ export default function BentoGrid() {
                 Industry Compliance
               </h3>
             </div>
-            <div className="flex flex-wrap gap-2 relative z-10 mt-8">
-              <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">
-                COPRO
-              </span>
-              <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">
-                Benor
-              </span>
-              <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">
-                ISO 9001:2015
-              </span>
-              <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">
-                ISO 14001:2015
-              </span>
-              <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">
-                ISO 45001:2018
-              </span>
-              <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">
-                EN124-2
-              </span>
-              <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">
-                MPA Bremen
-              </span>
-              <span className="px-3 py-1.5 bg-white rounded-full text-xs text-text-light-bg border border-brand-primary/20 font-sans font-normal">
-                ICMQ
-              </span>
+            <div className="flex flex-wrap gap-4 relative z-10 mt-8">
+              <img
+                src="/certified/COPRO.svg"
+                alt="COPRO"
+                className="h-12 w-auto object-contain mx-auto"
+              />
+              <img
+                src="/certified/BENOR.png"
+                alt="BENOR"
+                className="h-10 w-auto object-contain mx-auto"
+              />
+              <img
+                src="/certified/MPA-Bremen-logo.webp"
+                alt="MPA Bremen"
+                className="h-10 w-auto object-contain mx-auto"
+              />
+              <img
+                src="/certified/logo1-default.png"
+                alt="ICMQ"
+                className="h-10 w-auto object-contain mx-auto"
+              />
             </div>
           </div>
 

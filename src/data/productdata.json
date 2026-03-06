@@ -392,25 +392,7 @@
     },
     "table_link": "https://docs.google.com/spreadsheets/d/1fimmUnzBaPwIQBbksTEzQIQyUDrwglCpCEdUsO2OiRs/edit#gid=1158753928"
   },
-  {
-    "no": 18,
-    "product_category": "Siphons",
-    "sub_category": null,
-    "name": "V19/40O (under development)",
-    "certification_type": "Benor",
-    "certifications": {
-      "file_1": null,
-      "file_2": null,
-      "file_3": null,
-      "file_4": null
-    },
-    "specifications": {
-      "file_1": "https://drive.google.com/file/d/1b_lHC9tnL2C3bbzMayz3MmlgY4dKzh65/view?usp=drive_link",
-      "file_2": null
-    },
-    "image_link": null,
-    "table_link": null
-  },
+ 
   {
     "no": 19,
     "product_category": "Surface Boxes",

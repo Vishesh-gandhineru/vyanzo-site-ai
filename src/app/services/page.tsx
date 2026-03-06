@@ -163,7 +163,7 @@ const services = [
           <img
             src="/certified/ISO_9001-2015.svg"
             alt="ISO 9001"
-            className="h-12 w-auto object-contain mx-auto"
+            className="h-[130px] w-auto object-contain mx-auto"
           />
         ),
       },
@@ -174,7 +174,7 @@ const services = [
           <img
             src="/certified/iso-14001-2015.webp"
             alt="ISO 14001"
-            className="h-12 w-auto object-contain mx-auto"
+            className="h-[130px] w-auto object-contain mx-auto"
           />
         ),
       },
@@ -185,7 +185,7 @@ const services = [
           <img
             src="/certified/ISO-45001-2018.png"
             alt="ISO 45001"
-            className="h-12 w-auto object-contain mx-auto"
+            className="h-[130px] w-auto object-contain mx-auto"
           />
         ),
       },
@@ -333,7 +333,7 @@ export default function ServicesPage() {
                           {service.highlights.map((highlight, idx) => (
                             <div
                               key={idx}
-                              className="bg-white p-6 rounded-2xl shadow-sm border border-brand-ash/10 hover:-translate-y-1 transition-transform flex flex-col items-center justify-center text-center gap-3"
+                              className="bg-white p-6 rounded-2xl shadow-sm border border-brand-ash/10 hover:-translate-y-1 transition-transform flex flex-col items-center justify-start text-center gap-3"
                             >
                               {"icon" in highlight ? (
                                 highlight.icon
