@@ -99,7 +99,7 @@ const services = [
       "Vyanzo offers specialized assistance with international certification processes to ensure products meet global safety and quality standards.",
     highlights: [
       {
-        label: "Copro",
+        label: "",
         value: "Copro Certification",
         icon: (
           <img
@@ -110,7 +110,7 @@ const services = [
         ),
       },
       {
-        label: "BENOR",
+        label: "",
         value: "BENOR Certification",
         icon: (
           <img
@@ -126,7 +126,7 @@ const services = [
         icon: <ShieldCheck className="w-6 h-6" />,
       },
       {
-        label: "MPA Bremen",
+        label: "",
         value: "MPA Bremen Certification",
         icon: (
           <img
@@ -137,7 +137,7 @@ const services = [
         ),
       },
       {
-        label: "ICMQ",
+        label: "",
         value: "ICMQ Certification",
         icon: (
           <img
@@ -157,7 +157,7 @@ const services = [
       "Vyanzo offers specialized assistance with international certification processes to ensure products meet global safety and quality standards.",
     highlights: [
       {
-        label: "ISO 9001",
+        label: "",
         value: "ISO 9001 Certification",
         icon: (
           <img
@@ -168,7 +168,7 @@ const services = [
         ),
       },
       {
-        label: "ISO 14001",
+        label: "",
         value: "ISO 14001 Certification",
         icon: (
           <img
@@ -179,7 +179,7 @@ const services = [
         ),
       },
       {
-        label: "ISO 45001",
+        label: "",
         value: "ISO 45001 Certification",
         icon: (
           <img
