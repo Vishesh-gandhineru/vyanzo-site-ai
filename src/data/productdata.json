@@ -162,7 +162,9 @@
       "file_1": "https://drive.google.com/file/d/1Ml1DNeWat3s8AJ2vaSfx-MMo9XbC8gx7/view?usp=drive_link",
       "file_2": null
     },
-    "image_link": null,
+    "image_link": {
+      "img1": "/products/Verdo 600.png"
+    },
     "table_link": "https://docs.google.com/spreadsheets/d/1fimmUnzBaPwIQBbksTEzQIQyUDrwglCpCEdUsO2OiRs/edit?gid=1812868149"
   },
   {
