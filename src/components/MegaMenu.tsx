@@ -92,7 +92,11 @@ export default function MegaMenu() {
                     { title: "Sustainability", href: "/sustainability" },
                     { title: "Contact Us", href: "/contact" },
                   ].map((item) => (
-                    <Link key={item.title} href={item.href as any}>
+                    <Link
+                      key={item.title}
+                      href={item.href as any}
+                      onClick={() => setIsOpen(false)}
+                    >
                       <motion.div
                         className="text-[2.5rem] md:text-6xl lg:text-[5rem] font-serif font-semibold tracking-tight text-bg-dark hover:text-brand-primary transition-colors leading-[1.1]"
                         whileHover={{ x: 10 }}

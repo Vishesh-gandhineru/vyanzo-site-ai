@@ -369,12 +369,7 @@ export default function ProductDetails({ product }: { product: Product }) {
         <span className="text-brand-primary font-semibold">
           {product.category}
         </span>
-        {product.subCategory && (
-          <>
-            <ChevronRight className="w-4 h-4 shrink-0" />
-            <span className="text-text-light-bg/80">{product.subCategory}</span>
-          </>
-        )}
+
         <ChevronRight className="w-4 h-4 shrink-0" />
         <span className="text-bg-dark font-semibold">{product.title}</span>
       </div>
@@ -553,12 +548,6 @@ export default function ProductDetails({ product }: { product: Product }) {
       {!hasVariants && (
         <div className="mb-16">
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-bold tracking-wider uppercase ${certChipClass(product.certificationType)}`}
-            >
-              <ShieldCheck className="w-3 h-3" />
-              {product.certificationType}
-            </span>
             {product.subCategory && (
               <span className="text-xs font-bold tracking-widest text-brand-ash uppercase">
                 {product.subCategory}
