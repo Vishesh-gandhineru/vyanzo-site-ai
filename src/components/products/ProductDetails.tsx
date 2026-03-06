@@ -427,19 +427,6 @@ export default function ProductDetails({ product }: { product: Product }) {
         <aside className="w-full lg:w-[420px] shrink-0 flex flex-col gap-8">
           {hasVariants ? (
             <div className="flex flex-col pt-4">
-              <div className="flex flex-wrap items-center gap-3 mb-4">
-                <span
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-bold tracking-wider uppercase ${certChipClass(product.certificationType)}`}
-                >
-                  <ShieldCheck className="w-3 h-3" />
-                  {product.certificationType}
-                </span>
-                {product.subCategory && (
-                  <span className="text-xs font-bold tracking-widest text-brand-ash uppercase">
-                    {product.subCategory}
-                  </span>
-                )}
-              </div>
               <h1 className="text-4xl md:text-5xl lg:text-[4rem] leading-[1.05] font-serif font-bold text-bg-dark tracking-tight mb-6 mt-4">
                 {product.title}
               </h1>
@@ -481,13 +468,6 @@ export default function ProductDetails({ product }: { product: Product }) {
       {/* ── Title & Description (Only for non-variants) ── */}
       {!hasVariants && (
         <div className="mb-16">
-          <div className="flex flex-wrap items-center gap-3 mb-4">
-            {product.subCategory && (
-              <span className="text-xs font-bold tracking-widest text-brand-ash uppercase">
-                {product.subCategory}
-              </span>
-            )}
-          </div>
           <h1 className="text-4xl md:text-5xl lg:text-[4rem] leading-[1.05] font-serif font-bold text-bg-dark tracking-tight mb-6">
             {product.title}
           </h1>
@@ -513,7 +493,7 @@ export default function ProductDetails({ product }: { product: Product }) {
                   className="p-8 md:p-10 border-b border-[#1c64f2]/20 flex flex-col md:flex-row md:items-start justify-between gap-6 relative bg-white cursor-pointer hover:bg-[#f8f9fc] transition-colors"
                   onClick={() => toggleVariant(vIdx)}
                 >
-                  <div className="flex gap-6 items-start w-full pr-12">
+                  <div className="flex gap-6 items-center w-full pr-12">
                     {/* Icon Circle */}
                     <div className="w-[100px] h-[100px] rounded-full bg-[#eef4fb] border-[2.2px] border-[#6ab0e0] shrink-0 text-[#6ab0e0] overflow-hidden hover:bg-[#d8ecf9] hover:shadow-[0_4px_16px_rgba(106,176,224,0.3)] transition-all relative">
                       <VariantIcon name={variant.name} />
@@ -527,16 +507,10 @@ export default function ProductDetails({ product }: { product: Product }) {
                           {variant.kn}
                         </span>
                       </div>
-                      <h4 className="text-bg-dark text-body-xl mb-1">
-                        {variant.application}
-                      </h4>
-                      <p className="text-bg-dark text-body-md">
-                        {variant.description}
-                      </p>
                     </div>
                   </div>
                   {/* Chevron Toggle */}
-                  <div className="absolute right-8 top-10 md:top-1/2 md:-translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-[#f8f9fc] text-brand-ash group-hover:text-brand-primary transition-colors">
+                  <div className="absolute right-8 top-10 md:top-1/2 md:-translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-brand-primary/10 text-brand-primary group-hover:text-brand-primary transition-colors">
                     {isOpen ? (
                       <ChevronUp className="w-5 h-5" />
                     ) : (
@@ -552,10 +526,10 @@ export default function ProductDetails({ product }: { product: Product }) {
                       <thead>
                         <tr className="border-b border-brand-ash/10 bg-[#fbfcfd]">
                           <th className="py-5 px-8 text-[11px] font-bold text-brand-ash tracking-[0.15em] uppercase w-1/3">
-                            Item Identifier
+                            Class
                           </th>
                           <th className="py-5 px-8 text-[11px] font-bold text-brand-ash tracking-[0.15em] uppercase w-1/3">
-                            Clear Opening (mm)
+                            Size (mm)
                           </th>
                           <th className="py-5 px-8 text-[11px] font-bold text-brand-ash tracking-[0.15em] uppercase w-1/3 text-right">
                             Technical Data
@@ -565,7 +539,7 @@ export default function ProductDetails({ product }: { product: Product }) {
                       <tbody>
                         {variant.sizes.map((size, sIdx) => {
                           const specFile = variant.specificationFiles[sIdx];
-                          const identifier = `HC-${variant.name.replace("Class ", "")}-${size.replace(/x/gi, "")}`;
+                          const identifier = `${variant.name.replace("Class ", "")}-${size.replace(/x/gi, "")}`;
                           return (
                             <tr
                               key={sIdx}
@@ -574,7 +548,7 @@ export default function ProductDetails({ product }: { product: Product }) {
                               <td className="py-4 px-8 font-mono text-[#a0aabf] font-medium text-sm tracking-wide">
                                 {identifier}
                               </td>
-                              <td className="py-4 px-8 font-sans font-extrabold text-[#111827] text-[15px] flex items-center gap-3">
+                              <td className="py-4 px-8 font-sans font-bold text-[#111827] text-[14px] flex items-center gap-3">
                                 <Maximize className="w-4 h-4 text-[#d1d5db]" />
                                 {size.toLowerCase()}
                               </td>
@@ -814,7 +788,7 @@ export default function ProductDetails({ product }: { product: Product }) {
               </p>
               <div className="flex items-center justify-between text-bg-dark font-medium border-t border-brand-ash/10 pt-4">
                 <span className="font-serif font-bold text-lg text-brand-primary">
-                  Mfr. Direct
+                  View Technical Specs
                 </span>
                 <ArrowRight className="w-5 h-5 group-hover:text-brand-primary group-hover:translate-x-1 transition-transform" />
               </div>

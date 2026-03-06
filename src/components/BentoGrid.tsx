@@ -137,11 +137,6 @@ export default function BentoGrid() {
                 className="h-10 w-auto object-contain mx-auto"
               />
               <img
-                src="/certified/logo1-default.png"
-                alt="ICMQ"
-                className="h-10 w-auto object-contain mx-auto"
-              />
-              <img
                 src="/certified/COPRO.svg"
                 alt="COPRO"
                 className="h-12 w-auto object-contain mx-auto"
@@ -149,6 +144,11 @@ export default function BentoGrid() {
               <img
                 src="/certified/MPA-Bremen-logo.webp"
                 alt="MPA Bremen"
+                className="h-10 w-auto object-contain mx-auto"
+              />
+              <img
+                src="/certified/logo1-default.png"
+                alt="ICMQ"
                 className="h-10 w-auto object-contain mx-auto"
               />
             </div>
