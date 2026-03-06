@@ -529,7 +529,7 @@ export default function ProductDetails({ product }: { product: Product }) {
                             Class
                           </th>
                           <th className="py-5 px-8 text-[11px] font-bold text-brand-ash tracking-[0.15em] uppercase w-1/3">
-                            Size (mm)
+                            Size
                           </th>
                           <th className="py-5 px-8 text-[11px] font-bold text-brand-ash tracking-[0.15em] uppercase w-1/3 text-right">
                             Technical Data

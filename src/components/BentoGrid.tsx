@@ -54,7 +54,7 @@ export default function BentoGrid() {
               <div className="text-5xl lg:text-6xl font-sans font-bold text-brand-primary tracking-tighter">
                 99.9%
               </div>
-              <div className="text-sm text-brand-ash mt-2 uppercase tracking-widest font-sans font-normal">
+              <div className="text-sm text-brand-ash mt-2 capitalize tracking-normal font-sans font-normal">
                 Defect-Free Output
               </div>
             </div>

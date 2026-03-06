@@ -9,14 +9,14 @@ export default function CobeGlobe() {
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
 
-  const phi = useSpring(0, {
+  const phi = useSpring(-1.4, {
     stiffness: 280,
     damping: 40,
     mass: 1,
   });
 
   useEffect(() => {
-    let currentPhi = 0;
+    let currentPhi = -1.4;
 
     const hexToRgb = (hex: string) => {
       const r = parseInt(hex.slice(1, 3), 16) / 255;
@@ -29,7 +29,7 @@ export default function CobeGlobe() {
       devicePixelRatio: 2,
       width: 800,
       height: 800,
-      phi: 0,
+      phi: -1.4,
       theta: 0.3,
       dark: 0,
       diffuse: 1.2,
