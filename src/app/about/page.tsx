@@ -13,6 +13,8 @@ import {
   Building2,
   Globe,
   Wrench,
+  CircleDot,
+  Settings2,
 } from "lucide-react";
 
 export default function AboutPage() {
@@ -58,13 +60,13 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="flex-1 w-full"
             >
-              <div className="aspect-square md:aspect-[4/3] bg-bg-dark rounded-[2.5rem] p-12 relative overflow-hidden flex flex-col justify-center shadow-2xl">
+              <div className="w-full h-auto md:aspect-[4/3] bg-bg-dark rounded-[2.5rem] p-8 sm:p-10 md:p-12 relative overflow-hidden flex flex-col justify-center shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-transparent mix-blend-overlay"></div>
-                <Globe className="w-16 h-16 text-brand-primary mb-8" />
-                <h3 className="text-section-h3 font-serif font-bold text-white mb-6 leading-tight">
+                <Globe className="w-16 h-16 text-brand-primary mb-6 md:mb-8 shrink-0" />
+                <h3 className="text-3xl md:text-section-h3 font-serif font-bold text-white mb-4 md:mb-6 leading-tight">
                   Quality, Service & Reliability with relentless consistency.
                 </h3>
-                <p className="text-text-dark-bg/80 text-body-xl">
+                <p className="text-text-dark-bg/80 text-lg md:text-body-xl">
                   Since its inception in 2018, Vyanzo has evolved from an OEM
                   supplier to become a leading manufacturer of its own range of
                   Manhole Covers, Grates and other municipal casting products
@@ -109,7 +111,7 @@ export default function AboutPage() {
       </section>
 
       {/* Key Offerings & Products */}
-      <section className="section-xl  bg-bg-dark text-white relative overflow-hidden">
+      <section className="section-xl bg-text-dark-bg text-bg-dark relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-primary to-transparent opacity-20" />
         <div className="max-w-[1400px] mx-auto">
           <motion.div
@@ -126,50 +128,62 @@ export default function AboutPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Card 1 */}
             <motion.div
-              whileHover={{ y: -5 }}
-              className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0 }}
+              className="bg-white rounded-3xl p-8 flex flex-col items-center justify-center text-center gap-6 shadow-sm border border-brand-ash/10 hover:border-brand-primary/30 hover:-translate-y-2 transition-all duration-300 group"
             >
-              <div className="w-14 h-14 bg-brand-primary rounded-2xl flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(253,231,76,0.2)]">
-                <div className="w-6 h-6 border-4 border-bg-dark rounded-full" />
+              <div className="w-20 h-20 bg-[#f8f9fc] rounded-full flex items-center justify-center text-brand-ash group-hover:bg-bg-dark group-hover:text-brand-primary transition-colors duration-300">
+                <CircleDot className="w-8 h-8" />
               </div>
-              <h3 className="text-card-title mb-4 font-serif">
+              <h4 className="font-bold text-bg-dark font-sans text-body-lg">
                 Manhole Covers
-              </h3>
-              <p className="text-body-lg text-text-dark-bg/60 leading-relaxed">
+              </h4>
+              <p className="text-body-lg text-text-light-bg/70 leading-relaxed">
                 Heavy-duty, robust manhole cover solutions engineered for high
                 traffic and demanding infrastructural applications.
               </p>
             </motion.div>
 
+            {/* Card 2 */}
             <motion.div
-              whileHover={{ y: -5 }}
-              className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white rounded-3xl p-8 flex flex-col items-center justify-center text-center gap-6 shadow-sm border border-brand-ash/10 hover:border-brand-primary/30 hover:-translate-y-2 transition-all duration-300 group"
             >
-              <div className="w-14 h-14 bg-brand-primary rounded-2xl flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(253,231,76,0.2)]">
-                <Wrench className="w-6 h-6 text-bg-dark" />
+              <div className="w-20 h-20 bg-[#f8f9fc] rounded-full flex items-center justify-center text-brand-ash group-hover:bg-bg-dark group-hover:text-brand-primary transition-colors duration-300">
+                <Wrench className="w-8 h-8" />
               </div>
-              <h3 className="text-card-title mb-4 font-serif">Siphons</h3>
-              <p className="text-body-lg text-text-dark-bg/60 leading-relaxed">
+              <h4 className="font-bold text-bg-dark font-sans text-body-lg">
+                Siphons
+              </h4>
+              <p className="text-body-lg text-text-light-bg/70 leading-relaxed">
                 Precision-cast siphon fittings designed to strict European
                 standards for reliable drainage and plumbing systems.
               </p>
             </motion.div>
 
+            {/* Card 3 */}
             <motion.div
-              whileHover={{ y: -5 }}
-              className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white rounded-3xl p-8 flex flex-col items-center justify-center text-center gap-6 shadow-sm border border-brand-ash/10 hover:border-brand-primary/30 hover:-translate-y-2 transition-all duration-300 group"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-primary/20 blur-[50px] group-hover:scale-150 transition-transform duration-700" />
-              <div className="w-14 h-14 bg-brand-primary rounded-2xl flex items-center justify-center mb-8 relative z-10 shadow-[0_0_30px_rgba(253,231,76,0.2)]">
-                <Cpu className="w-6 h-6 text-bg-dark" />
+              <div className="w-20 h-20 bg-[#f8f9fc] rounded-full flex items-center justify-center text-brand-ash group-hover:bg-bg-dark group-hover:text-brand-primary transition-colors duration-300">
+                <Settings2 className="w-8 h-8" />
               </div>
-              <h3 className="text-card-title mb-4 font-serif relative z-10">
+              <h4 className="font-bold text-bg-dark font-sans text-body-lg">
                 Surface Boxes
-              </h3>
-              <p className="text-body-lg text-text-dark-bg/60 leading-relaxed relative z-10">
-                {" "}
+              </h4>
+              <p className="text-body-lg text-text-light-bg/70 leading-relaxed">
                 Durable cast iron surface boxes built for valve access and
                 utility protection in municipal and industrial environments.
               </p>
