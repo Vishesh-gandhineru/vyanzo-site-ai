@@ -111,7 +111,7 @@ type RawEntry = {
   }[];
 };
 
-export const products: Product[] = (productData as RawEntry[]).map((p) => {
+export const products: Product[] = (productData as unknown as RawEntry[]).map((p) => {
   const certFiles  = buildLinks(p.name, p.certifications, "Certification");
   const specFiles  = buildLinks(p.name, p.specifications, "Specification");
 
