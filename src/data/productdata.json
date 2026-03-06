@@ -181,9 +181,10 @@
     },
     "specifications": {},
     "image_link": {
-      "img1": "/products/B125.png",
-      "img2": "/products/D400.png",
-      "img3": "/products/C250.png"
+      "img1" : "/products/D400 main.png",
+      "img2": "/products/B125.png",
+      "img3": "/products/D400.png",
+      "img4": "/products/C250.png"
     },
     "table_link": "https://docs.google.com/spreadsheets/d/1fimmUnzBaPwIQBbksTEzQIQyUDrwglCpCEdUsO2OiRs/edit?gid=1812868149",
     "variants": [
@@ -417,7 +418,9 @@
       "file_1": "https://drive.google.com/file/d/1tHb5hs95vqW0xop3gsILodn-PrZEIG2T/view?usp=drive_link",
       "file_2": null
     },
-    "image_link": null,
+    "image_link": {
+      "img1": "/products/CASA 160.png"
+    },
     "table_link": "https://docs.google.com/spreadsheets/d/1fimmUnzBaPwIQBbksTEzQIQyUDrwglCpCEdUsO2OiRs/edit#gid=71100390"
   },
   {
