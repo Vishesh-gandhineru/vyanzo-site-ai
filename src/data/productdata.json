@@ -197,7 +197,9 @@
       "file_7": "https://drive.google.com/file/d/1GF2EgijC1cJAbJQZlekiQBtNkRGlUVVi/view?usp=drive_link",
       "file_8": "https://drive.google.com/file/d/1bO_vRKfCN7XPtaYHE9NoAcc9_A6Urzjf/view?usp=drive_link"
     },
-    "image_link": null,
+    "image_link": {
+    "img1" : "/products/B125.png"
+    },
     "table_link": "https://docs.google.com/spreadsheets/d/1fimmUnzBaPwIQBbksTEzQIQyUDrwglCpCEdUsO2OiRs/edit?gid=1812868149"
   },
   {
@@ -226,7 +228,9 @@
       "file_4": "https://drive.google.com/file/d/1XINZQFKqZUFzgMOXeb9Nwrw1oFgV0dUl/view?usp=drive_link",
       "file_5": "https://drive.google.com/file/d/10xAq1xmCFXKDoEDhXq2ixu8FntdOP4MP/view?usp=drive_link"
     },
-    "image_link": null,
+    "image_link": {
+      "img1": "/products/C250.png"
+    },
     "table_link": "https://docs.google.com/spreadsheets/d/1fimmUnzBaPwIQBbksTEzQIQyUDrwglCpCEdUsO2OiRs/edit?gid=1812868149#gid=1812868149"
   },
   {
@@ -259,7 +263,7 @@
       "file_6": "https://drive.google.com/file/d/1HlihgcUAiofqZ-_HRSExCg6rwI5DZCtX/view?usp=drive_link",
       "file_7": "https://drive.google.com/file/d/1eQNm_JfZePjP-QlYjgUX7ZlxCf_I9a2Q/view?usp=drive_link"
     },
-    "image_link": null,
+    "image_link": {"img1 ": "/products/D400.png"},
     "table_link": "https://docs.google.com/spreadsheets/d/1fimmUnzBaPwIQBbksTEzQIQyUDrwglCpCEdUsO2OiRs/edit?gid=1812868149#gid=1812868149"
   },
   {
