@@ -1,4 +1,4 @@
-import productData from "./productdata.json";
+import { getAllProducts, getProductBySlug, parseMetaItems } from "@/api/products";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -21,11 +21,13 @@ export type Product = {
   slug: string;
   sku: string;
   description: string;
+  productDetails?: { name: string; value: string }[]; 
   image: string;
   subImages: string[];
   category: string;     // = product_category
   subCategory: string | null;
   certificationType: string;
+  location?: string | null;
   isBenor: boolean;
   specificationFiles: DriveLink[];
   certificationFiles: DriveLink[];
@@ -47,99 +49,107 @@ export type Variant = {
   image: string;
 };
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
+// ─── Map WP GraphQL Node to Product Type ──────────────────────────────────────
 
-/** Convert a Google Drive share URL to a direct download URL */
-function toDownloadUrl(viewUrl: string): string {
-  const m = viewUrl.match(/\/file\/d\/([^/]+)\//);
-  return m ? `https://drive.google.com/uc?export=download&id=${m[1]}` : viewUrl;
+function mapNodeToProduct(node: any): Product {
+    const id = node.databaseId || 0;
+    const certs = node.certifications?.nodes || [];
+    const certType = certs.length > 0 ? certs[0].name : "None";
+    
+    // Attempting to extract location from a custom taxonomy or meta field if it exists
+    const location = node.locations?.nodes?.[0]?.name || null;
+
+    const specFiles: DriveLink[] = Array.isArray(node.specification) 
+      ? node.specification.map((item: any) => ({
+          label: item.name || '',
+          url: item.url || '', 
+          downloadUrl: item.url || ''
+        }))
+      : [];
+
+    const certFiles: DriveLink[] = Array.isArray(node.cerification)
+      ? node.cerification.map((item: any) => ({
+          label: item.name || '',
+          url: item.url || '',
+          downloadUrl: item.url || ''
+        }))
+      : [];
+
+    const productDetails = Array.isArray(node.productDetails) ? node.productDetails : [];
+
+    let subImages: string[] = [];
+    if (typeof node.productGallery === 'string') {
+      try {
+        const parsed = JSON.parse(node.productGallery);
+        if (Array.isArray(parsed)) {
+          subImages = parsed.map((item: any) => typeof item === 'string' ? item : (item?.url || item?.sourceUrl || '')).filter(Boolean);
+        } else if (typeof parsed === 'object' && parsed !== null) {
+          subImages = Object.values(parsed).map((item: any) => typeof item === 'string' ? item : (item?.url || item?.sourceUrl || '')).filter(Boolean);
+        } else {
+          subImages = node.productGallery.split(',').map((url: string) => url.trim()).filter(Boolean);
+        }
+      } catch (e) {
+        subImages = node.productGallery.split(',').map((url: string) => url.trim()).filter(Boolean);
+      }
+    } else if (Array.isArray(node.productGallery)) {
+      subImages = node.productGallery.map((item: any) => typeof item === 'string' ? item : (item?.url || item?.sourceUrl || '')).filter(Boolean);
+    } else if (node.productGallery && typeof node.productGallery === 'object') {
+      if (node.productGallery.nodes) {
+        subImages = node.productGallery.nodes.map((n: any) => n.sourceUrl || n.mediaItemUrl || "").filter(Boolean);
+      } else {
+        subImages = Object.values(node.productGallery).map((item: any) => typeof item === 'string' ? item : (item?.url || item?.sourceUrl || '')).filter(Boolean);
+      }
+    }
+
+    // Provide default layout images for category types if no featured image exists
+    let cat = node.productCategories?.nodes?.[0]?.name || "Uncategorized";
+    let defaultImg = "/products/manhole-cover.png";
+    if (cat.toLowerCase().includes("siphon")) defaultImg = "/products/siphon.png";
+    if (cat.toLowerCase().includes("surface")) defaultImg = "/products/surface-box.png";
+    if (cat.toLowerCase().includes("hydraulic")) defaultImg = "/products/hydraulic-cover.png";
+
+    return {
+      id,
+      no: id,
+      title: node.title,
+      slug: node.slug,
+      sku: `VY-${Math.floor(Math.random() * 10000)}`,
+      description: node.productDescription || "",
+      productDetails,
+      image: node.featuredImage?.node?.sourceUrl || defaultImg,
+      subImages,
+      category: cat,
+      subCategory: null,
+      certificationType: certType,
+      location: typeof location === 'string' ? location : null,
+      isBenor: certType.toLowerCase().includes("benor"),
+      specificationFiles: specFiles,
+      certificationFiles: certFiles,
+      tableLink: null,
+      variants: []
+    };
 }
 
-/** Convert a name + index to a sane display label */
-function fileLabel(name: string, idx: number, docType: string): string {
-  return `${name} — ${docType} ${idx + 1}`;
-}
+import STATIC_PRODUCTS from './productdata.json';
 
-/** Build a DriveLink array from an object of { file_1, file_2, ... } */
-function buildLinks(name: string, files: Record<string, string | null>, docType: string): DriveLink[] {
-  return Object.values(files)
-    .filter((url): url is string => !!url)
-    .map((url, i) => ({
-      label: fileLabel(name, i, docType),
-      url,
-      downloadUrl: toDownloadUrl(url),
-    }));
-}
+// ─── API Wrapper Functions ─────────────────────────────────────────────────────
 
-/** Pick the right product image based on category */
-function imageForCategory(cat: string, sub: string | null): string {
-  const c = cat.toLowerCase();
-  const s = (sub ?? "").toLowerCase();
-  if (s.includes("hydraulic")) return "/products/hydraulic-cover.png";
-  if (c.includes("siphon"))    return "/products/siphon.png";
-  if (c.includes("surface"))   return "/products/surface-box.png";
-  return "/products/manhole-cover.png";
-}
+function getStaticHydraulicCover(): Product | null {
+    const raw = STATIC_PRODUCTS.find((p: any) => p.no === 9);
+    if (!raw) return null;
 
-/** Slugify a string */
-function slugify(s: string): string {
-  return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-}
-
-// ─── Build products array ─────────────────────────────────────────────────────
-
-type RawEntry = {
-  no: number;
-  product_category: string;
-  sub_category: string | null;
-  name: string;
-  certification_type: string;
-  certifications: Record<string, string | null>;
-  specifications: Record<string, string | null>;
-  image_link: Record<string, string> | null;
-  table_link: string | null;
-  sizes?: string[];
-  variants?: {
-    name: string;
-    kn: string;
-    application: string;
-    description: string;
-    sizes: string[];
-    specifications: Record<string, string | null>;
-    image_link: Record<string, string> | null;
-    catalog_link: string | null;
-  }[];
-};
-
-export const products: Product[] = (productData as unknown as RawEntry[]).map((p) => {
-  const certFiles  = buildLinks(p.name, p.certifications, "Certification");
-  const specFiles  = buildLinks(p.name, p.specifications, "Specification");
-
-  const imageKeys = p.image_link ? Object.keys(p.image_link).sort() : [];
-  const primaryImage = imageKeys.length > 0 ? p.image_link![imageKeys[0]] : imageForCategory(p.product_category, p.sub_category);
-  const subImages = imageKeys.length > 1 ? imageKeys.slice(1).map(k => p.image_link![k]) : [];
-
-  return {
-    id:                p.no,
-    no:                p.no,
-    title:             p.name,
-    slug:              slugify(`${p.product_category}-${p.sub_category ?? ""}-${p.name}`),
-    sku:               `VY-${p.product_category.substring(0, 3).toUpperCase()}-${String(p.no).padStart(2, "0")}`,
-    description:       `High-quality ${p.name} from our ${p.product_category} range${p.sub_category ? ` (${p.sub_category})` : ""}.`,
-    image:             primaryImage,
-    subImages:         subImages,
-    category:          p.product_category,
-    subCategory:       p.sub_category,
-    certificationType: p.certification_type,
-    isBenor:           p.certification_type.toLowerCase() === "benor",
-    specificationFiles: specFiles,
-    certificationFiles: certFiles,
-    tableLink:         p.table_link,
-    sizes:             p.sizes,
-    variants: p.variants?.map((v) => {
-      const vSpecFiles = buildLinks(v.name, v.specifications, "Specification");
-      const vImageKeys = v.image_link ? Object.keys(v.image_link).sort() : [];
-      const vImage = vImageKeys.length > 0 ? v.image_link![vImageKeys[0]] : primaryImage;
+    const subImages = Object.values(raw.image_link || {}).filter(Boolean) as string[];
+    const variants: Variant[] = (raw.variants || []).map((v: any) => {
+      const specFiles = v.sizes.map((_: any, i: number) => {
+        const fileUrl = (v.specifications as any)[`file_${i + 1}`];
+        if (!fileUrl) return null;
+        return { label: `Spec for ${v.sizes[i]}`, url: fileUrl, downloadUrl: fileUrl } as DriveLink;
+      });
+      
+      let img = "";
+      if (v.image_link) {
+        img = Object.values(v.image_link)[0] as string || "";
+      }
 
       return {
         name: v.name,
@@ -147,20 +157,66 @@ export const products: Product[] = (productData as unknown as RawEntry[]).map((p
         application: v.application,
         description: v.description,
         sizes: v.sizes,
-        specifications: v.specifications,
-        image_link: v.image_link,
-        catalog_link: v.catalog_link,
-        specificationFiles: vSpecFiles,
-        image: vImage,
-      };
-    }),
-  };
-});
+        specifications: v.specifications || {},
+        image_link: v.image_link || null,
+        catalog_link: v.catalog_link || null,
+        specificationFiles: specFiles,
+        image: img
+      } as Variant;
+    });
 
-// ─── Derived filter lists (used by ProductGrid) ───────────────────────────────
+    return {
+      id: 9999,
+      no: 9,
+      title: raw.name,
+      slug: "hydraulic-covers",
+      sku: `VY-HYC`,
+      description: "",
+      productDetails: [],
+      image: subImages.length > 0 ? subImages[0] : "",
+      subImages,
+      category: raw.product_category,
+      subCategory: raw.sub_category,
+      certificationType: raw.certification_type,
+      location: null,
+      isBenor: false,
+      specificationFiles: [],
+      certificationFiles: [],
+      tableLink: raw.table_link || null,
+      variants
+    };
+}
 
-export const ALL_CATEGORIES    = Array.from(new Set(products.map(p => p.category)));
-export const ALL_SUB_CATEGORIES = Array.from(
-  new Set(products.map(p => p.subCategory).filter((s): s is string => !!s))
-);
-export const ALL_CERT_TYPES    = Array.from(new Set(products.map(p => p.certificationType)));
+export async function getProducts(locale: string = "EN"): Promise<Product[]> {
+    const nodes = await getAllProducts(locale.toUpperCase());
+    const products = nodes.map(mapNodeToProduct);
+    
+    // Inject the complex nested variant product
+    const hydraulic = getStaticHydraulicCover();
+    if (hydraulic && !products.some((p: Product) => p.slug === "hydraulic-covers")) {
+        products.push(hydraulic);
+    }
+    
+    return products;
+}
+
+export async function getProduct(slug: string): Promise<Product | null> {
+    if (slug === "hydraulic-covers") {
+      const hydraulic = getStaticHydraulicCover();
+      if (hydraulic) return hydraulic;
+    }
+
+    const node = await getProductBySlug(slug);
+    if (!node) return null;
+    return mapNodeToProduct(node);
+}
+
+export function getDerivedLists(productsList: Product[]) {
+    const ALL_CATEGORIES = Array.from(new Set(productsList.map(p => p.category)));
+    const ALL_SUB_CATEGORIES = Array.from(
+      new Set(productsList.map(p => p.subCategory).filter((s): s is string => !!s))
+    );
+    const ALL_CERT_TYPES = Array.from(new Set(productsList.map(p => p.certificationType)));
+    
+    return { ALL_CATEGORIES, ALL_SUB_CATEGORIES, ALL_CERT_TYPES };
+}

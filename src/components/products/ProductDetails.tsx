@@ -22,7 +22,6 @@ import {
 import { Product, DriveLink, SheetRow } from "@/data/products";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@/i18n/routing";
-import { products } from "@/data/products";
 
 // ─── Resolve the real Google Drive filename via our API route ─────────────────
 function useDriveFileName(
@@ -314,7 +313,13 @@ function VariantIcon({ name }: { name: string }) {
 }
 
 // ─── Main component ───────────────────────────────────────────────────────────
-export default function ProductDetails({ product }: { product: Product }) {
+export default function ProductDetails({
+  product,
+  relatedProducts,
+}: {
+  product: Product;
+  relatedProducts: Product[];
+}) {
   const hasVariants = product.variants && product.variants.length > 0;
   const allImages = [product.image, ...product.subImages];
   const [selectedImage, setSelectedImage] = useState(allImages[0]);
@@ -337,22 +342,6 @@ export default function ProductDetails({ product }: { product: Product }) {
 
   const specFiles = product.specificationFiles;
   const certFiles = product.certificationFiles;
-
-  // Similar products: same category, excluding self, max 3
-  const similarProducts = products
-    .filter((p) => p.id !== product.id && p.category === product.category)
-    .slice(0, 3);
-
-  // Fallback if not enough same-category
-  const relatedProducts =
-    similarProducts.length >= 3
-      ? similarProducts
-      : [
-          ...similarProducts,
-          ...products.filter(
-            (p) => p.id !== product.id && p.category !== product.category,
-          ),
-        ].slice(0, 3);
 
   return (
     <section className="w-full font-sans py-8 px-4 md:px-8 max-w-[1400px] mx-auto min-h-screen">
@@ -437,23 +426,12 @@ export default function ProductDetails({ product }: { product: Product }) {
             </div>
           ) : (
             <div className="bg-white rounded-[2.5rem] p-4 shadow-sm border border-brand-ash/20 h-fit overflow-hidden">
-              {specFiles.length > 0 ? (
-                (() => {
-                  const fileId =
-                    specFiles[0].url.match(/\/file\/d\/([^/]+)\//)?.[1];
-                  return fileId ? (
-                    <iframe
-                      src={`https://drive.google.com/file/d/${fileId}/preview`}
-                      className="w-full aspect-3/4 rounded-2xl border-none"
-                    />
-                  ) : (
-                    <div className="w-full aspect-square flex items-center justify-center bg-[#f8f9fc] rounded-2xl">
-                      <p className="text-text-light-bg/40 text-sm font-sans shrink-0">
-                        Invalid spec URL
-                      </p>
-                    </div>
-                  );
-                })()
+              {specFiles.length > 0 && specFiles[0].url ? (
+                <iframe
+                  src={specFiles[0].url.replace(/\/view.*/, "/preview")}
+                  title={`${product.title} Specification`}
+                  className="w-full aspect-3/4 rounded-2xl border-none"
+                />
               ) : (
                 <div className="w-full aspect-square flex items-center justify-center bg-[#f8f9fc] rounded-2xl">
                   <p className="text-text-light-bg/40 text-sm font-sans shrink-0">
@@ -502,20 +480,24 @@ export default function ProductDetails({ product }: { product: Product }) {
                     <div>
                       <div className="flex items-center gap-3 md:gap-4 mb-0 md:mb-2">
                         <h3 className="text-[1.3rem] md:text-section-h3 text-bg-dark font-sans tracking-tight leading-[1.15] md:leading-tight">
-                          {variant.name.split(" ").map((word, i, arr) => (
-                            <span key={i} className="block md:inline">
-                              {word}
-                              {i < arr.length - 1 ? " " : ""}
-                            </span>
-                          ))}
+                          {variant.name
+                            .split(" ")
+                            .map((word: string, i: number, arr: string[]) => (
+                              <span key={i} className="block md:inline">
+                                {word}
+                                {i < arr.length - 1 ? " " : ""}
+                              </span>
+                            ))}
                         </h3>
                         <span className="bg-[#6ab0e0] md:bg-brand-primary text-white w-10 h-10 md:w-auto md:h-auto md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-bold tracking-wider uppercase flex flex-col md:inline-flex items-center justify-center leading-[1.1] md:leading-normal shrink-0">
-                          {variant.kn.split(" ").map((part, i, arr) => (
-                            <span key={i} className="block md:inline">
-                              {part}
-                              {i < arr.length - 1 ? " " : ""}
-                            </span>
-                          ))}
+                          {variant.kn
+                            .split(" ")
+                            .map((part: string, i: number, arr: string[]) => (
+                              <span key={i} className="block md:inline">
+                                {part}
+                                {i < arr.length - 1 ? " " : ""}
+                              </span>
+                            ))}
                         </span>
                       </div>
                     </div>
@@ -549,7 +531,7 @@ export default function ProductDetails({ product }: { product: Product }) {
                         </tr>
                       </thead>
                       <tbody>
-                        {variant.sizes.map((size, sIdx) => {
+                        {variant.sizes.map((size: string, sIdx: number) => {
                           const specFile = variant.specificationFiles[sIdx];
                           const identifier = `${variant.name.replace("Class ", "")}`;
                           return (
@@ -608,60 +590,35 @@ export default function ProductDetails({ product }: { product: Product }) {
               Product Details
             </h3>
             <div className="bg-[#f8f9fc] rounded-2xl border border-brand-ash/10 overflow-hidden">
-              {/* Live rows from Google Sheet */}
-              {sheetLoading
-                ? Array.from({ length: 4 }).map((_, i) => (
+              {product.productDetails && product.productDetails.length > 0 ? (
+                product.productDetails.map(
+                  (
+                    row: { name: string; value: string },
+                    idx: number,
+                    arr: { name: string; value: string }[],
+                  ) => (
                     <div
-                      key={i}
-                      className="flex items-center justify-between py-4 px-6 border-b border-brand-ash/10 gap-4"
+                      key={idx}
+                      className={`flex flex-col sm:flex-row sm:items-start justify-between py-4 px-6 hover:bg-white transition-colors gap-2 sm:gap-4 ${
+                        idx !== arr.length - 1
+                          ? "border-b border-brand-ash/10"
+                          : ""
+                      }`}
                     >
-                      <div className="h-3.5 w-28 bg-brand-ash/20 rounded animate-pulse" />
-                      <div className="h-3.5 w-36 bg-brand-ash/20 rounded animate-pulse" />
+                      <span className="text-text-light-bg/70 font-medium text-body-lg shrink-0">
+                        {row.name}
+                      </span>
+                      <span className="text-bg-dark font-bold font-sans text-body-sm text-left sm:text-right whitespace-pre-line max-w-[60%]">
+                        {row.value}
+                      </span>
                     </div>
-                  ))
-                : sheetRows.length > 0
-                  ? sheetRows.map((row, idx, arr) => (
-                      <div
-                        key={idx}
-                        className={`flex flex-col sm:flex-row sm:items-start justify-between py-4 px-6 hover:bg-white transition-colors gap-2 sm:gap-4 ${
-                          idx !== arr.length - 1
-                            ? "border-b border-brand-ash/10"
-                            : ""
-                        }`}
-                      >
-                        <span className="text-text-light-bg/70 font-medium text-body-lg shrink-0">
-                          {row.key}
-                        </span>
-                        <span className="text-bg-dark font-bold font-sans text-body-sm text-left sm:text-right whitespace-pre-line max-w-[60%]">
-                          {row.value}
-                        </span>
-                      </div>
-                    ))
-                  : // Fallback when no table_link / sheet unavailable
-                    [
-                      { label: "Category", value: product.category },
-                      {
-                        label: "Sub-Category",
-                        value: product.subCategory ?? "—",
-                      },
-                      { label: "SKU", value: product.sku },
-                    ].map((row, idx, arr) => (
-                      <div
-                        key={idx}
-                        className={`flex flex-col sm:flex-row sm:items-center justify-between py-4 px-6 hover:bg-white transition-colors gap-2 sm:gap-4 ${
-                          idx !== arr.length - 1
-                            ? "border-b border-brand-ash/10"
-                            : ""
-                        }`}
-                      >
-                        <span className="text-text-light-bg/70 font-medium text-body-lg">
-                          {row.label}
-                        </span>
-                        <span className="text-bg-dark font-bold font-sans text-body-sm uppercase">
-                          {row.value}
-                        </span>
-                      </div>
-                    ))}
+                  ),
+                )
+              ) : (
+                <div className="p-8 text-center text-text-light-bg/50 font-sans">
+                  No detailed technical specifications available.
+                </div>
+              )}
             </div>
           </div>
 

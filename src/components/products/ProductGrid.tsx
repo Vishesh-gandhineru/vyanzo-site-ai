@@ -13,12 +13,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { Link } from "@/i18n/routing";
-import {
-  products,
-  ALL_CATEGORIES,
-  ALL_SUB_CATEGORIES,
-  ALL_CERT_TYPES,
-} from "@/data/products";
+import { Product } from "@/data/products";
 import { useTranslations } from "next-intl";
 
 // ─── Certification chip colours ───────────────────────────────────────────────
@@ -74,25 +69,26 @@ function FilterCheckbox({
 }
 
 // ─── Geo ↔ Certification bidirectional map ────────────────────────────────────
-const GEO_TO_CERT: Record<string, string[]> = {
-  Belgium: ["Benor", "Copro", "EN124-2"],
-  Scandinavia: [],
-};
-const CERT_TO_GEO: Record<string, string[]> = {
-  Benor: ["Belgium"],
-  Copro: ["Belgium"],
-  "EN124-2": ["Belgium"],
-};
-const ALL_GEOS = Object.keys(GEO_TO_CERT);
-
-export default function ProductGrid() {
+export default function ProductGrid({
+  products,
+  ALL_CATEGORIES,
+  ALL_SUB_CATEGORIES,
+  ALL_CERT_TYPES,
+  ALL_LOCATIONS,
+}: {
+  products: Product[];
+  ALL_CATEGORIES: string[];
+  ALL_SUB_CATEGORIES: string[];
+  ALL_CERT_TYPES: string[];
+  ALL_LOCATIONS: string[];
+}) {
   const t = useTranslations("ProductsPage.grid");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [selectedSubCategories, setSelectedSubCategories] = useState<string[]>(
     [],
   );
   const [selectedCertTypes, setSelectedCertTypes] = useState<string[]>([]);
-  const [selectedGeos, setSelectedGeos] = useState<string[]>([]);
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState("no-asc");
   const [isSortOpen, setIsSortOpen] = useState(false);
 
@@ -104,53 +100,11 @@ export default function ProductGrid() {
       prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value],
     );
 
-  // When toggling a geo, remove any selected certs that are incompatible
-  const toggleGeo = (geo: string) => {
-    setSelectedGeos((prev) => {
-      const next = prev.includes(geo)
-        ? prev.filter((g) => g !== geo)
-        : [...prev, geo];
-      if (next.length > 0) {
-        const validCerts = new Set(next.flatMap((g) => GEO_TO_CERT[g] ?? []));
-        setSelectedCertTypes((certs) => certs.filter((c) => validCerts.has(c)));
-      }
-      return next;
-    });
-  };
-
-  // When toggling a cert, remove any selected geos that are incompatible
-  const toggleCert = (cert: string) => {
-    setSelectedCertTypes((prev) => {
-      const next = prev.includes(cert)
-        ? prev.filter((c) => c !== cert)
-        : [...prev, cert];
-      if (next.length > 0) {
-        const validGeos = new Set(next.flatMap((c) => CERT_TO_GEO[c] ?? []));
-        setSelectedGeos((geos) => geos.filter((g) => validGeos.has(g)));
-      }
-      return next;
-    });
-  };
-
-  // Which geos are selectable given current cert selection
-  const availableGeos =
-    selectedCertTypes.length === 0
-      ? ALL_GEOS
-      : Array.from(
-          new Set(selectedCertTypes.flatMap((c) => CERT_TO_GEO[c] ?? [])),
-        );
-
-  // Which certs are selectable given current geo selection
-  const availableCerts =
-    selectedGeos.length === 0
-      ? ALL_CERT_TYPES
-      : Array.from(new Set(selectedGeos.flatMap((g) => GEO_TO_CERT[g] ?? [])));
-
   const resetFilters = () => {
     setSelectedCategories([]);
     setSelectedSubCategories([]);
     setSelectedCertTypes([]);
-    setSelectedGeos([]);
+    setSelectedLocations([]);
   };
 
   const searchParams = useSearchParams();
@@ -180,10 +134,8 @@ export default function ProductGrid() {
     )
     .filter(
       (p) =>
-        selectedGeos.length === 0 ||
-        (CERT_TO_GEO[p.certificationType] ?? []).some((g) =>
-          selectedGeos.includes(g),
-        ),
+        selectedLocations.length === 0 ||
+        (p.location && selectedLocations.includes(p.location)),
     )
     .sort((a, b) => {
       if (sortBy === "name-asc") return a.title.localeCompare(b.title);
@@ -203,16 +155,16 @@ export default function ProductGrid() {
               {t("sidebar.geoLocation")}
             </h3>
             <div className="flex flex-col gap-3">
-              {availableGeos.map((geo) => {
-                const isSelected = selectedGeos.includes(geo);
+              {ALL_LOCATIONS.map((geo: string) => {
+                const isSelected = selectedLocations.includes(geo);
                 // If any geo is selected, and this one is not the selected one, disable it
-                const isDisabled = selectedGeos.length > 0 && !isSelected;
+                const isDisabled = selectedLocations.length > 0 && !isSelected;
                 return (
                   <FilterCheckbox
                     key={geo}
                     label={geo}
                     checked={isSelected}
-                    onChange={() => toggleGeo(geo)}
+                    onChange={() => toggle(setSelectedLocations, geo)}
                     disabled={isDisabled}
                   />
                 );
@@ -227,12 +179,12 @@ export default function ProductGrid() {
               {t("sidebar.certification")}
             </h3>
             <div className="flex flex-col gap-3">
-              {availableCerts.map((cert) => (
+              {ALL_CERT_TYPES.map((cert: string) => (
                 <FilterCheckbox
                   key={cert}
                   label={cert}
                   checked={selectedCertTypes.includes(cert)}
-                  onChange={() => toggleCert(cert)}
+                  onChange={() => toggle(setSelectedCertTypes, cert)}
                 />
               ))}
             </div>
