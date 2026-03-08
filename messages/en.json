@@ -1,0 +1,407 @@
+{
+  "Hero": {
+    "headlineStart": "Where Quality Castings Meet",
+    "headlineHighlight": " Unsurpassed ",
+    "headlineEnd": " Service Standards",
+    "cta": "View products"
+  },
+  "MegaMenu": {
+    "menuText": "Menu",
+    "closeText": "Close",
+    "links": {
+      "home": "Home",
+      "products": "Products",
+      "services": "Services",
+      "about": "About Us",
+      "sustainability": "Sustainability",
+      "contact": "Contact Us"
+    }
+  },
+  "Footer": {
+    "links": {
+      "products": "Products",
+      "services": "Services",
+      "about": "About Us",
+      "contact": "Contact Us",
+      "team": "Our Team"
+    },
+    "copyright": "Copyright @Vyanzo {year}",
+    "aria": {
+      "scrollToTop": "Scroll to top",
+      "whatsapp": "Contact on WhatsApp"
+    }
+  },
+  "MarqueeLogos": {
+    "title": "Certifications"
+  },
+  "BentoGrid": {
+    "subtitle": "The Vyanzo Edge",
+    "titleStart": "Built for ",
+    "titleHighlight": "lifetime",
+    "description": "Delivering unparalleled casting solutions across the globe with precision, scale, and reliability since 2018.",
+    "quality": {
+      "title": "Unsurpassed Quality",
+      "description": "Engineered for perfection in every dimension and pour",
+      "stat": "99.9%",
+      "statLabel": "Defect-Free Output"
+    },
+    "global": {
+      "title": "Global Reach",
+      "description": "Serving customers in Belgium, France, Spain, Italy, Austria, Holland, UK, USA, and Canada"
+    },
+    "volume": {
+      "title": "Annual Production Volume",
+      "stat": "> 250,000",
+      "statLabel": " Parts"
+    },
+    "presence": {
+      "title": "Global Presence"
+    },
+    "compliance": {
+      "title": "Industry Compliance"
+    },
+    "contact": {
+      "title": "Contact Sales",
+      "description": "Get custom quotes"
+    }
+  },
+  "ProductSection": {
+    "subtitle": "What We Cast",
+    "titleStart": "Our core ",
+    "titleHighlight": "products",
+    "description": "Premium casting solutions built for the world's most demanding infrastructure.",
+    "viewAll": "View All Products",
+    "products": {
+      "manhole": "Manhole Covers",
+      "siphons": "Siphons",
+      "surfaceBoxes": "Surface Boxes"
+    }
+  },
+  "AboutSection": {
+    "subtitle": "About Vyanzo",
+    "titleStart": "Precision-cast for the ",
+    "titleHighlight": "world's most demanding",
+    "titleEnd": " infrastructure",
+    "description": "Born in 2018, Vyanzo manufactures manhole covers, grates, and municipal castings: supplied across Europe and beyond. Quality, service, and reliability aren't just promises. They're the standard.",
+    "cta": "Meet the team"
+  },
+  "EnvironmentSection": {
+    "subtitle": "Environmental Responsibility",
+    "titleStart": "Cleaner casting starts at the ",
+    "titleHighlight": "furnace",
+    "titleEnd": "",
+    "description": "Zero coal. Electrical induction furnaces. Rooftop solar. Every facility is built to minimize footprint: not just meet standards, but set them.",
+    "badges": {
+      "coal": "No Coal Melting",
+      "solar": "Solar Powered",
+      "iso": "ISO 14001 Certified"
+    },
+    "cta": "Learn More"
+  },
+  "ServicesSection": {
+    "subtitle": "Our Services",
+    "titleStart": "Discover what we can ",
+    "titleHighlight": "do for you",
+    "cta": "Learn More",
+    "services": {
+      "productDevelopment": "Product Development",
+      "productionExcellence": "A-Z Production Excellence",
+      "customPackaging": "Custom Packaging &\nDelivery Options",
+      "productCertification": "Product Certification"
+    }
+  },
+  "ContactSection": {
+    "subtitle": "Your Next Step",
+    "titleStart": "Drop us a line, ",
+    "titleHighlight": "we'll take it from there",
+    "description": "Custom quotes, technical specs, or bulk orders — fill in the details and our team gets back to you within 24 hours.",
+    "headquarters": {
+      "title": "Headquarters",
+      "address": "Botermelkbaan 51 <br />2900 Schoten <br />Belgium"
+    },
+    "warehouse": {
+      "title": "Warehouse",
+      "address": "Kluizenmeersen 10 <br />9170 Sint-Gillis-Waas <br />Belgium"
+    },
+    "email": {
+      "title": "Email Us",
+      "value": "info@vyanzo.be"
+    },
+    "phone": {
+      "title": "Call / Whatsapp Us",
+      "value": "+ 32 475 26 47 52"
+    },
+    "distribution": {
+      "title": "Belgian distribution and warehouse",
+      "value": "VIATEQ bv"
+    },
+    "formTitle": "Send us a message"
+  },
+  "AboutPage": {
+    "hero": {
+      "subtitle": "Company Profile",
+      "titleStart": "About ",
+      "titleHighlight": "Vyanzo",
+      "titleEnd": ".",
+      "description": "Discover our range of meticulously designed and manufactured products. Vyanzo delivers top-quality castings to the most demanding customers — consistent quality and service level are paramount to what we do."
+    },
+    "philosophy": {
+      "title": "Quality, Service & Reliability with relentless consistency.",
+      "description": "Since its inception in 2018, Vyanzo has evolved from an OEM supplier to become a leading manufacturer of its own range of Manhole Covers, Grates and other municipal casting products now supplied across Europe."
+    },
+    "service": {
+      "title": "End-to-End Service",
+      "description": "We offer end-to-end services to customers around the world who share our business philosophy: Quality, Service & Reliability at a correct price — and that with relentless consistency. By managing production, quality assurance, and logistics in-house, Vyanzo ensures a seamless experience for its clients.",
+      "badge": {
+        "title": "COPRO BENOR Certified",
+        "description": "For the Belgian market, distributed via Viateq"
+      }
+    },
+    "offerings": {
+      "title": "Key Offerings",
+      "description": "Vyanzo is a leading supplier of premium casting products, engineered for scale and durability.",
+      "manhole": {
+        "title": "Manhole Covers",
+        "description": "Heavy-duty, robust manhole cover solutions engineered for high traffic and demanding infrastructural applications."
+      },
+      "siphons": {
+        "title": "Siphons",
+        "description": "Precision-cast siphon fittings designed to strict European standards for reliable drainage and plumbing systems."
+      },
+      "surfaceBoxes": {
+        "title": "Surface Boxes",
+        "description": "Durable cast iron surface boxes built for valve access and utility protection in municipal and industrial environments."
+      }
+    },
+    "advantage": {
+      "title": "The Vyanzo Advantage",
+      "description": "A relentless focus on quality, scale, and sustainable production.",
+      "facilities": {
+        "title": "State-of-the-Art Facilities",
+        "description": "We have continuously upgraded our production facilities with the latest machines and technology, always considering the environment and energy efficiency."
+      },
+      "sustainable": {
+        "title": "Sustainable Manufacturing",
+        "description": "We don't melt with coal — we use the latest electrical induction furnaces, massively reducing our environmental impact."
+      },
+      "future": {
+        "title": "Built for the Future",
+        "description": "Vyanzo's production facilities are state-of-the-art and ready to meet customer volume and quality demands for decades to come."
+      },
+      "stats": {
+        "growth": {
+          "value": "+20",
+          "suffix": "%",
+          "label": "Annual Growth Rate"
+        },
+        "volume": {
+          "value": "250,000",
+          "suffix": "+",
+          "label": "Tons of Castings Annually"
+        }
+      }
+    }
+  },
+  "ContactPage": {
+    "hero": {
+      "subtitle": "Start a Conversation",
+      "titleStart": "We're ",
+      "titleHighlight": "Listening",
+      "titleEnd": "",
+      "description": "Got a project in mind? Let's figure out the right solution together."
+    }
+  },
+  "ServicesPage": {
+    "hero": {
+      "subtitle": "Services Portfolio",
+      "titleStart": "Excellence Forged,",
+      "titleHighlight": "Service Perfected.",
+      "description": "Vyanzo offers a comprehensive suite of services designed to streamline the casting and manufacturing process, from initial design to final delivery."
+    },
+    "tabs": {
+      "title": "Our Services"
+    },
+    "servicesList": {
+      "development": {
+        "title": "Product Development",
+        "description": "Vyanzo provides a high-level engineering resource to help clients design or optimize products.",
+        "highlights": {
+          "expertise": {
+            "label": "Expertise",
+            "value": "Access to a team of over 10 engineers."
+          },
+          "experience": {
+            "label": "Experience",
+            "value": "A combined 150 years of experience in the casting industry."
+          },
+          "focus": {
+            "label": "Focus",
+            "value": "Designing and optimizing products to specifically suit customer needs and technical requirements."
+          }
+        }
+      },
+      "production": {
+        "title": "A-Z Production Excellence",
+        "description": "Vyanzo manages the entire manufacturing lifecycle, ensuring quality at every stage according to specific client requirements.",
+        "highlights": {
+          "pattern": {
+            "label": "Pattern Making",
+            "value": "Creating the initial molds and patterns."
+          },
+          "sampling": {
+            "label": "Sampling",
+            "value": "Producing prototypes and samples for approval."
+          },
+          "quality": {
+            "label": "Quality Control",
+            "value": "Rigorous testing and inspection throughout the production run."
+          },
+          "finishing": {
+            "label": "Finishing & Coating",
+            "value": "Offering various painting and coating options, including: Water-based paint, KTL (E-coating), Epoxy coatings."
+          },
+          "assembly": {
+            "label": "Assembly",
+            "value": "Final assembly of components before shipment."
+          }
+        }
+      },
+      "logistics": {
+        "title": "Custom Packaging & Delivery Options",
+        "description": "Clients have full control over how their products are protected and branded during transit.",
+        "highlights": {
+          "packaging": {
+            "label": "Packaging Specs",
+            "value": "Customized number of items per pallet or box."
+          },
+          "protection": {
+            "label": "Protection",
+            "value": "Options for plastic wrap or specialized shielding."
+          },
+          "branding": {
+            "label": "Branding",
+            "value": "Custom design and content for labels."
+          },
+          "schedule": {
+            "label": "Logistics",
+            "value": "Shipments scheduled according to client timelines, utilizing 20-foot and 40-foot containers."
+          }
+        }
+      },
+      "certification": {
+        "title": "Product Certification",
+        "description": "Vyanzo offers specialized assistance with international certification processes to ensure products meet global safety and quality standards.",
+        "highlights": {
+          "copro": {
+            "label": "",
+            "value": "Copro Certification"
+          },
+          "benor": {
+            "label": "",
+            "value": "BENOR Certification"
+          },
+          "en124": {
+            "label": "EN124-2",
+            "value": "EN124-2 Certification"
+          },
+          "mpa": {
+            "label": "",
+            "value": "MPA Bremen Certification"
+          },
+          "icmq": {
+            "label": "",
+            "value": "ICMQ Certification"
+          }
+        }
+      },
+      "foundry": {
+        "title": "Foundry Certifications",
+        "description": "Vyanzo offers specialized assistance with international certification processes to ensure products meet global safety and quality standards.",
+        "highlights": {
+          "iso9001": {
+            "label": "",
+            "value": "ISO 9001 Certification"
+          },
+          "iso14001": {
+            "label": "",
+            "value": "ISO 14001 Certification"
+          },
+          "iso45001": {
+            "label": "",
+            "value": "ISO 45001 Certification"
+          }
+        }
+      }
+    },
+    "categories": {
+      "title": "Other Product Categories Served",
+      "description": "While providing these services, Vyanzo focuses on the following primary product lines:",
+      "manhole": "Manhole & Hydraulic Covers",
+      "surfaceBoxes": "Surface Boxes",
+      "siphons": "Siphons"
+    }
+  },
+  "SustainabilityPage": {
+    "hero": {
+      "subtitle": "ENVIRONMENTAL RESPONSIBILITY",
+      "titleStart": "We Cleaner Processes, ",
+      "titleHighlight": "Greener Casting.",
+      "description": "Sustainability engineered into every furnace, facility, and product — from raw material to final delivery."
+    },
+    "cards": {
+      "certifications": {
+        "title": "Certifications",
+        "description": "Certified across environmental management, product quality, and workplace safety — globally recognized, independently audited."
+      },
+      "zeroCoal": {
+        "title": "Zero-Coal Foundry",
+        "description": "Electrical induction furnaces replace coal-fired melting. Rooftop solar powers operations. Foundry sand is fully recycled and reused. The result — drastically lower emissions without compromising output."
+      },
+      "environmentalPolicy": {
+        "title": "Environmental Policy",
+        "description": "We don't just comply, we lead. Every facility is continuously upgraded with eco-friendly machinery. Air, land, and water pollution are actively prevented through stringent controls. All environmental data is shared transparently with customers and partners."
+      },
+      "standards": {
+        "title": "Standards & Declarations",
+        "en15804": "— full life-cycle transparency",
+        "reach": "— zero hazardous substances",
+        "bsEn124": "— European municipal casting compliance"
+      }
+    }
+  },
+  "ProductsPage": {
+    "hero": {
+      "subtitle": "Our Products",
+      "titleStart": "Engineered for",
+      "titleHighlight": "Infrastructure.",
+      "description": "Discover our complete range of certified municipal castings, designed for extreme durability and easy installation."
+    },
+    "grid": {
+      "sidebar": {
+        "geoLocation": "Geo Location",
+        "certification": "Certification",
+        "category": "Category",
+        "resetFilters": "Reset Filters"
+      },
+      "topBar": {
+        "showing": "Showing ",
+        "of": " of ",
+        "products": " products",
+        "sortBy": "Sort by:",
+        "sortOptions": {
+          "defaultOrder": "Default Order",
+          "nameAsc": "Name: A → Z",
+          "nameDesc": "Name: Z → A"
+        }
+      },
+      "card": {
+        "viewSpecs": "View Technical Specs"
+      },
+      "empty": {
+        "title": "The products for Scandinavia are under development.",
+        "description": "Try adjusting your filters to find what you're looking for.",
+        "clearFilters": "Clear Filters"
+      }
+    }
+  }
+}

@@ -20,7 +20,8 @@ import {
   ChevronUp,
 } from "lucide-react";
 import { Product, DriveLink, SheetRow } from "@/data/products";
-import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "@/i18n/routing";
 import { products } from "@/data/products";
 
 // ─── Resolve the real Google Drive filename via our API route ─────────────────

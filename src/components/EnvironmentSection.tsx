@@ -1,9 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function EnvironmentSection() {
+  const t = useTranslations("EnvironmentSection");
+
   return (
     <section className="w-full section-xl bg-white overflow-hidden font-sans border-t border-black/5">
       <div className="max-w-[1400px] mx-auto">
@@ -18,42 +22,43 @@ export default function EnvironmentSection() {
           >
             <h2 className="text-body-lg font-serif font-semibold tracking-widest  text-brand-primary mb-8 flex items-center gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
-              Environmental Responsibility
+              {t("subtitle")}
             </h2>
 
             <h3 className="text-section-h2 font-serif font-bold text-bg-dark leading-[1.1] mb-8">
-              Cleaner casting starts at the{" "}
-              <span className="text-brand-primary italic">furnace</span>
+              {t("titleStart")}
+              <span className="text-brand-primary italic">
+                {t("titleHighlight")}
+              </span>
+              {t("titleEnd")}
             </h3>
 
             <p className="text-body-lg text-bg-dark/60 font-sans font-normal leading-relaxed mb-12 max-w-xl">
-              Zero coal. Electrical induction furnaces. Rooftop solar. Every
-              facility is built to minimize footprint: not just meet standards,
-              but set them.
+              {t("description")}
             </p>
 
             <div className="flex flex-wrap gap-4 mb-12">
               <div className="flex items-center gap-3 bg-brand-primary/10 px-5 py-3 rounded-full">
                 <span className="w-2 h-2 rounded-full bg-brand-primary"></span>
                 <span className="text-xs font-sans font-bold tracking-wide text-bg-dark">
-                  No Coal Melting
+                  {t("badges.coal")}
                 </span>
               </div>
               <div className="flex items-center gap-3 bg-brand-primary/10 px-5 py-3 rounded-full">
                 <span className="w-2 h-2 rounded-full bg-brand-primary"></span>
                 <span className="text-xs font-sans font-bold tracking-wide text-bg-dark ">
-                  Solar Powered
+                  {t("badges.solar")}
                 </span>
               </div>
               <div className="flex items-center gap-3 bg-brand-primary/10 px-5 py-3 rounded-full">
                 <span className="w-2 h-2 rounded-full bg-brand-primary"></span>
                 <span className="text-xs font-sans font-bold tracking-wide text-bg-dark ">
-                  ISO 14001 Certified
+                  {t("badges.iso")}
                 </span>
               </div>
             </div>
             <Link href="/sustainability" className="w-full md:w-auto">
-              <button className="btn-primary">Learn More</button>
+              <button className="btn-primary">{t("cta")}</button>
             </Link>
           </motion.div>
 

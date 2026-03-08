@@ -1,0 +1,224 @@
+{
+  "Hero": {
+    "headlineStart": "Där gjutgods av högsta kvalitet möter",
+    "headlineHighlight": " oöverträffade ",
+    "headlineEnd": " servicestandarder",
+    "cta": "Visa produkter"
+  },
+  "MegaMenu": {
+    "menuText": "Meny",
+    "closeText": "Stäng",
+    "links": {
+      "home": "Hem",
+      "products": "Produkter",
+      "services": "Tjänster",
+      "about": "Om oss",
+      "sustainability": "Hållbarhet",
+      "contact": "Kontakta oss"
+    }
+  },
+  "Footer": {
+    "links": {
+      "products": "Produkter",
+      "services": "Tjänster",
+      "about": "Om oss",
+      "contact": "Kontakta oss",
+      "team": "Vårt team"
+    },
+    "copyright": "Copyright @Vyanzo {year}",
+    "aria": {
+      "scrollToTop": "Scrolla till toppen",
+      "whatsapp": "Kontakta via WhatsApp"
+    }
+  },
+  "MarqueeLogos": {
+    "title": "Certifieringar"
+  },
+  "BentoGrid": {
+    "subtitle": "Vyanzo-fördelen",
+    "titleStart": "Byggt för ",
+    "titleHighlight": "livstid",
+    "description": "Levererar oöverträffade gjutlösningar över hela världen med precision, kapacitet och tillförlitlighet sedan 2018.",
+    "quality": {
+      "title": "Oöverträffad kvalitet",
+      "description": "Konstruerat för perfektion i varje dimension och gjutning",
+      "stat": "99.9%",
+      "statLabel": "Felfri produktion"
+    },
+    "global": {
+      "title": "Global räckvidd",
+      "description": "Betjänar kunder i Belgien, Frankrike, Spanien, Italien, Österrike, Nederländerna, Storbritannien, USA och Kanada"
+    },
+    "volume": {
+      "title": "Årlig produktionsvolym",
+      "stat": "> 250,000",
+      "statLabel": " delar"
+    },
+    "presence": {
+      "title": "Global närvaro"
+    },
+    "compliance": {
+      "title": "Branschöverensstämmelse"
+    },
+    "contact": {
+      "title": "Kontakta försäljning",
+      "description": "Få skräddarsydda offerter"
+    }
+  },
+  "ProductSection": {
+    "subtitle": "Vad vi gjuter",
+    "titleStart": "Våra viktigaste ",
+    "titleHighlight": "produkter",
+    "description": "Premium gjutlösningar byggda för världens mest krävande infrastruktur.",
+    "viewAll": "Visa alla produkter",
+    "products": {
+      "manhole": "Brunnslock",
+      "siphons": "Sifoner",
+      "surfaceBoxes": "Ventilboxar"
+    }
+  },
+  "AboutSection": {
+    "subtitle": "Om Vyanzo",
+    "titleStart": "Precisionsgjutet för världens ",
+    "titleHighlight": "mest krävande",
+    "titleEnd": " infrastruktur",
+    "description": "Grundat 2018 tillverkar Vyanzo brunnslock, galler och kommunala gjutprodukter som levereras över hela Europa och bortom. Kvalitet, service och tillförlitlighet är inte bara löften – de är standard.",
+    "cta": "Möt teamet"
+  },
+  "EnvironmentSection": {
+    "subtitle": "Miljöansvar",
+    "titleStart": "Renare gjutning börjar i ",
+    "titleHighlight": "ugnen",
+    "titleEnd": "",
+    "description": "Ingen kol. Elektriska induktionsugnar. Solenergi på taket. Varje anläggning är byggd för att minimera miljöpåverkan – inte bara uppfylla standarder utan sätta dem.",
+    "badges": {
+      "coal": "Ingen kolsmältning",
+      "solar": "Solenergidriven",
+      "iso": "ISO 14001-certifierad"
+    },
+    "cta": "Läs mer"
+  },
+  "ServicesSection": {
+    "subtitle": "Våra tjänster",
+    "titleStart": "Upptäck vad vi kan ",
+    "titleHighlight": "göra för dig",
+    "cta": "Läs mer",
+    "services": {
+      "productDevelopment": "Produktutveckling",
+      "productionExcellence": "A-Ö Produktionskompetens",
+      "customPackaging": "Anpassad förpackning &\nleveransalternativ",
+      "productCertification": "Produktcertifiering"
+    }
+  },
+  "ContactSection": {
+    "subtitle": "Ditt nästa steg",
+    "titleStart": "Skicka ett meddelande, ",
+    "titleHighlight": "så tar vi det därifrån",
+    "description": "Skräddarsydda offerter, tekniska specifikationer eller bulkbeställningar — fyll i detaljerna så återkommer vårt team inom 24 timmar.",
+    "headquarters": {
+      "title": "Huvudkontor",
+      "address": "Botermelkbaan 51 <br />2900 Schoten <br />Belgien"
+    },
+    "warehouse": {
+      "title": "Lager",
+      "address": "Kluizenmeersen 10 <br />9170 Sint-Gillis-Waas <br />Belgien"
+    },
+    "email": {
+      "title": "Maila oss",
+      "value": "info@vyanzo.be"
+    },
+    "phone": {
+      "title": "Ring / WhatsApp",
+      "value": "+ 32 475 26 47 52"
+    },
+    "distribution": {
+      "title": "Belgisk distribution och lager",
+      "value": "VIATEQ bv"
+    },
+    "formTitle": "Skicka oss ett meddelande"
+  },
+  "AboutPage": {
+    "hero": {
+      "subtitle": "Företagsprofil",
+      "titleStart": "Om ",
+      "titleHighlight": "Vyanzo",
+      "titleEnd": ".",
+      "description": "Upptäck vårt sortiment av noggrant designade och tillverkade produkter. Vyanzo levererar gjutgods av högsta kvalitet till de mest krävande kunderna — konsekvent kvalitet och service är avgörande i allt vi gör."
+    },
+    "philosophy": {
+      "title": "Kvalitet, service och tillförlitlighet med kompromisslös konsekvens.",
+      "description": "Sedan starten 2018 har Vyanzo utvecklats från en OEM-leverantör till en ledande tillverkare av egna brunnslock, galler och andra kommunala gjutprodukter som nu levereras över hela Europa."
+    },
+    "service": {
+      "title": "Helhetsservice",
+      "description": "Vi erbjuder kompletta tjänster till kunder över hela världen som delar vår affärsfilosofi: Kvalitet, service och tillförlitlighet till rätt pris — med kompromisslös konsekvens. Genom att hantera produktion, kvalitetssäkring och logistik internt säkerställer Vyanzo en sömlös upplevelse för sina kunder.",
+      "badge": {
+        "title": "COPRO BENOR-certifierad",
+        "description": "För den belgiska marknaden, distribuerad via Viateq"
+      }
+    }
+  },
+  "ContactPage": {
+    "hero": {
+      "subtitle": "Starta en konversation",
+      "titleStart": "Vi ",
+      "titleHighlight": "lyssnar",
+      "titleEnd": "",
+      "description": "Har du ett projekt i åtanke? Låt oss hitta rätt lösning tillsammans."
+    }
+  },
+  "ServicesPage": {
+    "hero": {
+      "subtitle": "Tjänsteportfölj",
+      "titleStart": "Excellens smidd,",
+      "titleHighlight": "service fulländad.",
+      "description": "Vyanzo erbjuder ett omfattande utbud av tjänster för att effektivisera gjut- och tillverkningsprocessen – från första design till slutlig leverans."
+    },
+    "tabs": {
+      "title": "Våra tjänster"
+    }
+  },
+  "SustainabilityPage": {
+    "hero": {
+      "subtitle": "MILJÖANSVAR",
+      "titleStart": "Renare processer, ",
+      "titleHighlight": "grönare gjutning.",
+      "description": "Hållbarhet integrerad i varje ugn, anläggning och produkt — från råmaterial till slutleverans."
+    }
+  },
+  "ProductsPage": {
+    "hero": {
+      "subtitle": "Våra produkter",
+      "titleStart": "Konstruerat för",
+      "titleHighlight": "infrastruktur.",
+      "description": "Upptäck vårt kompletta sortiment av certifierade kommunala gjutprodukter, designade för extrem hållbarhet och enkel installation."
+    },
+    "grid": {
+      "sidebar": {
+        "geoLocation": "Geografisk plats",
+        "certification": "Certifiering",
+        "category": "Kategori",
+        "resetFilters": "Återställ filter"
+      },
+      "topBar": {
+        "showing": "Visar ",
+        "of": " av ",
+        "products": " produkter",
+        "sortBy": "Sortera efter:",
+        "sortOptions": {
+          "defaultOrder": "Standardordning",
+          "nameAsc": "Namn: A → Ö",
+          "nameDesc": "Namn: Ö → A"
+        }
+      },
+      "card": {
+        "viewSpecs": "Visa tekniska specifikationer"
+      },
+      "empty": {
+        "title": "Produkterna för Skandinavien är under utveckling.",
+        "description": "Justera dina filter för att hitta det du söker.",
+        "clearFilters": "Rensa filter"
+      }
+    }
+  }
+}

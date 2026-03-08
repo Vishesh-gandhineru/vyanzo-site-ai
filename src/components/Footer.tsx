@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Linkedin, ChevronUp } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 // We will use standard Svgs or Lucide icons for social.
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -25,6 +26,7 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [showScroll, setShowScroll] = useState(false);
+  const t = useTranslations("Footer");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -76,14 +78,14 @@ export default function Footer() {
               href="/products"
               className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity whitespace-nowrap"
             >
-              Products
+              {t("links.products")}
             </Link>
 
             <Link
               href="/services"
               className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity"
             >
-              Services
+              {t("links.services")}
             </Link>
           </div>
 
@@ -93,13 +95,13 @@ export default function Footer() {
               href="/about"
               className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity"
             >
-              About Us
+              {t("links.about")}
             </Link>
             <Link
               href="/contact"
               className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity"
             >
-              Contact Us
+              {t("links.contact")}
             </Link>
           </div>
 
@@ -109,7 +111,7 @@ export default function Footer() {
               href="/about/#team"
               className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity"
             >
-              Our Team
+              {t("links.team")}
             </Link>
           </div>
         </div>
@@ -117,7 +119,7 @@ export default function Footer() {
         {/* Bottom Right Copyright */}
         <div className="absolute bottom-8 right-8 md:bottom-12 md:right-16">
           <p className="text-bg-dark font-sans font-medium text-sm md:text-base">
-            Copyright @Vyanzo {currentYear}
+            {t("copyright", { year: currentYear })}
           </p>
         </div>
       </div>
@@ -132,7 +134,7 @@ export default function Footer() {
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10 pointer-events-none"
           } hover:-translate-y-1 hover:bg-black`}
-          aria-label="Scroll to top"
+          aria-label={t("aria.scrollToTop")}
         >
           <ChevronUp className="w-6 h-6" />
         </button>
@@ -143,7 +145,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 text-white rounded-full flex items-center justify-center shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(37,211,102,0.5)] transition-all duration-300 relative overflow-hidden group"
-          aria-label="Contact on WhatsApp"
+          aria-label={t("aria.whatsapp")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

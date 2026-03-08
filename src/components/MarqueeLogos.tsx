@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 // Logos from public/certified
 const logos = [
@@ -11,17 +12,18 @@ const logos = [
   "/certified/iso-14001-2015.webp",
   "/certified/logo1-default.png",
   "/certified/MPA_Bremen_logo.png",
-
 ];
 
 // Combine to create an infinite loop array
 const infiniteLogos = [...logos, ...logos, ...logos, ...logos];
 
 export default function MarqueeLogos() {
+  const t = useTranslations("MarqueeLogos");
+
   return (
     <section className="w-full section-s gap-xs bg-text-dark-bg border-b border-brand-ash/20 overflow-hidden flex flex-col items-center">
       <div className="text-lg font-sans font-semibold tracking-widest text-text-light-bg/40 uppercase mb-8">
-        Certifications
+        {t("title")}
       </div>
 
       {/* The mask-image creates a fade out effect on the left and right edges */}

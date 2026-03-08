@@ -16,196 +16,195 @@ import {
   Settings2,
   CheckCircle2,
 } from "lucide-react";
-
-// Service Data
-const services = [
-  {
-    id: "development",
-    title: "Product Development",
-    icon: <PenTool className="w-6 h-6" />,
-    description:
-      "Vyanzo provides a high-level engineering resource to help clients design or optimize products.",
-    highlights: [
-      { label: "Expertise", value: "Access to a team of over 10 engineers." },
-      {
-        label: "Experience",
-        value: "A combined 150 years of experience in the casting industry.",
-      },
-      {
-        label: "Focus",
-        value:
-          "Designing and optimizing products to specifically suit customer needs and technical requirements.",
-      },
-    ],
-  },
-  {
-    id: "production",
-    title: "A-Z Production Excellence",
-    icon: <Factory className="w-6 h-6" />,
-    description:
-      "Vyanzo manages the entire manufacturing lifecycle, ensuring quality at every stage according to specific client requirements.",
-    highlights: [
-      {
-        label: "Pattern Making",
-        value: "Creating the initial molds and patterns.",
-      },
-      {
-        label: "Sampling",
-        value: "Producing prototypes and samples for approval.",
-      },
-      {
-        label: "Quality Control",
-        value: "Rigorous testing and inspection throughout the production run.",
-      },
-      {
-        label: "Finishing & Coating",
-        value:
-          "Offering various painting and coating options, including: Water-based paint, KTL (E-coating), Epoxy coatings.",
-      },
-      {
-        label: "Assembly",
-        value: "Final assembly of components before shipment.",
-      },
-    ],
-  },
-  {
-    id: "logistics",
-    title: "Custom Packaging & Delivery Options",
-    icon: <Package className="w-6 h-6" />,
-    description:
-      "Clients have full control over how their products are protected and branded during transit.",
-    highlights: [
-      {
-        label: "Packaging Specs",
-        value: "Customized number of items per pallet or box.",
-      },
-      {
-        label: "Protection",
-        value: "Options for plastic wrap or specialized shielding.",
-      },
-      { label: "Branding", value: "Custom design and content for labels." },
-      {
-        label: "Logistics",
-        value:
-          "Shipments scheduled according to client timelines, utilizing 20-foot and 40-foot containers.",
-      },
-    ],
-  },
-  {
-    id: "certification",
-    title: "Product Certification",
-    icon: <ShieldCheck className="w-6 h-6" />,
-    description:
-      "Vyanzo offers specialized assistance with international certification processes to ensure products meet global safety and quality standards.",
-    highlights: [
-      {
-        label: "",
-        value: "Copro Certification",
-        icon: (
-          <img
-            src="/certified/COPRO.svg"
-            alt="Copro"
-            className="h-16 w-auto object-contain mx-auto"
-          />
-        ),
-      },
-      {
-        label: "",
-        value: "BENOR Certification",
-        icon: (
-          <img
-            src="/certified/BENOR.png"
-            alt="BENOR"
-            className="h-16 w-auto object-contain mx-auto"
-          />
-        ),
-      },
-      {
-        label: "EN124-2",
-        value: "EN124-2 Certification",
-        icon: <ShieldCheck className="w-6 h-6" />,
-      },
-      {
-        label: "",
-        value: "MPA Bremen Certification",
-        icon: (
-          <img
-            src="/certified/MPA-Bremen-logo.webp"
-            alt="MPA Bremen"
-            className="h-16 w-auto object-contain mx-auto"
-          />
-        ),
-      },
-      {
-        label: "",
-        value: "ICMQ Certification",
-        icon: (
-          <img
-            src="/certified/logo1-default.png"
-            alt="ICMQ"
-            className="h-16 w-auto object-contain mx-auto"
-          />
-        ),
-      },
-    ],
-  },
-  {
-    id: "foundry-certifications",
-    title: "Foundry Certifications",
-    icon: <ShieldCheck className="w-6 h-6" />,
-    description:
-      "Vyanzo offers specialized assistance with international certification processes to ensure products meet global safety and quality standards.",
-    highlights: [
-      {
-        label: "",
-        value: "ISO 9001 Certification",
-        icon: (
-          <img
-            src="/certified/ISO_9001-2015.svg"
-            alt="ISO 9001"
-            className="h-[130px] p-[6px] w-auto object-contain mx-auto"
-          />
-        ),
-      },
-      {
-        label: "",
-        value: "ISO 14001 Certification",
-        icon: (
-          <img
-            src="/certified/iso-14001-2015.webp"
-            alt="ISO 14001"
-            className="h-[130px] p-[8px] w-auto object-contain mx-auto"
-          />
-        ),
-      },
-      {
-        label: "",
-        value: "ISO 45001 Certification",
-        icon: (
-          <img
-            src="/certified/ISO-45001-2018.png"
-            alt="ISO 45001"
-            className="h-[130px] w-auto object-contain mx-auto"
-          />
-        ),
-      },
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function ServicesPage() {
-  // Service strings extracted directly on outer component.
+  const t = useTranslations("ServicesPage");
+
+  // Service Data
+  const services = [
+    {
+      id: "development",
+      title: t("servicesList.development.title"),
+      icon: <PenTool className="w-6 h-6" />,
+      description: t("servicesList.development.description"),
+      highlights: [
+        {
+          label: t("servicesList.development.highlights.expertise.label"),
+          value: t("servicesList.development.highlights.expertise.value"),
+        },
+        {
+          label: t("servicesList.development.highlights.experience.label"),
+          value: t("servicesList.development.highlights.experience.value"),
+        },
+        {
+          label: t("servicesList.development.highlights.focus.label"),
+          value: t("servicesList.development.highlights.focus.value"),
+        },
+      ],
+    },
+    {
+      id: "production",
+      title: t("servicesList.production.title"),
+      icon: <Factory className="w-6 h-6" />,
+      description: t("servicesList.production.description"),
+      highlights: [
+        {
+          label: t("servicesList.production.highlights.pattern.label"),
+          value: t("servicesList.production.highlights.pattern.value"),
+        },
+        {
+          label: t("servicesList.production.highlights.sampling.label"),
+          value: t("servicesList.production.highlights.sampling.value"),
+        },
+        {
+          label: t("servicesList.production.highlights.quality.label"),
+          value: t("servicesList.production.highlights.quality.value"),
+        },
+        {
+          label: t("servicesList.production.highlights.finishing.label"),
+          value: t("servicesList.production.highlights.finishing.value"),
+        },
+        {
+          label: t("servicesList.production.highlights.assembly.label"),
+          value: t("servicesList.production.highlights.assembly.value"),
+        },
+      ],
+    },
+    {
+      id: "logistics",
+      title: t("servicesList.logistics.title"),
+      icon: <Package className="w-6 h-6" />,
+      description: t("servicesList.logistics.description"),
+      highlights: [
+        {
+          label: t("servicesList.logistics.highlights.packaging.label"),
+          value: t("servicesList.logistics.highlights.packaging.value"),
+        },
+        {
+          label: t("servicesList.logistics.highlights.protection.label"),
+          value: t("servicesList.logistics.highlights.protection.value"),
+        },
+        {
+          label: t("servicesList.logistics.highlights.branding.label"),
+          value: t("servicesList.logistics.highlights.branding.value"),
+        },
+        {
+          label: t("servicesList.logistics.highlights.schedule.label"),
+          value: t("servicesList.logistics.highlights.schedule.value"),
+        },
+      ],
+    },
+    {
+      id: "certification",
+      title: t("servicesList.certification.title"),
+      icon: <ShieldCheck className="w-6 h-6" />,
+      description: t("servicesList.certification.description"),
+      highlights: [
+        {
+          label: t("servicesList.certification.highlights.copro.label"),
+          value: t("servicesList.certification.highlights.copro.value"),
+          icon: (
+            <img
+              src="/certified/COPRO.svg"
+              alt="Copro"
+              className="h-16 w-auto object-contain mx-auto"
+            />
+          ),
+        },
+        {
+          label: t("servicesList.certification.highlights.benor.label"),
+          value: t("servicesList.certification.highlights.benor.value"),
+          icon: (
+            <img
+              src="/certified/BENOR.png"
+              alt="BENOR"
+              className="h-16 w-auto object-contain mx-auto"
+            />
+          ),
+        },
+        {
+          label: t("servicesList.certification.highlights.en124.label"),
+          value: t("servicesList.certification.highlights.en124.value"),
+          icon: <ShieldCheck className="w-6 h-6" />,
+        },
+        {
+          label: t("servicesList.certification.highlights.mpa.label"),
+          value: t("servicesList.certification.highlights.mpa.value"),
+          icon: (
+            <img
+              src="/certified/MPA-Bremen-logo.webp"
+              alt="MPA Bremen"
+              className="h-16 w-auto object-contain mx-auto"
+            />
+          ),
+        },
+        {
+          label: t("servicesList.certification.highlights.icmq.label"),
+          value: t("servicesList.certification.highlights.icmq.value"),
+          icon: (
+            <img
+              src="/certified/logo1-default.png"
+              alt="ICMQ"
+              className="h-16 w-auto object-contain mx-auto"
+            />
+          ),
+        },
+      ],
+    },
+    {
+      id: "foundry-certifications",
+      title: t("servicesList.foundry.title"),
+      icon: <ShieldCheck className="w-6 h-6" />,
+      description: t("servicesList.foundry.description"),
+      highlights: [
+        {
+          label: t("servicesList.foundry.highlights.iso9001.label"),
+          value: t("servicesList.foundry.highlights.iso9001.value"),
+          icon: (
+            <img
+              src="/certified/ISO_9001-2015.svg"
+              alt="ISO 9001"
+              className="h-[130px] p-[6px] w-auto object-contain mx-auto"
+            />
+          ),
+        },
+        {
+          label: t("servicesList.foundry.highlights.iso14001.label"),
+          value: t("servicesList.foundry.highlights.iso14001.value"),
+          icon: (
+            <img
+              src="/certified/iso-14001-2015.webp"
+              alt="ISO 14001"
+              className="h-[130px] p-[8px] w-auto object-contain mx-auto"
+            />
+          ),
+        },
+        {
+          label: t("servicesList.foundry.highlights.iso45001.label"),
+          value: t("servicesList.foundry.highlights.iso45001.value"),
+          icon: (
+            <img
+              src="/certified/ISO-45001-2018.png"
+              alt="ISO 45001"
+              className="h-[130px] w-auto object-contain mx-auto"
+            />
+          ),
+        },
+      ],
+    },
+  ];
 
   const productCategories = [
     {
-      name: "Manhole & Hydraulic Covers",
+      name: t("categories.manhole"),
       icon: <CircleDot className="w-8 h-8" />,
     },
     {
-      name: "Surface Boxes",
+      name: t("categories.surfaceBoxes"),
       icon: <Settings2 className="w-8 h-8" />,
     },
-    { name: "Siphons", icon: <Wrench className="w-8 h-8" /> },
+    { name: t("categories.siphons"), icon: <Wrench className="w-8 h-8" /> },
   ];
 
   const [activeTab, setActiveTab] = useState(services[0].id);
@@ -225,19 +224,17 @@ export default function ServicesPage() {
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 text-brand-primary text-sm font-sans font-bold tracking-widest uppercase mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
-                Services Portfolio
+                {t("hero.subtitle")}
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight mb-6 leading-[1.1] ">
-                Excellence Forged,
+                {t("hero.titleStart")}
                 <br />
                 <span className="text-brand-primary italic">
-                  Service Perfected.
+                  {t("hero.titleHighlight")}
                 </span>
               </h1>
               <p className="text-brand-ash/80 text-body-xl font-sans font-normal max-w-2xl leading-relaxed">
-                Vyanzo offers a comprehensive suite of services designed to
-                streamline the casting and manufacturing process, from initial
-                design to final delivery.
+                {t("hero.description")}
               </p>
             </div>
           </div>
@@ -251,7 +248,7 @@ export default function ServicesPage() {
             {/* Sidebar Navigation */}
             <div className="lg:w-1/3 shrink-0 flex flex-col gap-4 sticky top-32 h-fit">
               <h3 className="text-section-h2 font-serif text-bg-dark mb-4">
-                {"Our Services"}
+                {t("tabs.title")}
               </h3>
               {services.map((service) => {
                 const isActive = activeTab === service.id;
@@ -373,11 +370,10 @@ export default function ServicesPage() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <h2 className="text-section-h2 font-serif font-bold text-bg-dark mb-6">
-              Other Product Categories Served
+              {t("categories.title")}
             </h2>
             <p className="text-body-xl text-text-light-bg/70">
-              While providing these services, Vyanzo focuses on the following
-              primary product lines:
+              {t("categories.description")}
             </p>
           </motion.div>
 

@@ -1,0 +1,203 @@
+{
+  "Hero": {
+    "headlineStart": "Wo hochwertige Gussprodukte auf",
+    "headlineHighlight": " unübertroffene ",
+    "headlineEnd": " Servicestandards treffen",
+    "cta": "Produkte ansehen"
+  },
+  "MegaMenu": {
+    "menuText": "Menü",
+    "closeText": "Schließen",
+    "links": {
+      "home": "Startseite",
+      "products": "Produkte",
+      "services": "Dienstleistungen",
+      "about": "Über uns",
+      "sustainability": "Nachhaltigkeit",
+      "contact": "Kontakt"
+    }
+  },
+  "Footer": {
+    "links": {
+      "products": "Produkte",
+      "services": "Dienstleistungen",
+      "about": "Über uns",
+      "contact": "Kontakt",
+      "team": "Unser Team"
+    },
+    "copyright": "Copyright @Vyanzo {year}",
+    "aria": {
+      "scrollToTop": "Nach oben scrollen",
+      "whatsapp": "Über WhatsApp kontaktieren"
+    }
+  },
+  "MarqueeLogos": {
+    "title": "Zertifizierungen"
+  },
+  "BentoGrid": {
+    "subtitle": "Der Vyanzo-Vorteil",
+    "titleStart": "Gebaut für ",
+    "titleHighlight": "ein Leben lang",
+    "description": "Seit 2018 liefern wir weltweit unvergleichliche Gusslösungen mit Präzision, Skalierbarkeit und Zuverlässigkeit.",
+    "quality": {
+      "title": "Unübertroffene Qualität",
+      "description": "Entwickelt für Perfektion in jeder Dimension und jedem Guss",
+      "stat": "99.9%",
+      "statLabel": "Fehlerfreie Produktion"
+    },
+    "global": {
+      "title": "Globale Reichweite",
+      "description": "Wir beliefern Kunden in Belgien, Frankreich, Spanien, Italien, Österreich, den Niederlanden, Großbritannien, den USA und Kanada"
+    },
+    "volume": {
+      "title": "Jährliches Produktionsvolumen",
+      "stat": "> 250,000",
+      "statLabel": " Teile"
+    },
+    "presence": {
+      "title": "Globale Präsenz"
+    },
+    "compliance": {
+      "title": "Industriekonformität"
+    },
+    "contact": {
+      "title": "Vertrieb kontaktieren",
+      "description": "Individuelle Angebote anfordern"
+    }
+  },
+  "ProductSection": {
+    "subtitle": "Was wir gießen",
+    "titleStart": "Unsere ",
+    "titleHighlight": "Kernprodukte",
+    "description": "Premium-Gusslösungen für die anspruchsvollsten Infrastrukturen der Welt.",
+    "viewAll": "Alle Produkte ansehen",
+    "products": {
+      "manhole": "Schachtabdeckungen",
+      "siphons": "Siphons",
+      "surfaceBoxes": "Oberflächenkästen"
+    }
+  },
+  "AboutSection": {
+    "subtitle": "Über Vyanzo",
+    "titleStart": "Präzisionsguss für die ",
+    "titleHighlight": "anspruchsvollsten",
+    "titleEnd": " Infrastrukturen der Welt",
+    "description": "Gegründet im Jahr 2018 stellt Vyanzo Schachtabdeckungen, Roste und kommunale Gussprodukte her, die in ganz Europa und darüber hinaus geliefert werden. Qualität, Service und Zuverlässigkeit sind nicht nur Versprechen – sie sind unser Standard.",
+    "cta": "Team kennenlernen"
+  },
+  "EnvironmentSection": {
+    "subtitle": "Umweltverantwortung",
+    "titleStart": "Sauberer Guss beginnt im ",
+    "titleHighlight": "Ofen",
+    "titleEnd": "",
+    "description": "Kein Kohleeinsatz. Elektrische Induktionsöfen. Solaranlagen auf den Dächern. Jede Anlage ist darauf ausgelegt, den ökologischen Fußabdruck zu minimieren – nicht nur Standards zu erfüllen, sondern neue zu setzen.",
+    "badges": {
+      "coal": "Keine Kohleschmelze",
+      "solar": "Solarbetrieben",
+      "iso": "ISO 14001 zertifiziert"
+    },
+    "cta": "Mehr erfahren"
+  },
+  "ServicesSection": {
+    "subtitle": "Unsere Dienstleistungen",
+    "titleStart": "Entdecken Sie, was wir ",
+    "titleHighlight": "für Sie tun können",
+    "cta": "Mehr erfahren",
+    "services": {
+      "productDevelopment": "Produktentwicklung",
+      "productionExcellence": "Produktionsexzellenz von A bis Z",
+      "customPackaging": "Individuelle Verpackungs-\nund Lieferoptionen",
+      "productCertification": "Produktzertifizierung"
+    }
+  },
+  "ContactSection": {
+    "subtitle": "Ihr nächster Schritt",
+    "titleStart": "Schreiben Sie uns, ",
+    "titleHighlight": "wir kümmern uns um den Rest",
+    "description": "Individuelle Angebote, technische Spezifikationen oder Großbestellungen — füllen Sie die Details aus und unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.",
+    "headquarters": {
+      "title": "Hauptsitz",
+      "address": "Botermelkbaan 51 <br />2900 Schoten <br />Belgien"
+    },
+    "warehouse": {
+      "title": "Lager",
+      "address": "Kluizenmeersen 10 <br />9170 Sint-Gillis-Waas <br />Belgien"
+    },
+    "email": {
+      "title": "E-Mail senden",
+      "value": "info@vyanzo.be"
+    },
+    "phone": {
+      "title": "Anrufen / WhatsApp",
+      "value": "+ 32 475 26 47 52"
+    },
+    "distribution": {
+      "title": "Belgischer Vertrieb und Lager",
+      "value": "VIATEQ bv"
+    },
+    "formTitle": "Senden Sie uns eine Nachricht"
+  },
+  "ContactPage": {
+    "hero": {
+      "subtitle": "Ein Gespräch beginnen",
+      "titleStart": "Wir ",
+      "titleHighlight": "hören zu",
+      "titleEnd": "",
+      "description": "Haben Sie ein Projekt im Kopf? Lassen Sie uns gemeinsam die richtige Lösung finden."
+    }
+  },
+  "ServicesPage": {
+    "hero": {
+      "subtitle": "Dienstleistungsportfolio",
+      "titleStart": "Exzellenz geschmiedet,",
+      "titleHighlight": "Service perfektioniert.",
+      "description": "Vyanzo bietet ein umfassendes Dienstleistungsportfolio, das den Guss- und Fertigungsprozess von der ersten Konstruktion bis zur endgültigen Lieferung optimiert."
+    },
+    "tabs": {
+      "title": "Unsere Dienstleistungen"
+    }
+  },
+  "SustainabilityPage": {
+    "hero": {
+      "subtitle": "UMWELTVERANTWORTUNG",
+      "titleStart": "Sauberere Prozesse, ",
+      "titleHighlight": "grünerer Guss.",
+      "description": "Nachhaltigkeit ist in jeden Ofen, jede Anlage und jedes Produkt integriert — vom Rohmaterial bis zur endgültigen Lieferung."
+    }
+  },
+  "ProductsPage": {
+    "hero": {
+      "subtitle": "Unsere Produkte",
+      "titleStart": "Entwickelt für",
+      "titleHighlight": "Infrastruktur.",
+      "description": "Entdecken Sie unser vollständiges Sortiment zertifizierter kommunaler Gussprodukte, entwickelt für extreme Haltbarkeit und einfache Installation."
+    },
+    "grid": {
+      "sidebar": {
+        "geoLocation": "Geografische Lage",
+        "certification": "Zertifizierung",
+        "category": "Kategorie",
+        "resetFilters": "Filter zurücksetzen"
+      },
+      "topBar": {
+        "showing": "Anzeigen ",
+        "of": " von ",
+        "products": " Produkten",
+        "sortBy": "Sortieren nach:",
+        "sortOptions": {
+          "defaultOrder": "Standardreihenfolge",
+          "nameAsc": "Name: A → Z",
+          "nameDesc": "Name: Z → A"
+        }
+      },
+      "card": {
+        "viewSpecs": "Technische Daten anzeigen"
+      },
+      "empty": {
+        "title": "Die Produkte für Skandinavien befinden sich derzeit in Entwicklung.",
+        "description": "Versuchen Sie, Ihre Filter anzupassen, um das Gesuchte zu finden.",
+        "clearFilters": "Filter löschen"
+      }
+    }
+  }
+}

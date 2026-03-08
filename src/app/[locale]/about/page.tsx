@@ -16,8 +16,11 @@ import {
   CircleDot,
   Settings2,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function AboutPage() {
+  const t = useTranslations("AboutPage");
+
   return (
     <main className="min-h-screen bg-[#f8f9fc] font-sans flex flex-col">
       <GlobalHeader />
@@ -33,16 +36,17 @@ export default function AboutPage() {
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 text-brand-primary text-sm font-sans font-bold tracking-widest uppercase mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
-                Company Profile
+                {t("hero.subtitle")}
               </div>
               <h1 className="text-hero-inner font-serif font-bold tracking-tight mb-6">
-                About <span className="text-brand-primary italic">Vyanzo</span>.
+                {t("hero.titleStart")}
+                <span className="text-brand-primary italic">
+                  {t("hero.titleHighlight")}
+                </span>
+                {t("hero.titleEnd")}
               </h1>
               <p className="text-brand-ash/80 text-body-xl  font-sans font-normal max-w-2xl leading-relaxed">
-                Discover our range of meticulously designed and manufactured
-                products. Vyanzo delivers top-quality castings to the most
-                demanding customers — consistent quality and service level are
-                paramount to what we do.
+                {t("hero.description")}
               </p>
             </div>
           </div>
@@ -60,17 +64,14 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="flex-1 w-full"
             >
-              <div className="w-full h-auto md:aspect-[4/3] bg-bg-dark rounded-[2.5rem] p-8 sm:p-10 md:p-12 relative overflow-hidden flex flex-col justify-center shadow-2xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-transparent mix-blend-overlay"></div>
+              <div className="w-full h-auto md:aspect-4/3 bg-bg-dark rounded-[2.5rem] p-8 sm:p-10 md:p-12 relative overflow-hidden flex flex-col justify-center shadow-2xl">
+                <div className="absolute inset-0 bg-linear-to-br from-brand-primary/20 to-transparent mix-blend-overlay"></div>
                 <Globe className="w-16 h-16 text-brand-primary mb-6 md:mb-8 shrink-0" />
                 <h3 className="text-3xl md:text-section-h3 font-serif font-bold text-white mb-4 md:mb-6 leading-tight">
-                  Quality, Service & Reliability with relentless consistency.
+                  {t("philosophy.title")}
                 </h3>
                 <p className="text-text-dark-bg/80 text-lg md:text-body-xl">
-                  Since its inception in 2018, Vyanzo has evolved from an OEM
-                  supplier to become a leading manufacturer of its own range of
-                  Manhole Covers, Grates and other municipal casting products
-                  now supplied across Europe.
+                  {t("philosophy.description")}
                 </p>
               </div>
             </motion.div>
@@ -83,14 +84,10 @@ export default function AboutPage() {
               className="flex-1"
             >
               <h2 className="text-section-h2 font-serif font-bold text-bg-dark mb-6">
-                End-to-End Service
+                {t("service.title")}
               </h2>
               <p className="text-body-lg text-text-light-bg/70 leading-relaxed mb-8">
-                We offer end-to-end services to customers around the world who
-                share our business philosophy: Quality, Service & Reliability at
-                a correct price — and that with relentless consistency. By
-                managing production, quality assurance, and logistics in-house,
-                Vyanzo ensures a seamless experience for its clients.
+                {t("service.description")}
               </p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-brand-primary/10 flex items-center justify-center border border-brand-primary/20">
@@ -98,10 +95,10 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h4 className="font-bold text-bg-dark">
-                    {"COPRO BENOR Certified"}
+                    {t("service.badge.title")}
                   </h4>
                   <p className="text-sm text-text-light-bg/60">
-                    {"For the Belgian market, distributed via Viateq"}
+                    {t("service.badge.description")}
                   </p>
                 </div>
               </div>
@@ -112,7 +109,7 @@ export default function AboutPage() {
 
       {/* Key Offerings & Products */}
       <section className="section-xl bg-text-dark-bg text-bg-dark relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-primary to-transparent opacity-20" />
+        <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-brand-primary to-transparent opacity-20" />
         <div className="max-w-[1400px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -121,10 +118,11 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="mb-16 text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-section-h2 font-serif mb-6">Key Offerings</h2>
+            <h2 className="text-section-h2 font-serif mb-6">
+              {t("offerings.title")}
+            </h2>
             <p className="text-body-xl text-text-dark-bg/70">
-              Vyanzo is a leading supplier of premium casting products,
-              engineered for scale and durability.
+              {t("offerings.description")}
             </p>
           </motion.div>
 
@@ -141,11 +139,10 @@ export default function AboutPage() {
                 <CircleDot className="w-8 h-8" />
               </div>
               <h4 className="font-bold text-bg-dark font-sans text-body-lg">
-                Manhole Covers
+                {t("offerings.manhole.title")}
               </h4>
               <p className="text-body-lg text-text-light-bg/70 leading-relaxed">
-                Heavy-duty, robust manhole cover solutions engineered for high
-                traffic and demanding infrastructural applications.
+                {t("offerings.manhole.description")}
               </p>
             </motion.div>
 
@@ -161,11 +158,10 @@ export default function AboutPage() {
                 <Wrench className="w-8 h-8" />
               </div>
               <h4 className="font-bold text-bg-dark font-sans text-body-lg">
-                Siphons
+                {t("offerings.siphons.title")}
               </h4>
               <p className="text-body-lg text-text-light-bg/70 leading-relaxed">
-                Precision-cast siphon fittings designed to strict European
-                standards for reliable drainage and plumbing systems.
+                {t("offerings.siphons.description")}
               </p>
             </motion.div>
 
@@ -181,11 +177,10 @@ export default function AboutPage() {
                 <Settings2 className="w-8 h-8" />
               </div>
               <h4 className="font-bold text-bg-dark font-sans text-body-lg">
-                Surface Boxes
+                {t("offerings.surfaceBoxes.title")}
               </h4>
               <p className="text-body-lg text-text-light-bg/70 leading-relaxed">
-                Durable cast iron surface boxes built for valve access and
-                utility protection in municipal and industrial environments.
+                {t("offerings.surfaceBoxes.description")}
               </p>
             </motion.div>
           </div>
@@ -198,11 +193,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-section-h2 font-serif  text-bg-dark mb-6">
-                The Vyanzo Advantage
+                {t("advantage.title")}
               </h2>
               <p className="text-body-lg text-text-light-bg/70 mb-12">
-                A relentless focus on quality, scale, and sustainable
-                production.
+                {t("advantage.description")}
               </p>
 
               <div className="flex flex-col gap-8">
@@ -214,12 +208,10 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h4 className="text-card-title font-bold text-bg-dark mb-2">
-                      State-of-the-Art Facilities
+                      {t("advantage.facilities.title")}
                     </h4>
                     <p className="text-text-light-bg/70 text-body-lg leading-relaxed">
-                      We have continuously upgraded our production facilities
-                      with the latest machines and technology, always
-                      considering the environment and energy efficiency.
+                      {t("advantage.facilities.description")}
                     </p>
                   </div>
                 </div>
@@ -232,12 +224,10 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h4 className="text-card-title font-bold text-bg-dark mb-2">
-                      Sustainable Manufacturing
+                      {t("advantage.sustainable.title")}
                     </h4>
                     <p className="text-text-light-bg/70 text-body-lg leading-relaxed">
-                      We don't melt with coal — we use the latest electrical
-                      induction furnaces, massively reducing our environmental
-                      impact.
+                      {t("advantage.sustainable.description")}
                     </p>
                   </div>
                 </div>
@@ -250,12 +240,10 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h4 className="text-card-title font-bold text-bg-dark mb-2">
-                      Built for the Future
+                      {t("advantage.future.title")}
                     </h4>
                     <p className="text-text-light-bg/70 text-body-lg leading-relaxed">
-                      Vyanzo's production facilities are state-of-the-art and
-                      ready to meet customer volume and quality demands for
-                      decades to come.
+                      {t("advantage.future.description")}
                     </p>
                   </div>
                 </div>
@@ -264,22 +252,28 @@ export default function AboutPage() {
 
             {/* Stats Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 content-center">
-              <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-brand-ash/10 hover:-translate-y-2 transition-transform duration-300">
+              <div className="bg-white rounded-4xl p-8 shadow-sm border border-brand-ash/10 hover:-translate-y-2 transition-transform duration-300">
                 <TrendingUp className="w-8 h-8 text-brand-primary mb-6" />
                 <div className="text-4xl font-serif font-bold text-bg-dark mb-2">
-                  +20<span className="text-brand-primary">%</span>
+                  {t("advantage.stats.growth.value")}
+                  <span className="text-brand-primary">
+                    {t("advantage.stats.growth.suffix")}
+                  </span>
                 </div>
                 <div className="text-text-light-bg/60 font-medium">
-                  {"Annual Growth Rate"}
+                  {t("advantage.stats.growth.label")}
                 </div>
               </div>
-              <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-brand-ash/10 hover:-translate-y-2 transition-transform duration-300 sm:translate-y-12">
+              <div className="bg-white rounded-4xl p-8 shadow-sm border border-brand-ash/10 hover:-translate-y-2 transition-transform duration-300 sm:translate-y-12">
                 <Building2 className="w-8 h-8 text-brand-primary mb-6" />
                 <div className="text-4xl font-serif font-bold text-bg-dark mb-2">
-                  250,000<span className="text-brand-primary">+</span>
+                  {t("advantage.stats.volume.value")}
+                  <span className="text-brand-primary">
+                    {t("advantage.stats.volume.suffix")}
+                  </span>
                 </div>
                 <div className="text-text-light-bg/60 font-medium">
-                  {"Tons of Castings Annually"}
+                  {t("advantage.stats.volume.label")}
                 </div>
               </div>
             </div>

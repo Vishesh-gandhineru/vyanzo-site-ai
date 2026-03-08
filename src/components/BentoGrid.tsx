@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import CobeGlobe from "./CobeGlobe";
 import {
   ArrowUpRight,
@@ -11,8 +11,11 @@ import {
   Factory,
   Cog,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function BentoGrid() {
+  const t = useTranslations("BentoGrid");
+
   return (
     <section className="w-full section-xl bg-[#f8f9fc] border-t border-black/5 font-sans">
       <div className="max-w-[1400px] mx-auto">
@@ -21,15 +24,16 @@ export default function BentoGrid() {
           <div className="max-w-2xl">
             <div className="text-body-lg font-serif font-semibold tracking-widest text-brand-primary  mb-6 flex items-center gap-4">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
-              The Vyanzo Edge
+              {t("subtitle")}
             </div>
             <h2 className="text-section-h2 font-serif font-bold text-text-light-bg tracking-tight mb-4">
-              Built for{" "}
-              <span className="text-brand-primary italic">lifetime</span>
+              {t("titleStart")}
+              <span className="text-brand-primary italic">
+                {t("titleHighlight")}
+              </span>
             </h2>
             <p className="text-body-xl text-bg-dark/60 font-sans font-normal">
-              Delivering unparalleled casting solutions across the globe with
-              precision, scale, and reliability since 2018.
+              {t("description")}
             </p>
           </div>
         </div>
@@ -44,18 +48,18 @@ export default function BentoGrid() {
                 strokeWidth={1.5}
               />
               <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg mb-3 tracking-tight">
-                Unsurpassed Quality
+                {t("quality.title")}
               </h3>
               <p className="text-text-light-bg/70 font-sans text-body-lg font-normal leading-relaxed">
-                Engineered for perfection in every dimension and pour
+                {t("quality.description")}
               </p>
             </div>
             <div className="mt-8 z-10">
               <div className="text-5xl lg:text-6xl font-sans font-bold text-brand-primary tracking-tighter">
-                99.9%
+                {t("quality.stat")}
               </div>
               <div className="text-sm text-brand-ash mt-2 capitalize tracking-normal font-sans font-normal">
-                Defect-Free Output
+                {t("quality.statLabel")}
               </div>
             </div>
           </div>
@@ -69,11 +73,10 @@ export default function BentoGrid() {
             />
             <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg z-10 tracking-tight">
               {" "}
-              Global Reach
+              {t("global.title")}
             </h3>
             <p className="text-text-light-bg/70 mt-3 z-10 text-body-lg font-sans font-normal leading-relaxed">
-              Serving customers in Belgium, France, Spain, Italy, Austria,
-              Holland, UK, USA, and Canada
+              {t("global.description")}
             </p>
           </div>
 
@@ -84,16 +87,15 @@ export default function BentoGrid() {
               strokeWidth={1.5}
             />
             <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg z-10 tracking-tight">
-              Annual Production Volume
+              {t("volume.title")}
             </h3>
             <div className="text-4xl lg:text-5xl font-sans mt-3 font-bold text-brand-primary tracking-tighter drop-shadow-[0_0_15px_rgba(110,176,255,0.4)]">
-              &gt; 250,000
+              {t("volume.stat")}
               <span
                 className="
             text-[12px] font-sans font-normal text-brand-ash tracking-wider"
               >
-                {" "}
-                Parts
+                {t("volume.statLabel")}
               </span>
             </div>
           </div>
@@ -104,7 +106,7 @@ export default function BentoGrid() {
             <div className="absolute top-8 left-8 right-8 z-20 flex justify-between items-start pointer-events-none">
               <div>
                 <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg tracking-tight">
-                  Global Presence
+                  {t("presence.title")}
                 </h3>
               </div>
             </div>
@@ -127,7 +129,7 @@ export default function BentoGrid() {
                 strokeWidth={1.5}
               />
               <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg mb-4 tracking-tight">
-                Industry Compliance
+                {t("compliance.title")}
               </h3>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 relative z-10 mt-8">
@@ -164,10 +166,10 @@ export default function BentoGrid() {
             </div>
             <div>
               <h3 className="text-2xl font-serif font-semibold group-hover:text-white transition-colors">
-                Contact Sales
+                {t("contact.title")}
               </h3>
               <p className="text-sm opacity-80 mt-1 font-sans font-normal">
-                Get custom quotes
+                {t("contact.description")}
               </p>
             </div>
           </Link>

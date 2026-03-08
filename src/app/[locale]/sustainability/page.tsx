@@ -5,8 +5,11 @@ import Footer from "@/components/Footer";
 import { Zap, Award, Factory, Cog } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function SustainabilityPage() {
+  const t = useTranslations("SustainabilityPage");
+
   return (
     <main className="min-h-screen bg-[#f8f9fc] font-sans flex flex-col">
       <GlobalHeader />
@@ -27,15 +30,16 @@ export default function SustainabilityPage() {
             >
               <div className="flex items-center gap-3 text-brand-primary text-sm font-sans font-bold tracking-widest uppercase mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
-                ENVIRONMENTAL RESPONSIBILITY
+                {t("hero.subtitle")}
               </div>
               <h1 className="text-hero-inner font-serif font-bold tracking-tight mb-6">
-                We Cleaner Processes,{" "}
-                <span className="text-brand-primary">Greener Casting.</span>
+                {t("hero.titleStart")}
+                <span className="text-brand-primary">
+                  {t("hero.titleHighlight")}
+                </span>
               </h1>
               <p className="text-brand-ash/80 text-lg md:text-xl font-sans font-normal max-w-2xl leading-relaxed">
-                Sustainability engineered into every furnace, facility, and
-                product — from raw material to final delivery.
+                {t("hero.description")}
               </p>
             </motion.div>
           </div>
@@ -56,12 +60,10 @@ export default function SustainabilityPage() {
               <div>
                 <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg tracking-tight mb-4 flex items-center gap-3">
                   <Award className="w-7 h-7 text-brand-primary shrink-0" />
-                  Certifications
+                  {t("cards.certifications.title")}
                 </h3>
                 <p className="text-text-light-bg/70 font-sans text-body-lg leading-relaxed max-w-3xl">
-                  Certified across environmental management, product quality,
-                  and workplace safety — globally recognized, independently
-                  audited.
+                  {t("cards.certifications.description")}
                 </p>
               </div>
 
@@ -101,13 +103,10 @@ export default function SustainabilityPage() {
             >
               <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg tracking-tight flex items-center gap-3">
                 <Zap className="w-7 h-7 text-brand-primary shrink-0" />
-                Zero-Coal Foundry
+                {t("cards.zeroCoal.title")}
               </h3>
               <p className="text-text-light-bg/70 font-sans text-body-lg leading-relaxed">
-                Electrical induction furnaces replace coal-fired melting.
-                Rooftop solar powers operations. Foundry sand is fully recycled
-                and reused. The result — drastically lower emissions without
-                compromising output.
+                {t("cards.zeroCoal.description")}
               </p>
             </motion.div>
 
@@ -121,14 +120,10 @@ export default function SustainabilityPage() {
             >
               <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg tracking-tight flex items-center gap-3">
                 <Factory className="w-7 h-7 text-brand-primary shrink-0" />
-                Environmental Policy
+                {t("cards.environmentalPolicy.title")}
               </h3>
               <p className="text-text-light-bg/70 font-sans text-body-lg leading-relaxed">
-                We don't just comply, we lead. Every facility is continuously
-                upgraded with eco-friendly machinery. Air, land, and water
-                pollution are actively prevented through stringent controls. All
-                environmental data is shared transparently with customers and
-                partners.
+                {t("cards.environmentalPolicy.description")}
               </p>
             </motion.div>
 
@@ -142,20 +137,20 @@ export default function SustainabilityPage() {
             >
               <h3 className="text-section-h3 font-serif font-semibold text-text-light-bg tracking-tight flex items-center gap-3">
                 <Cog className="w-7 h-7 text-brand-primary shrink-0" />
-                Standards & Declarations
+                {t("cards.standards.title")}
               </h3>
               <div className="flex flex-col gap-3 text-text-light-bg/80 font-sans text-body-lg">
                 <div>
-                  <span className="font-semibold">EN 15804 (EPD)</span> — full
-                  life-cycle transparency
+                  <span className="font-semibold">EN 15804 (EPD)</span>{" "}
+                  {t("cards.standards.en15804")}
                 </div>
                 <div>
-                  <span className="font-semibold">REACH & RoHS</span> — zero
-                  hazardous substances
+                  <span className="font-semibold">REACH & RoHS</span>{" "}
+                  {t("cards.standards.reach")}
                 </div>
                 <div>
-                  <span className="font-semibold">BS-EN-124</span> — European
-                  municipal casting compliance
+                  <span className="font-semibold">BS-EN-124</span>{" "}
+                  {t("cards.standards.bsEn124")}
                 </div>
               </div>
             </motion.div>

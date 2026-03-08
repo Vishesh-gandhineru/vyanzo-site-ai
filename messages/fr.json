@@ -1,0 +1,184 @@
+{
+  "Hero": {
+    "headlineStart": "Là où des moulages de qualité rencontrent",
+    "headlineHighlight": " des standards de service ",
+    "headlineEnd": " inégalés",
+    "cta": "Voir les produits"
+  },
+  "MegaMenu": {
+    "menuText": "Menu",
+    "closeText": "Fermer",
+    "links": {
+      "home": "Accueil",
+      "products": "Produits",
+      "services": "Services",
+      "about": "À propos",
+      "sustainability": "Durabilité",
+      "contact": "Contactez-nous"
+    }
+  },
+  "Footer": {
+    "links": {
+      "products": "Produits",
+      "services": "Services",
+      "about": "À propos",
+      "contact": "Contactez-nous",
+      "team": "Notre équipe"
+    },
+    "copyright": "Copyright @Vyanzo {year}",
+    "aria": {
+      "scrollToTop": "Remonter en haut",
+      "whatsapp": "Contacter sur WhatsApp"
+    }
+  },
+  "MarqueeLogos": {
+    "title": "Certifications"
+  },
+  "BentoGrid": {
+    "subtitle": "L'avantage Vyanzo",
+    "titleStart": "Conçu pour ",
+    "titleHighlight": "toute une vie",
+    "description": "Depuis 2018, nous fournissons des solutions de moulage inégalées à travers le monde, alliant précision, échelle et fiabilité.",
+    "quality": {
+      "title": "Qualité inégalée",
+      "description": "Conçu à la perfection dans chaque dimension et pour chaque coulée",
+      "stat": "99.9%",
+      "statLabel": "Production sans défaut"
+    },
+    "global": {
+      "title": "Portée mondiale",
+      "description": "Nous servons des clients en Belgique, France, Espagne, Italie, Autriche, Pays-Bas, Royaume-Uni, États-Unis et Canada"
+    },
+    "volume": {
+      "title": "Volume de production annuel",
+      "stat": "> 250,000",
+      "statLabel": " Pièces"
+    },
+    "presence": {
+      "title": "Présence mondiale"
+    },
+    "compliance": {
+      "title": "Conformité industrielle"
+    },
+    "contact": {
+      "title": "Contacter les ventes",
+      "description": "Obtenez des devis personnalisés"
+    }
+  },
+  "ProductSection": {
+    "subtitle": "Ce que nous moulons",
+    "titleStart": "Nos ",
+    "titleHighlight": "produits principaux",
+    "description": "Des solutions de moulage premium conçues pour les infrastructures les plus exigeantes du monde.",
+    "viewAll": "Voir tous les produits",
+    "products": {
+      "manhole": "Regards de chaussée",
+      "siphons": "Avaloirs",
+      "surfaceBoxes": "Regards de branchement"
+    }
+  },
+  "AboutSection": {
+    "subtitle": "À propos de Vyanzo",
+    "titleStart": "Moulé avec précision pour les ",
+    "titleHighlight": "infrastructures les plus exigeantes",
+    "titleEnd": " du monde",
+    "description": "Fondée en 2018, Vyanzo fabrique des couvercles de regard, des grilles et des pièces de fonderie municipales : fournis à travers l'Europe et au-delà. La qualité, le service et la fiabilité ne sont pas seulement des promesses. Ce sont la norme.",
+    "cta": "Rencontrer l'équipe"
+  },
+  "EnvironmentSection": {
+    "subtitle": "Responsabilité environnementale",
+    "titleStart": "Un moulage plus propre commence au ",
+    "titleHighlight": "four",
+    "titleEnd": "",
+    "description": "Zéro charbon. Fours à induction électriques. Solaire sur les toits. Chaque installation est conçue pour minimiser l'empreinte : non seulement respecter les normes, mais les définir.",
+    "badges": {
+      "coal": "Sans fusion au charbon",
+      "solar": "Alimenté par l'énergie solaire",
+      "iso": "Certifié ISO 14001"
+    },
+    "cta": "En savoir plus"
+  },
+  "ServicesSection": {
+    "subtitle": "Nos services",
+    "titleStart": "Découvrez ce que nous pouvons ",
+    "titleHighlight": "faire pour vous",
+    "cta": "En savoir plus",
+    "services": {
+      "productDevelopment": "Développement de produits",
+      "productionExcellence": "Excellence de production de A à Z",
+      "customPackaging": "Emballage personnalisé &\noptions de livraison",
+      "productCertification": "Certification des produits"
+    }
+  },
+  "ContactSection": {
+    "subtitle": "Votre prochaine étape",
+    "titleStart": "Écrivez-nous, ",
+    "titleHighlight": "nous nous occupons du reste",
+    "description": "Devis personnalisés, spécifications techniques ou commandes en gros — remplissez les informations et notre équipe vous répondra dans les 24 heures.",
+    "headquarters": {
+      "title": "Siège social",
+      "address": "Botermelkbaan 51 <br />2900 Schoten <br />Belgique"
+    },
+    "warehouse": {
+      "title": "Entrepôt",
+      "address": "Kluizenmeersen 10 <br />9170 Sint-Gillis-Waas <br />Belgique"
+    },
+    "email": {
+      "title": "Envoyez-nous un email",
+      "value": "info@vyanzo.be"
+    },
+    "phone": {
+      "title": "Appelez / WhatsApp",
+      "value": "+ 32 475 26 47 52"
+    },
+    "distribution": {
+      "title": "Distribution et entrepôt en Belgique",
+      "value": "VIATEQ bv"
+    },
+    "formTitle": "Envoyez-nous un message"
+  },
+  "ContactPage": {
+    "hero": {
+      "subtitle": "Démarrer une conversation",
+      "titleStart": "Nous ",
+      "titleHighlight": "vous écoutons",
+      "titleEnd": "",
+      "description": "Vous avez un projet en tête ? Trouvons ensemble la solution idéale."
+    }
+  },
+  "ProductsPage": {
+    "hero": {
+      "subtitle": "Nos produits",
+      "titleStart": "Conçu pour",
+      "titleHighlight": "les infrastructures.",
+      "description": "Découvrez notre gamme complète de pièces de fonderie municipales certifiées, conçues pour une durabilité extrême et une installation facile."
+    },
+    "grid": {
+      "sidebar": {
+        "geoLocation": "Localisation",
+        "certification": "Certification",
+        "category": "Catégorie",
+        "resetFilters": "Réinitialiser les filtres"
+      },
+      "topBar": {
+        "showing": "Affichage de ",
+        "of": " sur ",
+        "products": " produits",
+        "sortBy": "Trier par :",
+        "sortOptions": {
+          "defaultOrder": "Ordre par défaut",
+          "nameAsc": "Nom : A → Z",
+          "nameDesc": "Nom : Z → A"
+        }
+      },
+      "card": {
+        "viewSpecs": "Voir les spécifications techniques"
+      },
+      "empty": {
+        "title": "Les produits pour la Scandinavie sont en cours de développement.",
+        "description": "Essayez d'ajuster vos filtres pour trouver ce que vous cherchez.",
+        "clearFilters": "Effacer les filtres"
+      }
+    }
+  }
+}

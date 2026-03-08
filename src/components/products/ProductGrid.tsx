@@ -12,14 +12,14 @@ import {
   Tag,
   MapPin,
 } from "lucide-react";
-import Link from "next/link";
-
+import { Link } from "@/i18n/routing";
 import {
   products,
   ALL_CATEGORIES,
   ALL_SUB_CATEGORIES,
   ALL_CERT_TYPES,
 } from "@/data/products";
+import { useTranslations } from "next-intl";
 
 // ─── Certification chip colours ───────────────────────────────────────────────
 function certChipClass(type: string): string {
@@ -86,6 +86,7 @@ const CERT_TO_GEO: Record<string, string[]> = {
 const ALL_GEOS = Object.keys(GEO_TO_CERT);
 
 export default function ProductGrid() {
+  const t = useTranslations("ProductsPage.grid");
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [selectedSubCategories, setSelectedSubCategories] = useState<string[]>(
     [],
@@ -199,7 +200,7 @@ export default function ProductGrid() {
           <div className="bg-white rounded-2xl p-6 shadow-sm border border-brand-ash/20">
             <h3 className="flex items-center gap-2 text-bg-dark font-sans font-semibold text-base mb-5">
               <MapPin className="w-4 h-4 text-brand-primary" />
-              Geo Location
+              {t("sidebar.geoLocation")}
             </h3>
             <div className="flex flex-col gap-3">
               {availableGeos.map((geo) => {
@@ -223,7 +224,7 @@ export default function ProductGrid() {
           <div className="bg-white rounded-2xl p-6 shadow-sm border border-brand-ash/20">
             <h3 className="flex items-center gap-2 text-bg-dark font-sans font-semibold text-base mb-5">
               <ShieldCheck className="w-4 h-4 text-brand-primary" />
-              Certification
+              {t("sidebar.certification")}
             </h3>
             <div className="flex flex-col gap-3">
               {availableCerts.map((cert) => (
@@ -241,7 +242,7 @@ export default function ProductGrid() {
           <div className="bg-white rounded-2xl p-6 shadow-sm border border-brand-ash/20">
             <h3 className="flex items-center gap-2 text-bg-dark font-sans font-semibold text-base mb-5">
               <Folder className="w-4 h-4 text-brand-primary" />
-              Category
+              {t("sidebar.category")}
             </h3>
             <div className="flex flex-col gap-3">
               {ALL_CATEGORIES.map((cat) => (
@@ -260,7 +261,7 @@ export default function ProductGrid() {
             className="flex items-center gap-2 text-brand-primary text-sm font-sans font-semibold mt-6 hover:opacity-75 transition-opacity"
           >
             <ArrowDown className="w-4 h-4" />
-            Reset Filters
+            {t("sidebar.resetFilters")}
           </button>
         </aside>
 
@@ -269,30 +270,37 @@ export default function ProductGrid() {
           {/* Top Bar */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4 relative">
             <div className="text-text-light-bg/60 font-sans font-normal text-sm">
-              Showing{" "}
+              {t("topBar.showing")}{" "}
               <span className="font-semibold text-bg-dark text-base">
                 {filtered.length}
               </span>{" "}
-              of {products.length} products
+              {t("topBar.of")} {products.length}
+              {t("topBar.products")}
             </div>
 
             <div className="flex items-center gap-2 text-sm text-text-light-bg/60 font-sans font-normal relative">
-              Sort by:
+              {t("topBar.sortBy")}
               <button
                 onClick={() => setIsSortOpen(!isSortOpen)}
                 className="flex items-center gap-1 font-semibold text-bg-dark hover:text-brand-primary transition-colors"
               >
-                {sortBy === "no-asc" && "Default Order"}
-                {sortBy === "name-asc" && "Name: A → Z"}
-                {sortBy === "name-desc" && "Name: Z → A"}
+                {sortBy === "no-asc" && t("topBar.sortOptions.defaultOrder")}
+                {sortBy === "name-asc" && t("topBar.sortOptions.nameAsc")}
+                {sortBy === "name-desc" && t("topBar.sortOptions.nameDesc")}
                 <ChevronDown className="w-4 h-4" />
               </button>
               {isSortOpen && (
                 <div className="absolute top-full right-0 mt-2 w-48 bg-white border border-brand-ash/20 shadow-xl rounded-xl overflow-hidden z-20 font-sans font-medium text-sm">
                   {[
-                    { key: "no-asc", label: "Default Order" },
-                    { key: "name-asc", label: "Name: A → Z" },
-                    { key: "name-desc", label: "Name: Z → A" },
+                    {
+                      key: "no-asc",
+                      label: t("topBar.sortOptions.defaultOrder"),
+                    },
+                    { key: "name-asc", label: t("topBar.sortOptions.nameAsc") },
+                    {
+                      key: "name-desc",
+                      label: t("topBar.sortOptions.nameDesc"),
+                    },
                   ].map((o) => (
                     <button
                       key={o.key}
@@ -373,7 +381,7 @@ export default function ProductGrid() {
                     </div>
 
                     <button className="w-full py-3 px-4 border border-brand-ash/30 rounded-xl text-bg-dark font-sans font-bold text-sm tracking-wide group-hover:border-brand-primary group-hover:bg-brand-primary/5 transition-colors">
-                      View Technical Specs
+                      {t("card.viewSpecs")}
                     </button>
                   </div>
                 </Link>
@@ -385,16 +393,16 @@ export default function ProductGrid() {
                 <Folder className="w-8 h-8 text-brand-ash" />
               </div>
               <h3 className="text-xl font-serif font-semibold text-bg-dark mb-2">
-                The products for Scandinavia are under development.
+                {t("empty.title")}
               </h3>
               <p className="text-text-light-bg/60 font-sans font-normal mb-8">
-                Try adjusting your filters to find what you&apos;re looking for.
+                {t("empty.description")}
               </p>
               <button
                 onClick={resetFilters}
                 className="bg-brand-accent hover:opacity-90 transition-opacity text-bg-dark font-sans font-bold text-sm tracking-widest uppercase py-3 px-6 rounded-lg"
               >
-                Clear Filters
+                {t("empty.clearFilters")}
               </button>
             </div>
           )}

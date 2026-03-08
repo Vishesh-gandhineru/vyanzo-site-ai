@@ -3,8 +3,11 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Warehouse } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function ContactSection() {
+  const t = useTranslations("ContactSection");
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://server.fillout.com/embed/v1/";
@@ -34,19 +37,18 @@ export default function ContactSection() {
           >
             <h2 className="text-body-lg font-serif font-semibold tracking-[0.15em] text-brand-primary mb-6 flex items-center gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
-              Your Next Step
+              {t("subtitle")}
             </h2>
 
             <h3 className="text-section-h2 font-serif font-bold text-bg-dark leading-[1.1] mb-8">
-              Drop us a line,{" "}
+              {t("titleStart")}{" "}
               <span className="text-brand-primary italic">
-                we'll take it from there
+                {t("titleHighlight")}
               </span>
             </h3>
 
             <p className="text-body-lg text-bg-dark/60 font-sans font-normal leading-relaxed mb-12 max-w-xl">
-              Custom quotes, technical specs, or bulk orders — fill in the
-              details and our team gets back to you within 24 hours.
+              {t("description")}
             </p>
 
             <div className="flex flex-col gap-8">
@@ -57,13 +59,14 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">
-                      Headquarters
+                      {t("headquarters.title")}
                     </h4>
-                    <p className="text-bg-dark/70 font-sans font-normal leading-relaxed">
-                      Botermelkbaan 51 <br />
-                      2900 Schoten <br />
-                      Belgium
-                    </p>
+                    <p
+                      className="text-bg-dark/70 font-sans font-normal leading-relaxed"
+                      dangerouslySetInnerHTML={{
+                        __html: t("headquarters.address"),
+                      }}
+                    />
                   </div>
                 </div>
 
@@ -73,13 +76,14 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">
-                      Warehouse
+                      {t("warehouse.title")}
                     </h4>
-                    <p className="text-bg-dark/70 font-sans font-normal leading-relaxed">
-                      Kluizenmeersen 10 <br />
-                      9170 Sint-Gillis-Waas <br />
-                      Belgium
-                    </p>
+                    <p
+                      className="text-bg-dark/70 font-sans font-normal leading-relaxed"
+                      dangerouslySetInnerHTML={{
+                        __html: t("warehouse.address"),
+                      }}
+                    />
                   </div>
                 </div>
               </div>
@@ -90,13 +94,13 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">
-                    Email Us
+                    {t("email.title")}
                   </h4>
                   <a
-                    href="mailto:info@vyanzo.be"
+                    href={`mailto:${t("email.value")}`}
                     className="text-bg-dark/70 font-sans font-normal hover:text-brand-primary transition-colors"
                   >
-                    info@vyanzo.be
+                    {t("email.value")}
                   </a>
                 </div>
               </div>
@@ -107,13 +111,13 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">
-                    Call / Whatsapp Us
+                    {t("phone.title")}
                   </h4>
                   <a
                     href="https://api.whatsapp.com/send?phone=32475264752&text=Thank%20you%20for%20reaching%20out%20to%20us!%20We%20appreciate%20your%20interest%20in%20Vyanzo"
                     className="text-bg-dark/70 font-sans font-normal hover:text-brand-primary transition-colors"
                   >
-                    + 32 475 26 47 52
+                    {t("phone.value")}
                   </a>
                 </div>
               </div>
@@ -124,7 +128,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="text-bg-dark font-serif font-semibold text-lg mb-1">
-                    Belgian distribution and warehouse{" "}
+                    {t("distribution.title")}{" "}
                   </h4>
                   <a
                     href="https://viateq.be"
@@ -132,7 +136,7 @@ export default function ContactSection() {
                     rel="noopener noreferrer"
                     className="text-bg-dark/70 font-sans font-normal hover:text-brand-primary transition-colors"
                   >
-                    VIATEQ bv
+                    {t("distribution.value")}
                   </a>
                 </div>
               </div>
@@ -149,7 +153,7 @@ export default function ContactSection() {
           >
             <div className="bg-text-dark-bg p-8 md:p-12 rounded-3xl border border-black/5 shadow-xl shadow-black/2">
               <h3 className="text-section-h3 font-serif font-bold text-bg-dark mb-8">
-                Send us a message
+                {t("formTitle")}
               </h3>
 
               <div

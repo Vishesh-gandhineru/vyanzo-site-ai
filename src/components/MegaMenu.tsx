@@ -3,10 +3,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, X, ArrowUpRight, Menu } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export default function MegaMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("MegaMenu");
 
   return (
     <>
@@ -23,7 +25,7 @@ export default function MegaMenu() {
               className="flex items-center gap-2 md:gap-3 text-text-dark-bg font-sans"
             >
               <span className="hidden md:inline text-[11px] font-sans font-medium tracking-widest uppercase">
-                Menu
+                {t("menuText")}
               </span>
               <Menu
                 className="w-5 h-5 md:hidden font-light"
@@ -69,7 +71,7 @@ export default function MegaMenu() {
                 >
                   <X className="w-5 h-5 font-light" strokeWidth={1.5} />
                   <span className="text-sm font-sans font-medium tracking-wide">
-                    Close
+                    {t("closeText")}
                   </span>
                 </button>
               </motion.div>
@@ -85,15 +87,18 @@ export default function MegaMenu() {
                 {/* Mega Menu Links */}
                 <nav className="flex flex-col gap-1 mt-12 md:mt-24 flex-1">
                   {[
-                    { title: "Home", href: "/" },
-                    { title: "Products", href: "/products" },
-                    { title: "Services", href: "/services" },
-                    { title: "About Us", href: "/about" },
-                    { title: "Sustainability", href: "/sustainability" },
-                    { title: "Contact Us", href: "/contact" },
+                    { title: t("links.home"), href: "/" },
+                    { title: t("links.products"), href: "/products" },
+                    { title: t("links.services"), href: "/services" },
+                    { title: t("links.about"), href: "/about" },
+                    {
+                      title: t("links.sustainability"),
+                      href: "/sustainability",
+                    },
+                    { title: t("links.contact"), href: "/contact" },
                   ].map((item) => (
                     <Link
-                      key={item.title}
+                      key={item.href}
                       href={item.href as any}
                       onClick={() => setIsOpen(false)}
                     >

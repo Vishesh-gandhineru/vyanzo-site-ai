@@ -1,36 +1,44 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, PenTool, Factory, Package, ShieldCheck } from "lucide-react";
-import Link from "next/link";
-
-const services = [
-  {
-    title: "Product Development",
-    icon: PenTool,
-  },
-  {
-    title: "A-Z Production Excellence",
-    icon: Factory,
-  },
-  {
-    title: "Custom Packaging &\nDelivery Options",
-    icon: Package,
-  },
-  {
-    title: "Product Certification",
-    icon: ShieldCheck,
-  },
-];
+import {
+  ArrowRight,
+  PenTool,
+  Factory,
+  Package,
+  ShieldCheck,
+} from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function ServicesSection() {
+  const t = useTranslations("ServicesSection");
+
+  const services = [
+    {
+      title: t("services.productDevelopment"),
+      icon: PenTool,
+    },
+    {
+      title: t("services.productionExcellence"),
+      icon: Factory,
+    },
+    {
+      title: t("services.customPackaging"),
+      icon: Package,
+    },
+    {
+      title: t("services.productCertification"),
+      icon: ShieldCheck,
+    },
+  ];
+
   return (
     <section className="w-full section-xl bg-text-dark-bg border-t border-black/5 font-sans">
       <div className="max-w-[1400px] mx-auto">
-        
         {/* Header Area */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -39,10 +47,13 @@ export default function ServicesSection() {
           >
             <h2 className="text-body-lg font-serif font-semibold tracking-[0.15em] text-brand-primary  mb-6 flex items-center gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
-              Our Services
+              {t("subtitle")}
             </h2>
             <h3 className="text-section-h2 font-serif font-bold text-bg-dark">
-              Discover what we can <span className="text-brand-primary italic">do for you</span>
+              {t("titleStart")}{" "}
+              <span className="text-brand-primary italic">
+                {t("titleHighlight")}
+              </span>
             </h3>
           </motion.div>
 
@@ -55,10 +66,10 @@ export default function ServicesSection() {
             className="shrink-0"
           >
             <Link href="/services">
-            <div className="btn-primary flex items-center gap-2 justify-center "> 
-              Learn More
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </div>
+              <div className="btn-primary flex items-center gap-2 justify-center ">
+                {t("cta")}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
             </Link>
           </motion.div>
         </div>
@@ -77,13 +88,12 @@ export default function ServicesSection() {
               <div className="w-14 h-14 bg-brand-primary/10 group-hover:bg-brand-primary/20 transition-colors rounded-lg flex items-center justify-center mb-auto">
                 <service.icon className="w-8 h-8 text-brand-primary" />
               </div>
-              <h4 className="text-card-title font-serif font-semibold text-bg-dark leading-snug mt-12 group-hover:text-brand-primary transition-colors">
+              <h4 className="text-card-title font-serif font-semibold text-bg-dark leading-snug mt-12 group-hover:text-brand-primary transition-colors whitespace-pre-wrap">
                 {service.title}
               </h4>
             </motion.div>
           ))}
         </div>
-        
       </div>
     </section>
   );

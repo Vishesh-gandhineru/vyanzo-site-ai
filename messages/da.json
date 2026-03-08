@@ -1,0 +1,216 @@
+{
+  "Hero": {
+    "headlineStart": "Hvor støbegods af høj kvalitet møder",
+    "headlineHighlight": " uovertrufne ",
+    "headlineEnd": " servicestandarder",
+    "cta": "Se produkter"
+  },
+  "MegaMenu": {
+    "menuText": "Menu",
+    "closeText": "Luk",
+    "links": {
+      "home": "Hjem",
+      "products": "Produkter",
+      "services": "Tjenester",
+      "about": "Om os",
+      "sustainability": "Bæredygtighed",
+      "contact": "Kontakt os"
+    }
+  },
+  "Footer": {
+    "links": {
+      "products": "Produkter",
+      "services": "Tjenester",
+      "about": "Om os",
+      "contact": "Kontakt os",
+      "team": "Vores team"
+    },
+    "copyright": "Copyright @Vyanzo {year}",
+    "aria": {
+      "scrollToTop": "Scroll til toppen",
+      "whatsapp": "Kontakt via WhatsApp"
+    }
+  },
+  "MarqueeLogos": {
+    "title": "Certificeringer"
+  },
+  "BentoGrid": {
+    "subtitle": "Vyanzo-fordelen",
+    "titleStart": "Bygget til ",
+    "titleHighlight": "livstid",
+    "description": "Leverer uovertrufne støbeløsninger globalt med præcision, kapacitet og pålidelighed siden 2018.",
+    "quality": {
+      "title": "Uovertruffen kvalitet",
+      "description": "Udviklet til perfektion i hver dimension og støbning",
+      "stat": "99.9%",
+      "statLabel": "Fejlfri produktion"
+    },
+    "global": {
+      "title": "Global rækkevidde",
+      "description": "Betjener kunder i Belgien, Frankrig, Spanien, Italien, Østrig, Holland, Storbritannien, USA og Canada"
+    },
+    "volume": {
+      "title": "Årlig produktionsvolumen",
+      "stat": "> 250,000",
+      "statLabel": " dele"
+    },
+    "presence": {
+      "title": "Global tilstedeværelse"
+    },
+    "compliance": {
+      "title": "Brancheoverholdelse"
+    },
+    "contact": {
+      "title": "Kontakt salg",
+      "description": "Få skræddersyede tilbud"
+    }
+  },
+  "ProductSection": {
+    "subtitle": "Hvad vi støber",
+    "titleStart": "Vores vigtigste ",
+    "titleHighlight": "produkter",
+    "description": "Premium støbeløsninger bygget til verdens mest krævende infrastruktur.",
+    "viewAll": "Se alle produkter",
+    "products": {
+      "manhole": "Brønddæksler",
+      "siphons": "Sifoner",
+      "surfaceBoxes": "Ventilbokse"
+    }
+  },
+  "AboutSection": {
+    "subtitle": "Om Vyanzo",
+    "titleStart": "Præcisionsstøbt til verdens ",
+    "titleHighlight": "mest krævende",
+    "titleEnd": " infrastruktur",
+    "description": "Grundlagt i 2018 fremstiller Vyanzo brønddæksler, riste og kommunale støbeprodukter, som leveres over hele Europa og videre. Kvalitet, service og pålidelighed er ikke bare løfter – de er standarden.",
+    "cta": "Mød teamet"
+  },
+  "EnvironmentSection": {
+    "subtitle": "Miljøansvar",
+    "titleStart": "Renere støbning starter ved ",
+    "titleHighlight": "ovnen",
+    "titleEnd": "",
+    "description": "Ingen kul. Elektriske induktionsovne. Solenergi på taget. Hver facilitet er bygget til at minimere miljøaftryk – ikke kun for at opfylde standarder, men for at sætte dem.",
+    "badges": {
+      "coal": "Ingen kulsmeltning",
+      "solar": "Solcelledrevet",
+      "iso": "ISO 14001-certificeret"
+    },
+    "cta": "Læs mere"
+  },
+  "ServicesSection": {
+    "subtitle": "Vores tjenester",
+    "titleStart": "Opdag hvad vi kan ",
+    "titleHighlight": "gøre for dig",
+    "cta": "Læs mere",
+    "services": {
+      "productDevelopment": "Produktudvikling",
+      "productionExcellence": "A-Z produktionskompetence",
+      "customPackaging": "Tilpasset emballage &\nleveringsmuligheder",
+      "productCertification": "Produktcertificering"
+    }
+  },
+  "ContactSection": {
+    "subtitle": "Dit næste skridt",
+    "titleStart": "Send os en besked, ",
+    "titleHighlight": "så tager vi den derfra",
+    "description": "Skræddersyede tilbud, tekniske specifikationer eller større ordrer — udfyld oplysningerne, og vores team vender tilbage inden for 24 timer.",
+    "headquarters": {
+      "title": "Hovedkontor",
+      "address": "Botermelkbaan 51 <br />2900 Schoten <br />Belgien"
+    },
+    "warehouse": {
+      "title": "Lager",
+      "address": "Kluizenmeersen 10 <br />9170 Sint-Gillis-Waas <br />Belgien"
+    },
+    "email": {
+      "title": "Send os en e-mail",
+      "value": "info@vyanzo.be"
+    },
+    "phone": {
+      "title": "Ring / WhatsApp",
+      "value": "+ 32 475 26 47 52"
+    },
+    "distribution": {
+      "title": "Belgisk distribution og lager",
+      "value": "VIATEQ bv"
+    },
+    "formTitle": "Send os en besked"
+  },
+  "AboutPage": {
+    "hero": {
+      "subtitle": "Virksomhedsprofil",
+      "titleStart": "Om ",
+      "titleHighlight": "Vyanzo",
+      "titleEnd": ".",
+      "description": "Opdag vores sortiment af omhyggeligt designede og producerede produkter. Vyanzo leverer støbegods af højeste kvalitet til de mest krævende kunder — konsekvent kvalitet og serviceniveau er afgørende for det, vi gør."
+    },
+    "philosophy": {
+      "title": "Kvalitet, service og pålidelighed med kompromisløs konsistens.",
+      "description": "Siden starten i 2018 har Vyanzo udviklet sig fra en OEM-leverandør til en førende producent af egne brønddæksler, riste og andre kommunale støbeprodukter, som nu leveres over hele Europa."
+    }
+  },
+  "ContactPage": {
+    "hero": {
+      "subtitle": "Start en samtale",
+      "titleStart": "Vi ",
+      "titleHighlight": "lytter",
+      "titleEnd": "",
+      "description": "Har du et projekt i tankerne? Lad os finde den rigtige løsning sammen."
+    }
+  },
+  "ServicesPage": {
+    "hero": {
+      "subtitle": "Serviceportefølje",
+      "titleStart": "Ekspertise smedet,",
+      "titleHighlight": "service perfektioneret.",
+      "description": "Vyanzo tilbyder et omfattende udvalg af tjenester designet til at strømline støbe- og produktionsprocessen – fra første design til endelig levering."
+    },
+    "tabs": {
+      "title": "Vores tjenester"
+    }
+  },
+  "SustainabilityPage": {
+    "hero": {
+      "subtitle": "MILJØANSVAR",
+      "titleStart": "Renere processer, ",
+      "titleHighlight": "grønnere støbning.",
+      "description": "Bæredygtighed integreret i hver ovn, facilitet og produkt — fra råmateriale til endelig levering."
+    }
+  },
+  "ProductsPage": {
+    "hero": {
+      "subtitle": "Vores produkter",
+      "titleStart": "Konstrueret til",
+      "titleHighlight": "infrastruktur.",
+      "description": "Opdag vores komplette sortiment af certificerede kommunale støbeprodukter designet til ekstrem holdbarhed og nem installation."
+    },
+    "grid": {
+      "sidebar": {
+        "geoLocation": "Geografisk placering",
+        "certification": "Certificering",
+        "category": "Kategori",
+        "resetFilters": "Nulstil filtre"
+      },
+      "topBar": {
+        "showing": "Viser ",
+        "of": " af ",
+        "products": " produkter",
+        "sortBy": "Sorter efter:",
+        "sortOptions": {
+          "defaultOrder": "Standardrækkefølge",
+          "nameAsc": "Navn: A → Å",
+          "nameDesc": "Navn: Å → A"
+        }
+      },
+      "card": {
+        "viewSpecs": "Se tekniske specifikationer"
+      },
+      "empty": {
+        "title": "Produkterne til Skandinavien er under udvikling.",
+        "description": "Prøv at justere dine filtre for at finde det, du leder efter.",
+        "clearFilters": "Ryd filtre"
+      }
+    }
+  }
+}
