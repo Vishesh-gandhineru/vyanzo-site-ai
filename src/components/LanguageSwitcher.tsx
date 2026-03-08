@@ -32,14 +32,15 @@ export default function LanguageSwitcher() {
           pageLanguage: "en",
           autoDisplay: false,
         },
-        "google_translate_element"
+        "google_translate_element",
       );
     };
 
     // Only inject script if it doesn't exist
     if (!document.querySelector('script[src*="translate.google.com"]')) {
       const script = document.createElement("script");
-      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.src =
+        "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
       script.async = true;
       document.body.appendChild(script);
     }
@@ -56,18 +57,19 @@ export default function LanguageSwitcher() {
 
   const handleLanguageChange = (langCode: string) => {
     setIsOpen(false);
-    
+
     // Update cookies for both root and specific domain
     document.cookie = `googtrans=/en/${langCode}; path=/`;
     document.cookie = `googtrans=/en/${langCode}; domain=${window.location.hostname}; path=/`;
 
     setCurrentLang(langCode);
-    
+
     // Force a reload so Google Translate automatically picks up the new cookie
     window.location.reload();
   };
 
-  const activeLanguage = languages.find((l) => l.code === currentLang) || languages[0];
+  const activeLanguage =
+    languages.find((l) => l.code === currentLang) || languages[0];
 
   return (
     <>
@@ -83,8 +85,8 @@ export default function LanguageSwitcher() {
               {activeLanguage.code}
             </span>
           </div>
-          <ChevronDown 
-            className={`w-4 h-4 text-white transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} 
+          <ChevronDown
+            className={`w-4 h-4 text-white transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
           />
         </button>
 
@@ -102,8 +104,8 @@ export default function LanguageSwitcher() {
                   key={lang.code}
                   onClick={() => handleLanguageChange(lang.code)}
                   className={`text-left px-4 py-2 rounded-lg text-sm font-sans font-medium transition-colors ${
-                    currentLang === lang.code 
-                      ? "bg-brand-primary text-bg-dark" 
+                    currentLang === lang.code
+                      ? "bg-brand-primary text-bg-dark"
                       : "text-bg-dark hover:bg-brand-ash/10"
                   }`}
                 >

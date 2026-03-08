@@ -17,7 +17,7 @@ export default function GoogleTranslate() {
           pageLanguage: "en",
           autoDisplay: false,
         },
-        "google_translate_element"
+        "google_translate_element",
       );
     };
 

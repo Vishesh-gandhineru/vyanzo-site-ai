@@ -7,11 +7,7 @@ export default function GlobalHeader() {
       {/* Logo */}
       <div className="w-38 md:w-64">
         <a href="/">
-          <img 
-             src="/logo.svg" 
-             alt="Vyanzo" 
-             className="w-full h-auto" 
-          />
+          <img src="/logo.svg" alt="Vyanzo" className="w-full h-auto" />
         </a>
       </div>
 
