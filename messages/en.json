@@ -181,18 +181,18 @@
         "description": "We continuously upgrade our production facilities with the latest machines and technology, always considering the environment and energy efficiency."
       },
       "sustainable": {
-        "title": "Sustainable Manufacturing",
+        "title": "Sustainable manufacturing",
         "description": "We don't melt with coal — we use the latest electrical induction furnaces, massively reducing our environmental impact."
       },
       "future": {
-        "title": "Built for the Future",
+        "title": "Built for the future",
         "description": "Vyanzo’s production facilities have the necessary capacity to meet customer volume and quality demands for decades to come."
       },
       "stats": {
         "growth": {
           "value": "+20",
           "suffix": "%",
-          "label": "Annual Growth Rate"
+          "label": "Annual growth rate"
         },
         "volume": {
           "value": "250,000",
@@ -395,7 +395,7 @@
       }
     },
     "categories": {
-      "title": "Other product categories served",
+      "title": "Other products",
       "description": "While providing these services, Vyanzo focuses on the following primary product lines:",
       "manhole": "Manhole & Hydraulic Covers",
       "surfaceBoxes": "Surface Boxes",
