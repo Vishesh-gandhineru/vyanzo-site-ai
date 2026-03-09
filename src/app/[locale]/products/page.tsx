@@ -14,7 +14,9 @@ export default async function ProductsPage({
   const { locale } = await params;
   const products = await getProducts(locale);
   const locationsData = await getAllLocations();
-  const ALL_LOCATIONS = locationsData.map((loc: any) => loc.name);
+  const ALL_LOCATIONS = Array.from(
+    new Set<string>(locationsData.map((loc: any) => loc.name)),
+  );
 
   const { ALL_CATEGORIES, ALL_SUB_CATEGORIES, ALL_CERT_TYPES } =
     getDerivedLists(products);

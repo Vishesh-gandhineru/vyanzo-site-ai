@@ -41,7 +41,7 @@
     "description": "Wereldwijd ongeëvenaarde gietoplossingen met precisie, schaal en betrouwbaarheid sinds 2018.",
     "quality": {
       "title": "Ongeëvenaarde kwaliteit",
-      "description": "Ingenieursprecisie in elke dimensie en elke gietbeurt",
+      "description": "Ontworpen voor perfectie in elke dimensie bij iedere gieting",
       "stat": "99,9%",
       "statLabel": "Foutloze output"
     },
@@ -58,7 +58,7 @@
       "title": "Wereldwijde aanwezigheid"
     },
     "compliance": {
-      "title": "Industrienaleving"
+      "title": "Naleving van sector vereisten"
     },
     "contact": {
       "title": "Verkoop contacteren",
@@ -66,15 +66,15 @@
     }
   },
   "ProductSection": {
-    "subtitle": "Wat wij gieten",
+    "subtitle": "Wat we gieten",
     "titleStart": "Onze kern",
     "titleHighlight": "producten",
     "description": "Premium gietoplossingen gebouwd voor de meest veeleisende infrastructuur ter wereld.",
     "viewAll": "Alle producten bekijken",
     "products": {
-      "manhole": "Putdeksels",
-      "siphons": "Sifons",
-      "surfaceBoxes": "Straatpotten"
+      "manhole": "Wegensdeksels",
+      "siphons": "waterontvangers",
+      "surfaceBoxes": "huisaansluitputjes"
     }
   },
   "AboutSection": {
@@ -87,13 +87,13 @@
   },
   "EnvironmentSection": {
     "subtitle": "Milieuvera­ntwoordelijkheid",
-    "titleStart": "Schoner gietwerk begint bij de ",
+    "titleStart": "Ecologisch verantwoord gieten begint bij de ",
     "titleHighlight": "oven",
     "titleEnd": "",
     "description": "Nul kolen. In tegenstelling tot productie in bijvoorbeeld België gebruiken wij geen kolen om te smelten, maar elektrische inductieovens. Een groot zonnepanelenpark levert de stroom. Elke vestiging is ingericht om de ecologische voetafdruk te minimaliseren — niet alleen normen naleven, maar ze bepalen.",
     "badges": {
-      "coal": "Geen koolsmelten",
-      "solar": "Op zonne-energie",
+      "coal": "Smelten zonder kolen",
+      "solar": "Zonne-energie",
       "iso": "ISO 14001 gecertificeerd"
     },
     "cta": "Meer informatie"
@@ -161,8 +161,8 @@
       "title": "Kernproducten",
       "description": "Vyanzo is een toonaangevende leverancier van premium gietproducten, ontworpen voor schaal en duurzaamheid.",
       "manhole": {
-        "title": "Putdeksels",
-        "description": "Robuuste putdeksels voor zwaar gebruik, ontworpen voor intensief verkeer en veeleisende infrastructuurtoepassingen."
+        "title": "Wegensdeksels",
+        "description": "Robuuste Wegensdeksels voor zwaar gebruik, ontworpen voor intensief verkeer en veeleisende infrastructuurtoepassingen."
       },
       "siphons": {
         "title": "Sifons",
@@ -192,18 +192,18 @@
         "growth": {
           "value": "+20",
           "suffix": "%",
-          "label": "Jaarlijkse groeivoet"
+          "label": "Jaarlijkse groei"
         },
         "volume": {
           "value": "250.000",
           "suffix": "+",
-          "label": "Jaarlijks geproduceerde onderdelen"
+          "label": "Aantal jaarlijks gegoten producten"
         }
       }
     },
     "teams": {
       "title": "Leiderschapsteam",
-      "description": "Geleid door een managementteam met tientallen jaren gecombineerde ervaring in wereldwijde productie, supply chain en kwaliteitsborging.",
+      "description": "Geleid door een managementteam met tientallen jaren gecombineerde ervaring in wereldwijde productie, supply chain en Kwaliteitscontrole.",
       "members": [
         {
           "name": "Steve Vernelen",
@@ -397,7 +397,7 @@
     "categories": {
       "title": "Andere bediende productcategorieën",
       "description": "Bij het leveren van deze diensten richt Vyanzo zich op de volgende primaire productlijnen:",
-      "manhole": "Putdeksels & hydraulische deksels",
+      "manhole": "Wegensdeksels  & hydraulische deksels",
       "surfaceBoxes": "Straatpotten",
       "siphons": "Sifons"
     }
