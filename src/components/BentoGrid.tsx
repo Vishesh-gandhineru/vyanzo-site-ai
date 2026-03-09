@@ -58,7 +58,7 @@ export default function BentoGrid() {
               <div className="text-5xl lg:text-6xl font-sans font-bold text-brand-primary tracking-tighter">
                 {t("quality.stat")}
               </div>
-              <div className="text-sm text-brand-ash mt-2 capitalize tracking-normal font-sans font-normal">
+              <div className="text-sm text-bg-dark/80 mt-2 capitalize tracking-normal font-sans font-normal">
                 {t("quality.statLabel")}
               </div>
             </div>
