@@ -15,6 +15,8 @@ import {
   Wrench,
   CircleDot,
   Settings2,
+  Cuboid,
+  Cylinder,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -155,7 +157,7 @@ export default function AboutPage() {
               className="bg-white rounded-3xl p-8 flex flex-col items-center justify-center text-center gap-6 shadow-sm border border-brand-ash/10 hover:border-brand-primary/30 hover:-translate-y-2 transition-all duration-300 group"
             >
               <div className="w-20 h-20 bg-[#f8f9fc] rounded-full flex items-center justify-center text-brand-ash group-hover:bg-bg-dark group-hover:text-brand-primary transition-colors duration-300">
-                <Wrench className="w-8 h-8" />
+                <Cylinder className="w-8 h-8" />
               </div>
               <h4 className="font-bold text-bg-dark font-sans text-body-lg">
                 {t("offerings.siphons.title")}
@@ -174,7 +176,7 @@ export default function AboutPage() {
               className="bg-white rounded-3xl p-8 flex flex-col items-center justify-center text-center gap-6 shadow-sm border border-brand-ash/10 hover:border-brand-primary/30 hover:-translate-y-2 transition-all duration-300 group"
             >
               <div className="w-20 h-20 bg-[#f8f9fc] rounded-full flex items-center justify-center text-brand-ash group-hover:bg-bg-dark group-hover:text-brand-primary transition-colors duration-300">
-                <Settings2 className="w-8 h-8" />
+                <Cuboid className="w-8 h-8" />
               </div>
               <h4 className="font-bold text-bg-dark font-sans text-body-lg">
                 {t("offerings.surfaceBoxes.title")}

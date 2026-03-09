@@ -15,6 +15,8 @@ import {
   Grid,
   Settings2,
   CheckCircle2,
+  Cylinder,
+  Cuboid,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -202,9 +204,9 @@ export default function ServicesPage() {
     },
     {
       name: t("categories.surfaceBoxes"),
-      icon: <Settings2 className="w-8 h-8" />,
+      icon: <Cylinder className="w-8 h-8" />,
     },
-    { name: t("categories.siphons"), icon: <Wrench className="w-8 h-8" /> },
+    { name: t("categories.siphons"), icon: <Cuboid className="w-8 h-8" /> },
   ];
 
   const [activeTab, setActiveTab] = useState(services[0].id);
