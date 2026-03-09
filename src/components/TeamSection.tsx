@@ -3,65 +3,22 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function TeamSection() {
+  const t = useTranslations("AboutPage.teams");
   const [selectedMember, setSelectedMember] = useState<number | null>(null);
 
-  const team = [
-    {
-      name: "Steve Vernelen",
-      role: "CEO",
-      image: "/team/Steve-Vernelen.png",
-      bio: [
-        "Steve Vernelen has been doing business globally for the last 20 years, as CEO of Benito Urban in Spain (manhole covers and grates, urban equipment) and as CEO of Fondatel (foundry of manhole covers) in Belgium.",
-        "He holds an MBA from Kellogg School of Management , started his business career at McKinsey & Cie to then move on to turning around troubled private equity held companies.",
-      ],
-      contact: {
-        email: "steve@vyanzo.be",
-        phones: [
-          { label: "Belgium", number: "+32475264752" },
-          { label: "India", number: "+919560742436" },
-        ],
-      },
-    },
-    {
-      name: "Roxane Sabatier",
-      role: "Office Manager",
-      image: "/team/Roxane-Sabatier.png",
-      bio: [
-        "Roxane Sabatier runs our Mumbai office. She is fluent in English, French, Hindi, Italian and Spanish. A journalist by education, she has the tenacity to achieve her goals.",
-        "Roxane and Steve have worked together for over a decade in various companies. Roxane joined Vyanzo in 2022.",
-      ],
-      contact: {
-        email: "roxane@vyanzo.be",
-        phones: [{ label: "India", number: "+919930353363" }],
-      },
-    },
-    {
-      name: "Annick D'Hont",
-      role: "Legal and Contracts",
-      image: "/team/Annick-DHont.png",
-      bio: [
-        "Annick D'Hont is a seasoned lawyer and specializes in corporate contract law and logistics, leaving no loose ends. She has been an integral part of Vyanzo since its inception.",
-      ],
-      contact: {
-        email: "annick@vyanzo.be",
-        phones: [],
-      },
-    },
-    {
-      name: "Naba Kumar Gayen",
-      role: "Head of Quality",
-      image: "/team/Naba-Kumar-Gayen.png",
-      bio: [
-        "Naba Kumar Gayen is our Head of Quality, based in Kolkata. He inspects production and product development locally at the foundries in India making sure any issues are detected before products get shipped. He is an engineer and has 15+ years of experience in the casting industry. He joined Vyanzo in 2019.",
-      ],
-      contact: {
-        email: "naba@vyanzo.be", // Assuming format based on others
-        phones: [],
-      },
-    },
-  ];
+  const team = t.raw("members") as Array<{
+    name: string;
+    role: string;
+    image: string;
+    bio: string[];
+    contact: {
+      email: string;
+      phones: Array<{ label: string; number: string }>;
+    };
+  }>;
 
   // Helper to safely close the modal when clicking outside
   const closeModal = () => setSelectedMember(null);
@@ -82,10 +39,9 @@ export default function TeamSection() {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <h2 className="text-section-h2 font-serif mb-6">Leadership Team</h2>
+          <h2 className="text-section-h2 font-serif mb-6">{t("title")}</h2>
           <p className="text-body-xl text-text-light-bg/60 max-w-2xl mx-auto">
-            Guided by a leadership team with decades of combined experience in
-            global manufacturing, supply chain, and quality assurance.
+            {t("description")}
           </p>
         </motion.div>
 

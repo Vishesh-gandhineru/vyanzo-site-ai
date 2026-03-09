@@ -69,7 +69,7 @@
     "subtitle": "Ce que nous moulons",
     "titleStart": "Nos ",
     "titleHighlight": "produits principaux",
-    "description": "Des solutions de moulage premium conçues pour les infrastructures les plus exigeantes du monde.",
+    "description": "Solutions de moulage haut de gamme conçues pour les infrastructures les plus exigeantes.",
     "viewAll": "Voir tous les produits",
     "products": {
       "manhole": "Regards de chaussée",
@@ -79,21 +79,21 @@
   },
   "AboutSection": {
     "subtitle": "À propos de Vyanzo",
-    "titleStart": "Moulé avec précision pour les ",
-    "titleHighlight": "infrastructures les plus exigeantes",
-    "titleEnd": " du monde",
-    "description": "Fondée en 2018, Vyanzo fabrique des couvercles de regard, des grilles et des pièces de fonderie municipales : fournis à travers l'Europe et au-delà. La qualité, le service et la fiabilité ne sont pas seulement des promesses. Ce sont la norme.",
+    "titleStart": "Moulé avec précision ",
+    "titleHighlight": "pour les infrastructures les plus ",
+    "titleEnd": "exigeantes",
+    "description": "Fondée en 2018, Vyanzo, qui veut dire ‘nouvelle source’ en Swahili, fabrique des regards de chaussée, des grilles et des pièces en fonte pour les collectivités locales, distribués dans toute l'Europe et à l'international. Qualité, service et fiabilité ne sont pas que des mots : ce sont nos engagements.",
     "cta": "Rencontrer l'équipe"
   },
   "EnvironmentSection": {
     "subtitle": "Responsabilité environnementale",
-    "titleStart": "Un moulage plus propre commence au ",
+    "titleStart": "Un moulage plus propre commence dès le ",
     "titleHighlight": "four",
     "titleEnd": "",
-    "description": "Zéro charbon. Fours à induction électriques. Solaire sur les toits. Chaque installation est conçue pour minimiser l'empreinte : non seulement respecter les normes, mais les définir.",
+    "description": "Zéro charbon. Fours électriques à induction. Panneaux solaires sur les toits. Chaque installation est conçue pour minimiser son empreinte écologique : non seulement pour respecter les normes, mais aussi pour les définir.",
     "badges": {
       "coal": "Sans fusion au charbon",
-      "solar": "Alimenté par l'énergie solaire",
+      "solar": "Alimenté par énergie solaire",
       "iso": "Certifié ISO 14001"
     },
     "cta": "En savoir plus"
@@ -105,7 +105,7 @@
     "cta": "En savoir plus",
     "services": {
       "productDevelopment": "Développement de produits",
-      "productionExcellence": "Excellence de production de A à Z",
+      "productionExcellence": "Excellence en matière de production de A à Z",
       "customPackaging": "Emballage personnalisé &\noptions de livraison",
       "productCertification": "Certification des produits"
     }
@@ -137,31 +137,313 @@
     },
     "formTitle": "Envoyez-nous un message"
   },
+  "AboutPage": {
+    "hero": {
+      "subtitle": "Profil de l'entreprise",
+      "titleStart": "À propos de ",
+      "titleHighlight": "Vyanzo",
+      "titleEnd": ".",
+      "description": "Découvrez notre gamme de produits conçus et fabriqués avec le plus grand soin. Vyanzo fournit des pièces moulées de qualité supérieure aux clients les plus exigeants. La qualité constante et le niveau de service sont au cœur de nos préoccupations."
+    },
+    "philosophy": {
+      "title": "Qualité, Service & Fiabilité avec une constance sans relâche.",
+      "description": "Depuis sa création en 2018, Vyanzo est passé du statut de fournisseur OEM à celui de fabricant leader de sa propre gamme de regards de chaussée, de grilles et d'autres produits moulés destinés aux collectivités locales, désormais distribués dans toute l'Europe."
+    },
+    "service": {
+      "title": "Service de bout en bout",
+      "description": "Nous offrons des services complets à nos clients du monde entier qui partagent notre philosophie d'entreprise : qualité, service et fiabilité à un prix raisonnable, et ce, avec une constance sans faille. En gérant la production, l'assurance qualité et la logistique en interne, Vyanzo garantit une expérience optimale à ses clients.",
+      "badge": {
+        "title": "Certifié COPRO BENOR",
+        "description": "Pour le marché belge, distribué via Viateq"
+      }
+    },
+    "offerings": {
+      "title": "Produits phares",
+      "description": "Vyanzo est l'un des principaux fournisseurs de produits de moulage haut de gamme, conçus pour offrir évolutivité et durabilité.",
+      "manhole": {
+        "title": "Regards de chaussée",
+        "description": "Regards de chaussée robustes et résistants, conçus pour un trafic intense et des applications infrastructurelles exigeantes."
+      },
+      "siphons": {
+        "title": "Avaloirs",
+        "description": "Avaloirs moulés avec précision, offrant la meilleure capacité de débit de leur catégorie pour un drainage fiable, conçus selon les normes européennes les plus strictes."
+      },
+      "surfaceBoxes": {
+        "title": "Regards de branchement",
+        "description": "Regards de branchement en fonte résistants,conçus pour une installation et un accès faciles."
+      }
+    },
+    "advantage": {
+      "title": "L'Avantage Vyanzo",
+      "description": "Une attention constante portée à la qualité, à l'échelle et à la production durable.",
+      "facilities": {
+        "title": "Installations de pointe",
+        "description": "Nous modernisons continuellement nos installations de production avec les machines et les technologies les plus récentes, en tenant toujours compte de l'environnement et de l'efficacité énergétique."
+      },
+      "sustainable": {
+        "title": "Fabrication durable",
+        "description": "Nous ne fondons pas avec du charbon : nous utilisons les fours à induction électrique dernier cri, ce qui réduit considérablement notre impact environnemental."
+      },
+      "future": {
+        "title": "Conçu pour l'avenir",
+        "description": "installations de production de Vyanzo ont la capacité nécessaire pour répondre aux exigences des clients en matière de volume et de qualité pour les décennies à venir."
+      },
+      "stats": {
+        "growth": {
+          "value": "+20",
+          "suffix": "%",
+          "label": "Taux de croissance annuel"
+        },
+        "volume": {
+          "value": "250 000",
+          "suffix": "+",
+          "label": "Tonnes de moulages par an"
+        }
+      }
+    },
+    "teams": {
+      "title": "Leadership Team",
+      "description": "Dirigée par une équipe cumulant plusieurs décennies d'expérience dans les domaines de la fabrication mondiale, de la chaîne d'approvisionnement et de l'assurance qualité.",
+      "members": [
+        {
+          "name": "Steve Vernelen",
+          "role": "CEO",
+          "image": "/team/Steve-Vernelen.png",
+          "bio": [
+            "Steve Vernelen exerce ses activités à l'échelle mondiale depuis 20 ans, en tant que PDG de Benito Urban en Espagne (regards de chaussée et grilles, équipements urbains) et PDG de Fondatel (fonderie de regards de chaussée) en Belgique.  Titulaire d'un MBA de la Kellogg School of Management, il a commencé sa carrière chez McKinsey & Cie avant de se consacrer au redressement d'entreprises en difficulté détenues par des fonds d'investissement privés."
+          ],
+          "contact": {
+            "email": "steve@vyanzo.be",
+            "phones": [
+              { "label": "Belgium", "number": "+32475264752" },
+              { "label": "India", "number": "+919560742436" }
+            ]
+          }
+        },
+        {
+          "name": "Roxane Sabatier",
+          "role": "Office Manager",
+          "image": "/team/Roxane-Sabatier.png",
+          "bio": [
+            "Roxane Sabatier dirige notre bureau de Mumbai. Elle parle couramment l'anglais, le français, l'hindi, l'italien et l'espagnol. Journaliste de formation, elle fait preuve d'une grande ténacité pour atteindre ses objectifs.Roxane et Steve travaillent ensemble depuis plus de dix ans dans différentes entreprises. Roxane a rejoint Vyanzo en 2022."
+          ],
+          "contact": {
+            "email": "roxane@vyanzo.be",
+            "phones": [
+              { "label": "India", "number": "+919930353363" }
+            ]
+          }
+        },
+        {
+          "name": "Annick D'Hont",
+          "role": "Legal and Contracts",
+          "image": "/team/Annick-DHont.png",
+          "bio": [
+            "Annick D'Hont est une avocate chevronnée, spécialisée dans le droit des contrats d'entreprise et la logistique, qui ne laisse rien au hasard. Elle fait partie intégrante de Vyanzo depuis sa création."
+          ],
+          "contact": {
+            "email": "annick@vyanzo.be",
+            "phones": []
+          }
+        },
+        {
+          "name": "Naba Kumar Gayen",
+          "role": "Head of Quality",
+          "image": "/team/Naba-Kumar-Gayen.png",
+          "bio": [
+            "Naba Kumar Gayen est notre responsable qualité, basé à Kolkata. Il inspecte la production et le développement des produits au niveau local dans les fonderies en Inde, s'assurant que tout problème est détecté avant l'expédition des produits. Il est ingénieur et possède plus de 15 ans d'expérience dans l'industrie de la fonderie. Il a rejoint Vyanzo en 2019."
+          ],
+          "contact": {
+            "email": "naba@vyanzo.be",
+            "phones": []
+          }
+        }
+      ]
+    }
+  },
   "ContactPage": {
     "hero": {
-      "subtitle": "Démarrer une conversation",
-      "titleStart": "Nous ",
-      "titleHighlight": "vous écoutons",
+      "subtitle": "Entamez une conversation",
+      "titleStart": "Nous sommes",
+      "titleHighlight": "à votre écoute",
       "titleEnd": "",
-      "description": "Vous avez un projet en tête ? Trouvons ensemble la solution idéale."
+      "description": "Vous avez un projet en tête ? Trouvons ensemble la solution qui vous convient."
+    }
+  },
+  "ServicesPage": {
+    "hero": {
+      "subtitle": "Portefeuille de services",
+      "titleStart": "Excellence forgée,",
+      "titleHighlight": "Service parfait.",
+      "description": "Vyanzo propose une gamme complète de services conçus pour rationaliser le processus de moulage et de fabrication, de la conception initiale à la livraison finale."
+    },
+    "tabs": {
+      "title": "Nos Services"
+    },
+    "servicesList": {
+      "development": {
+        "title": "Développement de produits",
+        "description": "Vyanzo fournit des ressources d'ingénierie de haut niveau pour aider ses clients à concevoir ou optimiser leurs produits.",
+        "highlights": {
+          "expertise": {
+            "label": "Expertise",
+            "value": "Accès à une équipe de plus de 10 ingénieurs."
+          },
+          "experience": {
+            "label": "Expérience",
+            "value": " Plus de 50 ans d'expérience combinée dans l'industrie du moulage"
+          },
+          "focus": {
+            "label": "Objectif",
+            "value": "Conception et optimisation de produits adaptés aux besoins et aux exigences techniques des clients."
+          }
+        }
+      },
+      "production": {
+        "title": "Excellence en matière de production de A à Z",
+        "description": "Vyanzo gère l'intégralité du cycle de fabrication, garantissant la qualité à chaque étape selon les exigences spécifiques du client.",
+        "highlights": {
+          "pattern": {
+            "label": "Fabrication de modèles",
+            "value": "Création des moules et modèles initiaux."
+          },
+          "sampling": {
+            "label": "Échantillonnage",
+            "value": "Production de prototypes et d'échantillons pour approbation."
+          },
+          "quality": {
+            "label": "Contrôle qualité",
+            "value": "Tests et inspections rigoureux tout au long de la production."
+          },
+          "finishing": {
+            "label": "Finition & Revêtement",
+            "value": "Diverses options de peinture et de revêtement, notamment : peinture à base d'eau, KTL (e-coating), revêtements époxy."
+          },
+          "assembly": {
+            "label": "Assemblage",
+            "value": "Assemblage final des composants avant expédition."
+          }
+        }
+      },
+      "logistics": {
+        "title": "Emballage personnalisé & Options de livraison",
+        "description": "Les clients ont un contrôle total sur la protection et la mise en valeur de leurs produits pendant le transport.",
+        "highlights": {
+          "packaging": {
+            "label": "Spécifications d'emballage",
+            "value": "Nombre personnalisé d'articles par palette ou par boîte."
+          },
+          "protection": {
+            "label": "Protection",
+            "value": "Options de film plastique ou de protection spécialisée."
+          },
+          "branding": {
+            "label": "Personnalisation",
+            "value": "Conception et contenu personnalisés pour les étiquettes."
+          },
+          "schedule": {
+            "label": "Logistique",
+            "value": "Transport organisé par voie maritime, ferroviaire, routière ou aérienne, selon les délais et les exigences du client."
+          }
+        }
+      },
+      "certification": {
+        "title": "Certification de produits",
+        "description": "Vyanzo offre une assistance spécialisée dans les processus de certification internationale pour garantir que les produits répondent aux normes mondiales de sécurité et de qualité.",
+        "highlights": {
+          "copro": {
+            "label": "",
+            "value": "Certification Copro"
+          },
+          "benor": {
+            "label": "",
+            "value": "Certification BENOR"
+          },
+          "en124": {
+            "label": "EN124-2",
+            "value": "Certification EN124-2"
+          },
+          "mpa": {
+            "label": "",
+            "value": "Certification MPA Bremen"
+          },
+          "icmq": {
+            "label": "",
+            "value": "Certification ICMQ"
+          }
+        }
+      },
+      "foundry": {
+        "title": "Certifications de fonderie",
+        "description": "Vyanzo travaille uniquement avec des fonderies entièrement certifiées afin de garantir la conformité dans tous les domaines.",
+        "highlights": {
+          "iso9001": {
+            "label": "",
+            "value": "Certification ISO 9001"
+          },
+          "iso14001": {
+            "label": "",
+            "value": "Certification ISO 14001"
+          },
+          "iso45001": {
+            "label": "",
+            "value": "Certification ISO 45001"
+          }
+        }
+      }
+    },
+    "categories": {
+      "title": "Autres catégories de produits proposés",
+      "description": "Dans le cadre de ces services, Vyanzo se concentre sur les gammes de produits principales suivantes :",
+      "manhole": "Regards de chaussée et Regards hydrauliques",
+      "surfaceBoxes": "Regards de branchement",
+      "siphons": "Avaloirs"
+    }
+  },
+  "SustainabilityPage": {
+    "hero": {
+      "subtitle": "RESPONSABILITÉ ENVIRONNEMENTALE",
+      "titleStart": "Des procédés plus propres, ",
+      "titleHighlight": "une fonderie plus verte.",
+      "description": "La durabilité est intégrée dans chaque four, chaque installation et chaque produit, depuis les matières premières jusqu'à la livraison finale."
+    },
+    "cards": {
+      "certifications": {
+        "title": "Certifications",
+        "description": "Certifiés en gestion environnementale, qualité des produits et sécurité au travail — reconnus mondialement, audités de manière indépendante."
+      },
+      "zeroCoal": {
+        "title": "Fonderie sans charbon",
+        "description": "Zéro charbon. Contrairement à la production en Belgique, par exemple, nous n'utilisons pas de charbon pour la fusion, mais des fours à induction électrique. Un parc solaire géant alimente l'électricité. Chaque installation est construite de manière à minimiser son empreinte écologique, non seulement pour respecter les normes, mais aussi pour les définir."
+      },
+      "environmentalPolicy": {
+        "title": "Politique environnementale",
+        "description": "Nous ne nous contentons pas de respecter les normes, nous les définissons. Chaque installation est continuellement modernisée avec des machines écologiques. La pollution de l'air, des sols et de l'eau est activement prévenue par des contrôles stricts. Toutes les données environnementales sont partagées en toute transparence avec les clients et partenaires."
+      },
+      "standards": {
+        "title": "Normes & Déclarations",
+        "en15804": "— transparence complète du cycle de vie",
+        "reach": "— zéro substance dangereuse",
+        "bsEn124": "— conformité européenne pour les moulages municipaux"
+      }
     }
   },
   "ProductsPage": {
     "hero": {
-      "subtitle": "Nos produits",
-      "titleStart": "Conçu pour",
-      "titleHighlight": "les infrastructures.",
-      "description": "Découvrez notre gamme complète de pièces de fonderie municipales certifiées, conçues pour une durabilité extrême et une installation facile."
+      "subtitle": "Nos Produits",
+      "titleStart": "Conçus pour",
+      "titleHighlight": "l'Infrastructure.",
+      "description": "Découvrez notre gamme complète de moulages municipaux certifiés, conçus pour une durabilité extrême et une installation facile."
     },
     "grid": {
       "sidebar": {
-        "geoLocation": "Localisation",
+        "geoLocation": "Localisation géographique",
         "certification": "Certification",
         "category": "Catégorie",
         "resetFilters": "Réinitialiser les filtres"
       },
       "topBar": {
-        "showing": "Affichage de ",
+        "showing": "Affichage ",
         "of": " sur ",
         "products": " produits",
         "sortBy": "Trier par :",

@@ -82,7 +82,7 @@
     "titleStart": "Precision-cast for the ",
     "titleHighlight": "world's most demanding",
     "titleEnd": " infrastructure",
-    "description": "Born in 2018, Vyanzo manufactures manhole covers, grates, and municipal castings: supplied across Europe and beyond. Quality, service, and reliability aren't just promises. They're the standard.",
+    "description": " Founded in 2018, Vyanzo manufactures manhole covers, grates, and cast iron parts for local authorities, distributed throughout Europe and internationally. Quality, service, and reliability are not just empty words: they are our commitments",
     "cta": "Meet the team"
   },
   "EnvironmentSection": {
@@ -90,7 +90,7 @@
     "titleStart": "Cleaner casting starts at the ",
     "titleHighlight": "furnace",
     "titleEnd": "",
-    "description": "Zero coal. Electrical induction furnaces. Rooftop solar. Every facility is built to minimize footprint: not just meet standards, but set them.",
+    "description": "Zero coal. Unlike production in for example Belgium, we don’t use coal to melt, but electrical induction furnaces. A giant solar park fuels the electricity. Every facility is built to minimize footprint, not just meet standards, but set them.",
     "badges": {
       "coal": "No Coal Melting",
       "solar": "Solar Powered",
@@ -158,19 +158,19 @@
       }
     },
     "offerings": {
-      "title": "Key Offerings",
+      "title": "Key Products",
       "description": "Vyanzo is a leading supplier of premium casting products, engineered for scale and durability.",
       "manhole": {
         "title": "Manhole Covers",
-        "description": "Heavy-duty, robust manhole cover solutions engineered for high traffic and demanding infrastructural applications."
+        "description": "Heavy-duty, robust manhole manhole covers, engineered for intense traffic and demanding infrastructure applications."
       },
       "siphons": {
         "title": "Siphons",
-        "description": "Precision-cast siphon fittings designed to strict European standards for reliable drainage and plumbing systems."
+        "description": "Precision-cast siphons, with best in class flow-through capacity for reliable drainage, designed to the strictest European standards."
       },
       "surfaceBoxes": {
         "title": "Surface Boxes",
-        "description": "Durable cast iron surface boxes built for valve access and utility protection in municipal and industrial environments."
+        "description": "Durable cast iron surface boxes, built for easy installation and access."
       }
     },
     "advantage": {
@@ -178,7 +178,7 @@
       "description": "A relentless focus on quality, scale, and sustainable production.",
       "facilities": {
         "title": "State-of-the-Art Facilities",
-        "description": "We have continuously upgraded our production facilities with the latest machines and technology, always considering the environment and energy efficiency."
+        "description": "We continuously upgrade our production facilities with the latest machines and technology, always considering the environment and energy efficiency."
       },
       "sustainable": {
         "title": "Sustainable Manufacturing",
@@ -186,7 +186,7 @@
       },
       "future": {
         "title": "Built for the Future",
-        "description": "Vyanzo's production facilities are state-of-the-art and ready to meet customer volume and quality demands for decades to come."
+        "description": "Vyanzo’s production facilities have the necessary capacity to meet customer volume and quality demands for decades to come."
       },
       "stats": {
         "growth": {
@@ -197,9 +197,70 @@
         "volume": {
           "value": "250,000",
           "suffix": "+",
-          "label": "Tons of Castings Annually"
+          "label": "Parts produced annually"
         }
       }
+    },
+    "teams": {
+      "title": "Leadership Team",
+      "description": "Guided by a leadership team with decades of combined experience in global manufacturing, supply chain, and quality assurance.",
+      "members": [
+        {
+          "name": "Steve Vernelen",
+          "role": "CEO",
+          "image": "/team/Steve-Vernelen.png",
+          "bio": [
+            "Steve Vernelen has been doing business globally for the last 20 years, as CEO of Benito Urban in Spain (manhole covers and grates, urban equipment) and as CEO of Fondatel (foundry of manhole covers) in Belgium.",
+            "He holds an MBA from Kellogg School of Management , started his business career at McKinsey & Cie to then move on to turning around troubled private equity held companies."
+          ],
+          "contact": {
+            "email": "steve@vyanzo.be",
+            "phones": [
+              { "label": "Belgium", "number": "+32475264752" },
+              { "label": "India", "number": "+919560742436" }
+            ]
+          }
+        },
+        {
+          "name": "Roxane Sabatier",
+          "role": "Office Manager",
+          "image": "/team/Roxane-Sabatier.png",
+          "bio": [
+            "Roxane Sabatier runs our Mumbai office. She is fluent in English, French, Hindi, Italian and Spanish. A journalist by education, she has the tenacity to achieve her goals.",
+            "Roxane and Steve have worked together for over a decade in various companies. Roxane joined Vyanzo in 2022."
+          ],
+          "contact": {
+            "email": "roxane@vyanzo.be",
+            "phones": [
+              { "label": "India", "number": "+919930353363" }
+            ]
+          }
+        },
+        {
+          "name": "Annick D'Hont",
+          "role": "Legal and Contracts",
+          "image": "/team/Annick-DHont.png",
+          "bio": [
+            "Annick D'Hont is a seasoned lawyer and specializes in corporate contract law and logistics, leaving no loose ends. She has been an integral part of Vyanzo since its inception."
+          ],
+          "contact": {
+            "email": "annick@vyanzo.be",
+            "phones": []
+          }
+        },
+        {
+          "name": "Naba Kumar Gayen",
+          "role": "Head of Quality",
+          "image": "/team/Naba-Kumar-Gayen.png",
+          "bio": [
+            "Naba Kumar Gayen is our Head of Quality, based in Kolkata. He inspects production and product development locally at the foundries in India making sure any issues are detected before products get shipped. He is an engineer and has 15+ years of experience in the casting industry. He joined Vyanzo in 2019."
+          ],
+          "contact": {
+            "email": "naba@vyanzo.be",
+            "phones": []
+          }
+        }
+      ]
     }
   },
   "ContactPage": {
@@ -224,7 +285,7 @@
     "servicesList": {
       "development": {
         "title": "Product Development",
-        "description": "Vyanzo provides a high-level engineering resource to help clients design or optimize products.",
+        "description": "Vyanzo provides high-level engineering resources to help clients design or optimize products",
         "highlights": {
           "expertise": {
             "label": "Expertise",
@@ -232,7 +293,7 @@
           },
           "experience": {
             "label": "Experience",
-            "value": "A combined 150 years of experience in the casting industry."
+            "value": "Over 50 years of combined experience in the casting industry"
           },
           "focus": {
             "label": "Focus",
@@ -284,7 +345,7 @@
           },
           "schedule": {
             "label": "Logistics",
-            "value": "Shipments scheduled according to client timelines, utilizing 20-foot and 40-foot containers."
+            "value": "Transport organized by sea, rail, road or air, according to client timelines and requirements."
           }
         }
       },
@@ -316,7 +377,7 @@
       },
       "foundry": {
         "title": "Foundry Certifications",
-        "description": "Vyanzo offers specialized assistance with international certification processes to ensure products meet global safety and quality standards.",
+        "description": "Vyanzo only works with fully certified foundries to ensure compliance in every area",
         "highlights": {
           "iso9001": {
             "label": "",
@@ -344,7 +405,7 @@
   "SustainabilityPage": {
     "hero": {
       "subtitle": "ENVIRONMENTAL RESPONSIBILITY",
-      "titleStart": "We Cleaner Processes, ",
+      "titleStart": "Cleaner Processes, ",
       "titleHighlight": "Greener Casting.",
       "description": "Sustainability engineered into every furnace, facility, and product — from raw material to final delivery."
     },
@@ -355,7 +416,7 @@
       },
       "zeroCoal": {
         "title": "Zero-Coal Foundry",
-        "description": "Electrical induction furnaces replace coal-fired melting. Rooftop solar powers operations. Foundry sand is fully recycled and reused. The result — drastically lower emissions without compromising output."
+        "description": "Zero coal. Unlike production in for example Belgium, we don’t use coal to melt, but electrical induction furnaces. A giant solar park fuels the electricity. Every facility is built to minimize footprint, not just meet standards, but set them."
       },
       "environmentalPolicy": {
         "title": "Environmental Policy",

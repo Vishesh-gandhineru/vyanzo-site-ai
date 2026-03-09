@@ -121,7 +121,7 @@ export default function AboutPage() {
             <h2 className="text-section-h2 font-serif mb-6">
               {t("offerings.title")}
             </h2>
-            <p className="text-body-xl text-text-dark-bg/70">
+            <p className="text-body-xl text-bg-dark">
               {t("offerings.description")}
             </p>
           </motion.div>

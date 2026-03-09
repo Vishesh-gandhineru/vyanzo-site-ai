@@ -1,202 +1,467 @@
 {
   "Hero": {
-    "headlineStart": "Wo hochwertige Gussprodukte auf",
-    "headlineHighlight": " unübertroffene ",
-    "headlineEnd": " Servicestandards treffen",
-    "cta": "Produkte ansehen"
+    "headlineStart": "Waar kwaliteitsgietwerk ontmoet",
+    "headlineHighlight": " ongeëvenaarde ",
+    "headlineEnd": " servicenormen",
+    "cta": "Bekijk producten"
   },
   "MegaMenu": {
-    "menuText": "Menü",
-    "closeText": "Schließen",
+    "menuText": "Menu",
+    "closeText": "Sluiten",
     "links": {
-      "home": "Startseite",
-      "products": "Produkte",
-      "services": "Dienstleistungen",
-      "about": "Über uns",
-      "sustainability": "Nachhaltigkeit",
-      "contact": "Kontakt"
+      "home": "Home",
+      "products": "Producten",
+      "services": "Diensten",
+      "about": "Over ons",
+      "sustainability": "Duurzaamheid",
+      "contact": "Contact"
     }
   },
   "Footer": {
     "links": {
-      "products": "Produkte",
-      "services": "Dienstleistungen",
-      "about": "Über uns",
-      "contact": "Kontakt",
-      "team": "Unser Team"
+      "products": "Producten",
+      "services": "Diensten",
+      "about": "Over ons",
+      "contact": "Contact",
+      "team": "Ons team"
     },
     "copyright": "Copyright @Vyanzo {year}",
     "aria": {
-      "scrollToTop": "Nach oben scrollen",
-      "whatsapp": "Über WhatsApp kontaktieren"
+      "scrollToTop": "Scroll naar boven",
+      "whatsapp": "Contact via WhatsApp"
     }
   },
   "MarqueeLogos": {
-    "title": "Zertifizierungen"
+    "title": "Certificeringen"
   },
   "BentoGrid": {
-    "subtitle": "Der Vyanzo-Vorteil",
-    "titleStart": "Gebaut für ",
-    "titleHighlight": "ein Leben lang",
-    "description": "Seit 2018 liefern wir weltweit unvergleichliche Gusslösungen mit Präzision, Skalierbarkeit und Zuverlässigkeit.",
+    "subtitle": "De Vyanzo Troef",
+    "titleStart": "Gebouwd voor een ",
+    "titleHighlight": "leven lang",
+    "description": "Wereldwijd ongeëvenaarde gietoplossingen met precisie, schaal en betrouwbaarheid sinds 2018.",
     "quality": {
-      "title": "Unübertroffene Qualität",
-      "description": "Entwickelt für Perfektion in jeder Dimension und jedem Guss",
-      "stat": "99.9%",
-      "statLabel": "Fehlerfreie Produktion"
+      "title": "Ongeëvenaarde kwaliteit",
+      "description": "Ingenieursprecisie in elke dimensie en elke gietbeurt",
+      "stat": "99,9%",
+      "statLabel": "Foutloze output"
     },
     "global": {
-      "title": "Globale Reichweite",
-      "description": "Wir beliefern Kunden in Belgien, Frankreich, Spanien, Italien, Österreich, den Niederlanden, Großbritannien, den USA und Kanada"
+      "title": "Wereldwijd bereik",
+      "description": "Klanten in België, Frankrijk, Spanje, Italië, Oostenrijk, Nederland, het VK, de VS en Canada"
     },
     "volume": {
-      "title": "Jährliches Produktionsvolumen",
-      "stat": "> 250,000",
-      "statLabel": " Teile"
+      "title": "Jaarlijks productievolume",
+      "stat": "> 250.000",
+      "statLabel": " Onderdelen"
     },
     "presence": {
-      "title": "Globale Präsenz"
+      "title": "Wereldwijde aanwezigheid"
     },
     "compliance": {
-      "title": "Industriekonformität"
+      "title": "Industrienaleving"
     },
     "contact": {
-      "title": "Vertrieb kontaktieren",
-      "description": "Individuelle Angebote anfordern"
+      "title": "Verkoop contacteren",
+      "description": "Vraag een offerte op maat"
     }
   },
   "ProductSection": {
-    "subtitle": "Was wir gießen",
-    "titleStart": "Unsere ",
-    "titleHighlight": "Kernprodukte",
-    "description": "Premium-Gusslösungen für die anspruchsvollsten Infrastrukturen der Welt.",
-    "viewAll": "Alle Produkte ansehen",
+    "subtitle": "Wat wij gieten",
+    "titleStart": "Onze kern",
+    "titleHighlight": "producten",
+    "description": "Premium gietoplossingen gebouwd voor de meest veeleisende infrastructuur ter wereld.",
+    "viewAll": "Alle producten bekijken",
     "products": {
-      "manhole": "Schachtabdeckungen",
-      "siphons": "Siphons",
-      "surfaceBoxes": "Oberflächenkästen"
+      "manhole": "Putdeksels",
+      "siphons": "Sifons",
+      "surfaceBoxes": "Straatpotten"
     }
   },
   "AboutSection": {
-    "subtitle": "Über Vyanzo",
-    "titleStart": "Präzisionsguss für die ",
-    "titleHighlight": "anspruchsvollsten",
-    "titleEnd": " Infrastrukturen der Welt",
-    "description": "Gegründet im Jahr 2018 stellt Vyanzo Schachtabdeckungen, Roste und kommunale Gussprodukte her, die in ganz Europa und darüber hinaus geliefert werden. Qualität, Service und Zuverlässigkeit sind nicht nur Versprechen – sie sind unser Standard.",
-    "cta": "Team kennenlernen"
+    "subtitle": "Over Vyanzo",
+    "titleStart": "Precisiегietwerk voor de ",
+    "titleHighlight": "meest veeleisende",
+    "titleEnd": " infrastructuur ter wereld",
+    "description": "Opgericht in 2018 vervaardigt Vyanzo putdeksels, roosters en gietijzeren onderdelen voor lokale overheden, verdeeld door heel Europa en internationaal. Kwaliteit, service en betrouwbaarheid zijn niet zomaar woorden: het zijn onze engagementen.",
+    "cta": "Ontmoet het team"
   },
   "EnvironmentSection": {
-    "subtitle": "Umweltverantwortung",
-    "titleStart": "Sauberer Guss beginnt im ",
-    "titleHighlight": "Ofen",
+    "subtitle": "Milieuvera­ntwoordelijkheid",
+    "titleStart": "Schoner gietwerk begint bij de ",
+    "titleHighlight": "oven",
     "titleEnd": "",
-    "description": "Kein Kohleeinsatz. Elektrische Induktionsöfen. Solaranlagen auf den Dächern. Jede Anlage ist darauf ausgelegt, den ökologischen Fußabdruck zu minimieren – nicht nur Standards zu erfüllen, sondern neue zu setzen.",
+    "description": "Nul kolen. In tegenstelling tot productie in bijvoorbeeld België gebruiken wij geen kolen om te smelten, maar elektrische inductieovens. Een groot zonnepanelenpark levert de stroom. Elke vestiging is ingericht om de ecologische voetafdruk te minimaliseren — niet alleen normen naleven, maar ze bepalen.",
     "badges": {
-      "coal": "Keine Kohleschmelze",
-      "solar": "Solarbetrieben",
-      "iso": "ISO 14001 zertifiziert"
+      "coal": "Geen koolsmelten",
+      "solar": "Op zonne-energie",
+      "iso": "ISO 14001 gecertificeerd"
     },
-    "cta": "Mehr erfahren"
+    "cta": "Meer informatie"
   },
   "ServicesSection": {
-    "subtitle": "Unsere Dienstleistungen",
-    "titleStart": "Entdecken Sie, was wir ",
-    "titleHighlight": "für Sie tun können",
-    "cta": "Mehr erfahren",
+    "subtitle": "Onze diensten",
+    "titleStart": "Ontdek wat we voor ",
+    "titleHighlight": "u kunnen doen",
+    "cta": "Meer informatie",
     "services": {
-      "productDevelopment": "Produktentwicklung",
-      "productionExcellence": "Produktionsexzellenz von A bis Z",
-      "customPackaging": "Individuelle Verpackungs-\nund Lieferoptionen",
-      "productCertification": "Produktzertifizierung"
+      "productDevelopment": "Productontwikkeling",
+      "productionExcellence": "A-Z productie-excellentie",
+      "customPackaging": "Aangepaste verpakking &\nLeveringsopties",
+      "productCertification": "Productcertificering"
     }
   },
   "ContactSection": {
-    "subtitle": "Ihr nächster Schritt",
-    "titleStart": "Schreiben Sie uns, ",
-    "titleHighlight": "wir kümmern uns um den Rest",
-    "description": "Individuelle Angebote, technische Spezifikationen oder Großbestellungen — füllen Sie die Details aus und unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.",
+    "subtitle": "Uw volgende stap",
+    "titleStart": "Stuur ons een bericht, ",
+    "titleHighlight": "wij nemen het van daar over",
+    "description": "Offertes op maat, technische specificaties of bulkbestellingen — vul de gegevens in en ons team neemt binnen 24 uur contact met u op.",
     "headquarters": {
-      "title": "Hauptsitz",
-      "address": "Botermelkbaan 51 <br />2900 Schoten <br />Belgien"
+      "title": "Hoofdkantoor",
+      "address": "Botermelkbaan 51 <br />2900 Schoten <br />België"
     },
     "warehouse": {
-      "title": "Lager",
-      "address": "Kluizenmeersen 10 <br />9170 Sint-Gillis-Waas <br />Belgien"
+      "title": "Magazijn",
+      "address": "Kluizenmeersen 10 <br />9170 Sint-Gillis-Waas <br />België"
     },
     "email": {
-      "title": "E-Mail senden",
+      "title": "Stuur ons een e-mail",
       "value": "info@vyanzo.be"
     },
     "phone": {
-      "title": "Anrufen / WhatsApp",
+      "title": "Bel / WhatsApp ons",
       "value": "+ 32 475 26 47 52"
     },
     "distribution": {
-      "title": "Belgischer Vertrieb und Lager",
+      "title": "Belgische distributie en magazijn",
       "value": "VIATEQ bv"
     },
-    "formTitle": "Senden Sie uns eine Nachricht"
+    "formTitle": "Stuur ons een bericht"
+  },
+  "AboutPage": {
+    "hero": {
+      "subtitle": "Bedrijfsprofiel",
+      "titleStart": "Over ",
+      "titleHighlight": "Vyanzo",
+      "titleEnd": ".",
+      "description": "Ontdek ons assortiment zorgvuldig ontworpen en gefabriceerde producten. Vyanzo levert topkwaliteit gietwerk aan de meest veeleisende klanten — consistente kwaliteit en een hoog serviceniveau staan centraal in alles wat we doen."
+    },
+    "philosophy": {
+      "title": "Kwaliteit, service & betrouwbaarheid met onverbiddelijke consistentie.",
+      "description": "Sinds de oprichting in 2018 is Vyanzo geëvolueerd van OEM-leverancier tot toonaangevend fabrikant van zijn eigen gamma putdeksels, roosters en andere gemeentelijke gietproducten, nu verdeeld door heel Europa."
+    },
+    "service": {
+      "title": "End-to-end service",
+      "description": "Wij bieden end-to-end dienstverlening aan klanten over de hele wereld die onze bedrijfsfilosofie delen: kwaliteit, service & betrouwbaarheid aan een correcte prijs — en dat met onverbiddelijke consistentie. Door productie, kwaliteitsborging en logistiek intern te beheren, garandeert Vyanzo een naadloze ervaring voor zijn klanten.",
+      "badge": {
+        "title": "COPRO BENOR gecertificeerd",
+        "description": "Voor de Belgische markt, verdeeld via Viateq"
+      }
+    },
+    "offerings": {
+      "title": "Kernproducten",
+      "description": "Vyanzo is een toonaangevende leverancier van premium gietproducten, ontworpen voor schaal en duurzaamheid.",
+      "manhole": {
+        "title": "Putdeksels",
+        "description": "Robuuste putdeksels voor zwaar gebruik, ontworpen voor intensief verkeer en veeleisende infrastructuurtoepassingen."
+      },
+      "siphons": {
+        "title": "Sifons",
+        "description": "Precisiегegoten sifons met een best-in-class doorstroomcapaciteit voor betrouwbare afwatering, ontworpen volgens de strengste Europese normen."
+      },
+      "surfaceBoxes": {
+        "title": "Straatpotten",
+        "description": "Duurzame gietijzeren straatpotten, gebouwd voor eenvoudige installatie en toegang."
+      }
+    },
+    "advantage": {
+      "title": "Het Vyanzo-voordeel",
+      "description": "Een onverbiddelijke focus op kwaliteit, schaal en duurzame productie.",
+      "facilities": {
+        "title": "Ultramoderne installaties",
+        "description": "Wij upgraden onze productiefaciliteiten voortdurend met de nieuwste machines en technologie, steeds met aandacht voor het milieu en energie-efficiëntie."
+      },
+      "sustainable": {
+        "title": "Duurzame productie",
+        "description": "Wij smelten niet met kolen — wij gebruiken de nieuwste elektrische inductieovens, waardoor onze milieu-impact aanzienlijk wordt verminderd."
+      },
+      "future": {
+        "title": "Gebouwd voor de toekomst",
+        "description": "De productiefaciliteiten van Vyanzo beschikken over de nodige capaciteit om de volume- en kwaliteitseisen van klanten nog decennialang te beantwoorden."
+      },
+      "stats": {
+        "growth": {
+          "value": "+20",
+          "suffix": "%",
+          "label": "Jaarlijkse groeivoet"
+        },
+        "volume": {
+          "value": "250.000",
+          "suffix": "+",
+          "label": "Jaarlijks geproduceerde onderdelen"
+        }
+      }
+    },
+    "teams": {
+      "title": "Leiderschapsteam",
+      "description": "Geleid door een managementteam met tientallen jaren gecombineerde ervaring in wereldwijde productie, supply chain en kwaliteitsborging.",
+      "members": [
+        {
+          "name": "Steve Vernelen",
+          "role": "CEO",
+          "image": "/team/Steve-Vernelen.png",
+          "bio": [
+            "Steve Vernelen doet al 20 jaar zaken wereldwijd, als CEO van Benito Urban in Spanje (putdeksels en roosters, stedelijke uitrusting) en als CEO van Fondatel (gieterij van putdeksels) in België.",
+            "Hij heeft een MBA van de Kellogg School of Management, begon zijn zakencarrière bij McKinsey & Cie en richtte zich daarna op het herstructureren van noodlijdende private-equitybedrijven."
+          ],
+          "contact": {
+            "email": "steve@vyanzo.be",
+            "phones": [
+              { "label": "België", "number": "+32475264752" },
+              { "label": "India", "number": "+919560742436" }
+            ]
+          }
+        },
+        {
+          "name": "Roxane Sabatier",
+          "role": "Office Manager",
+          "image": "/team/Roxane-Sabatier.png",
+          "bio": [
+            "Roxane Sabatier leidt ons kantoor in Mumbai. Ze spreekt vloeiend Engels, Frans, Hindi, Italiaans en Spaans. Als journalist van opleiding beschikt ze over de vastberadenheid om haar doelen te bereiken.",
+            "Roxane en Steve werken al meer dan tien jaar samen in verschillende bedrijven. Roxane vervoegde Vyanzo in 2022."
+          ],
+          "contact": {
+            "email": "roxane@vyanzo.be",
+            "phones": [
+              { "label": "India", "number": "+919930353363" }
+            ]
+          }
+        },
+        {
+          "name": "Annick D'Hont",
+          "role": "Juridische zaken en contracten",
+          "image": "/team/Annick-DHont.png",
+          "bio": [
+            "Annick D'Hont is een ervaren advocate gespecialiseerd in bedrijfscontractrecht en logistiek, waarbij geen enkel detail aan haar aandacht ontsnapt. Ze maakt deel uit van Vyanzo sinds de oprichting."
+          ],
+          "contact": {
+            "email": "annick@vyanzo.be",
+            "phones": []
+          }
+        },
+        {
+          "name": "Naba Kumar Gayen",
+          "role": "Hoofd Kwaliteit",
+          "image": "/team/Naba-Kumar-Gayen.png",
+          "bio": [
+            "Naba Kumar Gayen is ons Hoofd Kwaliteit, gevestigd in Kolkata. Hij inspecteert ter plaatse de productie en productontwikkeling bij de gieterijen in India en zorgt ervoor dat eventuele problemen worden opgespoord voordat de producten worden verscheept. Hij is ingenieur en heeft meer dan 15 jaar ervaring in de gietindustrie. Hij vervoegde Vyanzo in 2019."
+          ],
+          "contact": {
+            "email": "naba@vyanzo.be",
+            "phones": []
+          }
+        }
+      ]
+    }
   },
   "ContactPage": {
     "hero": {
-      "subtitle": "Ein Gespräch beginnen",
-      "titleStart": "Wir ",
-      "titleHighlight": "hören zu",
+      "subtitle": "Start een gesprek",
+      "titleStart": "Wij ",
+      "titleHighlight": "luisteren",
       "titleEnd": "",
-      "description": "Haben Sie ein Projekt im Kopf? Lassen Sie uns gemeinsam die richtige Lösung finden."
+      "description": "Een project in gedachten? Laten we samen de juiste oplossing vinden."
     }
   },
   "ServicesPage": {
     "hero": {
-      "subtitle": "Dienstleistungsportfolio",
-      "titleStart": "Exzellenz geschmiedet,",
-      "titleHighlight": "Service perfektioniert.",
-      "description": "Vyanzo bietet ein umfassendes Dienstleistungsportfolio, das den Guss- und Fertigungsprozess von der ersten Konstruktion bis zur endgültigen Lieferung optimiert."
+      "subtitle": "Dienstenportfolio",
+      "titleStart": "Excellentie gesmeed,",
+      "titleHighlight": "service geperfectioneerd.",
+      "description": "Vyanzo biedt een uitgebreid pakket diensten om het giet- en productieproces te stroomlijnen, van het eerste ontwerp tot de uiteindelijke levering."
     },
     "tabs": {
-      "title": "Unsere Dienstleistungen"
+      "title": "Onze diensten"
+    },
+    "servicesList": {
+      "development": {
+        "title": "Productontwikkeling",
+        "description": "Vyanzo stelt hoogwaardige ingenieursresources ter beschikking om klanten te helpen producten te ontwerpen of te optimaliseren.",
+        "highlights": {
+          "expertise": {
+            "label": "Expertise",
+            "value": "Toegang tot een team van meer dan 10 ingenieurs."
+          },
+          "experience": {
+            "label": "Ervaring",
+            "value": "Meer dan 50 jaar gecombineerde ervaring in de gietindustrie."
+          },
+          "focus": {
+            "label": "Focus",
+            "value": "Producten ontwerpen en optimaliseren die specifiek afgestemd zijn op de behoeften en technische vereisten van de klant."
+          }
+        }
+      },
+      "production": {
+        "title": "A-Z productie-excellentie",
+        "description": "Vyanzo beheert de volledige productiecyclus en garandeert kwaliteit in elke fase volgens de specifieke eisen van de klant.",
+        "highlights": {
+          "pattern": {
+            "label": "Modelmaking",
+            "value": "Aanmaken van de initiële mallen en modellen."
+          },
+          "sampling": {
+            "label": "Bemonstering",
+            "value": "Productie van prototypes en stalen ter goedkeuring."
+          },
+          "quality": {
+            "label": "Kwaliteitscontrole",
+            "value": "Strenge tests en inspecties gedurende de volledige productierun."
+          },
+          "finishing": {
+            "label": "Afwerking & coating",
+            "value": "Diverse verf- en coatingopties, waaronder: watergedragen verf, KTL (e-coating), epoxycoatings."
+          },
+          "assembly": {
+            "label": "Assemblage",
+            "value": "Eindassemblage van componenten vóór verzending."
+          }
+        }
+      },
+      "logistics": {
+        "title": "Aangepaste verpakking & leveringsopties",
+        "description": "Klanten hebben volledige controle over hoe hun producten worden beschermd en gepresenteerd tijdens het transport.",
+        "highlights": {
+          "packaging": {
+            "label": "Verpakkingsspecificaties",
+            "value": "Aangepast aantal stuks per pallet of doos."
+          },
+          "protection": {
+            "label": "Bescherming",
+            "value": "Opties voor krimpfolie of gespecialiseerde bescherming."
+          },
+          "branding": {
+            "label": "Huisstijl",
+            "value": "Aangepast ontwerp en inhoud voor etiketten."
+          },
+          "schedule": {
+            "label": "Logistiek",
+            "value": "Transport georganiseerd per zee, spoor, weg of lucht, afgestemd op de tijdlijnen en vereisten van de klant."
+          }
+        }
+      },
+      "certification": {
+        "title": "Productcertificering",
+        "description": "Vyanzo biedt gespecialiseerde ondersteuning bij internationale certificeringsprocedures om ervoor te zorgen dat producten voldoen aan wereldwijde veiligheids- en kwaliteitsnormen.",
+        "highlights": {
+          "copro": {
+            "label": "",
+            "value": "Copro-certificering"
+          },
+          "benor": {
+            "label": "",
+            "value": "BENOR-certificering"
+          },
+          "en124": {
+            "label": "EN124-2",
+            "value": "EN124-2-certificering"
+          },
+          "mpa": {
+            "label": "",
+            "value": "MPA Bremen-certificering"
+          },
+          "icmq": {
+            "label": "",
+            "value": "ICMQ-certificering"
+          }
+        }
+      },
+      "foundry": {
+        "title": "Gieterijcertificeringen",
+        "description": "Vyanzo werkt uitsluitend samen met volledig gecertificeerde gieterijen om naleving op elk gebied te garanderen.",
+        "highlights": {
+          "iso9001": {
+            "label": "",
+            "value": "ISO 9001-certificering"
+          },
+          "iso14001": {
+            "label": "",
+            "value": "ISO 14001-certificering"
+          },
+          "iso45001": {
+            "label": "",
+            "value": "ISO 45001-certificering"
+          }
+        }
+      }
+    },
+    "categories": {
+      "title": "Andere bediende productcategorieën",
+      "description": "Bij het leveren van deze diensten richt Vyanzo zich op de volgende primaire productlijnen:",
+      "manhole": "Putdeksels & hydraulische deksels",
+      "surfaceBoxes": "Straatpotten",
+      "siphons": "Sifons"
     }
   },
   "SustainabilityPage": {
     "hero": {
-      "subtitle": "UMWELTVERANTWORTUNG",
-      "titleStart": "Sauberere Prozesse, ",
-      "titleHighlight": "grünerer Guss.",
-      "description": "Nachhaltigkeit ist in jeden Ofen, jede Anlage und jedes Produkt integriert — vom Rohmaterial bis zur endgültigen Lieferung."
+      "subtitle": "MILIEUVERA­NTWOORDELIJKHEID",
+      "titleStart": "Schonere processen, ",
+      "titleHighlight": "groener gietwerk.",
+      "description": "Duurzaamheid verankerd in elke oven, elke installatie en elk product — van grondstof tot eindlevering."
+    },
+    "cards": {
+      "certifications": {
+        "title": "Certificeringen",
+        "description": "Gecertificeerd op het vlak van milieubeheer, productkwaliteit en arbeidsveiligheid — wereldwijd erkend, onafhankelijk geauditeerd."
+      },
+      "zeroCoal": {
+        "title": "Kolenvrije gieterij",
+        "description": "Elektrische inductieovens vervangen het smelten met kolen. Zonnepanelen op het dak voorzien in de energie. Gieterijzand wordt volledig gerecycleerd en hergebruikt. Het resultaat: drastisch lagere emissies zonder concessies aan de output."
+      },
+      "environmentalPolicy": {
+        "title": "Milieubeleid",
+        "description": "Wij voldoen niet alleen aan de normen, wij zetten ze. Elke vestiging wordt voortdurend uitgerust met milieuvriendelijke machines. Lucht-, bodem- en waterverontreiniging worden actief voorkomen via strenge controles. Alle milieugegevens worden transparant gedeeld met klanten en partners."
+      },
+      "standards": {
+        "title": "Normen & verklaringen",
+        "en15804": "— volledige levenscyclustransparantie",
+        "reach": "— nul gevaarlijke stoffen",
+        "bsEn124": "— Europese naleving voor gemeentelijk gietwerk"
+      }
     }
   },
   "ProductsPage": {
     "hero": {
-      "subtitle": "Unsere Produkte",
-      "titleStart": "Entwickelt für",
-      "titleHighlight": "Infrastruktur.",
-      "description": "Entdecken Sie unser vollständiges Sortiment zertifizierter kommunaler Gussprodukte, entwickelt für extreme Haltbarkeit und einfache Installation."
+      "subtitle": "Onze producten",
+      "titleStart": "Ontworpen voor",
+      "titleHighlight": "infrastructuur.",
+      "description": "Ontdek ons volledig assortiment gecertificeerde gemeentelijke gietproducten, ontworpen voor extreme duurzaamheid en eenvoudige installatie."
     },
     "grid": {
       "sidebar": {
-        "geoLocation": "Geografische Lage",
-        "certification": "Zertifizierung",
-        "category": "Kategorie",
-        "resetFilters": "Filter zurücksetzen"
+        "geoLocation": "Geolocatie",
+        "certification": "Certificering",
+        "category": "Categorie",
+        "resetFilters": "Filters resetten"
       },
       "topBar": {
-        "showing": "Anzeigen ",
-        "of": " von ",
-        "products": " Produkten",
-        "sortBy": "Sortieren nach:",
+        "showing": "Toont ",
+        "of": " van ",
+        "products": " producten",
+        "sortBy": "Sorteren op:",
         "sortOptions": {
-          "defaultOrder": "Standardreihenfolge",
-          "nameAsc": "Name: A → Z",
-          "nameDesc": "Name: Z → A"
+          "defaultOrder": "Standaardvolgorde",
+          "nameAsc": "Naam: A → Z",
+          "nameDesc": "Naam: Z → A"
         }
       },
       "card": {
-        "viewSpecs": "Technische Daten anzeigen"
+        "viewSpecs": "Technische specificaties bekijken"
       },
       "empty": {
-        "title": "Die Produkte für Skandinavien befinden sich derzeit in Entwicklung.",
-        "description": "Versuchen Sie, Ihre Filter anzupassen, um das Gesuchte zu finden.",
-        "clearFilters": "Filter löschen"
+        "title": "De producten voor Scandinavië zijn in ontwikkeling.",
+        "description": "Pas uw filters aan om te vinden wat u zoekt.",
+        "clearFilters": "Filters wissen"
       }
     }
   }
