@@ -36,7 +36,7 @@
   },
   "BentoGrid": {
     "subtitle": "The Vyanzo Edge",
-    "titleStart": "Built for ",
+    "titleStart": "Built for a ",
     "titleHighlight": "lifetime",
     "description": "Delivering unparalleled casting solutions across the globe with precision, scale, and reliability since 2018.",
     "quality": {
@@ -69,7 +69,7 @@
     "subtitle": "What We Cast",
     "titleStart": "Our core ",
     "titleHighlight": "products",
-    "description": "Premium casting solutions built for the world's most demanding infrastructure.",
+    "description": "Premium casting solutions built for the most demanding infrastructure.",
     "viewAll": "View All Products",
     "products": {
       "manhole": "Manhole Covers",
@@ -80,9 +80,9 @@
   "AboutSection": {
     "subtitle": "About Vyanzo",
     "titleStart": "Precision-cast for the ",
-    "titleHighlight": "world's most demanding",
+    "titleHighlight": "most demanding",
     "titleEnd": " infrastructure",
-    "description": " Founded in 2018, Vyanzo manufactures manhole covers, grates, and cast iron parts for local authorities, distributed throughout Europe and internationally. Quality, service, and reliability are not just empty words: they are our commitments",
+    "description": " Founded in 2018, Vyanzo (Which means “new source” in Swahili) manufactures manhole covers, grates, and cast iron parts for local authorities, distributed throughout Europe and internationally. Quality, service, and reliability are not just empty words: they are our commitments",
     "cta": "Meet the team"
   },
   "EnvironmentSection": {
