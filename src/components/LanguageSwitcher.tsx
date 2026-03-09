@@ -8,11 +8,11 @@ import { useLocale } from "next-intl";
 
 const languages = [
   { code: "en", label: "English" },
-  { code: "nl", label: "Nederlands" },
+  // { code: "nl", label: "Nederlands" },
   { code: "fr", label: "Français" },
   { code: "de", label: "Deutsch" },
-  { code: "sv", label: "Svenska" },
-  { code: "da", label: "Dansk" },
+  // { code: "sv", label: "Svenska" },
+  // { code: "da", label: "Dansk" },
 ];
 
 export default function LanguageSwitcher() {

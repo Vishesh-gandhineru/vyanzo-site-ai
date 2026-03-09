@@ -1,4 +1,5 @@
 import { getAllProducts, getProductBySlug, parseMetaItems } from "@/api/products";
+import { getTranslations } from "next-intl/server";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -134,9 +135,11 @@ import STATIC_PRODUCTS from './productdata.json';
 
 // ─── API Wrapper Functions ─────────────────────────────────────────────────────
 
-function getStaticHydraulicCover(): Product | null {
+async function getStaticHydraulicCover(locale: string): Promise<Product | null> {
     const raw = STATIC_PRODUCTS.find((p: any) => p.no === 9);
     if (!raw) return null;
+
+    const t = await getTranslations({ locale, namespace: 'HydraulicCovers' });
 
     const subImages = Object.values(raw.image_link || {}).filter(Boolean) as string[];
     const variants: Variant[] = (raw.variants || []).map((v: any) => {
@@ -150,12 +153,14 @@ function getStaticHydraulicCover(): Product | null {
       if (v.image_link) {
         img = Object.values(v.image_link)[0] as string || "";
       }
+      
+      const variantKey = v.name.replace(/ /g, '_');
 
       return {
         name: v.name,
         kn: v.kn,
-        application: v.application,
-        description: v.description,
+        application: t(`variants.${variantKey}.application`),
+        description: t(`variants.${variantKey}.description`),
         sizes: v.sizes,
         specifications: v.specifications || {},
         image_link: v.image_link || null,
@@ -168,7 +173,7 @@ function getStaticHydraulicCover(): Product | null {
     return {
       id: 9999,
       no: 9,
-      title: raw.name,
+      title: t("title"),
       slug: "hydraulic-covers",
       sku: `VY-HYC`,
       description: "",
@@ -192,7 +197,7 @@ export async function getProducts(locale: string = "EN"): Promise<Product[]> {
     const products = nodes.map(mapNodeToProduct);
     
     // Inject the complex nested variant product
-    const hydraulic = getStaticHydraulicCover();
+    const hydraulic = await getStaticHydraulicCover(locale);
     if (hydraulic && !products.some((p: Product) => p.slug === "hydraulic-covers")) {
         products.push(hydraulic);
     }
@@ -200,9 +205,9 @@ export async function getProducts(locale: string = "EN"): Promise<Product[]> {
     return products;
 }
 
-export async function getProduct(slug: string): Promise<Product | null> {
+export async function getProduct(slug: string, locale: string = "EN"): Promise<Product | null> {
     if (slug === "hydraulic-covers") {
-      const hydraulic = getStaticHydraulicCover();
+      const hydraulic = await getStaticHydraulicCover(locale);
       if (hydraulic) return hydraulic;
     }
 

@@ -464,5 +464,22 @@
         "clearFilters": "Filters wissen"
       }
     }
+  },
+  "HydraulicCovers": {
+    "title": "Hydraulische deksels",
+    "variants": {
+      "Class_B125": {
+        "application": "Parkeerplaatsen & Opritten",
+        "description": "Voetpaden, voetgangersgebieden en vergelijkbare gebieden, parkeerdekken voor auto's."
+      },
+      "Class_C250": {
+        "application": "Stoepranden & Parkeerterreinen",
+        "description": "Voor stoepranden en niet-bereden delen van vluchtstroken en parkeergebieden."
+      },
+      "Class_D400": {
+        "application": "Hoofdwegen & Snelwegen",
+        "description": "Rijbanen van wegen, vluchtstroken en parkeerterreinen voor alle soorten wegvoertuigen."
+      }
+    }
   }
 }

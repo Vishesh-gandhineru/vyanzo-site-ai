@@ -12,8 +12,7 @@ export default async function SingleProductPage({
   params: Promise<{ slug: string; locale: string }>;
 }) {
   const resolvedParams = await params;
-  const product = await getProduct(resolvedParams.slug);
-
+  const product = await getProduct(resolvedParams.slug, resolvedParams.locale);
   if (!product) {
     notFound();
   }

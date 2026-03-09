@@ -515,6 +515,17 @@ export default function ProductDetails({
                 {/* ── Table ── */}
                 {isOpen && (
                   <div className="overflow-hidden animate-in fade-in slide-in-from-top-4 duration-300">
+                    <div className="p-5 md:p-8 bg-[#f8f9fc] border-b border-brand-ash/10">
+                      <p className="text-bg-dark font-sans font-medium text-sm md:text-base mb-1">
+                        <span className="text-text-light-bg/70 mr-2">
+                          Application:
+                        </span>
+                        {variant.application}
+                      </p>
+                      <p className="text-text-light-bg/70 font-sans text-sm md:text-base">
+                        {variant.description}
+                      </p>
+                    </div>
                     <table className="w-full text-left border-collapse">
                       <thead>
                         <tr className="border-b border-brand-ash/10 bg-[#fbfcfd]">

@@ -464,5 +464,22 @@
         "clearFilters": "Clear Filters"
       }
     }
+  },
+  "HydraulicCovers": {
+    "title": "Hydraulic Covers",
+    "variants": {
+      "Class_B125": {
+        "application": "Car Parks & Driveways",
+        "description": "Footways, pedestrian areas and comparable areas, car parking decks."
+      },
+      "Class_C250": {
+        "application": "Kerb Sides & Parking Areas",
+        "description": "For kerb sides and non-trafficked areas of hard shoulders and parking areas."
+      },
+      "Class_D400": {
+        "application": "Main Roads & Highways",
+        "description": "Carriageways of roads, hard shoulders, and parking areas for all types of road vehicles."
+      }
+    }
   }
 }

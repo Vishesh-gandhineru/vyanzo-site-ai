@@ -462,5 +462,22 @@
         "clearFilters": "Effacer les filtres"
       }
     }
+  },
+  "HydraulicCovers": {
+    "title": "Regards Hydrauliques",
+    "variants": {
+      "Class_B125": {
+        "application": "Parkings & Allées",
+        "description": "Trottoirs, zones piétonnes et zones comparables, aires de stationnement pour voitures."
+      },
+      "Class_C250": {
+        "application": "Bordures de Trottoir & Zones de Stationnement",
+        "description": "Pour les bordures de trottoir et les zones non circulées des accotements et des aires de stationnement."
+      },
+      "Class_D400": {
+        "application": "Routes Principales & Autoroutes",
+        "description": "Chaussées, accotements et aires de stationnement pour tous types de véhicules routiers."
+      }
+    }
   }
 }
