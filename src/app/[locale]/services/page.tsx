@@ -248,55 +248,57 @@ export default function ServicesPage() {
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
             {/* Sidebar Navigation */}
-            <div className="lg:w-1/3 shrink-0 flex flex-col gap-4 sticky top-32 h-fit">
-              <h3 className="text-section-h2 font-serif text-bg-dark mb-4">
+            <div className="lg:w-1/3 shrink-0 flex flex-col gap-4 lg:sticky lg:top-32 h-fit">
+              <h3 className="text-section-h2 font-serif text-bg-dark mb-2 lg:mb-4">
                 {t("tabs.title")}
               </h3>
-              {services.map((service) => {
-                const isActive = activeTab === service.id;
-                return (
-                  <button
-                    key={service.id}
-                    onClick={() => setActiveTab(service.id)}
-                    className={`relative p-6 rounded-2xl flex items-center gap-4 text-left transition-all duration-300 w-full group overflow-hidden ${
-                      isActive
-                        ? "bg-bg-dark text-white shadow-xl"
-                        : "bg-[#f8f9fc] text-bg-dark hover:bg-brand-primary/10 hover:text-bg-dark"
-                    }`}
-                  >
-                    {/* Active State Background Animation */}
-                    {isActive && (
-                      <motion.div
-                        layoutId="active-tab-indicator"
-                        className="absolute inset-0 bg-bg-dark z-0 rounded-2xl"
-                        initial={false}
-                        transition={{
-                          type: "spring",
-                          stiffness: 300,
-                          damping: 30,
-                        }}
-                      />
-                    )}
-
-                    <div
-                      className={`relative z-10 flex items-center gap-4 w-full ${isActive ? "text-white" : ""}`}
+              <div className="flex lg:flex-col gap-3 lg:gap-4 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 scroll-smooth w-full items-stretch custom-scrollbar">
+                {services.map((service) => {
+                  const isActive = activeTab === service.id;
+                  return (
+                    <button
+                      key={service.id}
+                      onClick={() => setActiveTab(service.id)}
+                      className={`relative p-4 lg:p-6 rounded-2xl flex items-center gap-3 lg:gap-4 text-left transition-all duration-300 w-max lg:w-full shrink-0 group overflow-hidden ${
+                        isActive
+                          ? "bg-bg-dark text-white shadow-xl"
+                          : "bg-[#f8f9fc] text-bg-dark hover:bg-brand-primary/10 hover:text-bg-dark"
+                      }`}
                     >
+                      {/* Active State Background Animation */}
+                      {isActive && (
+                        <motion.div
+                          layoutId="active-tab-indicator"
+                          className="absolute inset-0 bg-bg-dark z-0 rounded-2xl"
+                          initial={false}
+                          transition={{
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 30,
+                          }}
+                        />
+                      )}
+
                       <div
-                        className={`shrink-0 p-3 rounded-xl transition-colors ${
-                          isActive
-                            ? "bg-brand-primary/20 text-brand-primary"
-                            : "bg-white text-brand-ash group-hover:text-brand-primary border border-brand-ash/20"
-                        }`}
+                        className={`relative z-10 flex items-center gap-4 w-full ${isActive ? "text-white" : ""}`}
                       >
-                        {service.icon}
+                        <div
+                          className={`shrink-0 p-3 rounded-xl transition-colors ${
+                            isActive
+                              ? "bg-brand-primary/20 text-brand-primary"
+                              : "bg-white text-brand-ash group-hover:text-brand-primary border border-brand-ash/20"
+                          }`}
+                        >
+                          {service.icon}
+                        </div>
+                        <span className="font-bold md:text-body-lg text-body-md">
+                          {service.title}
+                        </span>
                       </div>
-                      <span className="font-bold text-body-lg">
-                        {service.title}
-                      </span>
-                    </div>
-                  </button>
-                );
-              })}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Content Display Area */}
@@ -328,7 +330,7 @@ export default function ServicesPage() {
                           {service.description}
                         </p>
 
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-auto">
                           {service.highlights.map((highlight, idx) => (
                             <div
                               key={idx}
