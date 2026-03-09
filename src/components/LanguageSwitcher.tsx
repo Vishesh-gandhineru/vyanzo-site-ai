@@ -8,8 +8,8 @@ import { useLocale } from "next-intl";
 
 const languages = [
   { code: "en", label: "English" },
-  { code: "fr", label: "French" },
-  { code: "de", label: "Dutch" },
+  // { code: "fr", label: "French" },
+  // { code: "nl", label: "Dutch" },
   // { code: "sv", label: "Swedish" },
   // { code: "da", label: "Danish" },
 ];
