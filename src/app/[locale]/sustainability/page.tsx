@@ -70,23 +70,29 @@ export default function SustainabilityPage() {
               {/* Logo Row */}
               <div className="flex flex-wrap items-center gap-6">
                 <div className="px-4 py-4 bg-white rounded-2xl border border-brand-primary/20 flex items-center justify-center w-28 h-28 shrink-0">
-                  <img
-                    src="certified/iso-14001-2015.webp"
+                  <Image
+                    src="/certified/iso-14001-2015.webp"
                     alt="ISO 14001"
+                    width={100}
+                    height={100}
                     className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="px-4 py-4 bg-white rounded-2xl border border-brand-primary/20 flex items-center justify-center w-28 h-28 shrink-0">
-                  <img
-                    src="certified/ISO_9001-2015.svg"
+                  <Image
+                    src="/certified/ISO_9001-2015.svg"
                     alt="ISO 9001"
+                    width={100}
+                    height={100}
                     className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="px-4 py-4 bg-white rounded-2xl border border-brand-primary/20 flex items-center justify-center w-28 h-28 shrink-0">
-                  <img
-                    src="certified/ISO-45001-2018.png"
+                  <Image
+                    src="/certified/ISO-45001-2018.png"
                     alt="ISO 45001"
+                    width={100}
+                    height={100}
                     className="w-full h-full object-contain"
                   />
                 </div>
