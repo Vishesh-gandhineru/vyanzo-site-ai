@@ -93,7 +93,7 @@ export default function BentoGrid() {
               {t("volume.stat")}
               <span
                 className="
-            text-[12px] font-sans font-normal text-brand-ash tracking-wider"
+            text-[12px] font-sans font-normal text-bg-dark/80 tracking-wider"
               >
                 {t("volume.statLabel")}
               </span>
@@ -132,7 +132,7 @@ export default function BentoGrid() {
                 {t("compliance.title")}
               </h3>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 relative z-10 mt-8">
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-5 relative z-10 mt-8">
               <img
                 src="/certified/BENOR.png"
                 alt="BENOR"
@@ -141,17 +141,17 @@ export default function BentoGrid() {
               <img
                 src="/certified/COPRO.svg"
                 alt="COPRO"
-                className="h-12 w-auto object-contain mx-auto"
+                className="h-14 w-auto object-contain mx-auto"
               />
               <img
                 src="/certified/MPA-Bremen-logo.webp"
                 alt="MPA Bremen"
-                className="h-10 w-auto object-contain mx-auto"
+                className="h-12 w-auto object-contain mx-auto"
               />
               <img
                 src="/certified/logo1-default.png"
                 alt="ICMQ"
-                className="h-10 w-auto object-contain mx-auto"
+                className="h-12 w-auto object-contain mx-auto"
               />
             </div>
           </div>
