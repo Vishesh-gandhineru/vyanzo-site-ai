@@ -180,7 +180,7 @@ async function getStaticHydraulicCover(locale: string): Promise<Product | null> 
       productDetails: [],
       image: subImages.length > 0 ? subImages[0] : "",
       subImages,
-      category: raw.product_category,
+      category: locale === 'fr' ? 'Regards de chaussée' : locale === 'de' ? 'Wegensdeksels' : raw.product_category,
       subCategory: raw.sub_category,
       certificationType: raw.certification_type,
       location: null,

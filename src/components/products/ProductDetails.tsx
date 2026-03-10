@@ -563,15 +563,18 @@ export default function ProductDetails({
                                 <div className="flex items-center justify-end gap-3">
                                   {specFile ? (
                                     <a
-                                      href={specFile.downloadUrl}
+                                      href={specFile.url.replace(
+                                        /\/view.*/,
+                                        "/preview",
+                                      )}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      title="Download Specification"
+                                      title="View Specification"
                                       className="inline-flex items-center justify-center gap-2 bg-[#f4f7f9] text-[#6b7280] hover:text-brand-primary hover:bg-[#eaf0f6] transition-colors p-2.5 md:px-4 md:py-2.5 rounded-xl text-xs font-bold tracking-wide border border-transparent hover:border-[#1c64f2]/20 shadow-sm"
                                     >
-                                      <Download className="w-4 h-4 md:w-3.5 md:h-3.5" />
+                                      <ExternalLink className="w-4 h-4 md:w-3.5 md:h-3.5" />
                                       <span className="hidden md:inline">
-                                        DOWNLOAD SPEC
+                                        VIEW SPEC
                                       </span>
                                     </a>
                                   ) : (
