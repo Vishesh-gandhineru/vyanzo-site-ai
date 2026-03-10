@@ -8,10 +8,10 @@ import { useLocale } from "next-intl";
 
 const languages = [
   { code: "en", label: "English" },
-  // { code: "fr", label: "French" },
-  // { code: "nl", label: "Dutch" },
-  // { code: "sv", label: "Swedish" },
-  // { code: "da", label: "Danish" },
+  { code: "fr", label: "French" },
+  { code: "nl", label: "Dutch" },
+  { code: "sv", label: "Swedish" },
+  { code: "da", label: "Danish" },
 ];
 
 export default function LanguageSwitcher() {
