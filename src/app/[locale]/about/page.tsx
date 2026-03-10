@@ -86,7 +86,10 @@ export default function AboutPage() {
               className="flex-1"
             >
               <h2 className="text-section-h2 font-serif font-bold text-bg-dark mb-6">
-                {t("service.title")}
+                {t("service.titleStart")}
+                <span className="text-brand-primary italic">
+                  {t("service.titleEnd")}
+                </span>
               </h2>
               <p className="text-body-lg text-text-light-bg/70 leading-relaxed mb-8">
                 {t("service.description")}
@@ -121,7 +124,10 @@ export default function AboutPage() {
             className="mb-16 text-center max-w-3xl mx-auto"
           >
             <h2 className="text-section-h2 font-serif mb-6">
-              {t("offerings.title")}
+              {t("offerings.titleStart")}
+              <span className="text-brand-primary italic">
+                {t("offerings.titleEnd")}
+              </span>
             </h2>
             <p className="text-body-xl text-bg-dark">
               {t("offerings.description")}
@@ -195,7 +201,11 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-section-h2 font-serif  text-bg-dark mb-6">
-                {t("advantage.title")}
+                {t("advantage.titleStart")}
+                <span className="text-brand-primary italic">
+                  {t("advantage.titleMid")}
+                </span>
+                {t("advantage.titleEnd")}
               </h2>
               <p className="text-body-lg text-text-light-bg/70 mb-12">
                 {t("advantage.description")}
