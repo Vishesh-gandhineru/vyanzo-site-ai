@@ -91,9 +91,9 @@ export default function SustainabilityPage() {
                   <Image
                     src="/certified/ISO-45001-2018.png"
                     alt="ISO 45001"
-                    width={100}
-                    height={100}
-                    className="w-full h-full object-contain"
+                    width={200}
+                    height={200}
+                    className="w-full h-full object-contain scale-130"
                   />
                 </div>
               </div>
