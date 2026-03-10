@@ -474,6 +474,37 @@
       }
     }
   },
+  "ProductDetails": {
+    "breadcrumbs": {
+      "home": "Home",
+      "products": "Producten"
+    },
+    "noSpecification": "Geen specificatie beschikbaar",
+    "application": "Toepassing",
+    "table": {
+      "class": "Klasse",
+      "size": "Afmetingen",
+      "technicalData": "Technische gegevens",
+      "viewSpec": "BEKIJK SPECIFICATIES"
+    },
+    "productDetails": "Productdetails",
+    "noDetails": "Geen gedetailleerde technische specificaties beschikbaar.",
+    "documentation": "Documentatie",
+    "tabs": {
+      "specifications": "Specificaties",
+      "certifications": "Certificeringen",
+      "sizes": "Afmetingen",
+      "noSpecificationFiles": "Geen specificatiebestanden beschikbaar.",
+      "noCertificationFiles": "Geen certificeringsbestanden beschikbaar.",
+      "noSizes": "Geen afmetingen beschikbaar."
+    },
+    "similarProducts": {
+      "title": "Vergelijkbare producten",
+      "description": "Ontdek alternatieve configuraties voor uw infrastructuurvereisten.",
+      "viewAll": "Alle producten bekijken",
+      "viewTechnicalSpecs": "Technische specificaties bekijken"
+    }
+  },
   "HydraulicCovers": {
     "title": "Hydraulische deksels",
     "variants": {

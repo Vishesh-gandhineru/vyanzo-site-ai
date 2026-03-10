@@ -22,6 +22,7 @@ import {
 import { Product, DriveLink, SheetRow } from "@/data/products";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 // ─── Resolve the real Google Drive filename via our API route ─────────────────
 function useDriveFileName(
@@ -320,6 +321,7 @@ export default function ProductDetails({
   product: Product;
   relatedProducts: Product[];
 }) {
+  const t = useTranslations("ProductDetails");
   const hasVariants = product.variants && product.variants.length > 0;
   const allImages = [product.image, ...product.subImages];
   const [selectedImage, setSelectedImage] = useState(allImages[0]);
@@ -348,11 +350,11 @@ export default function ProductDetails({
       {/* Breadcrumbs */}
       <div className="flex items-center gap-2 text-sm text-text-light-bg/60 font-medium mb-8 overflow-x-auto whitespace-nowrap pb-2">
         <Link href="/" className="hover:text-bg-dark transition-colors">
-          Home
+          {t("breadcrumbs.home")}
         </Link>
         <ChevronRight className="w-4 h-4 shrink-0" />
         <Link href="/products" className="hover:text-bg-dark transition-colors">
-          Products
+          {t("breadcrumbs.products")}
         </Link>
         <ChevronRight className="w-4 h-4 shrink-0" />
         <span className="text-brand-primary font-semibold">
@@ -435,7 +437,7 @@ export default function ProductDetails({
               ) : (
                 <div className="w-full aspect-square flex items-center justify-center bg-[#f8f9fc] rounded-2xl">
                   <p className="text-text-light-bg/40 text-sm font-sans shrink-0">
-                    No specification available
+                    {t("noSpecification")}
                   </p>
                 </div>
               )}
@@ -518,7 +520,7 @@ export default function ProductDetails({
                     <div className="p-5 md:p-8 bg-[#f8f9fc] border-b border-brand-ash/10">
                       <p className="text-bg-dark font-sans font-medium text-sm md:text-base mb-1">
                         <span className="text-text-light-bg/70 mr-2">
-                          Application:
+                          {t("application")}:
                         </span>
                         {variant.application}
                       </p>
@@ -530,14 +532,13 @@ export default function ProductDetails({
                       <thead>
                         <tr className="border-b border-brand-ash/10 bg-[#fbfcfd]">
                           <th className="py-3 px-4 md:py-5 md:px-8 text-[10px] md:text-[11px] font-bold text-brand-ash tracking-widest md:tracking-[0.15em] uppercase w-1/4 md:w-1/3">
-                            Class
+                            {t("table.class")}
                           </th>
                           <th className="py-3 px-4 md:py-5 md:px-8 text-[10px] md:text-[11px] font-bold text-brand-ash tracking-widest md:tracking-[0.15em] uppercase w-1/2 md:w-1/3">
-                            Size
+                            {t("table.size")}
                           </th>
                           <th className="py-3 px-4 md:py-5 md:px-8 text-[10px] md:text-[11px] font-bold text-brand-ash tracking-widest md:tracking-[0.15em] uppercase w-1/4 md:w-1/3 text-right">
-                            <span className="hidden md:inline">Technical </span>
-                            Data
+                            {t("table.technicalData")}
                           </th>
                         </tr>
                       </thead>
@@ -574,7 +575,7 @@ export default function ProductDetails({
                                     >
                                       <ExternalLink className="w-4 h-4 md:w-3.5 md:h-3.5" />
                                       <span className="hidden md:inline">
-                                        VIEW SPEC
+                                        {t("table.viewSpec")}
                                       </span>
                                     </a>
                                   ) : (
@@ -601,7 +602,7 @@ export default function ProductDetails({
           <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col">
             <h3 className="flex items-center gap-3 text-xl font-bold text-bg-dark font-sans tracking-tight mb-8">
               <Settings2 className="w-8 h-8 text-brand-primary" />
-              Product Details
+              {t("productDetails")}
             </h3>
             <div className="bg-[#f8f9fc] rounded-2xl border border-brand-ash/10 overflow-hidden">
               {product.productDetails && product.productDetails.length > 0 ? (
@@ -630,7 +631,7 @@ export default function ProductDetails({
                 )
               ) : (
                 <div className="p-8 text-center text-text-light-bg/50 font-sans">
-                  No detailed technical specifications available.
+                  {t("noDetails")}
                 </div>
               )}
             </div>
@@ -640,7 +641,7 @@ export default function ProductDetails({
           <div className="bg-white rounded-4xl p-8 md:p-10 border border-brand-ash/20 shadow-sm flex flex-col h-fit">
             <h3 className="flex items-center gap-3 text-xl font-bold text-bg-dark tracking-tight font-sans mb-6">
               <ExternalLink className="w-6 h-6 text-brand-primary" />
-              Documentation
+              {t("documentation")}
             </h3>
 
             {/* Tab switcher */}
@@ -658,7 +659,7 @@ export default function ProductDetails({
                       : "text-text-light-bg/60 hover:text-bg-dark"
                   }`}
                 >
-                  {tab}
+                  {t(`tabs.${tab}`)}
                 </button>
               ))}
             </div>
@@ -676,7 +677,7 @@ export default function ProductDetails({
                   ))
                 ) : (
                   <p className="py-8 text-text-light-bg/40 text-sm font-sans">
-                    No specification files available.
+                    {t(`tabs.noSpecificationFiles`)}
                   </p>
                 )}
               </div>
@@ -695,7 +696,7 @@ export default function ProductDetails({
                   ))
                 ) : (
                   <p className="py-8 text-text-light-bg/40 text-sm font-sans">
-                    No certification files available.
+                    {t(`tabs.noCertificationFiles`)}
                   </p>
                 )}
               </div>
@@ -720,7 +721,7 @@ export default function ProductDetails({
                   ))
                 ) : (
                   <p className="py-8 text-text-light-bg/40 text-sm font-sans">
-                    No sizes available.
+                    {t(`tabs.noSizes`)}
                   </p>
                 )}
               </div>
@@ -734,17 +735,17 @@ export default function ProductDetails({
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <h2 className="text-section-h2 font-serif text-bg-dark tracking-tight mb-2">
-              Similar Products
+              {t("similarProducts.title")}
             </h2>
             <p className="text-text-light-bg/70 text-body-xl">
-              Explore alternative configurations for your infrastructure needs.
+              {t("similarProducts.description")}
             </p>
           </div>
           <Link
             href="/products"
             className="text-xs font-bold tracking-[0.15em] text-brand-primary uppercase hover:text-bg-dark transition-colors shrink-0"
           >
-            View All Products
+            {t("similarProducts.viewAll")}
           </Link>
         </div>
 
@@ -776,7 +777,7 @@ export default function ProductDetails({
               </p>
               <div className="flex items-center justify-between text-bg-dark font-medium border-t border-brand-ash/10 pt-4">
                 <span className="font-serif font-bold text-lg text-brand-primary">
-                  View Technical Specs
+                  {t("similarProducts.viewTechnicalSpecs")}
                 </span>
                 <ArrowRight className="w-5 h-5 group-hover:text-brand-primary group-hover:translate-x-1 transition-transform" />
               </div>
