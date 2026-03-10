@@ -206,13 +206,13 @@
       }
     },
     "teams": {
-       "titleStart": "Leadership ",
-      "titleEnd": "team",
+       "titleStart": "Équipe de ",
+      "titleEnd": "direction",
       "description": "Dirigée par une équipe cumulant plusieurs décennies d'expérience dans les domaines de la fabrication mondiale, de la chaîne d'approvisionnement et de l'assurance qualité.",
       "members": [
         {
           "name": "Steve Vernelen",
-          "role": "CEO",
+          "role": "PDG",
           "image": "/team/Steve-Vernelen.png",
           "bio": [
             "Steve Vernelen exerce ses activités à l'échelle mondiale depuis 20 ans, en tant que PDG de Benito Urban en Espagne (regards de chaussée et grilles, équipements urbains) et PDG de Fondatel (fonderie de regards de chaussée) en Belgique.  Titulaire d'un MBA de la Kellogg School of Management, il a commencé sa carrière chez McKinsey & Cie avant de se consacrer au redressement d'entreprises en difficulté détenues par des fonds d'investissement privés."
@@ -227,7 +227,7 @@
         },
         {
           "name": "Roxane Sabatier",
-          "role": "Office Manager",
+          "role": "Responsable administratif",
           "image": "/team/Roxane-Sabatier.png",
           "bio": [
             "Roxane Sabatier dirige notre bureau de Mumbai. Elle parle couramment l'anglais, le français, l'hindi, l'italien et l'espagnol. Journaliste de formation, elle fait preuve d'une grande ténacité pour atteindre ses objectifs.Roxane et Steve travaillent ensemble depuis plus de dix ans dans différentes entreprises. Roxane a rejoint Vyanzo en 2022."
@@ -241,7 +241,7 @@
         },
         {
           "name": "Annick D'Hont",
-          "role": "Legal and Contracts",
+          "role": "Affaires juridiques et contrats",
           "image": "/team/Annick-DHont.png",
           "bio": [
             "Annick D'Hont est une avocate chevronnée, spécialisée dans le droit des contrats d'entreprise et la logistique, qui ne laisse rien au hasard. Elle fait partie intégrante de Vyanzo depuis sa création."
@@ -253,7 +253,7 @@
         },
         {
           "name": "Naba Kumar Gayen",
-          "role": "Head of Quality",
+          "role": "Responsable qualité",
           "image": "/team/Naba-Kumar-Gayen.png",
           "bio": [
             "Naba Kumar Gayen est notre responsable qualité, basé à Kolkata. Il inspecte la production et le développement des produits au niveau local dans les fonderies en Inde, s'assurant que tout problème est détecté avant l'expédition des produits. Il est ingénieur et possède plus de 15 ans d'expérience dans l'industrie de la fonderie. Il a rejoint Vyanzo en 2019."
