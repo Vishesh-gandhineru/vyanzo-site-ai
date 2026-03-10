@@ -39,7 +39,10 @@ export default function TeamSection() {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <h2 className="text-section-h2 font-serif mb-6">{t("title")}</h2>
+          <h2 className="text-section-h2 font-serif mb-6">
+            {t("titleStart")}
+            <span className="text-brand-primary italic">{t("titleEnd")}</span>
+          </h2>
           <p className="text-body-xl text-text-light-bg/60 max-w-2xl mx-auto">
             {t("description")}
           </p>

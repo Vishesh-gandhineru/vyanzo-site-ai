@@ -250,7 +250,10 @@ export default function ServicesPage() {
             {/* Sidebar Navigation */}
             <div className="lg:w-1/3 shrink-0 flex flex-col gap-4 lg:sticky lg:top-32 h-fit">
               <h3 className="text-section-h2 font-serif text-bg-dark mb-2 lg:mb-4">
-                {t("tabs.title")}
+                {t("tabs.titleStart")}
+                <span className="text-brand-primary italic">
+                  {t("tabs.titleEnd")}
+                </span>
               </h3>
               <div className="flex lg:flex-col gap-3 lg:gap-4 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 scroll-smooth w-full items-stretch custom-scrollbar">
                 {services.map((service) => {
@@ -374,7 +377,10 @@ export default function ServicesPage() {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <h2 className="text-section-h2 font-serif font-bold text-bg-dark mb-6">
-              {t("categories.title")}
+              {t("categories.titleStart")}
+              <span className="text-brand-primary italic">
+                {t("categories.titleEnd")}
+              </span>
             </h2>
             <p className="text-body-xl text-text-light-bg/70">
               {t("categories.description")}

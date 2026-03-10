@@ -150,7 +150,8 @@
       "description": "Sinds de oprichting in 2018 is Vyanzo geëvolueerd van OEM-leverancier tot toonaangevend fabrikant van zijn eigen gamma putdeksels, roosters en andere gemeentelijke gietproducten, nu verdeeld door heel Europa."
     },
     "service": {
-      "title": "End-to-end service",
+      "titleStart": "End-to-End ",
+      "titleEnd": "Service",
       "description": "Wij bieden end-to-end dienstverlening aan klanten over de hele wereld die onze bedrijfsfilosofie delen: kwaliteit, service & betrouwbaarheid aan een correcte prijs — en dat met onverbiddelijke consistentie. Door productie, kwaliteitsborging en logistiek intern te beheren, garandeert Vyanzo een naadloze ervaring voor zijn klanten.",
       "badge": {
         "title": "COPRO BENOR gecertificeerd",
@@ -158,7 +159,8 @@
       }
     },
     "offerings": {
-      "title": "Kernproducten",
+       "titleStart": "Kern",
+      "titleEnd": "producten",
       "description": "Vyanzo is een toonaangevende leverancier van premium gietproducten, ontworpen voor schaal en duurzaamheid.",
       "manhole": {
         "title": "Wegensdeksels",
@@ -174,7 +176,10 @@
       }
     },
     "advantage": {
-      "title": "Het Vyanzo-voordeel",
+       "titleStart": "Het ",
+      "titleMid": "Vyanzo",
+      "titleEnd": "-voordeel",
+  
       "description": "Een onverbiddelijke focus op kwaliteit, schaal en duurzame productie.",
       "facilities": {
         "title": "Ultramoderne installaties",
@@ -202,7 +207,8 @@
       }
     },
     "teams": {
-      "title": "Leiderschapsteam",
+        "titleStart": "Leiderschaps",
+      "titleEnd": "team",
       "description": "Geleid door een managementteam met tientallen jaren gecombineerde ervaring in wereldwijde productie, supply chain en Kwaliteitscontrole.",
       "members": [
         {
@@ -280,7 +286,9 @@
       "description": "Vyanzo biedt een uitgebreid pakket diensten om het giet- en productieproces te stroomlijnen, van het eerste ontwerp tot de uiteindelijke levering."
     },
     "tabs": {
-      "title": "Onze diensten"
+     
+       "titleStart": "Onze ",
+      "titleEnd": "diensten"
     },
     "servicesList": {
       "development": {
@@ -395,7 +403,8 @@
       }
     },
     "categories": {
-      "title": "Andere bediende productcategorieën",
+        "titleStart": "Andere bedien ",
+      "titleEnd": "productcategorieën",
       "description": "Bij het leveren van deze diensten richt Vyanzo zich op de volgende primaire productlijnen:",
       "manhole": "Wegensdeksels  & hydraulische deksels",
       "surfaceBoxes": "Straatpotten",

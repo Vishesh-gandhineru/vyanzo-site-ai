@@ -150,7 +150,8 @@
       "description": "Depuis sa création en 2018, Vyanzo est passé du statut de fournisseur OEM à celui de fabricant leader de sa propre gamme de regards de chaussée, de grilles et d'autres produits moulés destinés aux collectivités locales, désormais distribués dans toute l'Europe."
     },
     "service": {
-      "title": "Service de bout en bout",
+      "titleStart": "Service ",
+      "titleEnd": "de bout en bout",
       "description": "Nous offrons des services complets à nos clients du monde entier qui partagent notre philosophie d'entreprise : qualité, service et fiabilité à un prix raisonnable, et ce, avec une constance sans faille. En gérant la production, l'assurance qualité et la logistique en interne, Vyanzo garantit une expérience optimale à ses clients.",
       "badge": {
         "title": "Certifié COPRO BENOR",
@@ -158,7 +159,8 @@
       }
     },
     "offerings": {
-      "title": "Produits phares",
+       "titleStart": "Produits ",
+      "titleEnd": "phares",
       "description": "Vyanzo est l'un des principaux fournisseurs de produits de moulage haut de gamme, conçus pour offrir évolutivité et durabilité.",
       "manhole": {
         "title": "Regards de chaussée",
@@ -174,7 +176,9 @@
       }
     },
     "advantage": {
-      "title": "L'Avantage Vyanzo",
+        "titleStart": "L'",
+      "titleMid": "Avantage ",
+      "titleEnd": "Vyanzo",
       "description": "Une attention constante portée à la qualité, à l'échelle et à la production durable.",
       "facilities": {
         "title": "Installations de pointe",
@@ -202,7 +206,8 @@
       }
     },
     "teams": {
-      "title": "Leadership Team",
+       "titleStart": "Leadership ",
+      "titleEnd": "team",
       "description": "Dirigée par une équipe cumulant plusieurs décennies d'expérience dans les domaines de la fabrication mondiale, de la chaîne d'approvisionnement et de l'assurance qualité.",
       "members": [
         {
@@ -278,7 +283,8 @@
       "description": "Vyanzo propose une gamme complète de services conçus pour rationaliser le processus de moulage et de fabrication, de la conception initiale à la livraison finale."
     },
     "tabs": {
-      "title": "Nos Services"
+        "titleStart": "Nos ",
+      "titleEnd": "Services"
     },
     "servicesList": {
       "development": {
@@ -393,7 +399,8 @@
       }
     },
     "categories": {
-      "title": "Autres catégories de produits proposés",
+        "titleStart": "Autres catégories de ",
+      "titleEnd": "produits proposés",
       "description": "Dans le cadre de ces services, Vyanzo se concentre sur les gammes de produits principales suivantes :",
       "manhole": "Regards de chaussée et Regards hydrauliques",
       "surfaceBoxes": "Regards de branchement",
