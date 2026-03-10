@@ -73,8 +73,8 @@
     "viewAll": "Alle producten bekijken",
     "products": {
       "manhole": "Wegensdeksels",
-      "siphons": "waterontvangers",
-      "surfaceBoxes": "huisaansluitputjes"
+      "siphons": "Waterontvangers",
+      "surfaceBoxes": "Huisaansluitputjes"
     }
   },
   "AboutSection": {
@@ -87,7 +87,7 @@
   },
   "EnvironmentSection": {
     "subtitle": "Milieuvera­ntwoordelijkheid",
-    "titleStart": "Ecologisch verantwoord gieten begint bij de ",
+    "titleStart": "Ecologisch gieten begint bij het smelten in de ",
     "titleHighlight": "oven",
     "titleEnd": "",
     "description": "Nul kolen. In tegenstelling tot productie in bijvoorbeeld België gebruiken wij geen kolen om te smelten, maar elektrische inductieovens. Een groot zonnepanelenpark levert de stroom. Elke vestiging is ingericht om de ecologische voetafdruk te minimaliseren — niet alleen normen naleven, maar ze bepalen.",

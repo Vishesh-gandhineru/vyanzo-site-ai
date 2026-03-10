@@ -19,8 +19,8 @@
   },
   "Footer": {
     "links": {
-      "products": "Produits",
-      "services": "Services",
+      "products": "Nos Produits",
+      "services": "Nos services",
       "about": "À propos",
       "contact": "Contactez-nous",
       "team": "Notre équipe"
@@ -36,7 +36,7 @@
   },
   "BentoGrid": {
     "subtitle": "L'avantage Vyanzo",
-    "titleStart": "Conçu pour ",
+    "titleStart": "conçu pour durer ",
     "titleHighlight": "toute une vie",
     "description": "Depuis 2018, nous fournissons des solutions de moulage inégalées à travers le monde, alliant précision, échelle et fiabilité.",
     "quality": {
@@ -68,7 +68,7 @@
   "ProductSection": {
     "subtitle": "Ce que nous moulons",
     "titleStart": "Nos ",
-    "titleHighlight": "produits principaux",
+    "titleHighlight": "produits phares",
     "description": "Solutions de moulage haut de gamme conçues pour les infrastructures les plus exigeantes.",
     "viewAll": "Voir tous les produits",
     "products": {
@@ -201,7 +201,7 @@
         "volume": {
           "value": "250 000",
           "suffix": "+",
-          "label": "Tonnes de moulages par an"
+          "label": "Pièces produites chaque année"
         }
       }
     },
@@ -401,7 +401,7 @@
     "categories": {
         "titleStart": "Autres catégories de ",
       "titleEnd": "produits proposés",
-      "description": "Dans le cadre de ces services, Vyanzo se concentre sur les gammes de produits principales suivantes :",
+      "description": "Dans le cadre de ces services, Vyanzo se focus sur les gammes de produits principales suivantes :",
       "manhole": "Regards de chaussée et Regards hydrauliques",
       "surfaceBoxes": "Regards de branchement",
       "siphons": "Avaloirs"
@@ -496,13 +496,13 @@
     },
     "similarProducts": {
       "title": "Produits Similaires",
-      "description": "Explorez des configurations alternatives pour vos besoins en infrastructure.",
+      "description": "Explorez différentes configurations pour répondre à vos besoins en matière d'infrastructure.",
       "viewAll": "Voir tous les produits",
       "viewTechnicalSpecs": "Voir les spécifications techniques"
     }
   },
   "HydraulicCovers": {
-    "title": "Regards Hydrauliques",
+    "title": "Regards hydrauliques",
     "variants": {
       "Class_B125": {
         "application": "Parkings & Allées",
