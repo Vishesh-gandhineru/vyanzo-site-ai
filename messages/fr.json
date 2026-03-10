@@ -1,8 +1,8 @@
 {
   "Hero": {
     "headlineStart": "Qualité des pièces moulées et des normes",
-    "headlineHighlight": " de serivice ",
-    "headlineEnd": " inegalees",
+    "headlineHighlight": " de service ",
+    "headlineEnd": "inégalées",
     "cta": "Voir les produits"
   },
   "MegaMenu": {
@@ -32,11 +32,11 @@
     }
   },
   "MarqueeLogos": {
-    "title": "Certifications"
+    "title": "Homologations"
   },
   "BentoGrid": {
     "subtitle": "L'avantage Vyanzo",
-    "titleStart": "conçu pour durer ",
+    "titleStart": "Conçu pour durer ",
     "titleHighlight": "toute une vie",
     "description": "Depuis 2018, nous fournissons des solutions de moulage inégalées à travers le monde, alliant précision, échelle et fiabilité.",
     "quality": {
@@ -107,14 +107,14 @@
       "productDevelopment": "Développement de produits",
       "productionExcellence": "Excellence en matière de production de A à Z",
       "customPackaging": "Emballage personnalisé &\noptions de livraison",
-      "productCertification": "Certification des produits"
+      "productCertification": "Homologations des produits"
     }
   },
   "ContactSection": {
     "subtitle": "Votre prochaine étape",
     "titleStart": "Écrivez-nous, ",
     "titleHighlight": "nous nous occupons du reste",
-    "description": "Devis personnalisés, spécifications techniques ou commandes en gros — remplissez les informations et notre équipe vous répondra dans les 24 heures.",
+    "description": "Devis personnalisés, spécifications techniques ou commandes en gros : remplissez le formulaire et notre équipe vous répondra dans les 24 heures.",
     "headquarters": {
       "title": "Siège social",
       "address": "Botermelkbaan 51 <br />2900 Schoten <br />Belgique"
@@ -172,7 +172,7 @@
       },
       "surfaceBoxes": {
         "title": "Regards de branchement",
-        "description": "Regards de branchement en fonte résistants,conçus pour une installation et un accès faciles."
+        "description": "Regards de branchement en fonte résistants,conçus pour une installation et un accès facile."
       }
     },
     "advantage": {
@@ -190,7 +190,7 @@
       },
       "future": {
         "title": "Conçu pour l'avenir",
-        "description": "installations de production de Vyanzo ont la capacité nécessaire pour répondre aux exigences des clients en matière de volume et de qualité pour les décennies à venir."
+        "description": "Les installations de production de Vyanzo ont la capacité nécessaire pour répondre aux exigences des clients en matière de volume et de qualité pour les décennies à venir."
       },
       "stats": {
         "growth": {
@@ -220,8 +220,8 @@
           "contact": {
             "email": "steve@vyanzo.be",
             "phones": [
-              { "label": "Belgium", "number": "+32475264752" },
-              { "label": "India", "number": "+919560742436" }
+              { "label": "Belgique", "number": "+32475264752" },
+              { "label": "Inde", "number": "+919560742436" }
             ]
           }
         },
@@ -235,7 +235,7 @@
           "contact": {
             "email": "roxane@vyanzo.be",
             "phones": [
-              { "label": "India", "number": "+919930353363" }
+              { "label": "Inde", "number": "+919930353363" }
             ]
           }
         },
@@ -307,7 +307,7 @@
       },
       "production": {
         "title": "Excellence en matière de production de A à Z",
-        "description": "Vyanzo gère l'intégralité du cycle de fabrication, garantissant la qualité à chaque étape selon les exigences spécifiques du client.",
+        "description": "Vyanzo gère l'ensemble du cycle de fabrication, garantissant la qualité à chaque étape conformément aux exigences spécifiques du client.",
         "highlights": {
           "pattern": {
             "label": "Fabrication de modèles",
@@ -323,7 +323,7 @@
           },
           "finishing": {
             "label": "Finition & Revêtement",
-            "value": "Diverses options de peinture et de revêtement, notamment : peinture à base d'eau, KTL (e-coating), revêtements époxy."
+            "value": "Nous proposons différentes options de peinture et de revêtement, notamment : peinture à base d'eau, KTL (revêtement électrostatique), revêtements époxy."
           },
           "assembly": {
             "label": "Assemblage",
@@ -333,7 +333,7 @@
       },
       "logistics": {
         "title": "Emballage personnalisé & Options de livraison",
-        "description": "Les clients ont un contrôle total sur la protection et la mise en valeur de leurs produits pendant le transport.",
+        "description": "Les clients ont un contrôle total sur la manière dont leurs produits sont protégés et marqués pendant le transport.",
         "highlights": {
           "packaging": {
             "label": "Spécifications d'emballage",
@@ -354,46 +354,46 @@
         }
       },
       "certification": {
-        "title": "Certification de produits",
-        "description": "Vyanzo offre une assistance spécialisée dans les processus de certification internationale pour garantir que les produits répondent aux normes mondiales de sécurité et de qualité.",
+        "title": "Homologation de produits",
+        "description": "Vyanzo offre une assistance spécialisée dans le processus d’homologation internationale pour garantir que les produits répondent aux normes mondiales de sécurité et de qualité.",
         "highlights": {
           "copro": {
             "label": "",
-            "value": "Certification Copro"
+            "value": "Homologation Copro"
           },
           "benor": {
             "label": "",
-            "value": "Certification BENOR"
+            "value": "Homologation BENOR"
           },
           "en124": {
             "label": "EN124-2",
-            "value": "Certification EN124-2"
+            "value": "Homologation EN124-2"
           },
           "mpa": {
             "label": "",
-            "value": "Certification MPA Bremen"
+            "value": "Homologation MPA Bremen"
           },
           "icmq": {
             "label": "",
-            "value": "Certification ICMQ"
+            "value": "Homologation ICMQ"
           }
         }
       },
       "foundry": {
-        "title": "Certifications de fonderie",
+        "title": "Homologations de fonderie ",
         "description": "Vyanzo travaille uniquement avec des fonderies entièrement certifiées afin de garantir la conformité dans tous les domaines.",
         "highlights": {
           "iso9001": {
             "label": "",
-            "value": "Certification ISO 9001"
+            "value": "Homologations ISO 9001"
           },
           "iso14001": {
             "label": "",
-            "value": "Certification ISO 14001"
+            "value": "Homologations ISO 14001"
           },
           "iso45001": {
             "label": "",
-            "value": "Certification ISO 45001"
+            "value": "Homologations ISO 45001"
           }
         }
       }
@@ -401,7 +401,7 @@
     "categories": {
         "titleStart": "Autres catégories de ",
       "titleEnd": "produits proposés",
-      "description": "Dans le cadre de ces services, Vyanzo se focus sur les gammes de produits principales suivantes :",
+      "description": "Dans le cadre de la fourniture de ces services, Vyanzo se concentre sur les principales gammes de produits suivantes :",
       "manhole": "Regards de chaussée et Regards hydrauliques",
       "surfaceBoxes": "Regards de branchement",
       "siphons": "Avaloirs"
@@ -416,7 +416,7 @@
     },
     "cards": {
       "certifications": {
-        "title": "Certifications",
+        "title": "Homologations",
         "description": "Certifiés en gestion environnementale, qualité des produits et sécurité au travail — reconnus mondialement, audités de manière indépendante."
       },
       "zeroCoal": {
@@ -445,7 +445,7 @@
     "grid": {
       "sidebar": {
         "geoLocation": "Localisation géographique",
-        "certification": "Certification",
+        "certification": "Homologation",
         "category": "Catégorie",
         "resetFilters": "Réinitialiser les filtres"
       },
@@ -488,10 +488,10 @@
     "documentation": "Documentation",
     "tabs": {
       "specifications": "Spécifications",
-      "certifications": "Certifications",
+      "certifications": "Homologations",
       "sizes": "Tailles",
       "noSpecificationFiles": "Aucun fichier de spécification disponible.",
-      "noCertificationFiles": "Aucun fichier de certification disponible.",
+      "noCertificationFiles": "Aucun fichier de homologation disponible.",
       "noSizes": "Aucune taille disponible."
     },
     "similarProducts": {

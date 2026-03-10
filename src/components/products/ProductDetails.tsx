@@ -486,7 +486,7 @@ export default function ProductDetails({
                             .split(" ")
                             .map((word: string, i: number, arr: string[]) => (
                               <span key={i} className="block md:inline">
-                                {word}
+                                {word === "Class" ? t("table.class") : word}
                                 {i < arr.length - 1 ? " " : ""}
                               </span>
                             ))}
