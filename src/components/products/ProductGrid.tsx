@@ -294,13 +294,6 @@ export default function ProductGrid({
                       <ShieldCheck className="w-3 h-3" />
                       {product.certificationType}
                     </div>
-
-                    {/* Sub-category pill ─ bottom-left (only if exists) */}
-                    {product.subCategory && (
-                      <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-bg-dark text-[10px] font-sans font-semibold tracking-wide uppercase px-2.5 py-1 rounded-full border border-brand-ash/20">
-                        {product.subCategory}
-                      </div>
-                    )}
                   </div>
 
                   {/* Content */}

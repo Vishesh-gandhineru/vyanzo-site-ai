@@ -472,6 +472,37 @@
       }
     }
   },
+  "ProductDetails": {
+    "breadcrumbs": {
+      "home": "Home",
+      "products": "Products"
+    },
+    "noSpecification": "No specification available",
+    "application": "Application",
+    "table": {
+      "class": "Class",
+      "size": "Size",
+      "technicalData": "Technical Data",
+      "viewSpec": "VIEW SPEC"
+    },
+    "productDetails": "Product Details",
+    "noDetails": "No detailed technical specifications available.",
+    "documentation": "Documentation",
+    "tabs": {
+      "specifications": "Specifications",
+      "certifications": "Certifications",
+      "sizes": "Sizes",
+      "noSpecificationFiles": "No specification files available.",
+      "noCertificationFiles": "No certification files available.",
+      "noSizes": "No sizes available."
+    },
+    "similarProducts": {
+      "title": "Similar Products",
+      "description": "Explore alternative configurations for your infrastructure needs.",
+      "viewAll": "View All Products",
+      "viewTechnicalSpecs": "View Technical Specs"
+    }
+  },
   "HydraulicCovers": {
     "title": "Hydraulic Covers",
     "variants": {

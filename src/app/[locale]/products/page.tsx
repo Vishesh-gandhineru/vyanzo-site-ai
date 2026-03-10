@@ -13,7 +13,7 @@ export default async function ProductsPage({
 }) {
   const { locale } = await params;
   const products = await getProducts(locale);
-  const locationsData = await getAllLocations();
+  const locationsData = await getAllLocations(locale.toUpperCase());
   const ALL_LOCATIONS = Array.from(
     new Set<string>(locationsData.map((loc: any) => loc.name)),
   );

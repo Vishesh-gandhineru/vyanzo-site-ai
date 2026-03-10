@@ -189,7 +189,7 @@ export default function ServicesPage() {
             <img
               src="/certified/ISO-45001-2018.png"
               alt="ISO 45001"
-              className="h-[130px] w-auto object-contain mx-auto"
+              className="h-[130px] w-auto object-contain mx-auto scale-120"
             />
           ),
         },

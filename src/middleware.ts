@@ -3,13 +3,18 @@ import { routing } from './i18n/routing';
 
 export default createMiddleware(routing);
 
+// export const config = {
+//   // Match only internationalized pathnames
+//   matcher: ['/', '/(en)/:path*']
+// };
+
+
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(en)/:path*']
+  matcher: ['/', '/(en|nl|fr)/:path*']
 };
-
 
 // export const config = {
 //   // Match only internationalized pathnames
-//   matcher: ['/', '/(en|nl|fr|de|sv|da)/:path*']
+//   matcher: ['/', '/(en|nl|fr|nl|sv|da)/:path*']
 // };

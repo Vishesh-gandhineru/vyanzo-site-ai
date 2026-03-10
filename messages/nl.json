@@ -1,8 +1,8 @@
 {
   "Hero": {
-    "headlineStart": "Waar kwaliteitsgietwerk ontmoet",
-    "headlineHighlight": " ongeëvenaarde ",
-    "headlineEnd": " servicenormen",
+    "headlineStart": "Waar kwaliteitsgietwerk samenkomt met ",
+    "headlineHighlight": "ongeëvenaarde ",
+    "headlineEnd": "servicenormen",
     "cta": "Bekijk producten"
   },
   "MegaMenu": {
@@ -69,28 +69,28 @@
     "subtitle": "Wat we gieten",
     "titleStart": "Onze kern",
     "titleHighlight": "producten",
-    "description": "Premium gietoplossingen gebouwd voor de meest veeleisende infrastructuur ter wereld.",
+    "description": "Premium gietoplossingen gebouwd voor de meest veeleisende infrastructuur.",
     "viewAll": "Alle producten bekijken",
     "products": {
-      "manhole": "Wegensdeksels",
-      "siphons": "waterontvangers",
-      "surfaceBoxes": "huisaansluitputjes"
+      "manhole": "Wegenisdeksels",
+      "siphons": "Waterontvangers",
+      "surfaceBoxes": "Huisaansluitputjes"
     }
   },
   "AboutSection": {
     "subtitle": "Over Vyanzo",
-    "titleStart": "Precisiегietwerk voor de ",
+    "titleStart": "Precisiegietwerk voor de ",
     "titleHighlight": "meest veeleisende",
-    "titleEnd": " infrastructuur ter wereld",
-    "description": "Opgericht in 2018 vervaardigt Vyanzo putdeksels, roosters en gietijzeren onderdelen voor lokale overheden, verdeeld door heel Europa en internationaal. Kwaliteit, service en betrouwbaarheid zijn niet zomaar woorden: het zijn onze engagementen.",
+    "titleEnd": " infrastructuur",
+    "description": "Opgericht in 2018 vervaardigt Vyanzo putdeksels, roosters en gietijzeren onderdelen voor lokale overheden, verdeeld door heel Europa en daarbuiten. Kwaliteit, service en betrouwbaarheid zijn niet zomaar woorden: het zijn onze engagementen.",
     "cta": "Ontmoet het team"
   },
   "EnvironmentSection": {
     "subtitle": "Milieuvera­ntwoordelijkheid",
-    "titleStart": "Ecologisch verantwoord gieten begint bij de ",
+    "titleStart": "Ecologisch gieten begint bij het smelten in de ",
     "titleHighlight": "oven",
     "titleEnd": "",
-    "description": "Nul kolen. In tegenstelling tot productie in bijvoorbeeld België gebruiken wij geen kolen om te smelten, maar elektrische inductieovens. Een groot zonnepanelenpark levert de stroom. Elke vestiging is ingericht om de ecologische voetafdruk te minimaliseren — niet alleen normen naleven, maar ze bepalen.",
+    "description": "Geen gebruik van vervuilende kolen. In tegenstelling tot productie in bijvoorbeeld België gebruiken wij geen kolen om te smelten, maar elektrische inductieovens. Een groot zonnepanelenpark levert de stroom. Elke vestiging is ingericht om de ecologische voetafdruk te minimaliseren — niet alleen normen naleven, maar ze bepalen.",
     "badges": {
       "coal": "Smelten zonder kolen",
       "solar": "Zonne-energie",
@@ -163,8 +163,8 @@
       "titleEnd": "producten",
       "description": "Vyanzo is een toonaangevende leverancier van premium gietproducten, ontworpen voor schaal en duurzaamheid.",
       "manhole": {
-        "title": "Wegensdeksels",
-        "description": "Robuuste Wegensdeksels voor zwaar gebruik, ontworpen voor intensief verkeer en veeleisende infrastructuurtoepassingen."
+        "title": "Wegenisdeksels",
+        "description": "Robuuste Wegenisdeksels voor zwaar gebruik, ontworpen voor intensief verkeer en veeleisende infrastructuurtoepassingen."
       },
       "siphons": {
         "title": "Sifons",
@@ -281,7 +281,7 @@
   "ServicesPage": {
     "hero": {
       "subtitle": "Dienstenportfolio",
-      "titleStart": "Excellentie gesmeed,",
+      "titleStart": "Excellentie bij het gieten,",
       "titleHighlight": "service geperfectioneerd.",
       "description": "Vyanzo biedt een uitgebreid pakket diensten om het giet- en productieproces te stroomlijnen, van het eerste ontwerp tot de uiteindelijke levering."
     },
@@ -293,7 +293,7 @@
     "servicesList": {
       "development": {
         "title": "Productontwikkeling",
-        "description": "Vyanzo stelt hoogwaardige ingenieursresources ter beschikking om klanten te helpen producten te ontwerpen of te optimaliseren.",
+        "description": "Vyanzo stelt gespecialiseerde ingenieurs ter beschikking om klanten te ondersteunen bij de ontwikkeling en optimalisatie van hun producten",
         "highlights": {
           "expertise": {
             "label": "Expertise",
@@ -314,7 +314,7 @@
         "description": "Vyanzo beheert de volledige productiecyclus en garandeert kwaliteit in elke fase volgens de specifieke eisen van de klant.",
         "highlights": {
           "pattern": {
-            "label": "Modelmaking",
+            "label": "Mallen",
             "value": "Aanmaken van de initiële mallen en modellen."
           },
           "sampling": {
@@ -327,39 +327,39 @@
           },
           "finishing": {
             "label": "Afwerking & coating",
-            "value": "Diverse verf- en coatingopties, waaronder: watergedragen verf, KTL (e-coating), epoxycoatings."
+            "value": "Diverse verf- en coatingopties, waaronder: verf op waterbasis, KTL (e-coating), epoxycoatings."
           },
           "assembly": {
             "label": "Assemblage",
-            "value": "Eindassemblage van componenten vóór verzending."
+            "value": "Eindassemblage van onderdelen vóór verzending."
           }
         }
       },
       "logistics": {
         "title": "Aangepaste verpakking & leveringsopties",
-        "description": "Klanten hebben volledige controle over hoe hun producten worden beschermd en gepresenteerd tijdens het transport.",
+        "description": "Klanten hebben volledige controle over de verpakking, bescherming en labelling van de producten, alsmede over het transport",
         "highlights": {
           "packaging": {
             "label": "Verpakkingsspecificaties",
-            "value": "Aangepast aantal stuks per pallet of doos."
+            "value": "Keuze voor het aantal stuks per pallet of doos."
           },
           "protection": {
             "label": "Bescherming",
             "value": "Opties voor krimpfolie of gespecialiseerde bescherming."
           },
           "branding": {
-            "label": "Huisstijl",
+            "label": "Labelling-stijl",
             "value": "Aangepast ontwerp en inhoud voor etiketten."
           },
           "schedule": {
             "label": "Logistiek",
-            "value": "Transport georganiseerd per zee, spoor, weg of lucht, afgestemd op de tijdlijnen en vereisten van de klant."
+            "value": "Transport georganiseerd per zee, spoor, weg of lucht, afgestemd op de timing en vereisten van de klant."
           }
         }
       },
       "certification": {
         "title": "Productcertificering",
-        "description": "Vyanzo biedt gespecialiseerde ondersteuning bij internationale certificeringsprocedures om ervoor te zorgen dat producten voldoen aan wereldwijde veiligheids- en kwaliteitsnormen.",
+        "description": "Vyanzo biedt gespecialiseerde ondersteuning bij internationale certificeringsprocedures om ervoor te zorgen dat producten voldoen aan alle vereiste veiligheids- en kwaliteitsnormen.",
         "highlights": {
           "copro": {
             "label": "",
@@ -385,7 +385,7 @@
       },
       "foundry": {
         "title": "Gieterijcertificeringen",
-        "description": "Vyanzo werkt uitsluitend samen met volledig gecertificeerde gieterijen om naleving op elk gebied te garanderen.",
+        "description": "Vyanzo werkt uitsluitend samen met volledig gecertificeerde gieterijen om naleving op elk niets aan het toeval over te laten.",
         "highlights": {
           "iso9001": {
             "label": "",
@@ -403,18 +403,18 @@
       }
     },
     "categories": {
-        "titleStart": "Andere bedien ",
-      "titleEnd": "productcategorieën",
+        "titleStart": "Verschillende ",
+      "titleEnd": "productcategoriën",
       "description": "Bij het leveren van deze diensten richt Vyanzo zich op de volgende primaire productlijnen:",
-      "manhole": "Wegensdeksels  & hydraulische deksels",
-      "surfaceBoxes": "Straatpotten",
-      "siphons": "Sifons"
+      "manhole": "Wegenisdeksels en hydraulische deksels",
+      "surfaceBoxes": "Huisaansluitputjes",
+      "siphons": "Waterontvangers"
     }
   },
   "SustainabilityPage": {
     "hero": {
       "subtitle": "MILIEUVERA­NTWOORDELIJKHEID",
-      "titleStart": "Schonere processen, ",
+      "titleStart": "Ecologischere processen, ",
       "titleHighlight": "groener gietwerk.",
       "description": "Duurzaamheid verankerd in elke oven, elke installatie en elk product — van grondstof tot eindlevering."
     },
@@ -444,7 +444,7 @@
       "subtitle": "Onze producten",
       "titleStart": "Ontworpen voor",
       "titleHighlight": "infrastructuur.",
-      "description": "Ontdek ons volledig assortiment gecertificeerde gemeentelijke gietproducten, ontworpen voor extreme duurzaamheid en eenvoudige installatie."
+      "description": "Ontdek ons volledig assortiment gecertificeerd wegenis-gietijzer, ontworpen voor extreme duurzaamheid en eenvoudige installatie."
     },
     "grid": {
       "sidebar": {
@@ -474,11 +474,42 @@
       }
     }
   },
+  "ProductDetails": {
+    "breadcrumbs": {
+      "home": "Home",
+      "products": "Producten"
+    },
+    "noSpecification": "Geen specificatie beschikbaar",
+    "application": "Toepassing",
+    "table": {
+      "class": "Klasse",
+      "size": "Afmetingen",
+      "technicalData": "Technische gegevens",
+      "viewSpec": "Bekijk specs"
+    },
+    "productDetails": "Productdetails",
+    "noDetails": "Geen gedetailleerde technische specificaties beschikbaar.",
+    "documentation": "Documentatie",
+    "tabs": {
+      "specifications": "Specificaties",
+      "certifications": "Certificeringen",
+      "sizes": "Afmetingen",
+      "noSpecificationFiles": "Geen specificatiebestanden beschikbaar.",
+      "noCertificationFiles": "Geen certificeringsbestanden beschikbaar.",
+      "noSizes": "Geen afmetingen beschikbaar."
+    },
+    "similarProducts": {
+      "title": "Vergelijkbare producten",
+      "description": "Ontdek alternatieve producten voor uw wegeniswerken.",
+      "viewAll": "Bekijk alle producten",
+      "viewTechnicalSpecs": "Technische specificaties bekijken"
+    }
+  },
   "HydraulicCovers": {
     "title": "Hydraulische deksels",
     "variants": {
       "Class_B125": {
-        "application": "Parkeerplaatsen & Opritten",
+        "application": "Parkeerplaatsen, voetpaden en opritten",
         "description": "Voetpaden, voetgangersgebieden en vergelijkbare gebieden, parkeerdekken voor auto's."
       },
       "Class_C250": {

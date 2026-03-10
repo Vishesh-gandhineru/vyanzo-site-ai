@@ -170,7 +170,7 @@
   {
     "no": 9,
     "product_category": "Manhole Covers",
-    "sub_category": "Hydraulic Covers",
+    "sub_category":null,
     "name": "Hydraulic Covers",
     "certification_type": "EN124-2",
     "certifications": {

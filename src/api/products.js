@@ -299,8 +299,8 @@ export async function getAllCertifications() {
 // ─────────────────────────────────────────────
 
 const GET_ALL_LOCATIONS = `
-  query GetAllLocations {
-    locations(first: 100) {
+  query GetAllLocations($language: LanguageCodeFilterEnum) {
+    locations(first: 100, where: { language: $language }) {
       nodes {
         id
         databaseId
@@ -312,8 +312,8 @@ const GET_ALL_LOCATIONS = `
   }
 `;
 
-export async function getAllLocations() {
-  const data = await fetchGraphQL(GET_ALL_LOCATIONS);
+export async function getAllLocations(language = 'EN') {
+  const data = await fetchGraphQL(GET_ALL_LOCATIONS, { language });
   return data.locations.nodes ?? [];
 }
 
