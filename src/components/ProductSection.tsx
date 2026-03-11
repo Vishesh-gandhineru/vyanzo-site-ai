@@ -12,19 +12,19 @@ export default function ProductSection() {
     {
       id: 2,
       name: t("products.manhole"),
-      category: "Manhole Covers",
+      category: t("products.categoryManhole"),
       image: "/Manhole_home.png",
     },
     {
       id: 3,
       name: t("products.siphons"),
-      category: "Siphons",
+      category: t("products.categorySiphons"),
       image: "/Siphon_Home.png",
     },
     {
       id: 4,
       name: t("products.surfaceBoxes"),
-      category: "Surface Boxes",
+      category: t("products.categorySurfaceBoxes"),
       image: "/SurfaceBoxes_home.png",
     },
   ];

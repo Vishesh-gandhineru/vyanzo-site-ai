@@ -74,7 +74,10 @@
     "products": {
       "manhole": "Wegenisdeksels",
       "siphons": "Waterontvangers",
-      "surfaceBoxes": "Huisaansluitputjes"
+      "surfaceBoxes": "Huisaansluitputjes",
+      "categoryManhole": "wegenisdeksels",
+      "categorySiphons": "waterontvangers",
+      "categorySurfaceBoxes": "huisaansluitputjes"
     }
   },
   "AboutSection": {
@@ -152,7 +155,7 @@
     "service": {
       "titleStart": "End-to-End ",
       "titleEnd": "Service",
-      "description": "Wij bieden end-to-end dienstverlening aan klanten over de hele wereld die onze bedrijfsfilosofie delen: kwaliteit, service & betrouwbaarheid aan een correcte prijs — en dat met onverbiddelijke consistentie. Door productie, kwaliteitsborging en logistiek intern te beheren, garandeert Vyanzo een naadloze ervaring voor zijn klanten.",
+      "description": "Wij bieden end-to-end dienstverlening aan klanten over de hele wereld die onze bedrijfsfilosofie delen: kwaliteit, service & betrouwbaarheid aan een correcte prijs — en dat met onverbiddelijke consistentie. Door productie, kwaliteitscontrole en logistiek intern te beheren, garandeert Vyanzo een naadloze ervaring voor haar klanten.",
       "badge": {
         "title": "COPRO BENOR gecertificeerd",
         "description": "Voor de Belgische markt, verdeeld via Viateq"
@@ -167,12 +170,12 @@
         "description": "Robuuste Wegenisdeksels voor zwaar gebruik, ontworpen voor intensief verkeer en veeleisende infrastructuurtoepassingen."
       },
       "siphons": {
-        "title": "Sifons",
-        "description": "Precisiегegoten sifons met een best-in-class doorstroomcapaciteit voor betrouwbare afwatering, ontworpen volgens de strengste Europese normen."
+        "title": "Waterontvangers",
+        "description": "Precisiегegoten Waterontvangers met een best-in-class doorstroomcapaciteit voor betrouwbare afwatering, ontworpen volgens de strengste Europese normen."
       },
       "surfaceBoxes": {
-        "title": "Straatpotten",
-        "description": "Duurzame gietijzeren straatpotten, gebouwd voor eenvoudige installatie en toegang."
+        "title": "Huisaansluitputjes",
+        "description": "Duurzame gietijzeren Huisaansluitputjes, gebouwd voor eenvoudige installatie en toegang."
       }
     },
     "advantage": {
@@ -385,7 +388,7 @@
       },
       "foundry": {
         "title": "Gieterijcertificeringen",
-        "description": "Vyanzo werkt uitsluitend samen met volledig gecertificeerde gieterijen om naleving op elk niets aan het toeval over te laten.",
+        "description": "Vyanzo werkt uitsluitend samen met volledig gecertificeerde gieterijen om niets aan het toeval over te laten.",
         "highlights": {
           "iso9001": {
             "label": "",

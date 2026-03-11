@@ -74,7 +74,10 @@
     "products": {
       "manhole": "Manhole Covers",
       "siphons": "Siphons",
-      "surfaceBoxes": "Surface Boxes"
+      "surfaceBoxes": "Surface Boxes",
+      "categoryManhole": "Manhole Covers",
+      "categorySiphons": "Siphons",
+      "categorySurfaceBoxes": "Surface Boxes"
     }
   },
   "AboutSection": {

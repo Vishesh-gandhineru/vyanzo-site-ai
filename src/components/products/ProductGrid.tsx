@@ -140,7 +140,7 @@ export default function ProductGrid({
     .sort((a, b) => {
       if (sortBy === "name-asc") return a.title.localeCompare(b.title);
       if (sortBy === "name-desc") return b.title.localeCompare(a.title);
-      return a.no - b.no; // default: product number
+      return (a.menuOrder ?? 0) - (b.menuOrder ?? 0); // default: menuOrder
     });
 
   return (
