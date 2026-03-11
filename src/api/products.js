@@ -24,6 +24,7 @@ async function fetchGraphQL(query, variables = {}) {
 const PRODUCT_FIELDS = `
   id
   databaseId
+  menuOrder
   title
   slug
   featuredImage {
@@ -69,7 +70,7 @@ const PRODUCT_FIELDS = `
 
 const GET_ALL_PRODUCTS = `
   query GetAllProducts($language: LanguageCodeFilterEnum) {
-    products(first: 100, where: { language: $language }) {
+    products(first: 100, where: { language: $language ,orderby: {field: MENU_ORDER, order: ASC}}) {
       nodes {
         ${PRODUCT_FIELDS}
       }
@@ -95,6 +96,7 @@ const GET_PRODUCTS_BY_CATEGORY = `
       first: 100
       where: {
         language: $language
+        orderby: {field: MENU_ORDER, order: ASC}
         taxQuery: {
           taxArray: [
             {
@@ -135,6 +137,7 @@ const GET_PRODUCTS_BY_CERTIFICATION = `
       first: 100
       where: {
         language: $language
+        orderby: {field: MENU_ORDER, order: ASC}
         taxQuery: {
           taxArray: [
             {
@@ -176,6 +179,7 @@ const GET_PRODUCTS_FILTERED = `
       first: 100
       where: {
         language: $language
+        orderby: {field: MENU_ORDER, order: ASC}
         taxQuery: {
           relation: AND
           taxArray: [
@@ -234,7 +238,7 @@ export async function getProductBySlug(slug) {
 
 const GET_ALL_PRODUCT_SLUGS = `
   query GetAllProductSlugs($language: LanguageCodeFilterEnum) {
-    products(first: 100, where: { language: $language }) {
+    products(first: 100, where: { language: $language, orderby: {field: MENU_ORDER, order: ASC} }) {
       nodes {
         slug
         language { code }

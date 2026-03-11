@@ -18,6 +18,8 @@ export type SheetRow = {
 export type Product = {
   id: number;
   no: number;
+  order?: number;
+  menuOrder?: number;
   title: string;        // = name from JSON
   slug: string;
   sku: string;
@@ -39,6 +41,7 @@ export type Product = {
 
 export type Variant = {
   name: string;
+  order?: number;
   kn: string;
   application: string;
   description: string;
@@ -112,6 +115,7 @@ function mapNodeToProduct(node: any): Product {
     return {
       id,
       no: id,
+      menuOrder: node.menuOrder || 0,
       title: node.title,
       slug: node.slug,
       sku: `VY-${Math.floor(Math.random() * 10000)}`,
@@ -158,6 +162,7 @@ async function getStaticHydraulicCover(locale: string): Promise<Product | null> 
 
       return {
         name: v.name,
+        order:v.order,
         kn: v.kn,
         application: t(`variants.${variantKey}.application`),
         description: t(`variants.${variantKey}.description`),
@@ -173,6 +178,8 @@ async function getStaticHydraulicCover(locale: string): Promise<Product | null> 
     return {
       id: 9999,
       no: 9,
+      order:raw.order,
+      menuOrder: raw.order,
       title: t("title"),
       slug: "hydraulic-covers",
       sku: `VY-HYC`,

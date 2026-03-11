@@ -61,7 +61,7 @@
       "title": "Conformité industrielle"
     },
     "contact": {
-      "title": "Contacter les ventes",
+      "title": "Contacter le service commercia",
       "description": "Obtenez des devis personnalisés"
     }
   },
@@ -74,7 +74,10 @@
     "products": {
       "manhole": "Regards de chaussée",
       "siphons": "Avaloirs",
-      "surfaceBoxes": "Regards de branchement"
+      "surfaceBoxes": "Regards de branchement",
+      "categoryManhole": "Regards de chaussée",
+      "categorySiphons": "Avaloirs",
+      "categorySurfaceBoxes": "Regards de branchement"
     }
   },
   "AboutSection": {
@@ -230,7 +233,7 @@
           "role": "Responsable administratif",
           "image": "/team/Roxane-Sabatier.png",
           "bio": [
-            "Roxane Sabatier dirige notre bureau de Mumbai. Elle parle couramment l'anglais, le français, l'hindi, l'italien et l'espagnol. Journaliste de formation, elle fait preuve d'une grande ténacité pour atteindre ses objectifs.Roxane et Steve travaillent ensemble depuis plus de dix ans dans différentes entreprises. Roxane a rejoint Vyanzo en 2022."
+            "Roxane Sabatier dirige notre bureau de Mumbai. Elle parle couramment l'anglais, le français, l'hindi, l'italien et l'espagnol. Journaliste de formation, elle fait preuve d'une grande ténacité pour atteindre ses objectifs. Roxane et Steve travaillent ensemble depuis plus de dix ans dans différentes entreprises. Roxane a rejoint Vyanzo en 2022."
           ],
           "contact": {
             "email": "roxane@vyanzo.be",
@@ -269,7 +272,7 @@
   "ContactPage": {
     "hero": {
       "subtitle": "Entamez une conversation",
-      "titleStart": "Nous sommes",
+      "titleStart": "Nous sommes ",
       "titleHighlight": "à votre écoute",
       "titleEnd": "",
       "description": "Vous avez un projet en tête ? Trouvons ensemble la solution qui vous convient."
@@ -439,7 +442,7 @@
     "hero": {
       "subtitle": "Nos Produits",
       "titleStart": "Conçus pour",
-      "titleHighlight": "l'Infrastructure.",
+      "titleHighlight": "les infrastructure.",
       "description": "Découvrez notre gamme complète de moulages municipaux certifiés, conçus pour une durabilité extrême et une installation facile."
     },
     "grid": {
