@@ -357,9 +357,12 @@ export default function ProductDetails({
           {t("breadcrumbs.products")}
         </Link>
         <ChevronRight className="w-4 h-4 shrink-0" />
-        <span className="text-brand-primary font-semibold">
+        <Link
+          href={`/products?category=${product.category}`}
+          className="text-brand-primary font-semibold"
+        >
           {product.category}
-        </span>
+        </Link>
 
         <ChevronRight className="w-4 h-4 shrink-0" />
         <span className="text-bg-dark font-semibold">{product.title}</span>
