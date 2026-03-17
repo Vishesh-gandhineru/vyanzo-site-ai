@@ -138,7 +138,33 @@
       "title": "Belgische distributie en magazijn",
       "value": "VIATEQ bv"
     },
-    "formTitle": "Stuur ons een bericht"
+    "formTitle": "Stuur ons een bericht",
+    "formDescription": "Heeft u een project in gedachten? Laten we samen de juiste oplossing vinden.",
+    "formFullName": "Volledige naam",
+    "formEmail": "E-mail",
+    "formPhoneNumber": "Telefoonnummer",
+    "formCompany": "Bedrijf",
+    "formMessage": "Bericht",
+    "formSubmit": "Verstuur uw aanvraag",
+    "formSuccess": "Bericht succesvol verzonden!",
+    "formError": "Er is een fout opgetreden. Probeer het opnieuw.",
+    "formSending": "Verzenden...",
+    "formRequired": "Alle velden zijn verplicht.",
+    "formFullNameError": "Volledige naam is vereist.",
+    "formEmailError": "E-mail is vereist.",
+    "formPhoneNumberError": "Telefoonnummer is vereist.",
+    "formCompanyError": "Bedrijf is vereist.",
+    "formMessageError": "Bericht is vereist.",
+    "searchCountry": "Zoek naar land...",
+    "noResults": "Geen resultaten gevonden",
+    "formPhoneNumberPlaceholder": "Voer telefoonnummer in",
+    "validationFullNameRequired": "Volledige naam is vereist.",
+    "validationFullNameMin": "Volledige naam moet minimaal 2 tekens bevatten.",
+    "validationEmailRequired": "E-mail is vereist.",
+    "validationEmailInvalid": "Voer een geldig e-mailadres in.",
+    "validationPhoneRequired": "Telefoonnummer is vereist.",
+    "validationPhoneInvalid": "Voer een geldig telefoonnummer in (alleen cijfers, 6–15 cijfers).",
+    "validationCompanyRequired": "Bedrijfsnaam is vereist."
   },
   "AboutPage": {
     "hero": {
@@ -162,7 +188,7 @@
       }
     },
     "offerings": {
-       "titleStart": "Kern",
+      "titleStart": "Kern",
       "titleEnd": "producten",
       "description": "Vyanzo is een toonaangevende leverancier van premium gietproducten, ontworpen voor schaal en duurzaamheid.",
       "manhole": {
@@ -179,10 +205,10 @@
       }
     },
     "advantage": {
-       "titleStart": "Het ",
+      "titleStart": "Het ",
       "titleMid": "Vyanzo",
       "titleEnd": "-voordeel",
-  
+
       "description": "Een onverbiddelijke focus op kwaliteit, schaal en duurzame productie.",
       "facilities": {
         "title": "Ultramoderne installaties",
@@ -210,7 +236,7 @@
       }
     },
     "teams": {
-        "titleStart": "Leiderschaps",
+      "titleStart": "Leiderschaps",
       "titleEnd": "team",
       "description": "Geleid door een managementteam met tientallen jaren gecombineerde ervaring in wereldwijde productie, supply chain en Kwaliteitscontrole.",
       "members": [
@@ -240,9 +266,7 @@
           ],
           "contact": {
             "email": "roxane@vyanzo.be",
-            "phones": [
-              { "label": "India", "number": "+919930353363" }
-            ]
+            "phones": [{ "label": "India", "number": "+919930353363" }]
           }
         },
         {
@@ -289,8 +313,7 @@
       "description": "Vyanzo biedt een uitgebreid pakket diensten om het giet- en productieproces te stroomlijnen, van het eerste ontwerp tot de uiteindelijke levering."
     },
     "tabs": {
-     
-       "titleStart": "Onze ",
+      "titleStart": "Onze ",
       "titleEnd": "diensten"
     },
     "servicesList": {
@@ -406,7 +429,7 @@
       }
     },
     "categories": {
-        "titleStart": "Verschillende ",
+      "titleStart": "Verschillende ",
       "titleEnd": "productcategoriën",
       "description": "Bij het leveren van deze diensten richt Vyanzo zich op de volgende primaire productlijnen:",
       "manhole": "Wegenisdeksels en hydraulische deksels",

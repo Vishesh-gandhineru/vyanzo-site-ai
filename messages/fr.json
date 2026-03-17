@@ -138,7 +138,33 @@
       "title": "Distribution et entrepôt en Belgique",
       "value": "VIATEQ bv"
     },
-    "formTitle": "Envoyez-nous un message"
+    "formTitle": "Envoyez-nous un message",
+    "formDescription": "Vous avez un projet en tête ? Trouvons ensemble la solution qui vous convient.",
+    "formFullName": "Nom Prénom",
+    "formEmail": "E-mail",
+    "formPhoneNumber": "Numéro de téléphone",
+    "formCompany": "Société",
+    "formMessage": "Message",
+    "formSubmit": "Envoyer votre demande",
+    "formSuccess": "Message envoyé avec succès !",
+    "formError": "Une erreur s'est produite. Veuillez réessayer.",
+    "formSending": "Envoi en cours...",
+    "formRequired": "Tous les champs sont requis.",
+    "formFullNameError": "Le nom complet est requis.",
+    "formEmailError": "L'e-mail est requis.",
+    "formPhoneNumberError": "Le numéro de téléphone est requis.",
+    "formCompanyError": "La société est requise.",
+    "formMessageError": "Le message est requis.",
+    "searchCountry": "Rechercher un pays...",
+    "noResults": "Aucun résultat trouvé",
+    "formPhoneNumberPlaceholder": "Entrez votre numéro de téléphone",
+    "validationFullNameRequired": "Le nom complet est requis.",
+    "validationFullNameMin": "Le nom complet doit contenir au moins 2 caractères.",
+    "validationEmailRequired": "L'e-mail est requis.",
+    "validationEmailInvalid": "Veuillez entrer une adresse e-mail valide.",
+    "validationPhoneRequired": "Le numéro de téléphone est requis.",
+    "validationPhoneInvalid": "Entrez un numéro de téléphone valide (chiffres uniquement, 6–15 chiffres).",
+    "validationCompanyRequired": "Le nom de la société est requis."
   },
   "AboutPage": {
     "hero": {
@@ -162,7 +188,7 @@
       }
     },
     "offerings": {
-       "titleStart": "Produits ",
+      "titleStart": "Produits ",
       "titleEnd": "phares",
       "description": "Vyanzo est l'un des principaux fournisseurs de produits de moulage haut de gamme, conçus pour offrir évolutivité et durabilité.",
       "manhole": {
@@ -179,7 +205,7 @@
       }
     },
     "advantage": {
-        "titleStart": "L'",
+      "titleStart": "L'",
       "titleMid": "Avantage ",
       "titleEnd": "Vyanzo",
       "description": "Une attention constante portée à la qualité, à l'échelle et à la production durable.",
@@ -209,7 +235,7 @@
       }
     },
     "teams": {
-       "titleStart": "Équipe de ",
+      "titleStart": "Équipe de ",
       "titleEnd": "direction",
       "description": "Dirigée par une équipe cumulant plusieurs décennies d'expérience dans les domaines de la fabrication mondiale, de la chaîne d'approvisionnement et de l'assurance qualité.",
       "members": [
@@ -237,9 +263,7 @@
           ],
           "contact": {
             "email": "roxane@vyanzo.be",
-            "phones": [
-              { "label": "Inde", "number": "+919930353363" }
-            ]
+            "phones": [{ "label": "Inde", "number": "+919930353363" }]
           }
         },
         {
@@ -276,6 +300,16 @@
       "titleHighlight": "à votre écoute",
       "titleEnd": "",
       "description": "Vous avez un projet en tête ? Trouvons ensemble la solution qui vous convient."
+    },
+    "form": {
+      "title": "Contactez-nous",
+      "description": "Vous avez un projet en tête ? Trouvons ensemble la solution qui vous convient.",
+      "fullName": "Nom Prénom",
+      "email": "E-mail",
+      "phoneNumber": "Numéro de téléphone",
+      "company": "Société",
+      "message": "Message",
+      "submit": "Envoyer votre demande"
     }
   },
   "ServicesPage": {
@@ -286,7 +320,7 @@
       "description": "Vyanzo propose une gamme complète de services conçus pour rationaliser le processus de moulage et de fabrication, de la conception initiale à la livraison finale."
     },
     "tabs": {
-        "titleStart": "Nos ",
+      "titleStart": "Nos ",
       "titleEnd": "Services"
     },
     "servicesList": {
@@ -402,7 +436,7 @@
       }
     },
     "categories": {
-        "titleStart": "Autres catégories de ",
+      "titleStart": "Autres catégories de ",
       "titleEnd": "produits proposés",
       "description": "Dans le cadre de la fourniture de ces services, Vyanzo se concentre sur les principales gammes de produits suivantes :",
       "manhole": "Regards de chaussée et Regards hydrauliques",

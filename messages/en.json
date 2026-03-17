@@ -138,7 +138,33 @@
       "title": "Belgian distribution and warehouse",
       "value": "VIATEQ bv"
     },
-    "formTitle": "Send us a message"
+    "formTitle": "Send us a message",
+    "formDescription": "Have a project in mind? Let’s find the right solution together.",
+    "formFullName": "Full Name",
+    "formEmail": "Email",
+    "formPhoneNumber": "Phone Number",
+    "formCompany": "Company",
+    "formMessage": "Message",
+    "formSubmit": "Submit Inquiry",
+    "formSuccess": "Message sent successfully!",
+    "formError": "An error occurred. Please try again.",
+    "formSending": "Sending…",
+    "formRequired": "All fields are required.",
+    "formFullNameError": "Full name is required.",
+    "formEmailError": "Email is required.",
+    "formPhoneNumberError": "Phone number is required.",
+    "formCompanyError": "Company is required.",
+    "formMessageError": "Message is required.",
+    "searchCountry": "Search country...",
+    "noResults": "No results found",
+    "formPhoneNumberPlaceholder": "Enter phone number",
+    "validationFullNameRequired": "Full name is required.",
+    "validationFullNameMin": "Full name must be at least 2 characters.",
+    "validationEmailRequired": "Email is required.",
+    "validationEmailInvalid": "Please enter a valid email address.",
+    "validationPhoneRequired": "Phone number is required.",
+    "validationPhoneInvalid": "Enter a valid phone number (digits only, 6–15 digits).",
+    "validationCompanyRequired": "Company name is required."
   },
   "AboutPage": {
     "hero": {
@@ -239,9 +265,7 @@
           ],
           "contact": {
             "email": "roxane@vyanzo.be",
-            "phones": [
-              { "label": "India", "number": "+919930353363" }
-            ]
+            "phones": [{ "label": "India", "number": "+919930353363" }]
           }
         },
         {
