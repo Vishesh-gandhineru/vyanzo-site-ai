@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Warehouse } from "lucide-react";
 import { useTranslations } from "next-intl";
+import ContactForm from "./ContactForm";
 
 export default function ContactSection() {
   const t = useTranslations("ContactSection");
@@ -151,19 +152,12 @@ export default function ContactSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:w-1/2 w-full"
           >
-            <div className="bg-text-dark-bg p-8 md:p-12 rounded-3xl border border-black/5 shadow-xl shadow-black/2">
-              <h3 className="text-section-h3 font-serif font-bold text-bg-dark mb-8">
+            <div className="bg-text-dark-bg p-4 md:p-8 rounded-3xl border border-black/5">
+              <h3 className="text-section-h3 font-serif font-bold text-bg-dark mb-8 text-center">
                 {t("formTitle")}
               </h3>
 
-              <div
-                style={{ width: "100%", height: "500px" }}
-                data-fillout-id="og6zZBZdi1us"
-                data-fillout-embed-type="standard"
-                data-fillout-inherit-parameters
-                data-fillout-dynamic-resize
-                suppressHydrationWarning
-              ></div>
+              <ContactForm />
             </div>
           </motion.div>
         </div>
