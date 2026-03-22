@@ -109,7 +109,18 @@ function certChipClass(type: string): string {
 
 // ─── Reusable download row ────────────────────────────────────────────────────
 function DriveRow({ file, icon }: { file: DriveLink; icon: React.ReactNode }) {
-  const { name, loading } = useDriveFileName(file.url, file.label);
+  const { name: driveName, loading } = useDriveFileName(file.url, file.label);
+  
+  // Extract filename from URL (useful for WordPress media links) if no label/Drive name is present
+  let displayName = driveName;
+  if (!displayName && !loading && file.url) {
+    try {
+      const urlPath = new URL(file.url).pathname;
+      displayName = decodeURIComponent(urlPath.split('/').pop() || "Document");
+    } catch (e) {
+      displayName = "Document";
+    }
+  }
 
   return (
     <a
@@ -126,8 +137,8 @@ function DriveRow({ file, icon }: { file: DriveLink; icon: React.ReactNode }) {
           {loading ? (
             <div className="h-4 w-40 bg-brand-ash/20 rounded animate-pulse" />
           ) : (
-            <p className="text-sm font-semibold text-bg-dark font-sans">
-              {name}
+            <p className="text-sm font-semibold text-bg-dark font-sans max-w-[200px] truncate" title={displayName}>
+              {displayName}
             </p>
           )}
         </div>
