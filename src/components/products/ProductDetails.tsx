@@ -432,11 +432,19 @@ export default function ProductDetails({
           ) : (
             <div className="bg-white rounded-[2.5rem] p-4 shadow-sm border border-brand-ash/20 h-fit overflow-hidden">
               {specFiles.length > 0 && specFiles[0].url ? (
-                <iframe
-                  src={specFiles[0].url.replace(/\/view.*/, "/preview")}
-                  title={`${product.title} Specification`}
-                  className="w-full aspect-3/4 rounded-2xl border-none"
-                />
+                /drive\.google\.com|docs\.google\.com/.test(specFiles[0].url) ? (
+                  <iframe
+                    src={specFiles[0].url.replace(/\/view.*/, "/preview")}
+                    title={`${product.title} Specification`}
+                    className="w-full aspect-3/4 rounded-2xl border-none"
+                  />
+                ) : (
+                  <img
+                    src={specFiles[0].url}
+                    alt={`${product.title} Specification`}
+                    className="w-full rounded-2xl object-contain"
+                  />
+                )
               ) : (
                 <div className="w-full aspect-square flex items-center justify-center bg-[#f8f9fc] rounded-2xl">
                   <p className="text-text-light-bg/40 text-sm font-sans shrink-0">
