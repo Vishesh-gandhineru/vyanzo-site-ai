@@ -171,7 +171,7 @@
     "no": 9,
     "order": 9,
     "product_category": "Manhole Covers",
-    "sub_category":null,
+    "sub_category": null,
     "name": "Hydraulic Covers",
     "certification_type": "EN124-2",
     "certifications": {
@@ -182,10 +182,9 @@
     },
     "specifications": {},
     "image_link": {
-      "img1": "/products/D400 main.png",
-      "img2": "/products/B125.png",
-      "img3": "/products/D400.png",
-      "img4": "/products/C250.png"
+      "img1": "/products/B125.png",
+      "img2": "/products/D400.png",
+      "img3": "/products/C250.png"
     },
     "table_link": "https://docs.google.com/spreadsheets/d/1fimmUnzBaPwIQBbksTEzQIQyUDrwglCpCEdUsO2OiRs/edit?gid=1812868149",
     "variants": [
@@ -205,14 +204,14 @@
           "100X100"
         ],
         "specifications": {
-          "file_1": "https://drive.google.com/file/d/1nmcVl1vU_ZWfwrckwjGKayj78g0IiwPY/view?usp=drive_link",
-          "file_2": "https://drive.google.com/file/d/1zUY3qYp8L9lDNg_0l8tdT0gXxiFZGZFT/view?usp=drive_link",
-          "file_3": "https://drive.google.com/file/d/1wQ2bLhKaMyJR06-tvWsDJh03sSQw8nDv/view?usp=drive_link",
-          "file_4": "https://drive.google.com/file/d/1Pzuc3yzgxtXTGZqgkMEHZ2dxhyJok5BY/view?usp=drive_link",
-          "file_5": "https://drive.google.com/file/d/1mATooJtf5PoJ0cthMGKP0xD_et23lik2/view?usp=drive_link",
-          "file_6": "https://drive.google.com/file/d/1n4dVpoo_C6zuiRycYNRdsXH1WBu3q4eo/view?usp=drive_link",
-          "file_7": "https://drive.google.com/file/d/1GF2EgijC1cJAbJQZlekiQBtNkRGlUVVi/view?usp=drive_link",
-          "file_8": "https://drive.google.com/file/d/1bO_vRKfCN7XPtaYHE9NoAcc9_A6Urzjf/view?usp=drive_link"
+          "file_1": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/30X30-B125.pdf",
+          "file_2": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/40X40-B125.pdf",
+          "file_3": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/50X50-B125.pdf",
+          "file_4": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/60X60-B125.pdf",
+          "file_5": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/70X70-B125.pdf",
+          "file_6": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/80X80-B125.pdf",
+          "file_7": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/90X90-B125.pdf",
+          "file_8": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/100X100-B125.pdf"
         },
         "image_link": {
           "img1": "/products/B125.png"
@@ -224,19 +223,13 @@
         "kn": "250 KN",
         "application": "Kerb Sides & Parking Areas",
         "description": "For kerb sides and non-trafficked areas of hard shoulders and parking areas.",
-        "sizes": [
-          "50X50",
-          "60X60",
-          "70X70",
-          "80X80",
-          "90X90"
-        ],
+        "sizes": ["50X50", "60X60", "70X70", "80X80", "90X90"],
         "specifications": {
-          "file_1": "https://drive.google.com/file/d/1O3DZ7659YNDgr-T2Es5H6NvXIixf5tRX/view?usp=drive_link",
-          "file_2": "https://drive.google.com/file/d/1fAqtIrOzh5OobiFxAUpYzG5P3dWHCfZc/view?usp=drive_link",
-          "file_3": "https://drive.google.com/file/d/1jjfRRmdFejvEWaUAFJf01t2F4S33nbFY/view?usp=drive_link",
-          "file_4": "https://drive.google.com/file/d/1XINZQFKqZUFzgMOXeb9Nwrw1oFgV0dUl/view?usp=drive_link",
-          "file_5": "https://drive.google.com/file/d/10xAq1xmCFXKDoEDhXq2ixu8FntdOP4MP/view?usp=drive_link"
+          "file_1": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/50X50-C250.pdf",
+          "file_2": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/60X60-C250.pdf",
+          "file_3": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/70X70-C250.pdf",
+          "file_4": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/80X80-C250.pdf",
+          "file_5": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/90X90-C250.pdf"
         },
         "image_link": {
           "img1": "/products/C250.png"
@@ -258,13 +251,13 @@
           "110X110"
         ],
         "specifications": {
-          "file_1": "https://drive.google.com/file/d/1iXXEGxG_GSONbynX0rKJrznac9LyADj_/view?usp=drive_link",
-          "file_2": "https://drive.google.com/file/d/1Q-Uzj3woENhoCDCGRT8sl3DqtDloB_SH/view?usp=drive_link",
-          "file_3": "https://drive.google.com/file/d/1WtVWC05hE14d2CpNUm4-Ff1ochB_HrmJ/view?usp=drive_link",
-          "file_4": "https://drive.google.com/file/d/1H2fFUxfue7Tn5ddQaOpRgHZ7cxtDtPy5/view?usp=drive_link",
-          "file_5": "https://drive.google.com/file/d/1WnMrKKx-tQgAD6vquaCZZoks2hMcFFkq/view?usp=drive_link",
-          "file_6": "https://drive.google.com/file/d/1HlihgcUAiofqZ-_HRSExCg6rwI5DZCtX/view?usp=drive_link",
-          "file_7": "https://drive.google.com/file/d/1eQNm_JfZePjP-QlYjgUX7ZlxCf_I9a2Q/view?usp=drive_link"
+          "file_1": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/40X40-D400.pdf",
+          "file_2": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/50X50-D400.pdf",
+          "file_3": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/60X60-D400.pdf",
+          "file_4": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/70X70-D400.pdf",
+          "file_5": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/90X90-D400.pdf",
+          "file_6": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/100X100-D400.pdf",
+          "file_7": "https://vyanzo.gandhineru.com/wp-content/uploads/2026/03/110X110-D400.pdf"
         },
         "image_link": {
           "img1 ": "/products/D400.png"
