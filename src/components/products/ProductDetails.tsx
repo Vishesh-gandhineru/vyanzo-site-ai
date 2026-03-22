@@ -432,7 +432,8 @@ export default function ProductDetails({
           ) : (
             <div className="bg-white rounded-[2.5rem] p-4 shadow-sm border border-brand-ash/20 h-fit overflow-hidden">
               {specFiles.length > 0 && specFiles[0].url ? (
-                /drive\.google\.com|docs\.google\.com/.test(specFiles[0].url) ? (
+                /drive\.google\.com|docs\.google\.com/.test(specFiles[0].url) ||
+                /\.pdf(\?.*)?$/i.test(specFiles[0].url) ? (
                   <iframe
                     src={specFiles[0].url.replace(/\/view.*/, "/preview")}
                     title={`${product.title} Specification`}
