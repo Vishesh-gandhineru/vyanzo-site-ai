@@ -23,7 +23,8 @@
       "services": "Nos services",
       "about": "À propos",
       "contact": "Contactez-nous",
-      "team": "Notre équipe"
+      "team": "Notre équipe",
+      "privacyPolicy": "Politique de confidentialité"
     },
     "copyright": "Copyright @Vyanzo {year}",
     "aria": {
@@ -552,6 +553,130 @@
       "Class_D400": {
         "application": "Routes Principales & Autoroutes",
         "description": "Chaussées, accotements et aires de stationnement pour tous types de véhicules routiers."
+      }
+    }
+  },
+  "PrivacyPolicyPage": {
+    "title": "POLITIQUE EN MATIÈRE DE COOKIES ET DE CONFIDENTIALITÉ (RGPD) – Version 2026.1",
+    "intro1": "Nous apprécions votre intérêt pour Vyanzo et votre visite sur notre site web (vyanzo.be). Cette Politique de confidentialité explique comment nous collectons, traitons et utilisons les données personnelles des visiteurs de notre site web.",
+    "intro2": "Nous nous engageons à protéger votre vie privée. Toute information personnellement identifiable que vous fournissez ne sera jamais partagée avec des tiers sans votre consentement, sauf dans les cas décrits dans cette politique.",
+    "sections": {
+      "cookies": {
+        "title": "1. Cookies",
+        "description": "Les cookies sont de petits fichiers texte stockés sur votre appareil (ordinateur, tablette ou smartphone) pour améliorer votre expérience de navigation.",
+        "useTypes": "Nous utilisons les types de cookies suivants :",
+        "types": {
+          "necessary": {
+            "name": "Cookies nécessaires",
+            "desc": "Essentiels au bon fonctionnement du site web (ex. : navigation, connexion sécurisée). Sans ces cookies, certaines parties du site pourraient ne pas fonctionner correctement."
+          },
+          "performance": {
+            "name": "Cookies de performance",
+            "desc": "Nous aident à comprendre comment les visiteurs utilisent notre site web (ex. : pages visitées, données de trafic) afin d'améliorer les fonctionnalités. Ces cookies collectent des données anonymes."
+          },
+          "functional": {
+            "name": "Cookies fonctionnels",
+            "desc": "Mémorisent vos préférences (telles que la langue ou la région) pour offrir une expérience personnalisée."
+          },
+          "advertising": {
+            "name": "Cookies publicitaires",
+            "desc": "Suivent le comportement de navigation pour afficher des publicités pertinentes et mesurer l'efficacité des campagnes. Ces cookies ne stockent pas de données personnelles directement identifiables."
+          }
+        },
+        "conclusion": "Vous pouvez contrôler ou supprimer les cookies via les paramètres de votre navigateur à tout moment. La désactivation des cookies peut affecter le fonctionnement du site web."
+      },
+      "informationWeCollect": {
+        "title": "2. Informations que nous collectons",
+        "nonPersonal": {
+          "title": "Données non personnelles",
+          "desc": "Collectées automatiquement lors de votre visite sur notre site web, notamment :",
+          "items": [
+            "Adresse IP",
+            "Type et version du navigateur",
+            "Type d'appareil",
+            "Pages visitées et durée",
+            "Fournisseur d'accès à Internet"
+          ]
+        },
+        "personal": {
+          "title": "Données personnelles",
+          "desc": "Nous ne collectons des données personnelles que lorsque vous les fournissez volontairement, par exemple :",
+          "items": [
+            "Nom",
+            "Adresse e-mail",
+            "Numéro de téléphone",
+            "Adresse",
+            "Date de naissance",
+            "Préférences"
+          ]
+        }
+      },
+      "howWeUseYourData": {
+        "title": "3. Comment nous utilisons vos données",
+        "desc": "Nous utilisons vos données pour :",
+        "items": [
+          "Fournir les services ou informations demandés",
+          "Traiter les transactions",
+          "Améliorer les fonctionnalités du site web",
+          "Envoyer des mises à jour administratives",
+          "Envoyer des communications marketing (uniquement avec votre consentement)",
+          "Résoudre les litiges et fournir un support"
+        ]
+      },
+      "dataRetention": {
+        "title": "4. Conservation des données",
+        "desc": "Vos données personnelles sont conservées uniquement aussi longtemps que nécessaire aux fins décrites ci-dessus, avec une période de conservation maximale de 10 ans, sauf si une période plus courte est requise par la loi."
+      },
+      "yourRights": {
+        "title": "5. Vos droits (RGPD)",
+        "desc": "Vous avez le droit de :",
+        "items": [
+          "Accéder à vos données personnelles",
+          "Corriger des données inexactes",
+          "Demander la suppression (« droit à l'oubli »)",
+          "Retirer votre consentement",
+          "Restreindre ou s'opposer au traitement"
+        ],
+        "contact": "Pour exercer ces droits, contactez-nous à :\nE-mail : info@vyanzo.be"
+      },
+      "dataSecurity": {
+        "title": "6. Sécurité des données",
+        "desc": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte, vol ou utilisation abusive."
+      },
+      "dataSharing": {
+        "title": "7. Partage des données",
+        "desc": "Nous pouvons partager vos données :",
+        "items": [
+          "Avec des prestataires de services (pour l'hébergement, les paiements, etc.)",
+          "Lorsque la loi l'exige",
+          "En cas de transfert d'entreprise"
+        ],
+        "conclusion": "Nous ne vendons pas vos données personnelles."
+      },
+      "internationalDataTransfers": {
+        "title": "8. Transferts internationaux de données",
+        "desc": "Vos données peuvent être traitées en dehors de l'EEE avec des garanties appropriées."
+      },
+      "externalLinks": {
+        "title": "9. Liens externes",
+        "desc": "Notre site web peut contenir des liens vers des sites tiers. Nous ne sommes pas responsables de leurs pratiques en matière de confidentialité."
+      },
+      "communications": {
+        "title": "10. Communications",
+        "desc": "Nous pouvons vous contacter concernant des mises à jour de service ou des promotions (avec votre consentement). Vous pouvez vous désabonner à tout moment."
+      },
+      "passwordSecurity": {
+        "title": "11. Sécurité du mot de passe",
+        "desc": "Gardez votre mot de passe confidentiel et changez-le s'il est compromis."
+      },
+      "updatesToThisPolicy": {
+        "title": "12. Mises à jour de cette politique",
+        "desc": "Nous pouvons mettre à jour cette politique périodiquement. Veuillez la consulter régulièrement."
+      },
+      "contact": {
+        "title": "13. Contact",
+        "email": "E-mail : info@vyanzo.be",
+        "website": "Site web : vyanzo.be"
       }
     }
   }

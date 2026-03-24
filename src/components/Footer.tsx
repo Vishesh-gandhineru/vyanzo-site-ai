@@ -113,6 +113,12 @@ export default function Footer() {
             >
               {t("links.team")}
             </Link>
+            <Link
+              href="/privacy-policy"
+              className="text-bg-dark font-sans font-bold text-lg hover:opacity-70 transition-opacity"
+            >
+              {t("links.privacyPolicy")}
+            </Link>
           </div>
         </div>
 

@@ -23,7 +23,8 @@
       "services": "Services",
       "about": "About Us",
       "contact": "Contact Us",
-      "team": "Our Team"
+      "team": "Our Team",
+      "privacyPolicy": "Privacy Policy"
     },
     "copyright": "Copyright @Vyanzo {year}",
     "aria": {
@@ -544,6 +545,130 @@
       "Class_D400": {
         "application": "Main Roads & Highways",
         "description": "Carriageways of roads, hard shoulders, and parking areas for all types of road vehicles."
+      }
+    }
+  },
+  "PrivacyPolicyPage": {
+    "title": "COOKIES & PRIVACY POLICY (GDPR) – Version 2026.1",
+    "intro1": "We value your interest in Vyanzo and your visit to our website (vyanzo.be). This Privacy Policy explains how we collect, process, and use personal data of visitors to our website.",
+    "intro2": "We are committed to protecting your privacy. Any personally identifiable information you provide will never be shared with third parties without your consent, except as described in this policy.",
+    "sections": {
+      "cookies": {
+        "title": "1. Cookies",
+        "description": "Cookies are small text files stored on your device (computer, tablet, or smartphone) to enhance your browsing experience.",
+        "useTypes": "We use the following types of cookies:",
+        "types": {
+          "necessary": {
+            "name": "Necessary cookies",
+            "desc": "Essential for the proper functioning of the website (e.g., navigation, secure login). Without these, parts of the site may not work properly."
+          },
+          "performance": {
+            "name": "Performance cookies",
+            "desc": "Help us understand how visitors use our website (e.g., page visits, traffic data) so we can improve functionality. These collect anonymous data."
+          },
+          "functional": {
+            "name": "Functional cookies",
+            "desc": "Remember your preferences (such as language or region) to provide a personalized experience."
+          },
+          "advertising": {
+            "name": "Advertising cookies",
+            "desc": "Track browsing behavior to show relevant ads and measure campaign effectiveness. These do not store directly identifiable personal data."
+          }
+        },
+        "conclusion": "You can control or delete cookies through your browser settings at any time. Disabling cookies may affect website functionality."
+      },
+      "informationWeCollect": {
+        "title": "2. Information We Collect",
+        "nonPersonal": {
+          "title": "Non-Personal Data",
+          "desc": "Collected automatically when you visit our website, including:",
+          "items": [
+            "IP address",
+            "Browser type and version",
+            "Device type",
+            "Pages visited and duration",
+            "Internet service provider"
+          ]
+        },
+        "personal": {
+          "title": "Personal Data",
+          "desc": "We only collect personal data when you voluntarily provide it, such as:",
+          "items": [
+            "Name",
+            "Email address",
+            "Phone number",
+            "Address",
+            "Date of birth",
+            "Preferences"
+          ]
+        }
+      },
+      "howWeUseYourData": {
+        "title": "3. How We Use Your Data",
+        "desc": "We use your data to:",
+        "items": [
+          "Provide requested services or information",
+          "Process transactions",
+          "Improve website functionality",
+          "Send administrative updates",
+          "Send marketing communications (only with consent)",
+          "Resolve disputes and provide support"
+        ]
+      },
+      "dataRetention": {
+        "title": "4. Data Retention",
+        "desc": "Your personal data is stored only as long as necessary for the purposes outlined above, with a maximum retention period of 10 years, unless a shorter period is required by law."
+      },
+      "yourRights": {
+        "title": "5. Your Rights (GDPR)",
+        "desc": "You have the right to:",
+        "items": [
+          "Access your personal data",
+          "Correct inaccurate data",
+          "Request deletion (“right to be forgotten”)",
+          "Withdraw consent",
+          "Restrict or object to processing"
+        ],
+        "contact": "To exercise these rights, contact us at:\nEmail: info@vyanzo.be"
+      },
+      "dataSecurity": {
+        "title": "6. Data Security",
+        "desc": "We implement appropriate technical and organizational measures to protect your data against unauthorized access, loss or theft, and misuse."
+      },
+      "dataSharing": {
+        "title": "7. Data Sharing",
+        "desc": "We may share your data:",
+        "items": [
+          "With service providers (for hosting, payments, etc.)",
+          "When required by law",
+          "In case of business transfer"
+        ],
+        "conclusion": "We do not sell your personal data."
+      },
+      "internationalDataTransfers": {
+        "title": "8. International Data Transfers",
+        "desc": "Your data may be processed outside the EEA with appropriate safeguards."
+      },
+      "externalLinks": {
+        "title": "9. External Links",
+        "desc": "Our website may contain links to third-party websites. We are not responsible for their privacy practices."
+      },
+      "communications": {
+        "title": "10. Communications",
+        "desc": "We may contact you regarding service updates or promotions (with consent). You can opt out anytime."
+      },
+      "passwordSecurity": {
+        "title": "11. Password Security",
+        "desc": "Keep your password confidential and change it if compromised."
+      },
+      "updatesToThisPolicy": {
+        "title": "12. Updates to This Policy",
+        "desc": "We may update this policy periodically. Please review it regularly."
+      },
+      "contact": {
+        "title": "13. Contact",
+        "email": "Email: info@vyanzo.be",
+        "website": "Website: vyanzo.be"
       }
     }
   }

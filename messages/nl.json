@@ -23,7 +23,8 @@
       "services": "Diensten",
       "about": "Over ons",
       "contact": "Contact",
-      "team": "Ons team"
+      "team": "Ons team",
+      "privacyPolicy": "Privacybeleid"
     },
     "copyright": "Copyright @Vyanzo {year}",
     "aria": {
@@ -545,6 +546,130 @@
       "Class_D400": {
         "application": "Hoofdwegen & Snelwegen",
         "description": "Rijbanen van wegen, vluchtstroken en parkeerterreinen voor alle soorten wegvoertuigen."
+      }
+    }
+  },
+  "PrivacyPolicyPage": {
+    "title": "COOKIES & PRIVACYBELEID (AVG) – Versie 2026.1",
+    "intro1": "Wij waarderen uw interesse in Vyanzo en uw bezoek aan onze website (vyanzo.be). Dit Privacybeleid legt uit hoe wij persoonsgegevens van bezoekers van onze website verzamelen, verwerken en gebruiken.",
+    "intro2": "Wij zetten ons in voor de bescherming van uw privacy. Persoonlijk identificeerbare informatie die u verstrekt, wordt nooit zonder uw toestemming gedeeld met derden, behalve zoals beschreven in dit beleid.",
+    "sections": {
+      "cookies": {
+        "title": "1. Cookies",
+        "description": "Cookies zijn kleine tekstbestanden die op uw apparaat (computer, tablet of smartphone) worden opgeslagen om uw browse-ervaring te verbeteren.",
+        "useTypes": "Wij gebruiken de volgende soorten cookies:",
+        "types": {
+          "necessary": {
+            "name": "Noodzakelijke cookies",
+            "desc": "Essentieel voor het correct functioneren van de website (bijv. navigatie, veilig inloggen). Zonder deze cookies werken bepaalde onderdelen van de site mogelijk niet correct."
+          },
+          "performance": {
+            "name": "Prestatiecookies",
+            "desc": "Helpen ons te begrijpen hoe bezoekers onze website gebruiken (bijv. bezochte pagina's, verkeersgegevens) zodat wij de functionaliteit kunnen verbeteren. Deze cookies verzamelen anonieme gegevens."
+          },
+          "functional": {
+            "name": "Functionele cookies",
+            "desc": "Onthouden uw voorkeuren (zoals taal of regio) om een gepersonaliseerde ervaring te bieden."
+          },
+          "advertising": {
+            "name": "Advertentiecookies",
+            "desc": "Volgen surfgedrag om relevante advertenties te tonen en de effectiviteit van campagnes te meten. Deze cookies slaan geen rechtstreeks identificeerbare persoonsgegevens op."
+          }
+        },
+        "conclusion": "U kunt cookies op elk moment beheren of verwijderen via uw browserinstellingen. Het uitschakelen van cookies kan de werking van de website beïnvloeden."
+      },
+      "informationWeCollect": {
+        "title": "2. Informatie die wij verzamelen",
+        "nonPersonal": {
+          "title": "Niet-persoonlijke gegevens",
+          "desc": "Automatisch verzameld wanneer u onze website bezoekt, waaronder:",
+          "items": [
+            "IP-adres",
+            "Browsertype en -versie",
+            "Apparaattype",
+            "Bezochte pagina's en duur",
+            "Internetserviceprovider"
+          ]
+        },
+        "personal": {
+          "title": "Persoonsgegevens",
+          "desc": "Wij verzamelen alleen persoonsgegevens wanneer u deze vrijwillig verstrekt, zoals:",
+          "items": [
+            "Naam",
+            "E-mailadres",
+            "Telefoonnummer",
+            "Adres",
+            "Geboortedatum",
+            "Voorkeuren"
+          ]
+        }
+      },
+      "howWeUseYourData": {
+        "title": "3. Hoe wij uw gegevens gebruiken",
+        "desc": "Wij gebruiken uw gegevens om:",
+        "items": [
+          "Gevraagde diensten of informatie te leveren",
+          "Transacties te verwerken",
+          "De functionaliteit van de website te verbeteren",
+          "Administratieve updates te verzenden",
+          "Marketingcommunicatie te verzenden (alleen met uw toestemming)",
+          "Geschillen op te lossen en ondersteuning te bieden"
+        ]
+      },
+      "dataRetention": {
+        "title": "4. Bewaring van gegevens",
+        "desc": "Uw persoonsgegevens worden alleen bewaard zolang als nodig is voor de hierboven beschreven doeleinden, met een maximale bewaartermijn van 10 jaar, tenzij een kortere termijn wettelijk vereist is."
+      },
+      "yourRights": {
+        "title": "5. Uw rechten (AVG)",
+        "desc": "U heeft het recht om:",
+        "items": [
+          "Uw persoonsgegevens in te zien",
+          "Onjuiste gegevens te corrigeren",
+          "Verwijdering te verzoeken (« recht op vergetelheid »)",
+          "Uw toestemming in te trekken",
+          "De verwerking te beperken of hiertegen bezwaar te maken"
+        ],
+        "contact": "Om deze rechten uit te oefenen, kunt u contact met ons opnemen via:\nE-mail: info@vyanzo.be"
+      },
+      "dataSecurity": {
+        "title": "6. Gegevensbeveiliging",
+        "desc": "Wij treffen passende technische en organisatorische maatregelen om uw gegevens te beschermen tegen ongeoorloofde toegang, verlies, diefstal of misbruik."
+      },
+      "dataSharing": {
+        "title": "7. Gegevens delen",
+        "desc": "Wij kunnen uw gegevens delen:",
+        "items": [
+          "Met dienstverleners (voor hosting, betalingen, enz.)",
+          "Wanneer wettelijk vereist",
+          "In geval van bedrijfsoverdracht"
+        ],
+        "conclusion": "Wij verkopen uw persoonsgegevens niet."
+      },
+      "internationalDataTransfers": {
+        "title": "8. Internationale gegevensoverdrachten",
+        "desc": "Uw gegevens kunnen buiten de EER worden verwerkt met passende waarborgen."
+      },
+      "externalLinks": {
+        "title": "9. Externe links",
+        "desc": "Onze website kan links bevatten naar websites van derden. Wij zijn niet verantwoordelijk voor hun privacypraktijken."
+      },
+      "communications": {
+        "title": "10. Communicatie",
+        "desc": "Wij kunnen contact met u opnemen over service-updates of promoties (met uw toestemming). U kunt zich op elk moment afmelden."
+      },
+      "passwordSecurity": {
+        "title": "11. Wachtwoordbeveiliging",
+        "desc": "Houd uw wachtwoord vertrouwelijk en wijzig het als het gecompromitteerd is."
+      },
+      "updatesToThisPolicy": {
+        "title": "12. Updates van dit beleid",
+        "desc": "Wij kunnen dit beleid periodiek bijwerken. Gelieve het regelmatig te raadplegen."
+      },
+      "contact": {
+        "title": "13. Contact",
+        "email": "E-mail: info@vyanzo.be",
+        "website": "Website: vyanzo.be"
       }
     }
   }
