@@ -127,7 +127,7 @@
       "address": "Kluizenmeersen 10 <br />9170 Sint-Gillis-Waas <br />Belgique"
     },
     "email": {
-      "title": "Envoyez-nous un email",
+      "title": "Envoyez-nous un courriel",
       "value": "info@vyanzo.be"
     },
     "phone": {
@@ -141,7 +141,7 @@
     "formTitle": "Envoyez-nous un message",
     "formDescription": "Vous avez un projet en tête ? Trouvons ensemble la solution qui vous convient.",
     "formFullName": "Nom Prénom",
-    "formEmail": "E-mail",
+    "formEmail": "Courriel",
     "formPhoneNumber": "Numéro de téléphone",
     "formCompany": "Société",
     "formMessage": "Message",
@@ -151,7 +151,7 @@
     "formSending": "Envoi en cours...",
     "formRequired": "Tous les champs sont requis.",
     "formFullNameError": "Le nom complet est requis.",
-    "formEmailError": "L'e-mail est requis.",
+    "formEmailError": "Courriel est requis.",
     "formPhoneNumberError": "Le numéro de téléphone est requis.",
     "formCompanyError": "La société est requise.",
     "formMessageError": "Le message est requis.",
@@ -160,7 +160,7 @@
     "formPhoneNumberPlaceholder": "Entrez votre numéro de téléphone",
     "validationFullNameRequired": "Le nom complet est requis.",
     "validationFullNameMin": "Le nom complet doit contenir au moins 2 caractères.",
-    "validationEmailRequired": "L'e-mail est requis.",
+    "validationEmailRequired": "courriel est requis.",
     "validationEmailInvalid": "Veuillez entrer une adresse e-mail valide.",
     "validationPhoneRequired": "Le numéro de téléphone est requis.",
     "validationPhoneInvalid": "Entrez un numéro de téléphone valide (chiffres uniquement, 6–15 chiffres).",
@@ -305,7 +305,7 @@
       "title": "Contactez-nous",
       "description": "Vous avez un projet en tête ? Trouvons ensemble la solution qui vous convient.",
       "fullName": "Nom Prénom",
-      "email": "E-mail",
+      "email": "Courriel",
       "phoneNumber": "Numéro de téléphone",
       "company": "Société",
       "message": "Message",
