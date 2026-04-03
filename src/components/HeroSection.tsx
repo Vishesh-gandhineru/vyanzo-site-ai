@@ -14,15 +14,13 @@ export default function HeroSection() {
     <section className="relative h-screen w-full overflow-hidden bg-bg-dark text-text-dark-bg font-sans selection:bg-brand-primary/30">
       {/* Background Video Simulator */}
       <div className="absolute inset-0 z-0 overflow-hidden bg-black">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-80"
-        >
-          <source src="/hero-background.mp4" type="video/mp4" />
-        </video>
+        <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-80">
+  <source
+    src="https://res.cloudinary.com/diwiusdfq/video/upload/vc_auto,q_auto/hero-background_n2tmr1.mp4"
+    type="video/mp4"
+  />
+</video>
+       
       </div>{" "}
       {/* Soft edge blur and darkened overlay to ensure text readability */}
       <div className="absolute inset-0 bg-black/30 mix-blend-overlay" />
