@@ -6,22 +6,57 @@ import MegaMenu from "./MegaMenu";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { useEffect , useRef } from "react";
 
 export default function HeroSection() {
   const t = useTranslations("Hero");
+
+  
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Safari fix: set muted via JS (HTML attribute alone isn't trusted)
+    video.muted = true;
+
+    video.play().catch(() => {
+      // Autoplay blocked — wait for user interaction (iOS Safari)
+      const tryPlay = () => video.play().catch(() => {});
+      document.addEventListener("touchstart", tryPlay, { once: true });
+      document.addEventListener("click", tryPlay, { once: true });
+    });
+  }, []);
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-bg-dark text-text-dark-bg font-sans selection:bg-brand-primary/30">
       {/* Background Video Simulator */}
       <div className="absolute inset-0 z-0 overflow-hidden bg-black">
-        <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-80">
-  <source
-    src="https://res.cloudinary.com/diwiusdfq/video/upload/vc_auto,q_auto/hero-background_n2tmr1.mp4"
-    type="video/mp4"
-  />
-</video>
+        <video
+        ref={videoRef}
+        autoPlay
+        muted
+        loop
+        playsInline
+        disablePictureInPicture
+        preload="auto"
+        poster="https://res.cloudinary.com/diwiusdfq/video/upload/so_0/hero-background_n2tmr1.jpg"
+        className="w-full h-full object-cover opacity-80"
+      >
+        {/* H.264 for Safari */}
+        <source
+          src="https://res.cloudinary.com/diwiusdfq/video/upload/vc_h264,q_auto/hero-background_n2tmr1.mp4"
+          type="video/mp4; codecs=avc1.42E01E"
+        />
+        {/* WebM for Chrome/Firefox */}
+        <source
+          src="https://res.cloudinary.com/diwiusdfq/video/upload/vc_vp9,q_auto/hero-background_n2tmr1.webm"
+          type="video/webm"
+        />
+      </video>
        
-      </div>{" "}
+      </div>
       {/* Soft edge blur and darkened overlay to ensure text readability */}
       <div className="absolute inset-0 bg-black/30 mix-blend-overlay" />
       <div className="absolute inset-0 bg-linear-to-t from-bg-dark/80 via-transparent to-transparent" />
