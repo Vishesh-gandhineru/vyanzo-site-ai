@@ -44,7 +44,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} style={{ colorScheme: "light" }}>
        <head>
-        <meta name="color-scheme" content="light" />  {/* 👈 added */}
+        <meta name="color-scheme" content="light" />
       </head>
       <body className={`${figtree.variable} ${notoSerif.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
